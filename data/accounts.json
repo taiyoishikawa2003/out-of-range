@@ -73,5 +73,17 @@
    "ja": "あなた"
   },
   "hidden": true
+ },
+ "kepler_uranai": {
+  "name": {
+   "en": "Kepler Star Fortunes (fan-made)",
+   "ja": "ケプラー星占い（ファンメイド）"
+  },
+  "place": "deep",
+  "followers": 812,
+  "bio": {
+   "en": "Zodiac rankings made from real NASA Kepler data. Just for fun: astrology is not science. Made by students.",
+   "ja": "NASAのケプラー望遠鏡の本物のデータで作る星座ランキング。占いは科学ではありません（お遊びです）。学生が作っています。"
+  }
  }
 }
