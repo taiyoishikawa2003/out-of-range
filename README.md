@@ -90,6 +90,13 @@ Then open http://localhost:8000/. There is no build step for the site itself (pl
 - `tools/build_*.py` build the earlier videos and photo posts. `tools/version_media.py` adds a content hash to every media path.
 - `tools/nasa_collect.py` collects candidate media for every machine on the official challenge resource list (`data/nasa_catalog.json`).
 
+## Videos about the project
+
+- 30-second demo (English, small Japanese): https://taiyoishikawa2003.github.io/out-of-range/demo/
+- Walkthrough in under 3 minutes (Japanese with English subtitles): https://taiyoishikawa2003.github.io/out-of-range/walkthrough/
+
+Both are recorded from the real site by `tools/motion/demo.html` and `tools/motion/pitch.html`.
+
 ## Images for slides and posts
 
 `docs/press/` has ready-made images: `cover_1200x630.jpg` (link preview) and `screens_en.jpg` / `screens_ja.jpg` (four screens, 1920×1080).

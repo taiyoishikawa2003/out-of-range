@@ -1,0 +1,109 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#07090d;color:#fff;font-family:'Noto Sans CJK JP','Noto Sans','Noto Color Emoji',sans-serif;font-weight:900}
+.s{position:relative;width:1920px;height:1080px;overflow:hidden;background:radial-gradient(1200px 800px at 30% 50%,#141b26,#07090d)}
+.phone{position:absolute;left:210px;top:50px;width:412px;height:892px;transform:scale(1.1);transform-origin:0 0;border-radius:40px;overflow:hidden;background:#000;box-shadow:0 0 0 9px #23262d,0 0 0 11px #3a3f49,0 30px 80px rgba(0,0,0,.7)}
+.panes{position:absolute;left:0;top:0;width:412px}
+.pane{position:absolute;left:0;width:412px;height:892px;overflow:hidden;background:#000}
+.stagebox{position:absolute;left:0;top:0;width:412px;height:836px;overflow:hidden;background:#000}
+.stagebox video{position:absolute;inset:0;width:100%;height:100%}
+.pane img{position:absolute;left:0;top:0;width:412px;height:892px}
+.right{position:absolute;left:790px;top:0;width:1060px;height:1080px}
+.brand{position:absolute;left:0;top:76px;font-size:30px;letter-spacing:.2em;color:#ffc400}
+.step{position:absolute;right:0;top:80px;font-size:24px;color:#6f7a8a;font-weight:700}
+.seg{position:absolute;left:0;top:330px;width:1060px;opacity:0}
+.seg h2{font-size:68px;line-height:1.25}
+.seg p{font-size:38px;line-height:1.5;font-weight:700;margin-top:28px;color:#e6ebf2}
+.seg .sub{font-size:27px;color:#9aa5b5;margin-top:26px;font-weight:700;line-height:1.45}
+.card{position:absolute;inset:0;background:#07090d;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;opacity:0;padding:0 150px}
+.card h1{font-size:80px;line-height:1.4}
+.card h1 em{font-style:normal;color:#ffc400}
+.card .t{font-size:120px;letter-spacing:.14em;margin-top:56px}
+.card p{font-size:40px;font-weight:700;margin-top:34px;color:#e6ebf2;line-height:1.55}
+.card .sub{font-size:28px;color:#9aa5b5;margin-top:30px;font-weight:700;line-height:1.5}
+.card .url{font-size:42px;color:#ffc400;margin-top:26px}
+.seg h2,.seg p,.card h1,.card p{word-break:auto-phrase;line-break:strict}
+.card .fine{position:absolute;left:0;right:0;bottom:50px;font-size:22px;font-weight:700;color:#8c96a6;line-height:1.6}
+</style></head>
+<body><div class="s" id="stage"></div>
+<script type="module">
+// Walkthrough video, a little under 3 minutes (1920x1080): the real posts and screens of the site in a phone frame,
+// with the main text in one language and subtitles in the other (?lang=ja: Japanese text, English subtitles).
+import { M, LANG, el, sfx, music, win, an, fadeIn, clip, done } from './motion.js';
+const two = (ja, en) => LANG === 'ja' ? [ja, en] : [en, ja];
+const st = document.getElementById('stage'); M.dur = 173; M.poster = 40;
+const T = [18, 24, 37, 48, 58, 68, 79, 89, 101, 119, 127, 139, 151, 161];   // phone segments start at T[0]; T[12] promise card; T[13] end card
+const L = LANG === 'ja' ? 'ja' : 'en';
+
+// opening cards
+const cards = [
+  [0, 6, two('NASA は、月や火星に<br>たくさんの機械を<em>置いてきた</em>。', 'NASA left many machines<br>on the Moon and on <em>Mars</em>.')],
+  [6, 12, two('でも、その話があるのは<br>むずかしいサイトの奥。<br>今の子どもが見るのは、<em>短い動画</em>。', 'Their stories sit deep in technical websites.<br>Kids today watch <em>short videos</em>.')],
+  [12, 18, two('だから、機械のほうを<br><em>子どものいる場所</em>へ連れていった。', 'So we took the machines<br>to <em>where the kids already are</em>.')]];
+cards.forEach(([a, b, [main, sub]], i) => {
+  const c = el(`<div class="card" style="z-index:5"><h1>${main}</h1><div class="sub">${sub.replace(/<br>/g, ' ').replace(/<\/?em>/g, '')}</div></div>`, st);
+  win(c, a, b, 0.35); if (i) sfx(a + 0.05, 'pop', 0.6);
+});
+
+// the phone
+const phone = el('<div class="phone"><div class="panes"></div></div>', st), panes = phone.firstChild;
+const A = 'pitch_assets/';
+const still = (i, files) => { const p = el(`<div class="pane" style="top:${i * 892}px"></div>`, panes); const d = (T[i + 1] - T[i]) / files.length;
+  files.forEach((f, k) => { const im = el(`<img src="${A}${f}.jpg">`, p); if (k) { an(im, [{ opacity: 0 }, { opacity: 1 }], { duration: 220, delay: (T[i] + d * k) * 1000 }); sfx(T[i] + d * k, 'pop', 0.7); } }); };
+const video = (i, src, fit, ui, from) => {
+  const p = el(`<div class="pane" style="top:${i * 892}px"><div class="stagebox"><video src="/${src}" muted playsinline preload="auto" style="object-fit:${fit}"></video></div><img src="${A}${ui}.png"></div>`, panes);
+  clip(p.querySelector('video'), T[i], T[i + 1], from);
+  music(src, T[i], T[i + 1] + 0.12, { from, fadeIn: 0.25, fadeOut: 0.3 });
+};
+still(0, ['gate']);
+video(1, `media/insight/kaidan1.${L}.mp4`, 'cover', 'ui_insight-kaidan-1', 0.3);
+video(2, `media/surveyor/pov.${L}.mp4`, 'contain', 'ui_surveyor-pov-1', 1.0);
+video(3, `media/pioneer/navi.${L}.mp4`, 'contain', 'ui_pioneer-navi-1', 2.0);
+video(4, `media/near/chat.${L}.mp4`, 'contain', 'ui_near-chat-1', 3.0);
+video(5, `media/opportunity/unread.${L}.mp4`, 'contain', 'ui_opportunity-unread-1', 2.0);
+still(6, ['comments']); still(7, ['sources', 'stamps']); still(8, ['game_0', 'game_1', 'game_2', 'game_3', 'game_4']);
+still(9, ['quiz_0', 'quiz_1', 'quiz_2']); still(10, ['map_0', 'map_1', 'map_2']); still(11, ['create', 'class', 'furi']);
+const N = 12;   // panes
+const kf = [{ transform: 'translateY(0)', offset: 0 }];
+for (let i = 1; i < N; i++) { const t = T[i], a = (t - 0.22) / M.dur, b = (t + 0.22) / M.dur; kf.push({ transform: `translateY(${-(i - 1) * 892}px)`, offset: a, easing: 'cubic-bezier(.3,.8,.3,1)' }, { transform: `translateY(${-i * 892}px)`, offset: b }); sfx(t - 0.2, 'whoosh', 0.6); }
+kf.push({ transform: `translateY(${-(N - 1) * 892}px)`, offset: 1 }); an(panes, kf, { duration: M.dur * 1000 });
+music('Carefree', 0, T[1] + 0.2, { from: 0.1, gain: 0.7, fadeIn: 0.4, fadeOut: 1.0 });
+music('Carefree', T[6] - 0.2, M.dur, { from: 40, gain: 1.15, fadeIn: 0.6, fadeOut: 1.8 });
+
+// right column
+const R = el('<div class="right"><div class="brand">OUT OF RANGE</div></div>', st);
+const segs = [
+  ['置いてきた機械が、<br>自分で投稿する。', '子どもがいつも見ている、短い動画のフィードの形で。', 'The machines NASA left behind post their own stories, in a short-video feed.', 'The machines NASA left behind<br>post their own stories.', 'In the short-video feed kids already watch.'],
+  ['1本目は、こわい話。', 'この音は本物。インサイトが火星で記録した。', 'A scary story. The sound is real: InSight recorded it on Mars.', 'First, a scary story.', 'The sound is real. InSight recorded it on Mars.'],
+  ['POV：月で2年半、ひとり。', 'そこへ、アポロ12号の人間がやって来た（実話）。', 'A POV. Surveyor 3 waited on the Moon for 2.5 years. Then people came.', 'A POV: alone on the Moon<br>for 2.5 years.', 'Then the Apollo 12 astronauts walked over (true story).'],
+  ['カーナビ：<br>到着まで200万年。', 'パイオニア10号の今を、ナビの画面で。', 'A nav app. Pioneer 10 will arrive in more than 2 million years.', 'A nav app:<br>arrival in 2 million years.', 'Where Pioneer 10 is heading, as a navigation screen.'],
+  ['グループチャット。', '着陸用ではない探査機が、小惑星に着陸した実話。', 'A group chat. A spacecraft that was not built to land, landed on an asteroid.', 'A group chat.', 'A spacecraft that was not built to land, landed on an asteroid.'],
+  ['1000回送っても、<br>既読がつかない。', 'オポチュニティとの別れを、メッセージの形で。', '“We texted 1,000 times. No reply.” Saying goodbye to Opportunity.', 'Texted 1,000 times.<br>No reply.', 'Saying goodbye to Opportunity, as unread messages.'],
+  ['コメント欄で、<br>機械どうしが話す。', 'セリフは演出。中に出てくる事実は本当。', 'In the comments, the machines talk to each other. The lines are ours. The facts are real.', 'In the comments,<br>the machines talk.', 'The lines are ours. The facts in them are real.'],
+  ['どの投稿にも、<br>NASA の出典。', '出典を開くと「たしかめスタンプ」がもらえる。', 'NASA sources on every post. Opening them earns a fact-check stamp.', 'NASA sources<br>on every post.', 'Opening them earns a fact-check stamp.'],
+  ['ゲーム：<br>ラグ20分のラジコン。', 'ほぼ必ずぶつかる。だから本物は、1日分の命令をまとめて送った。', 'A game. With a 20-minute signal delay, you crash. So real drivers sent a day of commands at once.', 'A game: drive with<br>a 20-minute lag.', 'You crash. So real drivers sent a whole day of commands at once.'],
+  ['診断：<br>どの探査機タイプ？', 'お遊びの結果に、機械の本当の話。', 'A quiz. The result cards carry real facts about the machines.', 'A quiz: which space<br>machine are you?', 'Just for fun, but the result cards carry real facts.'],
+  ['地図：<br>機械は今、どこに？', '何か。なぜ送ったか。何を見つけたか。月と火星と、その先の22か所。', 'A map. What it is, why it was sent, what it found. 22 sites.', 'A map: where are<br>they now?', 'What it is, why it was sent, what it found. 22 sites.'],
+  ['見るだけで終わらない。', '自分の「本当の話」を作れる。出典がないと投稿できない。授業用のワークシートと、ふりがなも。', 'Kids make their own true post: no source, no post. A classroom worksheet and furigana too.', 'Not just watching.', 'Kids make their own true post: no source, no post. A classroom worksheet and furigana too.']];
+segs.forEach(([jh, jp, en, eh, ep], i) => {
+  const s = LANG === 'ja' ? el(`<div class="seg"><h2>${jh}</h2><p>${jp}</p><div class="sub">${en}</div></div>`, R) : el(`<div class="seg"><h2>${eh}</h2><p>${ep}</p><div class="sub">${jh.replace(/<br>/g, '')} ${jp}</div></div>`, R);
+  win(s, T[i] + 0.2, T[i + 1] - 0.12, 0.22);
+  const n = el(`<div class="step">${i + 1} / ${segs.length}</div>`, R); win(n, T[i] + 0.2, T[i + 1] - 0.12, 0.22);
+});
+// the phone and the right column only show after the opening cards
+[phone, R].forEach(e => an(e, [{ opacity: 0 }, { opacity: 1 }], { duration: 400, delay: (T[0] - 0.2) * 1000 }));
+
+// the promise, then the closing card
+const [pm, ps] = two('笑いは、形式だけ。<br>事実は、<em>全部ほんとう</em>。', 'The jokes are only in the format.<br><em>Every fact is real.</em>');
+const [qm, qs] = two('事実は NASA の資料で確かめ、全部の投稿に出典をつけた。<br>AI で作った画像・動画・声は、使っていない。', 'Every fact is checked against NASA sources, and every post lists them.<br>No AI-generated images, video or voices.');
+const promise = el(`<div class="card" style="z-index:6"><h1>${pm}</h1><p>${qm}</p><div class="sub">${ps.replace(/<br>/g, ' ').replace(/<\/?em>/g, '')} ${qs.replace(/<br>/g, ' ')}</div></div>`, st);
+win(promise, T[12], T[13], 0.35); sfx(T[12] + 0.1, 'ding', 0.8);
+const [em_, es] = two('置いていかれたんじゃない。<br>最後まで働いて、<em>そこで止まった</em>。', 'They weren’t thrown away.<br>They worked to the very end, <em>and stopped there</em>.');
+const end = el(`<div class="card" style="z-index:7"><h1>${em_}</h1><div class="sub">${es.replace(/<br>/g, ' ').replace(/<\/?em>/g, '')}</div>
+  <h1 class="t">OUT OF RANGE</h1><div class="url">taiyoishikawa2003.github.io/out-of-range</div><p style="font-size:30px;color:#9aa5b5;margin-top:14px">Team SunSunWorld · NASA Space Apps Challenge 2026</p>
+  <div class="fine">Images, video and sound: NASA. NASA does not endorse this project. Music: Kevin MacLeod (CC BY 4.0).<br>No AI-generated images, video or voices. Built with AI assistance (Claude).</div></div>`, st);
+win(end, T[13], M.dur, 0); an(end, [{ opacity: 0 }, { opacity: 1 }], { duration: 400, delay: T[13] * 1000, fill: 'none' }); sfx(T[13] + 0.15, 'chime', 0.8);
+fadeIn(end.querySelector('.t'), T[13] + 2.2, 0.5); fadeIn(end.querySelector('.url'), T[13] + 2.8, 0.5);
+done();
+</script></body></html>
