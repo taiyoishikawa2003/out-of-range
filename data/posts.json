@@ -6,8 +6,8 @@
   "place": "mars",
   "video": {
    "src": {
-    "en": "media/insight/kaidan1.en.mp4?v=5a6cd036",
-    "ja": "media/insight/kaidan1.ja.mp4?v=7e3de14d"
+    "en": "media/insight/kaidan1.en.mp4?v=0a335a4f",
+    "ja": "media/insight/kaidan1.ja.mp4?v=7c5faf7f"
    },
    "poster": {
     "en": "media/insight/kaidan1.poster.en.jpg?v=3c9f664e",
@@ -245,8 +245,8 @@
   "type": "video",
   "video": {
    "src": {
-    "ja": "media/surveyor/pov.ja.mp4?v=f165478f",
-    "en": "media/surveyor/pov.en.mp4?v=11269b89"
+    "ja": "media/surveyor/pov.ja.mp4?v=1b5e1cbd",
+    "en": "media/surveyor/pov.en.mp4?v=deb614fa"
    },
    "poster": {
     "ja": "media/surveyor/pov.poster.ja.jpg?v=61f8eb7c",
@@ -681,8 +681,8 @@
   "type": "video",
   "video": {
    "src": {
-    "ja": "media/pioneer/navi.ja.mp4?v=d37c01e8",
-    "en": "media/pioneer/navi.en.mp4?v=903e52b0"
+    "ja": "media/pioneer/navi.ja.mp4?v=64689af1",
+    "en": "media/pioneer/navi.en.mp4?v=5c24e114"
    },
    "poster": {
     "ja": "media/pioneer/navi.poster.ja.jpg?v=bb0c5477",
@@ -1046,8 +1046,8 @@
   "place": "deep",
   "video": {
    "src": {
-    "en": "media/kepler/uranai.en.mp4?v=24d407c1",
-    "ja": "media/kepler/uranai.ja.mp4?v=5d3046ff"
+    "en": "media/kepler/uranai.en.mp4?v=e17cbe54",
+    "ja": "media/kepler/uranai.ja.mp4?v=3859ca69"
    },
    "poster": {
     "en": "media/kepler/uranai.poster.en.jpg?v=4f36ca03",
@@ -1220,8 +1220,8 @@
   "account": "opportunity_rover",
   "place": "mars",
   "poster": {
-   "ja": "media/lag/poster.ja.jpg",
-   "en": "media/lag/poster.en.jpg"
+   "ja": "media/lag/poster.ja.jpg?v=d60468e3",
+   "en": "media/lag/poster.en.jpg?v=e85610ba"
   },
   "caption": {
    "ja": "わたしをラジコンで運転してみて。ラグは片道20分（クリアできたら天才） #やってみた #火星 #ラグ",
@@ -1990,8 +1990,8 @@
   "type": "video",
   "video": {
    "src": {
-    "ja": "media/ranking/top5.ja.mp4?v=936ec4d3",
-    "en": "media/ranking/top5.en.mp4?v=364e8776"
+    "ja": "media/ranking/top5.ja.mp4?v=0ba2926f",
+    "en": "media/ranking/top5.en.mp4?v=f445ca56"
    },
    "poster": {
     "ja": "media/ranking/top5.poster.ja.jpg?v=15ad4145",
