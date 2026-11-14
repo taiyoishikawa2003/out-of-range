@@ -1214,6 +1214,103 @@
   ]
  },
  {
+  "id": "lag-1",
+  "type": "app",
+  "app": "lag",
+  "account": "opportunity_rover",
+  "place": "mars",
+  "poster": {
+   "ja": "media/lag/poster.ja.jpg",
+   "en": "media/lag/poster.en.jpg"
+  },
+  "caption": {
+   "ja": "わたしをラジコンで運転してみて。ラグは片道20分（クリアできたら天才） #やってみた #火星 #ラグ",
+   "en": "Try driving me like an RC car. The lag is 20 minutes each way (good luck) #itried #mars #lag"
+  },
+  "tags": [
+   "game",
+   "lag",
+   "mars",
+   "opportunity"
+  ],
+  "sound": {
+   "ja": "音はありません",
+   "en": "No sound"
+  },
+  "stats": {
+   "likes": 0,
+   "saves": 0
+  },
+  "comments": [
+   {
+    "user": "opportunity_rover",
+    "pinned": true,
+    "text": {
+     "ja": "答え合わせ 👇（ここからは全部ほんとう）\n\n■ なぜラジコンにできない？\n火星は遠い。電波は光の速さで進むけれど、それでも片道3〜22分かかる（地球と火星の位置で変わる）。画面にうつるのは何分も前の火星で、「止まれ」がとどくのも何分もあと。\n\n■ 本当の運転のしかた\nジョイスティックはなかった。運転する人たちは、1日分の動きを先に考えて、ローバーがどう動くかをコンピューターで確かめてから、まとめて送った。わたしは走りながら、2つのカメラの目で岩や坂を見つけた。そして自分でよけたり、止まって次の命令を待ったりした。\n\n■ わたしはだれ？\nNASA のローバー（火星を走る車）、オポチュニティ。むかしの火星に水があった証拠をさがすために、2004年に火星に着いた。そして本当に見つけた。予定は90日。実際は14年以上はたらいた。\n\n※ゲームでは20分を2秒にちぢめています。岩の場所と「1日6個まで」はゲーム用の作りものです。",
+     "en": "The real story 👇 (everything below is true)\n\n■ Why not an RC car?\nMars is far away. A radio signal travels at the speed of light, and it still takes 3 to 22 minutes each way, depending on where Earth and Mars are. The picture on your screen is minutes old, and your STOP arrives minutes late.\n\n■ How I was really driven\nThere was no joystick. My drivers planned a whole day of moves, checked on a computer what I would do, and sent the commands all at once. On the way, I used my two camera eyes to spot rocks and slopes. Then I steered around them, or stopped and waited for the next commands.\n\n■ Who am I?\nOpportunity, a NASA rover (a car that drives on Mars). I landed in 2004 to look for signs that Mars once had water, and I found them. I was planned for 90 days and worked for more than 14 years.\n\nIn the game, 20 minutes takes 2 seconds. The rock positions and the six-commands-a-day rule are made up for the game."
+    }
+   }
+  ],
+  "sources": [
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Mars in a Minute: How Do Rovers Drive on Mars? (NASA Science): no joystick; commands are sent for the next day; the rover maps hazards with two cameras",
+    "url": "https://science.nasa.gov/resource/mars-in-a-minute-how-do-rovers-drive-on-mars/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Mars Rover Driver Board Game (NASA/JPL Education): a signal takes as little as 3 minutes or as long as 22 minutes",
+    "url": "https://www.jpl.nasa.gov/edu/resources/lesson-plan/mars-rover-driver-board-game/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Learning To Drive The Mars Rovers (JPL Robotics): the time lag; the tool that shows drivers what the rover will do",
+    "url": "https://robotics.jpl.nasa.gov/news/learning-to-drive-the-mars-rovers/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Biesiadecki, Leger & Maimone (JPL), 2007: the Mars Exploration Rovers are typically commanded once per Martian day",
+    "url": "https://www-robotics.jpl.nasa.gov/media/documents/tradeoffs_ijrr_07.pdf"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA14129 Autonomous Hazard Checks Leave Patterned Rover Tracks on Mars (NASA/JPL-Caltech), cropped; the caption explains autonav",
+    "url": "https://photojournal.jpl.nasa.gov/catalog/PIA14129"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Mars Exploration Rovers Spirit and Opportunity (NASA Science)",
+    "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "NASA: Opportunity Rover Mission on Mars Comes to End (designed for 90 Martian days)",
+    "url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+   }
+  ]
+ },
+ {
   "id": "viking-casefile-1",
   "account": "viking1_lander",
   "place": "mars",

@@ -23,6 +23,7 @@ The challenge asks for a story that introduces school-age kids to this hardware 
 | Which space machine are you? | 8 machines | Interactive just-for-fun quiz |
 | "Want to try landing?" | NEAR Shoemaker (asteroid Eros) | Group chat video |
 | NASA's "favorite" zodiac signs | Kepler (deep space) | Ranking video made from real Kepler data |
+| Try driving me like an RC car | Opportunity (Mars) | Playable game: feel the 20-minute signal delay, then drive the way rover drivers really did |
 | Case file | Viking 1 (Mars) | Photo post: detective file with a tappable quiz |
 | We texted 1,000 times. No reply. | Opportunity (Mars) | Chat video (the ending of the trailer) |
 | Fashion check | Apollo 17 rover, Ingenuity, InSight, Apollo 11 lander | Photo post: four looks, four real reasons |

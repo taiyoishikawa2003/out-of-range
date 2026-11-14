@@ -410,3 +410,65 @@ img.av{object-fit:cover}
 .msrc{font-size:11.5px!important;color:#999;margin-top:8px!important;word-break:break-word}
 .msrc a{color:#bbb}
 .mapbox{overflow:visible}.mapbox img{border-radius:14px}
+
+/* lag game (app post): drive a Mars rover with a signal delay */
+.lag{display:flex;justify-content:center;align-items:center}
+.lag .lg-in{gap:10px}
+.lag .sd-title{font-size:clamp(21px,6.2vw,30px)}
+.lg-ph{display:inline-block}
+.lg-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 50%;opacity:.5}
+.lg-hero{width:92px;height:92px;display:block;filter:drop-shadow(0 6px 14px #000)}
+.lg-hero svg,.lg-rov svg,.lg-rv svg{width:100%;height:100%;display:block}
+.lg-round{margin:0;font-size:12.5px;font-weight:800;letter-spacing:.06em;color:#ffc400}
+.lg-task{margin:0;font-size:clamp(18px,5.2vw,23px);line-height:1.35;font-weight:900}
+.lg-scr{position:relative;width:100%;height:112px;border-radius:14px;overflow:hidden;background:linear-gradient(#2b1710 0 30%,#a4552d 30% 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+.lg-scr::after{content:"";position:absolute;inset:30% 0 0 0;background:radial-gradient(circle at 20% 30%,rgba(0,0,0,.2) 0 3px,transparent 4px),radial-gradient(circle at 70% 70%,rgba(0,0,0,.16) 0 4px,transparent 5px),radial-gradient(circle at 45% 55%,rgba(255,255,255,.1) 0 2px,transparent 3px);background-size:90px 50px,130px 60px,70px 40px;pointer-events:none}
+.lg-lab{position:absolute;left:8px;top:6px;font-size:11px;font-weight:700;background:rgba(0,0,0,.6);padding:2px 9px;border-radius:999px;z-index:3}
+.lg-rov{position:absolute;top:66%;width:44px;height:44px;margin:-22px 0 0 -22px;z-index:3}
+.lg-rov svg{transform:rotate(90deg);filter:drop-shadow(0 3px 2px rgba(0,0,0,.45))}
+.lg-real{z-index:2}
+.lg-real svg{opacity:.5}
+.lg-real em{position:absolute;left:50%;top:-15px;transform:translateX(-50%);font-size:10px;font-style:normal;font-weight:800;background:#ffc400;color:#111;padding:0 5px;border-radius:4px;white-space:nowrap;line-height:1.5}
+.lg-rock{position:absolute;top:66%;width:38px;height:34px;margin:-17px 0 0 -4px;background:radial-gradient(circle at 35% 30%,#8f857c,#4a413c 70%);border-radius:46% 54% 50% 50%/60% 58% 42% 40%;box-shadow:2px 4px 0 rgba(0,0,0,.35);z-index:1;animation:lgpop .25s ease-out}
+.lg-boom{position:absolute;top:66%;font-size:34px;font-style:normal;transform:translate(-50%,-62%);z-index:4;animation:lgpop .3s ease-out}
+.lg-link{display:flex;align-items:center;gap:8px;width:100%;font-size:11.5px}
+.lg-link b{font-weight:800;opacity:.9}
+.lg-wire{position:relative;flex:1;height:2px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.45) 0 6px,transparent 6px 12px)}
+.lg-dot{position:absolute;top:-5px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:#ffc400;box-shadow:0 0 10px #ffc400;animation:lgfly 2s linear forwards}
+.lg-dot.red{background:#ff5a4d;box-shadow:0 0 10px #ff5a4d}
+@keyframes lgfly{from{left:0}to{left:100%}}
+@keyframes lgpop{from{transform:scale(.2);opacity:0}}
+@keyframes lgshake{25%{margin-left:-3px}75%{margin-left:3px}}
+.lg-msg{margin:0;min-height:2.9em;font-size:13.5px;line-height:1.45;font-weight:600}
+.lg-row{display:flex;gap:10px;width:100%}
+.lg-big{flex:1;border:0;border-radius:16px;font:inherit;font-weight:900;font-size:20px;padding:16px 0;color:#fff;cursor:pointer}
+.lg-big.go{background:#1a9a50}
+.lg-big.stop{background:#e5484d}
+.lg-big:disabled,.lg-key:disabled,.lg-send:disabled{opacity:.35;cursor:default}
+.lg-res{margin:0;font-size:21px;font-weight:900}
+.lg-res.crash{color:#ff8a80}
+.lg-res.early{color:#ffd166}
+.lg-res.lucky{color:#7ee2a8}
+.lg-why{margin:0;font-size:14px;line-height:1.55}
+.lg-fact{margin:0;font-size:13.5px;line-height:1.55;background:rgba(255,255,255,.1);border-radius:12px;padding:9px 12px;text-align:left}
+.lg-next{font-size:15.5px;padding:11px 22px;margin-top:2px}
+.lg-board{position:relative;display:grid;grid-template-columns:repeat(5,1fr);width:min(100%,30vh);aspect-ratio:1;border-radius:12px;overflow:hidden;background:#a4552d;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+.lg-cell{position:relative;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);font-style:normal;font-size:13px;font-weight:800;color:#fff;text-shadow:0 1px 2px #000}
+.lg-cell.rock::before{content:"";width:74%;height:66%;background:radial-gradient(circle at 35% 30%,#8f857c,#4a413c 70%);border-radius:46% 54% 50% 50%/60% 58% 42% 40%;box-shadow:2px 3px 0 rgba(0,0,0,.35)}
+.lg-cell.new::before{animation:lgpop .5s ease-out;outline:2px solid #ffc400;outline-offset:3px}
+.lg-cell.goal{background:rgba(255,196,0,.25)}
+.lg-cell.goal::after{content:"★";position:absolute;font-size:24px;color:#ffc400;text-shadow:0 1px 3px #000}
+.lg-cell.pl{background:rgba(255,255,255,.24)}
+.lg-cell.goal.pl{background:rgba(255,196,0,.5)}
+.lg-rv{position:absolute;left:0;top:0;width:20%;height:20%;padding:3px;box-sizing:border-box;transition:transform .4s ease;z-index:2;filter:drop-shadow(0 2px 3px rgba(0,0,0,.5))}
+.lg-rv.halt{animation:lgshake .35s 3}
+.lg-chips{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:5px;min-height:28px;font-size:12px}
+.lg-chips b{width:26px;height:26px;border-radius:8px;background:#fff;color:#111;display:flex;align-items:center;justify-content:center;font-size:16px}
+.lg-chips span{opacity:.8;margin-left:4px}
+.lg-pad{display:flex;gap:7px;justify-content:center;width:100%}
+.lg-key{flex:1;max-width:54px;height:46px;border:0;border-radius:12px;background:#2b3442;color:#fff;font:inherit;font-size:22px;font-weight:900;cursor:pointer}
+.lg-undo{background:#4a2b2b}
+.lg-send{margin-top:0;font-size:16px;padding:11px 26px}
+.lg-pic{width:100%;height:104px;object-fit:cover;object-position:40% 60%;border-radius:12px}
+.lg-cap{margin:0;font-size:11.5px;line-height:1.5;opacity:.85;text-align:left}
+@media (max-height:700px){.lag .lg-in{gap:6px}.lg-hero{width:70px;height:70px}.lg-scr{height:92px}.lg-board{width:min(100%,31vh)}.lg-r2 .lg-task,.lg-r2 .lg-link{display:none}.lg-msg{font-size:12.5px;min-height:2.7em}.lg-big{padding:12px 0;font-size:18px}.lg-key{height:40px}.lg-pic{height:60px}.lg-cap{font-size:11px;line-height:1.4}.lg-task{font-size:17px}.lg-why,.lg-fact{font-size:12.5px;line-height:1.45}.lg-send{padding:9px 22px;font-size:15px}.lg-chips{min-height:24px}.lg-chips b{width:22px;height:22px;font-size:14px}}

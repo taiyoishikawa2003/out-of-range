@@ -8,7 +8,7 @@ OUT OF RANGE
 
 ## High-Level Project Summary
 
-OUT OF RANGE is a short-video style feed for kids who grew up on short videos, including kids who are not interested in space. The machines NASA left on the Moon, on Mars and in deep space post about their own lives, in formats those kids already know: a scary story, a POV, a group chat, a nav app, a ranking, a movie trailer, a just-for-fun quiz. The jokes are only in the format. Every fact is true. Each post says what the machine is, why it was sent and what it found, is built from real NASA images and sound, and links to its NASA sources. A map shows where every machine rests now, and kids can make their own true post, which the app will not publish without a source. It runs in any browser with no login, in English and Japanese.
+OUT OF RANGE is a short-video style feed for kids who grew up on short videos, including kids who are not interested in space. The machines NASA left on the Moon, on Mars and in deep space post about their own lives, in formats those kids already know: a scary story, a POV, a group chat, a nav app, a ranking, a movie trailer, a quiz, a game. The jokes are only in the format. Every fact is true. Each post says what the machine is, why it was sent and what it found, is built from real NASA images and sound, and links to its NASA sources. A map shows where every machine rests now, and kids can make their own true post, which the app will not publish without a source. It runs in any browser with no login, in English and Japanese.
 
 ## Link to Project Demo
 
@@ -28,7 +28,7 @@ OUT OF RANGE looks and works like the short-video apps kids already use: a verti
 
 The challenge says school-age kids "often hear only about active, ongoing missions", and that the history of past missions sits in "dense technical websites". We asked where those kids already spend their attention. The answer is short-video feeds. So instead of asking kids to come to a space site, we took the machines to the place and the formats kids already know. A kid with no interest in space will still stop for a scary story, a group chat or a ranking. The space fact is the punchline.
 
-**What is in the feed** (13 posts: videos with sound, swipeable photo posts and an interactive quiz)
+**What is in the feed** (14 posts: videos with sound, swipeable photo posts, a playable game and a quiz)
 
 - InSight (Mars): a scary-story video built on the real sound of a meteoroid hitting Mars, recorded by its seismometer
 - Surveyor 3 (Moon): a POV video. Alone for 2.5 years, then Apollo 12 landed about 180 m away and took its camera home for science
@@ -39,6 +39,7 @@ The challenge says school-age kids "often hear only about active, ongoing missio
 - A just-for-fun quiz, "Which space machine are you?", whose result cards carry real facts about eight machines
 - NEAR Shoemaker (asteroid Eros): a group chat. An orbiter with no legs is asked to land, and survives
 - Kepler (deep space): a zodiac ranking video made from real Kepler / K2 data
+- Opportunity (Mars): a playable game. First try to drive the rover like an RC car with a 20-minute signal delay (you cannot). Then drive it the way rover drivers really did: plan the day, send the commands at once, and let the rover stop itself when its cameras see a rock
 - Viking 1 (Mars): a detective case file with a tappable quiz. What cut off the lander after six years? (A faulty command from Earth.)
 - Opportunity (Mars): "We texted 1,000 times. No reply." The ending of the trailer: more than a thousand commands after the 2018 dust storm
 - Apollo 17 rover, Ingenuity, InSight, Apollo 11 lander: a fashion check. Four looks, four real engineering reasons
@@ -54,7 +55,7 @@ The challenge says school-age kids "often hear only about active, ongoing missio
 **How it answers the challenge**
 
 - *What they are, why they were sent, what they found*: every post carries this in its pinned "answer" comment, in plain words for kids, and the map gives the same three answers for every machine.
-- *Showing how missions operated rather than listing facts*: each post is built around one moment. A lander photographing its own foot. A camera detached and carried home. A last photo cut short by touchdown.
+- *Showing how missions operated rather than listing facts*: each post is built around one moment. A lander photographing its own foot. A camera detached and carried home. A last photo cut short by touchdown. And one post is a game: kids feel the signal delay themselves, then drive the rover the way its drivers really did.
 - *A personal connection*: the machines speak in the first person, and the last post ends on one line: "They weren't thrown away. They worked to the very end."
 - *Age group*: upper elementary to junior high (about 9 to 15). *Perspective*: the machines' own. *Scope*: broad, from the Moon to interstellar space.
 - *Accessibility*: no login, any phone or PC, English and Japanese, read-aloud for photo posts, keyboard controls, reduced-motion support, works offline after the first visit.
@@ -93,6 +94,7 @@ NASA Science mission pages and news (facts, dates, design goals):
 - https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/
 - https://science.nasa.gov/missions/pioneer/pioneer-10-sends-last-signal/
 - https://science.nasa.gov/resource/opportunity-rovers-full-marathon-length-traverse
+- https://science.nasa.gov/resource/mars-in-a-minute-how-do-rovers-drive-on-mars/
 - https://science.nasa.gov/universe/overview/
 - https://www.jpl.nasa.gov/images/pia07999-looking-back-at-purgatory-dune
 - https://www.jpl.nasa.gov/news/nasa-insight-lander-hears-martian-winds/
@@ -100,6 +102,9 @@ NASA Science mission pages and news (facts, dates, design goals):
 - https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/
 - https://www.jpl.nasa.gov/news/opportunity-rolling-again-after-fifth-mars-winter/
 - https://www.jpl.nasa.gov/news/rover-amnesia-event-follows-latest-memory-reformatting/
+- https://www.jpl.nasa.gov/edu/resources/lesson-plan/mars-rover-driver-board-game/
+- https://robotics.jpl.nasa.gov/news/learning-to-drive-the-mars-rovers/
+- https://www-robotics.jpl.nasa.gov/media/documents/tradeoffs_ijrr_07.pdf
 - https://www.jpl.nasa.gov/videos/spirit-six-years-of-roving-mars/
 - https://www.nasa.gov/missions/lro/laser-beams-reflected-between-earth-and-moon-boost-science/
 
