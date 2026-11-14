@@ -1,4 +1,16 @@
 {
+ "moon_lostfound": {
+  "name": {
+   "en": "Lunar Lost & Found (fan-made)",
+   "ja": "月面遺失物センター（ファンメイド）"
+  },
+  "place": "moon",
+  "followers": 96,
+  "bio": {
+   "en": "Things people left on the Moon, and the science behind them. Made by students; facts checked against NASA and other sources.",
+   "ja": "月に置いてきた物と、その裏の科学を紹介します。学生が作っています。事実はNASAの資料などで確認しています。"
+  }
+ },
  "spirit_rover": {
   "name": {
    "en": "Spirit (fan-made story)",

@@ -1,5 +1,129 @@
 [
  {
+  "id": "lost-bags-1",
+  "type": "carousel",
+  "account": "moon_lostfound",
+  "place": "moon",
+  "noSourceSlide": true,
+  "slides": [
+   {
+    "bg": {
+     "ja": "media/lost/bags1.ja.jpg",
+     "en": "media/lost/bags1.en.jpg"
+    },
+    "dur": 3,
+    "alt": {
+     "ja": "月面の着陸船",
+     "en": "Lunar module on the Moon"
+    }
+   },
+   {
+    "bg": {
+     "ja": "media/lost/bags2.ja.jpg",
+     "en": "media/lost/bags2.en.jpg"
+    },
+    "dur": 3,
+    "alt": {
+     "ja": "着陸船の足元",
+     "en": "Base of the lunar module"
+    }
+   },
+   {
+    "bg": {
+     "ja": "media/lost/bags3.ja.jpg",
+     "en": "media/lost/bags3.en.jpg"
+    },
+    "dur": 3.5,
+    "alt": {
+     "ja": "文字：中身はうんち",
+     "en": "Text: poop"
+    }
+   },
+   {
+    "bg": {
+     "ja": "media/lost/bags4.ja.jpg",
+     "en": "media/lost/bags4.en.jpg"
+    },
+    "dur": 5,
+    "alt": {
+     "ja": "文字：科学者は取りに行きたい",
+     "en": "Text: scientists want it back"
+    }
+   }
+  ],
+  "audio": "media/lost/dark_ambience.mp3",
+  "caption": {
+   "ja": "月の落とし物、96個。持ち主は名乗り出ていません #怖い話 #月 #アポロ",
+   "en": "96 lost items on the Moon. No one has claimed them. #creepy #moon #apollo"
+  },
+  "tags": [
+   "moon",
+   "apollo"
+  ],
+  "sound": {
+   "ja": "効果音：チーム制作",
+   "en": "Ambience: our team"
+  },
+  "stats": {
+   "likes": 0,
+   "saves": 0
+  },
+  "comments": [
+   {
+    "user": "moon_lostfound",
+    "pinned": true,
+    "text": {
+     "ja": "答え合わせ👇\n\n月を歩いたアポロの宇宙飛行士たち（6回の着陸で12人）は、うんちやおしっこ、はいたものなどを入れた白い袋を、合わせて96個、月に置いてきました。\n\n■ なぜ置いてきた？\n帰りに月の石をたくさん持ち帰るため、その分の重さを減らす必要がありました。ゴルフボールやカメラ、ブーツなども一緒に置いてきています。\n\n■ なぜ科学者は取りに行きたい？\nうんちの半分くらいは、おなかの中にいた菌でできています。月は空気がなく、昼は100℃、夜は−170℃くらいになり、強い放射線も降り注ぐ場所です。そんな所で50年たった菌が生きていたら、「生き物は宇宙の旅にも耐えられるかもしれない」という手がかりになります。\n\n■ 本当に生きてる？\n研究者も「生きている可能性は低い」と言っています。でも、月に置いてきた物の中では、いちばん可能性がある物だそうです。\n\n※写真はアポロ14号の着陸船です。出典は「出典」ボタンから。月の落とし物は、遺失物センターのページでも紹介しています。",
+     "en": "The answer 👇\n\nThe Apollo astronauts who walked on the Moon (12 people over 6 landings) left behind 96 white bags of poop, pee, vomit and other waste.\n\n■ Why leave them?\nTo bring lots of Moon rocks home, they had to cut weight. Golf balls, cameras and boots were left too.\n\n■ Why do scientists want them back?\nAbout half of poop is made of gut microbes. The Moon has no air, swings from about 100°C by day to about −170°C at night, and is hit by strong radiation. If microbes survived 50 years there, it would be a clue that life could survive trips through space.\n\n■ Are they alive?\nResearchers say it's unlikely — but it's the most likely place on the Moon to find anything alive.\n\nNote: photos show the Apollo 14 lunar module. Sources: tap \"Sources\". More Moon lost items on our Lost & Found page."
+    }
+   }
+  ],
+  "sources": [
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "AS14-66-9277 View of Apollo 14 Lunar Module on the Moon (NASA)",
+    "url": "https://images.nasa.gov/details/as14-66-09277"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "BBC Science Focus: Why is there poo on the Moon? (96 bags, left to offset Moon-rock weight)",
+    "url": "https://www.sciencefocus.com/space/why-is-there-poo-on-the-moon/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Vox: Apollo astronauts left their poop on the moon (microbe survival, Schuerger)",
+    "url": "https://www.vox.com/science-and-health/2019/3/22/18236125/apollo-moon-poop-mars-science"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Business Insider: 96 bags and the 'Poo Bags Paradox'",
+    "url": "https://businessinsider.in/science/space/article/lunar-loo-did-apollo-astronauts-96-bags-of-poop-and-urine-seed-the-moon-with-life/articleshow/113413267.cms"
+   },
+   {
+    "kind": {
+     "en": "Sound",
+     "ja": "音"
+    },
+    "title": {
+     "en": "Dark ambience: made by our team in code (tools/build_lost_bags.py)",
+     "ja": "暗い環境音：チームがプログラムで作成（tools/build_lost_bags.py）"
+    }
+   }
+  ]
+ },
+ {
   "id": "insight-kaidan-1",
   "type": "video",
   "account": "insight_lander",
