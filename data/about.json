@@ -1,34 +1,159 @@
 {
-  "version": "0.1 (2026-11-14)",
-  "sections": [
-    {"title": {"en": "What is this?", "ja": "これは何？"},
-     "body": {"en": ["OUT OF RANGE is a short-video style feed for kids who grew up on short videos. The machines NASA left on the Moon, on Mars and in deep space post about their own lives. The jokes are only in the format. Every fact is true, and each post ends with its sources.", "Made for the NASA Space Apps Challenge 2026 challenge “Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars”."],
-              "ja": ["OUT OF RANGE は、短い動画で育った子どもたちのための、ショート動画風のフィードです。NASA が月・火星・深宇宙に置いてきた機械が、自分のことを投稿します。笑いは見せ方だけで、中身はすべて本当の話です。どの投稿も最後に出典が付いています。", "NASA Space Apps Challenge 2026 の課題「Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars」の作品です。"]}},
-    {"title": {"en": "How to use", "ja": "使い方"},
-     "list": [
-       {"en": "Swipe up / down (or ↑ ↓ keys) to change posts.", "ja": "上下にスワイプ（またはキーボードの ↑ ↓）で次の投稿へ。"},
-       {"en": "Swipe left / right (or ← →) to flip through photo posts.", "ja": "左右にスワイプ（または ← →）で写真をめくる。"},
-       {"en": "Tap a video to pause. Double-tap to like.", "ja": "動画をタップで一時停止。2回タップでいいね。"},
-       {"en": "The page icon shows the sources for that post.", "ja": "紙のアイコンで、その投稿の出典が見られます。"},
-       {"en": "The speech bubble at the top left reads slides aloud.", "ja": "左上の吹き出しで、スライドを読み上げます。"},
-       {"en": "Press + to make your own true post. It stays on your device.", "ja": "＋で自分の「本当の話」の投稿を作れます。作った投稿はこの端末にだけ残ります。"}
-     ]},
-    {"title": {"en": "How we checked the facts", "ja": "事実の確かめ方"},
-     "body": {"en": "Every fact is checked against NASA or other primary sources before it is posted. Where a number is our own calculation (for example walking time), the assumptions are written in the sources.", "ja": "投稿の事実は、NASA などの一次資料で確かめてから載せています。自分たちで計算した数字（たとえば歩いてかかる時間）は、計算の前提を出典に書いています。"}},
-    {"title": {"en": "Use of AI", "ja": "AI の使い方"},
-     "body": {"en": ["DRAFT — to be finalised by the team before submission.", "Code and design: written with help from an AI assistant (Claude by Anthropic), then tested and reviewed by the team.", "Read-aloud voice: generated on your device by the browser's built-in text-to-speech. It is a synthetic voice.", "Images: we use real NASA photos. We do not use AI-generated images."],
-              "ja": ["下書き — 提出前にチームで確定します。", "コードとデザイン：AI アシスタント（Anthropic の Claude）の助けを借りて書き、チームが動作確認と見直しをしました。", "読み上げの声：ブラウザに入っている音声合成で、端末の中で作られた合成音声です。", "画像：NASA の本物の写真を使っています。AI で作った画像は使っていません。"]}},
-    {"title": {"en": "Privacy and safety", "ja": "プライバシーと安全"},
-     "body": {"en": "No login, no ads, no tracking. Likes, follows, comments and the posts you make are stored only in your own browser and are never uploaded. Comments you write are visible only to you.", "ja": "ログイン・広告・追跡はありません。いいね、フォロー、コメント、作った投稿は、あなたのブラウザの中にだけ保存され、どこにも送られません。書いたコメントはあなたにしか見えません。"}},
-    {"title": {"en": "Team: who decided what", "ja": "チーム：誰が何を決めたか"},
-     "table": {"head": [{"en": "Member", "ja": "メンバー"}, {"en": "Role", "ja": "担当"}],
-               "rows": [["Taiyo Ishikawa", {"en": "Concept, direction, kid-friendly wording", "ja": "企画・方向性・子ども向けの言葉直し"}], ["MISAKI MATSUDA", {"en": "TBD", "ja": "未定"}]]}},
-    {"title": {"en": "License and credits", "ja": "ライセンスとクレジット"},
-     "list": [
-       {"en": "This project: Apache License 2.0.", "ja": "この作品：Apache License 2.0。"},
-       {"en": "idb-keyval (Apache-2.0) — saving your posts in the browser.", "ja": "idb-keyval（Apache-2.0）— 作った投稿のブラウザ内保存。"},
-       {"en": "html-to-image (MIT) — downloading your slides as images.", "ja": "html-to-image（MIT）— スライドの画像保存。"},
-       {"en": "NASA images and media are used under NASA's media usage guidelines. NASA does not endorse this project.", "ja": "NASA の画像・映像は NASA のメディア利用ガイドラインに沿って使用しています。NASA がこの作品を推奨しているわけではありません。"}
-     ]}
-  ]
+ "version": "0.1 (2026-11-14)",
+ "sections": [
+  {
+   "title": {
+    "en": "What is this?",
+    "ja": "これは何？"
+   },
+   "body": {
+    "en": [
+     "OUT OF RANGE is a short-video style feed for kids who grew up on short videos. The machines NASA left on the Moon, on Mars and in deep space post about their own lives. The jokes are only in the format. Every fact is true, and each post ends with its sources.",
+     "Made for the NASA Space Apps Challenge 2026 challenge “Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars”."
+    ],
+    "ja": [
+     "OUT OF RANGE は、短い動画で育った子どもたちのための、ショート動画風のフィードです。NASA が月・火星・深宇宙に置いてきた機械が、自分のことを投稿します。笑いは見せ方だけで、中身はすべて本当の話です。どの投稿も最後に出典が付いています。",
+     "NASA Space Apps Challenge 2026 の課題「Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars」の作品です。"
+    ]
+   }
+  },
+  {
+   "title": {
+    "en": "How to use",
+    "ja": "使い方"
+   },
+   "list": [
+    {
+     "en": "Swipe up / down (or ↑ ↓ keys) to change posts.",
+     "ja": "上下にスワイプ（またはキーボードの ↑ ↓）で次の投稿へ。"
+    },
+    {
+     "en": "Swipe left / right (or ← →) to flip through photo posts.",
+     "ja": "左右にスワイプ（または ← →）で写真をめくる。"
+    },
+    {
+     "en": "Tap a video to pause. Double-tap to like.",
+     "ja": "動画をタップで一時停止。2回タップでいいね。"
+    },
+    {
+     "en": "The page icon shows the sources for that post.",
+     "ja": "紙のアイコンで、その投稿の出典が見られます。"
+    },
+    {
+     "en": "The speech bubble at the top left reads slides aloud.",
+     "ja": "左上の吹き出しで、スライドを読み上げます。"
+    },
+    {
+     "en": "Press + to make your own true post. It stays on your device.",
+     "ja": "＋で自分の「本当の話」の投稿を作れます。作った投稿はこの端末にだけ残ります。"
+    }
+   ]
+  },
+  {
+   "title": {
+    "en": "How we checked the facts",
+    "ja": "事実の確かめ方"
+   },
+   "body": {
+    "en": "Every fact is checked against NASA or other primary sources before it is posted. Where a number is our own calculation (for example walking time), the assumptions are written in the sources.",
+    "ja": "投稿の事実は、NASA などの一次資料で確かめてから載せています。自分たちで計算した数字（たとえば歩いてかかる時間）は、計算の前提を出典に書いています。"
+   }
+  },
+  {
+   "title": {
+    "en": "Use of AI",
+    "ja": "AI の使い方"
+   },
+   "body": {
+    "en": [
+     "DRAFT — to be finalised by the team before submission.",
+     "Code and design: written with help from an AI assistant (Claude by Anthropic), then tested and reviewed by the team.",
+     "Read-aloud voice: generated on your device by the browser's built-in text-to-speech. It is a synthetic voice.",
+     "Images: we use real NASA photos. We do not use AI-generated images."
+    ],
+    "ja": [
+     "下書き — 提出前にチームで確定します。",
+     "コードとデザイン：AI アシスタント（Anthropic の Claude）の助けを借りて書き、チームが動作確認と見直しをしました。",
+     "読み上げの声：ブラウザに入っている音声合成で、端末の中で作られた合成音声です。",
+     "画像：NASA の本物の写真を使っています。AI で作った画像は使っていません。"
+    ]
+   }
+  },
+  {
+   "title": {
+    "en": "Privacy and safety",
+    "ja": "プライバシーと安全"
+   },
+   "body": {
+    "en": "No login, no ads, no tracking. Likes, follows, comments and the posts you make are stored only in your own browser and are never uploaded. Comments you write are visible only to you.",
+    "ja": "ログイン・広告・追跡はありません。いいね、フォロー、コメント、作った投稿は、あなたのブラウザの中にだけ保存され、どこにも送られません。書いたコメントはあなたにしか見えません。"
+   }
+  },
+  {
+   "title": {
+    "en": "Team: who decided what",
+    "ja": "チーム：誰が何を決めたか"
+   },
+   "table": {
+    "head": [
+     {
+      "en": "Member",
+      "ja": "メンバー"
+     },
+     {
+      "en": "Role",
+      "ja": "担当"
+     }
+    ],
+    "rows": [
+     [
+      "Taiyo Ishikawa",
+      {
+       "en": "Concept, direction, kid-friendly wording",
+       "ja": "企画・方向性・子ども向けの言葉直し"
+      }
+     ],
+     [
+      "MISAKI MATSUDA",
+      {
+       "en": "TBD",
+       "ja": "未定"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "title": {
+    "en": "License and credits",
+    "ja": "ライセンスとクレジット"
+   },
+   "list": [
+    {
+     "en": "This project: Apache License 2.0.",
+     "ja": "この作品：Apache License 2.0。"
+    },
+    {
+     "en": "idb-keyval (Apache-2.0) — saving your posts in the browser.",
+     "ja": "idb-keyval（Apache-2.0）— 作った投稿のブラウザ内保存。"
+    },
+    {
+     "en": "html-to-image (MIT) — downloading your slides as images.",
+     "ja": "html-to-image（MIT）— スライドの画像保存。"
+    },
+    {
+     "en": "NASA images and media are used under NASA's media usage guidelines. NASA does not endorse this project.",
+     "ja": "NASA の画像・映像は NASA のメディア利用ガイドラインに沿って使用しています。NASA がこの作品を推奨しているわけではありません。"
+    },
+    {
+     "en": "Music: \"Monkeys Spinning Monkeys\" and \"Fluffing a Duck\" by Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 (creativecommons.org/licenses/by/4.0/).",
+     "ja": "音楽：Kevin MacLeod「Monkeys Spinning Monkeys」「Fluffing a Duck」（incompetech.com）、Creative Commons 表示 4.0（creativecommons.org/licenses/by/4.0/）。"
+    },
+    {
+     "en": "Sound effects (sad trombone, reveal chord, horror ambience): made by our team in code.",
+     "ja": "効果音（悲しいトロンボーン、ジャーン、ホラーの環境音）：チームがプログラムで作成。"
+    }
+   ]
+  }
+ ]
 }

@@ -122,7 +122,8 @@
     "alt": {
      "ja": "NASAが描いた探査車の想像図",
      "en": "NASA artist's concept of the rover"
-    }
+    },
+    "music": "media/music/monkeys_spinning_monkeys.mp3"
    },
    {
     "bg": {
@@ -133,7 +134,8 @@
      "ja": "引きずった車輪の跡が残る火星の地面",
      "en": "Track left by the dragged wheel"
     },
-    "sfx": "media/sfx/sad_trombone.mp3"
+    "sfx": "media/sfx/sad_trombone.mp3",
+    "music": ""
    },
    {
     "bg": {
@@ -143,7 +145,8 @@
     "alt": {
      "ja": "溝から出てきた白い土",
      "en": "White soil in the rut"
-    }
+    },
+    "music": "media/music/fluffing_a_duck.mp3"
    },
    {
     "bg": {
@@ -154,7 +157,8 @@
      "ja": "白い土のアップ",
      "en": "Close-up of the white soil"
     },
-    "sfx": "media/sfx/reveal.mp3"
+    "sfx": "media/sfx/reveal.mp3",
+    "music": "media/music/monkeys_spinning_monkeys.mp3"
    }
   ],
   "caption": {
@@ -166,8 +170,8 @@
    "spirit"
   ],
   "sound": {
-   "ja": "効果音：チーム制作",
-   "en": "SFX: our team"
+   "ja": "Kevin MacLeod「Monkeys Spinning Monkeys」「Fluffing a Duck」(CC BY 4.0)＋効果音：チーム制作",
+   "en": "Kevin MacLeod – Monkeys Spinning Monkeys / Fluffing a Duck (CC BY 4.0) + SFX: our team"
   },
   "stats": {
    "likes": 0,
@@ -239,6 +243,32 @@
     },
     "title": "Space.com: Spirit rover (90-sol plan, last contact March 22, 2010)",
     "url": "https://www.space.com/18766-spirit-rover.html"
+   },
+   {
+    "kind": {
+     "en": "Music",
+     "ja": "音楽"
+    },
+    "title": "\"Monkeys Spinning Monkeys\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/",
+    "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Music",
+     "ja": "音楽"
+    },
+    "title": "\"Fluffing a Duck\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/",
+    "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Sound effects",
+     "ja": "効果音"
+    },
+    "title": {
+     "en": "Sad trombone, reveal chord: made by our team (synthesised in code, tools/make_sfx.py)",
+     "ja": "悲しいトロンボーン・ジャーン：チームがプログラムで合成（tools/make_sfx.py）"
+    }
    }
   ],
   "noSourceSlide": true
