@@ -117,151 +117,147 @@
   ]
  },
  {
-  "id": "spirit-ideal-1",
-  "type": "carousel",
-  "account": "spirit_rover",
-  "place": "mars",
-  "slides": [
-   {
-    "bg": {
-     "ja": "media/spirit/s1.ja.jpg?v=25f6be2f",
-     "en": "media/spirit/s1.en.jpg?v=419c2712"
-    },
-    "alt": {
-     "ja": "NASAが描いた探査車の想像図",
-     "en": "NASA artist's concept of the rover"
-    },
-    "dur": 3
-   },
-   {
-    "bg": {
-     "ja": "media/spirit/s2.ja.jpg?v=9d01581f",
-     "en": "media/spirit/s2.en.jpg?v=049be600"
-    },
-    "alt": {
-     "ja": "引きずった車輪の跡が残る火星の地面",
-     "en": "Track left by the dragged wheel"
-    },
-    "dur": 3
-   },
-   {
-    "bg": {
-     "ja": "media/spirit/s3.ja.jpg?v=fbec4d74",
-     "en": "media/spirit/s3.en.jpg?v=708852c7"
-    },
-    "alt": {
-     "ja": "溝から出てきた白い土",
-     "en": "White soil in the rut"
-    },
-    "dur": 3.5
-   },
-   {
-    "bg": {
-     "ja": "media/spirit/s4.ja.jpg?v=3183a5fd",
-     "en": "media/spirit/s4.en.jpg?v=8787c81b"
-    },
-    "alt": {
-     "ja": "白い土のアップ",
-     "en": "Close-up of the white soil"
-    },
-    "dur": 5
-   }
-  ],
+  "id": "surveyor-pov-1",
+  "account": "surveyor3",
+  "place": "moon",
   "caption": {
-   "ja": "火星探査機の理想と現実 #理想と現実 #火星 #スピリット",
-   "en": "Mars rover: expectation vs reality #expectationvsreality #mars #spirit"
+   "ja": "月で2年半ひとりで待ってたら、人が来た（実話） #POV #月 #サーベイヤー3号",
+   "en": "I waited alone on the Moon for 2.5 years. Then people came. (True story) #POV #moon #surveyor3"
   },
   "tags": [
-   "mars",
-   "spirit"
+   "POV",
+   "moon",
+   "surveyor3",
+   "apollo12"
   ],
   "sound": {
-   "ja": "Kevin MacLeod「Fluffing a Duck」(CC BY 4.0)",
-   "en": "Kevin MacLeod – Fluffing a Duck (CC BY 4.0)"
-  },
-  "stats": {
-   "likes": 0,
-   "saves": 0
+   "ja": "Kevin MacLeod「Gymnopedie No. 1」「Carefree」「Wholesome」(CC BY 4.0)",
+   "en": "Kevin MacLeod – Gymnopedie No. 1 / Carefree / Wholesome (CC BY 4.0)"
   },
   "comments": [
    {
-    "user": "spirit_rover",
+    "user": "surveyor3",
     "pinned": true,
     "text": {
-     "ja": "答え合わせ（ネタバレ注意）👇\n\nスピリットは、2004年に火星に着いた探査車です。予定は90日でしたが、6年以上動き続けました。\n\n■ 何が起きた？\n2006年、右前の車輪が動かなくなりました。そこで向きを変えて、後ろ向きに5つの車輪で走り、壊れた車輪を引きずって進みました。\n\n■ 白い土の正体\n引きずった車輪が地面を掘って、白い土が出てきました。調べると、ほぼ純粋な「シリカ」でした。\n\n■ なぜすごい？\nこれほど濃いシリカは、温泉や蒸気が噴き出す場所でできます。どちらも、地球では生き物がすめる環境です。昔の火星にも生き物がすめる場所があったかもしれない、という手がかりになりました。科学者は「生き物がすめたかを考えるうえで、スピリットのいちばん重要な発見」と言っています。\n\n■ その後\n2009年に砂にはまって動けなくなり、2010年3月22日の通信が最後になりました。\n\n※1枚目はNASAが描いた想像図、2〜4枚目は火星で撮った本物の写真です。出典は「出典」ボタンから。",
-     "en": "The answer (spoilers) 👇\n\nSpirit landed on Mars in 2004. It was planned to work for 90 days, but kept going for over 6 years.\n\n■ What happened?\nIn 2006 its right front wheel stopped working. So it turned around and drove backwards on five wheels, dragging the broken one.\n\n■ The white soil\nThe dragged wheel dug into the ground and turned up white soil. It turned out to be almost pure silica.\n\n■ Why it matters\nSilica this concentrated forms around hot springs or steam vents — places where life thrives on Earth. It's a clue that ancient Mars may have had places where life could live. Scientists called it Spirit's most important finding about habitability.\n\n■ After that\nIn 2009 it got stuck in sand. Its last message came on March 22, 2010.\n\nNote: slide 1 is a NASA artist's concept; slides 2–4 are real photos from Mars. Sources: tap \"Sources\"."
+     "ja": "答え合わせ👇（ここからは全部ほんとの話）\n\nサーベイヤー3号は、1967年4月に月に着陸した、人が乗っていない探査機です。\n\n■ 着陸でバウンドした\n降りるときにエンジンが止まらず、月面で2回はねました（1回目は高さ約10m、2回目は約3m）。3回目でやっと止まりました。\n\n■ 月で何をした？\n写真を6,326枚送り、スコップで月の土を掘って、かたさを調べました。「月の地面は、人が乗る着陸船を支えられるくらいしっかりしている」と分かりました。最後の通信は1967年5月4日です。\n\n■ 2年半後に人が来た\n1969年11月、アポロ12号が約180m先に着陸しました。2人の宇宙飛行士が歩いてやって来て、テレビカメラやスコップなどを取り外し、地球に持ち帰りました。\n\n■ なぜ持ち帰った？\n月の表面に約2年半さらされた機械がどうなるかを、科学者が調べるためです。\n\n■ 今は？\n今も月の「嵐の大洋」にあります。2009年に月を回る探査機LROが撮った写真には、アポロ12号の着陸船の下の部分とサーベイヤー3号、宇宙飛行士が歩いたあとが写っています。\n\n※「え、会いに来てくれたの？」などのセリフは、わたしたちが考えた演出です。写真はすべて本物です。最後の写真の丸と名前は、わたしたちが書き足しました。",
+     "en": "The real story 👇 (everything below is true)\n\nSurveyor 3 was a robotic lander that reached the Moon in April 1967.\n\n■ It bounced\nIts engine did not shut off in time, so it bounced off the Moon twice (about 10 m high, then about 3 m) before settling on the third touchdown.\n\n■ What did it do?\nIt sent 6,326 pictures and dug into the soil with a scoop to test how firm it was. That showed the ground was solid enough to hold a lander carrying people. Last contact was on May 4, 1967.\n\n■ 2.5 years later, people came\nIn November 1969, Apollo 12 landed about 180 m away. Two astronauts walked over, removed the TV camera, the scoop and other parts, and took them back to Earth.\n\n■ Why take them?\nSo scientists could study what nearly two and a half years on the Moon's surface does to a machine.\n\n■ And now?\nIt is still in the Ocean of Storms. A 2009 photo from the LRO orbiter shows the Apollo 12 descent stage, Surveyor 3 and the astronauts' footpaths.\n\nNote: lines like \"you came all this way for me?\" are our own dramatization. All photos are real. We added the circles and labels on the last photo."
     }
    }
   ],
   "sources": [
    {
     "kind": {
-     "en": "Image",
-     "ja": "画像"
+     "en": "Fact check",
+     "ja": "事実確認"
     },
-    "title": "PIA04413 Artist Concept of Rover on Mars (NASA/JPL)",
-    "url": "https://images.nasa.gov/details/PIA04413"
-   },
-   {
-    "kind": {
-     "en": "Image",
-     "ja": "画像"
-    },
-    "title": "PIA11823 Spirit Begins Drive Around Home Plate (NASA/JPL-Caltech)",
-    "url": "https://images.nasa.gov/details/PIA11823"
+    "title": "Surveyor 3 (NASA Science): landing, 6,326 pictures, last contact, Apollo 12 visit",
+    "url": "https://science.nasa.gov/mission/surveyor-3/"
    },
    {
     "kind": {
      "en": "Image",
      "ja": "画像"
     },
-    "title": "PIA09491 Silica-Rich Soil Found by Spirit (NASA/JPL-Caltech/Cornell)",
-    "url": "https://images.nasa.gov/details/PIA09491"
+    "title": "as12-48-7121 View of Surveyor III in its crater (NASA)",
+    "url": "https://images.nasa.gov/details/as12-48-7121"
    },
    {
     "kind": {
-     "en": "Fact check",
-     "ja": "事実確認"
+     "en": "Image",
+     "ja": "画像"
     },
-    "title": "NASA/JPL news release: Spirit faces circuitous route (2009) — dragged wheel, silica & hot springs",
-    "url": "https://spaceflightnow.com/news/n0903/10spirit"
+    "title": "AS12-48-7133 View of two U.S. spacecraft on the surface of the Moon (NASA)",
+    "url": "https://images.nasa.gov/details/AS12-48-7133"
    },
    {
     "kind": {
-     "en": "Fact check",
-     "ja": "事実確認"
+     "en": "Image",
+     "ja": "画像"
     },
-    "title": "NASA JPL video: Spirit — Six Years of Roving Mars",
-    "url": "https://www.jpl.nasa.gov/videos/spirit-six-years-of-roving-mars/"
+    "title": "AS12-48-7134 Conrad examines the Surveyor 3 TV camera (NASA)",
+    "url": "https://images.nasa.gov/details/AS12-48-7134"
    },
    {
     "kind": {
-     "en": "Fact check",
-     "ja": "事実確認"
+     "en": "Image",
+     "ja": "画像"
     },
-    "title": "The Planetary Society: Silica Soils Near Home Plate",
-    "url": "https://planetary.org/space-images/silica-soils-near-home-plate"
+    "title": "as12-48-7136 Astronaut examines Surveyor 3 (NASA)",
+    "url": "https://images.nasa.gov/details/as12-48-7136"
    },
    {
     "kind": {
-     "en": "Fact check",
-     "ja": "事実確認"
+     "en": "Image",
+     "ja": "画像"
     },
-    "title": "Space.com: Spirit rover (90-sol plan, last contact March 22, 2010)",
-    "url": "https://www.space.com/18766-spirit-rover.html"
+    "title": "as12-48-7099 View of the Surveyor III craft (NASA)",
+    "url": "https://images.nasa.gov/details/as12-48-7099"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "as12-48-7110 Surveyor 3 footpad and surface sampler trenches (NASA)",
+    "url": "https://images.nasa.gov/details/as12-48-7110"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA12922 Apollo 12 Second Look: Midday on the Ocean of Storms (footpaths visible) (NASA/GSFC/Arizona State University)",
+    "url": "https://photojournal.jpl.nasa.gov/catalog/PIA12922"
    },
    {
     "kind": {
      "en": "Music",
-     "ja": "音楽"
+     "ja": "BGM"
     },
-    "title": "\"Fluffing a Duck\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/",
+    "title": "\"Gymnopedie No. 1\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (shortened to a loop)",
     "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Music",
+     "ja": "BGM"
+    },
+    "title": "\"Carefree\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (shortened to a loop)",
+    "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Music",
+     "ja": "BGM"
+    },
+    "title": "\"Wholesome\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (shortened to a loop)",
+    "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Sound effect",
+     "ja": "効果音"
+    },
+    "title": "Interface sounds: synthesized by the team (tools/motion/make_sfx.py, no third-party audio)",
+    "url": "https://github.com/taiyoishikawa2003/out-of-range"
    }
   ],
-  "noSourceSlide": true,
-  "audio": "media/music/fluffing_a_duck.mp3?v=cfc6741d",
-  "fit": "contain"
+  "type": "video",
+  "video": {
+   "src": {
+    "ja": "media/surveyor/pov.ja.mp4?v=f165478f",
+    "en": "media/surveyor/pov.en.mp4?v=11269b89"
+   },
+   "poster": {
+    "ja": "media/surveyor/pov.poster.ja.jpg?v=61f8eb7c",
+    "en": "media/surveyor/pov.poster.en.jpg?v=89d5726f"
+   },
+   "fit": "contain"
+  },
+  "stats": {
+   "likes": 0,
+   "saves": 0
+  }
  },
  {
   "id": "lost-quiz-1",
@@ -503,8 +499,8 @@
     "user": "opportunity_trailer",
     "pinned": true,
     "text": {
-     "ja": "これは、わたしたちチームが作った「予告」です。本物の広告ではありません。\n\n■ 本当の話です\nオポチュニティは2004年1月に火星に着陸した、NASAの探査車です。予定された活動期間は火星の90日、走る距離は1キロとして設計されていました。\n\n■ 動画に出てくる試練（すべて実際の出来事）\n・2005年：砂の丘に車輪がうまり、5週間以上動けなかった\n・2011〜2012年の冬：太陽の光が弱く、19週間走れなかった\n・2014〜2015年：記録用のメモリーが壊れ、データを覚えていられない「記憶喪失」がくり返し起きた\n\n■ 距離のカウンター\n各場面のときの実際の走行距離（約5.3km、約34.4km、約40.8〜41.6km）を通るように作っています。あいだの増え方は演出です。地図の金色の線は、NASAの地図にある実際の走行ルートを描き直したものです。\n\n■ この先どうなったかは…\n自分で調べてみてください。\n\n※画像はすべてNASAの本物です。揺れ・画面の乱れなどは演出です。",
-     "en": "This is a trailer made by our team. It is not a real ad.\n\n■ This is a true story\nOpportunity is a NASA rover that landed on Mars in January 2004. It was designed to work for 90 Martian days and drive 1 kilometer.\n\n■ The trials in the video (all real)\n• 2005: its wheels sank into a sand ripple and it was stuck for over five weeks\n• Winter 2011–2012: too little sunlight to drive for 19 weeks\n• 2014–2015: its flash memory failed, causing repeated \"amnesia\" events\n\n■ The odometer\nIt passes the real distances at each scene (about 5.3 km, 34.4 km, 40.8–41.6 km). The pace in between is dramatized. The gold line is the real route from NASA's map, redrawn.\n\n■ What happened next?\nLook it up yourself.\n\nAll images are real NASA images. The camera shake and glitches are effects."
+     "ja": "これは、わたしたちチームが作った「予告」です。本物の広告ではありません。\n\n■ 本当の話です\nオポチュニティは2004年1月に火星に着陸した、NASAの探査車です。予定された活動期間は火星の90日、走る距離は1キロとして設計されていました。\n\n■ 動画に出てくる試練（すべて実際の出来事）\n・2005年：砂の丘に車輪がうまり、5週間以上動けなかった\n・2011〜2012年の冬：太陽の光が弱く、19週間走れなかった\n・2014〜2015年：記録用のメモリーが壊れ、データを覚えていられない「記憶喪失」がくり返し起きた\n\n■ 距離のカウンター\n各場面のときの実際の走行距離（約5.3km、約34.4km、約40.8〜41.6km）を通るように作っています。あいだの増え方は演出です。地図の金色の線は、NASAの地図にある実際の走行ルートを描き直したものです。\n\n■ この先どうなったかは…\n「1000回送っても、既読がつかなかった」の投稿で見られます（下のボタンから）。\n\n※画像はすべてNASAの本物です。揺れ・画面の乱れなどは演出です。",
+     "en": "This is a trailer made by our team. It is not a real ad.\n\n■ This is a true story\nOpportunity is a NASA rover that landed on Mars in January 2004. It was designed to work for 90 Martian days and drive 1 kilometer.\n\n■ The trials in the video (all real)\n• 2005: its wheels sank into a sand ripple and it was stuck for over five weeks\n• Winter 2011–2012: too little sunlight to drive for 19 weeks\n• 2014–2015: its flash memory failed, causing repeated \"amnesia\" events\n\n■ The odometer\nIt passes the real distances at each scene (about 5.3 km, 34.4 km, 40.8–41.6 km). The pace in between is dramatized. The gold line is the real route from NASA's map, redrawn.\n\n■ What happened next?\nSee the post “We texted 1,000 times. No reply.” (use the button below).\n\nAll images are real NASA images. The camera shake and glitches are effects."
     }
    }
   ],
@@ -576,8 +572,471 @@
   ],
   "ad": true,
   "cta": {
-   "ja": "本当にあった話を読む",
-   "en": "Read the true story"
+   "ja": "この話の結末を見る",
+   "en": "See how the story ends"
+  },
+  "ctaLink": "#/p/opportunity-unread-1"
+ },
+ {
+  "id": "pioneer-navi-1",
+  "account": "pioneer10",
+  "place": "deep",
+  "caption": {
+   "ja": "パイオニア10号のカーナビ、到着予定がおかしい #カーナビ #宇宙 #パイオニア10号",
+   "en": "Pioneer 10’s nav app has a very strange arrival time #navapp #deepspace #pioneer10"
+  },
+  "tags": [
+   "navi",
+   "deepspace",
+   "pioneer10"
+  ],
+  "sound": {
+   "ja": "Kevin MacLeod「Local Forecast - Elevator」(CC BY 4.0)",
+   "en": "Kevin MacLeod – Local Forecast - Elevator (CC BY 4.0)"
+  },
+  "comments": [
+   {
+    "user": "pioneer10",
+    "pinned": true,
+    "text": {
+     "ja": "ほんとの話と、計算のしかた👇\n\nパイオニア10号は1972年に打ち上げられた、NASAで最初に木星より遠くをめざした探査機です。\n\n■ 21か月の予定が30年以上\nもともとは木星の近くを通る21か月の計画でした。実際は30年以上、地球に信号を送りつづけました。\n\n■ 最後の信号\n2003年1月。地球から約122億kmはなれていて、電波（光と同じ速さ）でも11時間20分かかりました。電気を作る装置の力が弱くなり、今は連絡がとれません。\n\n■ どこへ向かっている？\nおうし座の赤い星アルデバランの方向です。アルデバランまでは約68光年。NASAは「200万年以上かかる」としています。\n\n■ 名刺って？\n宇宙のだれかに見つけてもらったときのために、地球の場所と人間の絵をかいたアルミの板をのせています。\n\n■ 計算のしかた（わたしたちの計算）\n68光年＝約643兆km（1光年＝約9.46兆km）。これを休まずに進んだときの年数にしました。\n・歩く（時速4km）：約183億年\n・車（時速100km）：約7.3億年\n・新幹線（時速300km）：約2.4億年\n宇宙の年齢は約138億年です（NASA）。\n\n※カーナビの画面は、わたしたちが作った演出です。パイオニア10号にカーナビはありません。",
+     "en": "The real story, and how we did the math 👇\n\nPioneer 10 launched in 1972. It was NASA's first mission to the outer planets.\n\n■ Planned for 21 months, lasted over 30 years\nIt was designed for a 21-month mission to fly by Jupiter. It kept sending signals to Earth for more than 30 years.\n\n■ Last signal\nJanuary 2003, from about 12.2 billion km away. Even radio, at the speed of light, took 11 hours 20 minutes. Its power source had become too weak, so we can no longer hear it.\n\n■ Where is it going?\nToward Aldebaran, the red star in Taurus, about 68 light-years away. NASA says it will take more than 2 million years.\n\n■ The \"business card\"\nAn aluminum plaque showing where Earth is and what humans look like, in case anyone ever finds it.\n\n■ Our calculation\n68 light-years ≈ 643 trillion km (1 light-year ≈ 9.46 trillion km). Travelling nonstop:\n・Walking (4 km/h): about 18.3 billion years\n・Car (100 km/h): about 730 million years\n・Bullet train (300 km/h): about 240 million years\nThe universe is about 13.8 billion years old (NASA).\n\nNote: the nav app screens are our dramatization. Pioneer 10 has no nav app."
+    }
+   }
+  ],
+  "sources": [
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Pioneer 10 (NASA Science): 21-month design, last signal Jan. 23, 2003, 12.23 billion km, 11 h 20 min, plaque, Aldebaran",
+    "url": "https://science.nasa.gov/mission/pioneer-10/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "NASA: Pioneer 10 Sends Last Signal (Aldebaran is about 68 light-years away; over 2 million years)",
+    "url": "https://science.nasa.gov/missions/pioneer/pioneer-10-sends-last-signal/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "NASA: the universe is about 13.8 billion years old",
+    "url": "https://science.nasa.gov/universe/overview/"
+   },
+   {
+    "kind": {
+     "en": "Our calculation",
+     "ja": "自分たちの計算"
+    },
+    "title": "Travel times = 68 light-years (6.43 × 10^14 km) ÷ speed (4, 100, 300 km/h), nonstop, 8,766 hours per year",
+    "url": "https://science.nasa.gov/missions/pioneer/pioneer-10-sends-last-signal/"
+   },
+   {
+    "kind": {
+     "en": "Image (artist's concept)",
+     "ja": "画像（想像図）"
+    },
+    "title": "ARC-1973-AC73-4247 Pioneer 10 passing Jupiter, artist: Rick Guidice (NASA Ames)",
+    "url": "https://images.nasa.gov/details/ARC-1973-AC73-4247"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "ARC-1973-AC73-9019 Pioneer 10 spacecraft final assembly (NASA Ames)",
+    "url": "https://images.nasa.gov/details/ARC-1973-AC73-9019"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "ARC-1972-AC72-1338 Pioneer F/G plaque (NASA Ames)",
+    "url": "https://images.nasa.gov/details/ARC-1972-AC72-1338"
+   },
+   {
+    "kind": {
+     "en": "Music",
+     "ja": "BGM"
+    },
+    "title": "\"Local Forecast - Elevator\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (shortened to a loop)",
+    "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Sound effect",
+     "ja": "効果音"
+    },
+    "title": "Interface sounds: synthesized by the team (tools/motion/make_sfx.py, no third-party audio)",
+    "url": "https://github.com/taiyoishikawa2003/out-of-range"
+   }
+  ],
+  "type": "video",
+  "video": {
+   "src": {
+    "ja": "media/pioneer/navi.ja.mp4?v=d37c01e8",
+    "en": "media/pioneer/navi.en.mp4?v=903e52b0"
+   },
+   "poster": {
+    "ja": "media/pioneer/navi.poster.ja.jpg?v=bb0c5477",
+    "en": "media/pioneer/navi.poster.en.jpg?v=2ee96fa6"
+   },
+   "fit": "contain"
+  },
+  "stats": {
+   "likes": 0,
+   "saves": 0
+  }
+ },
+ {
+  "id": "spirit-ideal-1",
+  "type": "carousel",
+  "account": "spirit_rover",
+  "place": "mars",
+  "slides": [
+   {
+    "bg": {
+     "ja": "media/spirit/s1.ja.jpg?v=25f6be2f",
+     "en": "media/spirit/s1.en.jpg?v=419c2712"
+    },
+    "alt": {
+     "ja": "NASAが描いた探査車の想像図",
+     "en": "NASA artist's concept of the rover"
+    },
+    "dur": 3
+   },
+   {
+    "bg": {
+     "ja": "media/spirit/s2.ja.jpg?v=9d01581f",
+     "en": "media/spirit/s2.en.jpg?v=049be600"
+    },
+    "alt": {
+     "ja": "引きずった車輪の跡が残る火星の地面",
+     "en": "Track left by the dragged wheel"
+    },
+    "dur": 3
+   },
+   {
+    "bg": {
+     "ja": "media/spirit/s3.ja.jpg?v=fbec4d74",
+     "en": "media/spirit/s3.en.jpg?v=708852c7"
+    },
+    "alt": {
+     "ja": "溝から出てきた白い土",
+     "en": "White soil in the rut"
+    },
+    "dur": 3.5
+   },
+   {
+    "bg": {
+     "ja": "media/spirit/s4.ja.jpg?v=3183a5fd",
+     "en": "media/spirit/s4.en.jpg?v=8787c81b"
+    },
+    "alt": {
+     "ja": "白い土のアップ",
+     "en": "Close-up of the white soil"
+    },
+    "dur": 5
+   }
+  ],
+  "caption": {
+   "ja": "火星探査機の理想と現実 #理想と現実 #火星 #スピリット",
+   "en": "Mars rover: expectation vs reality #expectationvsreality #mars #spirit"
+  },
+  "tags": [
+   "mars",
+   "spirit"
+  ],
+  "sound": {
+   "ja": "Kevin MacLeod「Fluffing a Duck」(CC BY 4.0)",
+   "en": "Kevin MacLeod – Fluffing a Duck (CC BY 4.0)"
+  },
+  "stats": {
+   "likes": 0,
+   "saves": 0
+  },
+  "comments": [
+   {
+    "user": "spirit_rover",
+    "pinned": true,
+    "text": {
+     "ja": "答え合わせ（ネタバレ注意）👇\n\nスピリットは、2004年に火星に着いた探査車です。予定は90日でしたが、6年以上動き続けました。\n\n■ 何が起きた？\n2006年、右前の車輪が動かなくなりました。そこで向きを変えて、後ろ向きに5つの車輪で走り、壊れた車輪を引きずって進みました。\n\n■ 白い土の正体\n引きずった車輪が地面を掘って、白い土が出てきました。調べると、ほぼ純粋な「シリカ」でした。\n\n■ なぜすごい？\nこれほど濃いシリカは、温泉や蒸気が噴き出す場所でできます。どちらも、地球では生き物がすめる環境です。昔の火星にも生き物がすめる場所があったかもしれない、という手がかりになりました。科学者は「生き物がすめたかを考えるうえで、スピリットのいちばん重要な発見」と言っています。\n\n■ その後\n2009年に砂にはまって動けなくなり、2010年3月22日の通信が最後になりました。\n\n※1枚目はNASAが描いた想像図、2〜4枚目は火星で撮った本物の写真です。出典は「出典」ボタンから。",
+     "en": "The answer (spoilers) 👇\n\nSpirit landed on Mars in 2004. It was planned to work for 90 days, but kept going for over 6 years.\n\n■ What happened?\nIn 2006 its right front wheel stopped working. So it turned around and drove backwards on five wheels, dragging the broken one.\n\n■ The white soil\nThe dragged wheel dug into the ground and turned up white soil. It turned out to be almost pure silica.\n\n■ Why it matters\nSilica this concentrated forms around hot springs or steam vents — places where life thrives on Earth. It's a clue that ancient Mars may have had places where life could live. Scientists called it Spirit's most important finding about habitability.\n\n■ After that\nIn 2009 it got stuck in sand. Its last message came on March 22, 2010.\n\nNote: slide 1 is a NASA artist's concept; slides 2–4 are real photos from Mars. Sources: tap \"Sources\"."
+    }
+   }
+  ],
+  "sources": [
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA04413 Artist Concept of Rover on Mars (NASA/JPL)",
+    "url": "https://images.nasa.gov/details/PIA04413"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA11823 Spirit Begins Drive Around Home Plate (NASA/JPL-Caltech)",
+    "url": "https://images.nasa.gov/details/PIA11823"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA09491 Silica-Rich Soil Found by Spirit (NASA/JPL-Caltech/Cornell)",
+    "url": "https://images.nasa.gov/details/PIA09491"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "NASA/JPL news release: Spirit faces circuitous route (2009) — dragged wheel, silica & hot springs",
+    "url": "https://spaceflightnow.com/news/n0903/10spirit"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "NASA JPL video: Spirit — Six Years of Roving Mars",
+    "url": "https://www.jpl.nasa.gov/videos/spirit-six-years-of-roving-mars/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "The Planetary Society: Silica Soils Near Home Plate",
+    "url": "https://planetary.org/space-images/silica-soils-near-home-plate"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Space.com: Spirit rover (90-sol plan, last contact March 22, 2010)",
+    "url": "https://www.space.com/18766-spirit-rover.html"
+   },
+   {
+    "kind": {
+     "en": "Music",
+     "ja": "音楽"
+    },
+    "title": "\"Fluffing a Duck\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/",
+    "url": "https://incompetech.com/music/royalty-free/"
+   }
+  ],
+  "noSourceSlide": true,
+  "audio": "media/music/fluffing_a_duck.mp3?v=cfc6741d",
+  "fit": "contain"
+ },
+ {
+  "id": "shindan-1",
+  "type": "app",
+  "app": "shindan",
+  "account": "tanken_shindan",
+  "place": "deep",
+  "poster": {
+   "ja": "media/shindan/poster.ja.jpg?v=6fd2577a",
+   "en": "media/shindan/poster.en.jpg?v=c5da03f0"
+  },
+  "caption": {
+   "ja": "あなたはどの探査機タイプ？5問でわかる（お遊び） #診断 #探査機タイプ",
+   "en": "Which space machine are you? 5 questions (just for fun) #quiz #whichmachine"
+  },
+  "tags": [
+   "quiz",
+   "shindan"
+  ],
+  "sound": {
+   "ja": "音はありません",
+   "en": "No sound"
+  },
+  "stats": {
+   "likes": 0,
+   "saves": 0
+  },
+  "comments": [
+   {
+    "user": "tanken_shindan",
+    "pinned": true,
+    "text": {
+     "ja": "診断はお遊びです（性格を科学的に調べるものではありません）。でも、結果に出てくる機械の話は全部ほんとうです👇\n\n・オポチュニティ：予定は火星の90日。14年以上はたらき、45.16km走った\n・パイオニア10号：1972年に出発。21か月の予定が、30年以上信号を送った\n・サーベイヤー3号：1967年に月に着陸。2年半後、アポロ12号の宇宙飛行士が会いに来た\n・NEARシューメーカー：着陸用ではないのに小惑星エロスに着陸し、約2週間データを送った\n・スピリット：こわれた車輪が掘った地面から、昔の温泉のあと（シリカ）を見つけた\n・インジェニュイティ：地球ではない星で初めて飛んだヘリコプター。5回の予定が72回\n・ケプラー：9年間で、太陽系の外の惑星を2,600個以上見つけた\n・バイキング1号：予定は90日。6年以上、火星から写真や天気の報告を送った\n\n結果が気に入ったら、その機械の投稿も見てみてね。",
+     "en": "The quiz is just for fun (it is not a scientific personality test). But every fact on the result cards is real 👇\n\n・Opportunity: planned for 90 Martian days. It worked for over 14 years and drove 45.16 km\n・Pioneer 10: launched in 1972. Planned for 21 months, it sent signals for over 30 years\n・Surveyor 3: landed on the Moon in 1967. Apollo 12 astronauts visited it 2.5 years later\n・NEAR Shoemaker: not built to land, it landed on asteroid Eros and sent data for about two weeks\n・Spirit: its broken wheel dug up silica left by ancient hot springs\n・Ingenuity: the first helicopter to fly on another planet. Planned for 5 flights, it made 72\n・Kepler: in nine years it found more than 2,600 planets beyond our solar system\n・Viking 1: planned for 90 days. It sent photos and weather reports from Mars for over 6 years\n\nIf you like your result, go and watch that machine's posts."
+    }
+   }
+  ],
+  "sources": [
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Mars Exploration Rovers Spirit and Opportunity (NASA Science)",
+    "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "NASA: Opportunity Rover Mission on Mars Comes to End (designed for 90 Martian days)",
+    "url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Pioneer 10 (NASA Science)",
+    "url": "https://science.nasa.gov/mission/pioneer-10/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Surveyor 3 (NASA Science)",
+    "url": "https://science.nasa.gov/mission/surveyor-3/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "NEAR Shoemaker (NASA Science)",
+    "url": "https://science.nasa.gov/mission/near-shoemaker/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Ingenuity Mars Helicopter (NASA Science)",
+    "url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Kepler (NASA Science): nine years, more than 2,600 planet discoveries",
+    "url": "https://science.nasa.gov/mission/kepler"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Viking 1 (NASA Science)",
+    "url": "https://science.nasa.gov/mission/viking-1/"
+   }
+  ]
+ },
+ {
+  "id": "near-chat-1",
+  "account": "near_shoemaker",
+  "place": "deep",
+  "caption": {
+   "ja": "回るために作られたのに「着陸してみない？」と言われた探査機（結果は実話） #無茶ぶり #小惑星 #NEAR",
+   "en": "Built to orbit, then asked “want to try landing?” (the ending is real) #groupchat #asteroid #NEAR"
+  },
+  "tags": [
+   "chat",
+   "asteroid",
+   "NEAR"
+  ],
+  "sound": {
+   "ja": "Kevin MacLeod「Sneaky Snitch」「Carefree」(CC BY 4.0)",
+   "en": "Kevin MacLeod – Sneaky Snitch / Carefree (CC BY 4.0)"
+  },
+  "comments": [
+   {
+    "user": "near_shoemaker",
+    "pinned": true,
+    "text": {
+     "ja": "ほんとの話👇\n\nNEARシューメーカーは、小惑星のまわりを回った世界で最初の探査機です。2000年2月から1年間、小惑星エロスを回って調べました。\n\n■ 着陸用には作られていなかった\n回って調べるための探査機で、着陸のための足はありません。1年間の仕事のあと、ゆっくりとエロスに降りていきました。\n\n■ 降りながら写真を69枚\n最後の1枚は高さ120mから撮ったものです。写真の下がすじになっているのは、送っている途中で着地して、信号がとぎれたからです。\n\n■ 時速約6kmで着地、そして無事\n2001年2月12日、歩くくらいの速さで着地しました。こわれずに、そのあと約2週間、地面からデータを送りつづけました。小惑星に着陸した最初の探査機になりました。\n\n■ 最後の通信\n2001年2月28日。−173℃の寒さのなかでした。今もエロスの上にあります。\n\n※チャットの会話は、わたしたちが考えた演出です。NEARと地球のチームが、実際にこういう言葉をやりとりしたわけではありません。写真と出来事は本物です。",
+     "en": "The real story 👇\n\nNEAR Shoemaker was the first spacecraft to orbit an asteroid. It studied asteroid Eros from orbit for a year, starting in February 2000.\n\n■ It was not built to land\nIt was an orbiter with no landing legs. After its year of work, it made a slow, controlled descent to Eros.\n\n■ 69 photos on the way down\nThe last one was taken from 120 m up. The streaks at the bottom are where the signal was lost as it touched down while still sending the picture.\n\n■ It touched down at about 6 km/h and survived\nOn Feb. 12, 2001 it landed at walking speed, then kept returning data from the surface for about two weeks. It became the first spacecraft to land on an asteroid.\n\n■ Last contact\nFeb. 28, 2001, in cold of minus 173°C. It is still sitting on Eros.\n\nNote: the chat is our dramatization. NEAR and its team never exchanged these words. The photos and events are real."
+    }
+   }
+  ],
+  "sources": [
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "NEAR Shoemaker (NASA Science): not designed as a lander, 69 photos, 6.4 km/h touchdown, two weeks of data, last contact Feb. 28, 2001",
+    "url": "https://science.nasa.gov/mission/near-shoemaker/"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA03148 Final Eros Images: Last, Closest Image of Eros (streaks = loss of signal at touchdown) (NASA/JPL/JHUAPL)",
+    "url": "https://photojournal.jpl.nasa.gov/catalog/PIA03148"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA02467 NEAR First Whole-Eros Mosaic from Orbit (NASA/JPL/JHUAPL)",
+    "url": "https://photojournal.jpl.nasa.gov/catalog/PIA02467"
+   },
+   {
+    "kind": {
+     "en": "Music",
+     "ja": "BGM"
+    },
+    "title": "\"Sneaky Snitch\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (shortened to a loop)",
+    "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Music",
+     "ja": "BGM"
+    },
+    "title": "\"Carefree\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (shortened to a loop)",
+    "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Sound effect",
+     "ja": "効果音"
+    },
+    "title": "Interface sounds: synthesized by the team (tools/motion/make_sfx.py, no third-party audio)",
+    "url": "https://github.com/taiyoishikawa2003/out-of-range"
+   }
+  ],
+  "type": "video",
+  "video": {
+   "src": {
+    "ja": "media/near/chat.ja.mp4?v=3147b203",
+    "en": "media/near/chat.en.mp4?v=dc816814"
+   },
+   "poster": {
+    "ja": "media/near/chat.poster.ja.jpg?v=5e3a8465",
+    "en": "media/near/chat.poster.en.jpg?v=177f0c92"
+   },
+   "fit": "contain"
+  },
+  "stats": {
+   "likes": 0,
+   "saves": 0
   }
  },
  {
@@ -753,366 +1212,6 @@
     "url": "https://incompetech.com/music/royalty-free/"
    }
   ]
- },
- {
-  "id": "surveyor-pov-1",
-  "account": "surveyor3",
-  "place": "moon",
-  "caption": {
-   "ja": "月で2年半ひとりで待ってたら、人が来た（実話） #POV #月 #サーベイヤー3号",
-   "en": "I waited alone on the Moon for 2.5 years. Then people came. (True story) #POV #moon #surveyor3"
-  },
-  "tags": [
-   "POV",
-   "moon",
-   "surveyor3",
-   "apollo12"
-  ],
-  "sound": {
-   "ja": "Kevin MacLeod「Gymnopedie No. 1」「Carefree」(CC BY 4.0)",
-   "en": "Kevin MacLeod – Gymnopedie No. 1 / Carefree (CC BY 4.0)"
-  },
-  "comments": [
-   {
-    "user": "surveyor3",
-    "pinned": true,
-    "text": {
-     "ja": "答え合わせ👇（ここからは全部ほんとの話）\n\nサーベイヤー3号は、1967年4月に月に着陸した、人が乗っていない探査機です。\n\n■ 着陸でバウンドした\n降りるときにエンジンが止まらず、月面で2回はねました（1回目は高さ約10m、2回目は約3m）。3回目でやっと止まりました。\n\n■ 月で何をした？\n写真を6,326枚送り、スコップで月の土を掘って、かたさを調べました。「月の地面は、人が乗る着陸船を支えられるくらいしっかりしている」と分かりました。最後の通信は1967年5月4日です。\n\n■ 2年半後に人が来た\n1969年11月、アポロ12号が約180m先に着陸しました。2人の宇宙飛行士が歩いてやって来て、テレビカメラやスコップなどを取り外し、地球に持ち帰りました。\n\n■ なぜ持ち帰った？\n月の表面に約2年半さらされた機械がどうなるかを、科学者が調べるためです。\n\n■ 今は？\n今も月の「嵐の大洋」にあります。2009年に月を回る探査機LROが撮った写真には、アポロ12号の着陸船の下の部分とサーベイヤー3号、宇宙飛行士が歩いたあとが写っています。\n\n※「え、会いに来てくれたの？」などのセリフは、わたしたちが考えた演出です。写真はすべて本物です。最後の写真の丸と名前は、わたしたちが書き足しました。",
-     "en": "The real story 👇 (everything below is true)\n\nSurveyor 3 was a robotic lander that reached the Moon in April 1967.\n\n■ It bounced\nIts engine did not shut off in time, so it bounced off the Moon twice (about 10 m high, then about 3 m) before settling on the third touchdown.\n\n■ What did it do?\nIt sent 6,326 pictures and dug into the soil with a scoop to test how firm it was. That showed the ground was solid enough to hold a lander carrying people. Last contact was on May 4, 1967.\n\n■ 2.5 years later, people came\nIn November 1969, Apollo 12 landed about 180 m away. Two astronauts walked over, removed the TV camera, the scoop and other parts, and took them back to Earth.\n\n■ Why take them?\nSo scientists could study what nearly two and a half years on the Moon's surface does to a machine.\n\n■ And now?\nIt is still in the Ocean of Storms. A 2009 photo from the LRO orbiter shows the Apollo 12 descent stage, Surveyor 3 and the astronauts' footpaths.\n\nNote: lines like \"you came all this way for me?\" are our own dramatization. All photos are real. We added the circles and labels on the last photo."
-    }
-   }
-  ],
-  "sources": [
-   {
-    "kind": {
-     "en": "Fact check",
-     "ja": "事実確認"
-    },
-    "title": "Surveyor 3 (NASA Science): landing, 6,326 pictures, last contact, Apollo 12 visit",
-    "url": "https://science.nasa.gov/mission/surveyor-3/"
-   },
-   {
-    "kind": {
-     "en": "Image",
-     "ja": "画像"
-    },
-    "title": "as12-48-7121 View of Surveyor III in its crater (NASA)",
-    "url": "https://images.nasa.gov/details/as12-48-7121"
-   },
-   {
-    "kind": {
-     "en": "Image",
-     "ja": "画像"
-    },
-    "title": "AS12-48-7133 View of two U.S. spacecraft on the surface of the Moon (NASA)",
-    "url": "https://images.nasa.gov/details/AS12-48-7133"
-   },
-   {
-    "kind": {
-     "en": "Image",
-     "ja": "画像"
-    },
-    "title": "AS12-48-7134 Conrad examines the Surveyor 3 TV camera (NASA)",
-    "url": "https://images.nasa.gov/details/AS12-48-7134"
-   },
-   {
-    "kind": {
-     "en": "Image",
-     "ja": "画像"
-    },
-    "title": "as12-48-7136 Astronaut examines Surveyor 3 (NASA)",
-    "url": "https://images.nasa.gov/details/as12-48-7136"
-   },
-   {
-    "kind": {
-     "en": "Image",
-     "ja": "画像"
-    },
-    "title": "as12-48-7099 View of the Surveyor III craft (NASA)",
-    "url": "https://images.nasa.gov/details/as12-48-7099"
-   },
-   {
-    "kind": {
-     "en": "Image",
-     "ja": "画像"
-    },
-    "title": "as12-48-7110 Surveyor 3 footpad and surface sampler trenches (NASA)",
-    "url": "https://images.nasa.gov/details/as12-48-7110"
-   },
-   {
-    "kind": {
-     "en": "Image",
-     "ja": "画像"
-    },
-    "title": "PIA12922 Apollo 12 Second Look: Midday on the Ocean of Storms (footpaths visible) (NASA/GSFC/Arizona State University)",
-    "url": "https://photojournal.jpl.nasa.gov/catalog/PIA12922"
-   },
-   {
-    "kind": {
-     "en": "Music",
-     "ja": "BGM"
-    },
-    "title": "\"Gymnopedie No. 1\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (shortened to a loop)",
-    "url": "https://incompetech.com/music/royalty-free/"
-   },
-   {
-    "kind": {
-     "en": "Music",
-     "ja": "BGM"
-    },
-    "title": "\"Carefree\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (shortened to a loop)",
-    "url": "https://incompetech.com/music/royalty-free/"
-   }
-  ],
-  "type": "carousel",
-  "slides": [
-   {
-    "bg": {
-     "ja": "media/surveyor/1.ja.jpg?v=3876ba8c",
-     "en": "media/surveyor/1.en.jpg?v=cd73876e"
-    },
-    "alt": {
-     "ja": "POV：月で2年半、ひとりで待ってた。月面のサーベイヤー3号の写真",
-     "en": "POV: alone on the Moon for 2.5 years. Photo of Surveyor 3 on the Moon"
-    },
-    "dur": 4.5,
-    "music": "media/music/gymnopedie_no_1.mp3?v=e5f078b7"
-   },
-   {
-    "bg": {
-     "ja": "media/surveyor/2.ja.jpg?v=53c68459",
-     "en": "media/surveyor/2.en.jpg?v=6a9109ec"
-    },
-    "alt": {
-     "ja": "人が来た！アポロ12号が約180m先に着陸",
-     "en": "People showed up! Apollo 12 landed about 180 m away"
-    },
-    "dur": 4,
-    "music": "media/music/carefree.mp3?v=14b5e743"
-   },
-   {
-    "bg": {
-     "ja": "media/surveyor/3.ja.jpg?v=152f8acb",
-     "en": "media/surveyor/3.en.jpg?v=bc2f2d4c"
-    },
-    "alt": {
-     "ja": "え、わざわざ会いに来てくれたの？宇宙飛行士がサーベイヤー3号をのぞきこんでいる",
-     "en": "Wait, you came all this way to see me? An astronaut looks closely at Surveyor 3"
-    },
-    "dur": 3.5
-   },
-   {
-    "bg": {
-     "ja": "media/surveyor/4.ja.jpg?v=8b56d5f6",
-     "en": "media/surveyor/4.en.jpg?v=5138e891"
-    },
-    "alt": {
-     "ja": "現実：カメラ、もぎ取られた。スコップも持っていかれた",
-     "en": "Reality: they took my camera. And my scoop."
-    },
-    "dur": 4,
-    "music": "media/music/gymnopedie_no_1.mp3?v=e5f078b7"
-   },
-   {
-    "bg": {
-     "ja": "media/surveyor/5.ja.jpg?v=9de97851",
-     "en": "media/surveyor/5.en.jpg?v=92c5d9b5"
-    },
-    "alt": {
-     "ja": "そして帰っていった。また、ひとり",
-     "en": "And then they left. Alone again"
-    },
-    "dur": 3.5
-   },
-   {
-    "bg": {
-     "ja": "media/surveyor/6.ja.jpg?v=7b96aaf5",
-     "en": "media/surveyor/6.en.jpg?v=ed04331e"
-    },
-    "alt": {
-     "ja": "でも実は、カメラは地球で調べられた。月に2年半置いた機械はどうなるかを知るため",
-     "en": "But actually, the camera was studied on Earth to learn what 2.5 years on the Moon does to a machine"
-    },
-    "dur": 6,
-    "music": "media/music/carefree.mp3?v=14b5e743"
-   },
-   {
-    "bg": {
-     "ja": "media/surveyor/7.ja.jpg?v=49cedd73",
-     "en": "media/surveyor/7.en.jpg?v=0560c211"
-    },
-    "alt": {
-     "ja": "2009年、月の上空から撮った写真。サーベイヤー3号は今も同じ場所にいる。宇宙飛行士の足あとも残っている",
-     "en": "Photo from lunar orbit, 2009. Surveyor 3 is still in the same place. The astronauts’ footpaths are still there"
-    },
-    "dur": 6
-   }
-  ],
-  "noSourceSlide": true,
-  "fit": "contain",
-  "stats": {
-   "likes": 0,
-   "saves": 0
-  }
- },
- {
-  "id": "pioneer-navi-1",
-  "account": "pioneer10",
-  "place": "deep",
-  "audio": "media/music/local_forecast_elevator.mp3?v=9942a856",
-  "caption": {
-   "ja": "パイオニア10号のカーナビ、到着予定がおかしい #カーナビ #宇宙 #パイオニア10号",
-   "en": "Pioneer 10’s nav app has a very strange arrival time #navapp #deepspace #pioneer10"
-  },
-  "tags": [
-   "navi",
-   "deepspace",
-   "pioneer10"
-  ],
-  "sound": {
-   "ja": "Kevin MacLeod「Local Forecast - Elevator」(CC BY 4.0)",
-   "en": "Kevin MacLeod – Local Forecast - Elevator (CC BY 4.0)"
-  },
-  "comments": [
-   {
-    "user": "pioneer10",
-    "pinned": true,
-    "text": {
-     "ja": "ほんとの話と、計算のしかた👇\n\nパイオニア10号は1972年に打ち上げられた、NASAで最初に木星より遠くをめざした探査機です。\n\n■ 21か月の予定が30年以上\nもともとは木星の近くを通る21か月の計画でした。実際は30年以上、地球に信号を送りつづけました。\n\n■ 最後の信号\n2003年1月。地球から約122億kmはなれていて、電波（光と同じ速さ）でも11時間20分かかりました。電気を作る装置の力が弱くなり、今は連絡がとれません。\n\n■ どこへ向かっている？\nおうし座の赤い星アルデバランの方向です。アルデバランまでは約68光年。NASAは「200万年以上かかる」としています。\n\n■ 名刺って？\n宇宙のだれかに見つけてもらったときのために、地球の場所と人間の絵をかいたアルミの板をのせています。\n\n■ 計算のしかた（わたしたちの計算）\n68光年＝約643兆km（1光年＝約9.46兆km）。これを休まずに進んだときの年数にしました。\n・歩く（時速4km）：約183億年\n・車（時速100km）：約7.3億年\n・新幹線（時速300km）：約2.4億年\n宇宙の年齢は約138億年です（NASA）。\n\n※カーナビの画面は、わたしたちが作った演出です。パイオニア10号にカーナビはありません。",
-     "en": "The real story, and how we did the math 👇\n\nPioneer 10 launched in 1972. It was NASA's first mission to the outer planets.\n\n■ Planned for 21 months, lasted over 30 years\nIt was designed for a 21-month mission to fly by Jupiter. It kept sending signals to Earth for more than 30 years.\n\n■ Last signal\nJanuary 2003, from about 12.2 billion km away. Even radio, at the speed of light, took 11 hours 20 minutes. Its power source had become too weak, so we can no longer hear it.\n\n■ Where is it going?\nToward Aldebaran, the red star in Taurus, about 68 light-years away. NASA says it will take more than 2 million years.\n\n■ The \"business card\"\nAn aluminum plaque showing where Earth is and what humans look like, in case anyone ever finds it.\n\n■ Our calculation\n68 light-years ≈ 643 trillion km (1 light-year ≈ 9.46 trillion km). Travelling nonstop:\n・Walking (4 km/h): about 18.3 billion years\n・Car (100 km/h): about 730 million years\n・Bullet train (300 km/h): about 240 million years\nThe universe is about 13.8 billion years old (NASA).\n\nNote: the nav app screens are our dramatization. Pioneer 10 has no nav app."
-    }
-   }
-  ],
-  "sources": [
-   {
-    "kind": {
-     "en": "Fact check",
-     "ja": "事実確認"
-    },
-    "title": "Pioneer 10 (NASA Science): 21-month design, last signal Jan. 23, 2003, 12.23 billion km, 11 h 20 min, plaque, Aldebaran",
-    "url": "https://science.nasa.gov/mission/pioneer-10/"
-   },
-   {
-    "kind": {
-     "en": "Fact check",
-     "ja": "事実確認"
-    },
-    "title": "NASA: Pioneer 10 Sends Last Signal (Aldebaran is about 68 light-years away; over 2 million years)",
-    "url": "https://science.nasa.gov/missions/pioneer/pioneer-10-sends-last-signal/"
-   },
-   {
-    "kind": {
-     "en": "Fact check",
-     "ja": "事実確認"
-    },
-    "title": "NASA: the universe is about 13.8 billion years old",
-    "url": "https://science.nasa.gov/universe/overview/"
-   },
-   {
-    "kind": {
-     "en": "Our calculation",
-     "ja": "自分たちの計算"
-    },
-    "title": "Travel times = 68 light-years (6.43 × 10^14 km) ÷ speed (4, 100, 300 km/h), nonstop, 8,766 hours per year",
-    "url": "https://science.nasa.gov/missions/pioneer/pioneer-10-sends-last-signal/"
-   },
-   {
-    "kind": {
-     "en": "Image (artist's concept)",
-     "ja": "画像（想像図）"
-    },
-    "title": "ARC-1973-AC73-4247 Pioneer 10 passing Jupiter, artist: Rick Guidice (NASA Ames)",
-    "url": "https://images.nasa.gov/details/ARC-1973-AC73-4247"
-   },
-   {
-    "kind": {
-     "en": "Image",
-     "ja": "画像"
-    },
-    "title": "ARC-1973-AC73-9019 Pioneer 10 spacecraft final assembly (NASA Ames)",
-    "url": "https://images.nasa.gov/details/ARC-1973-AC73-9019"
-   },
-   {
-    "kind": {
-     "en": "Image",
-     "ja": "画像"
-    },
-    "title": "ARC-1972-AC72-1338 Pioneer F/G plaque (NASA Ames)",
-    "url": "https://images.nasa.gov/details/ARC-1972-AC72-1338"
-   },
-   {
-    "kind": {
-     "en": "Music",
-     "ja": "BGM"
-    },
-    "title": "\"Local Forecast - Elevator\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (shortened to a loop)",
-    "url": "https://incompetech.com/music/royalty-free/"
-   }
-  ],
-  "type": "carousel",
-  "slides": [
-   {
-    "bg": {
-     "ja": "media/pioneer/1.ja.jpg?v=19af1804",
-     "en": "media/pioneer/1.en.jpg?v=2b1df579"
-    },
-    "alt": {
-     "ja": "パイオニア10号のカーナビを見てみた。目的地：アルデバラン。到着予定：約200万年後。距離68光年",
-     "en": "I checked Pioneer 10’s nav app. Destination: Aldebaran. Arrival: in about 2 million years. Distance: 68 light-years"
-    },
-    "dur": 6
-   },
-   {
-    "bg": {
-     "ja": "media/pioneer/2.ja.jpg?v=aecf936a",
-     "en": "media/pioneer/2.en.jpg?v=7b4785cd"
-    },
-    "alt": {
-     "ja": "ほかの行き方。歩く：約180億年。車：約7億年。新幹線：約2.4億年。パイオニア10号：約200万年でいちばん速い。歩くと宇宙の年齢138億年より長い",
-     "en": "Other ways to go. Walking: about 18 billion years. Car: about 730 million years. Bullet train: about 240 million years. Pioneer 10: about 2 million years, the fastest. Walking takes longer than the age of the universe, 13.8 billion years"
-    },
-    "dur": 7.5
-   },
-   {
-    "bg": {
-     "ja": "media/pioneer/3.ja.jpg?v=55d633b6",
-     "en": "media/pioneer/3.en.jpg?v=ef4a0d82"
-    },
-    "alt": {
-     "ja": "現在地：わからない。最後に信号がとどいたのは2003年1月。そのとき地球から約122億km、電波でも11時間20分かかった",
-     "en": "Current location: unknown. Its last signal arrived in January 2003, from about 12.2 billion km away. Even radio took 11 hours 20 minutes"
-    },
-    "dur": 6
-   },
-   {
-    "bg": {
-     "ja": "media/pioneer/4.ja.jpg?v=67254bd6",
-     "en": "media/pioneer/4.en.jpg?v=aaa2dd48"
-    },
-    "alt": {
-     "ja": "いちおう名刺は持ってる。だれかに拾われたとき用。地球の場所と人間の絵がかいてある金属の板",
-     "en": "It does carry a business card, in case someone finds it: a metal plaque showing where Earth is and what humans look like"
-    },
-    "dur": 6
-   },
-   {
-    "bg": {
-     "ja": "media/pioneer/5.ja.jpg?v=96438728",
-     "en": "media/pioneer/5.en.jpg?v=c163f7d1"
-    },
-    "alt": {
-     "ja": "この先200万年、道なりです。予定は21か月の旅だったが、30年以上信号を送りつづけた。今も飛びつづけている",
-     "en": "Continue straight for 2 million years. Planned as a 21-month mission, it kept sending signals for over 30 years. It is still flying"
-    },
-    "dur": 6
-   }
-  ],
-  "noSourceSlide": true,
-  "fit": "contain",
-  "stats": {
-   "likes": 0,
-   "saves": 0
-  }
  },
  {
   "id": "viking-casefile-1",
@@ -1315,30 +1414,29 @@
   }
  },
  {
-  "id": "near-chat-1",
-  "account": "near_shoemaker",
-  "place": "deep",
-  "audio": "media/music/sneaky_snitch.mp3?v=c1642708",
+  "id": "opportunity-unread-1",
+  "account": "opportunity_rover",
+  "place": "mars",
   "caption": {
-   "ja": "回るために作られたのに「着陸してみない？」と言われた探査機（結果は実話） #無茶ぶり #小惑星 #NEAR",
-   "en": "Built to orbit, then asked “want to try landing?” (the ending is real) #groupchat #asteroid #NEAR"
+   "ja": "1000回送っても、既読がつかなかった（実話） #既読がつかない #火星 #オポチュニティ",
+   "en": "We texted 1,000 times. No reply. (True story) #noreply #mars #opportunity"
   },
   "tags": [
-   "chat",
-   "asteroid",
-   "NEAR"
+   "opportunity",
+   "mars",
+   "chat"
   ],
   "sound": {
-   "ja": "Kevin MacLeod「Sneaky Snitch」(CC BY 4.0)",
-   "en": "Kevin MacLeod – Sneaky Snitch (CC BY 4.0)"
+   "ja": "Kevin MacLeod「Heartbreaking」「Wholesome」(CC BY 4.0)",
+   "en": "Kevin MacLeod – Heartbreaking / Wholesome (CC BY 4.0)"
   },
   "comments": [
    {
-    "user": "near_shoemaker",
+    "user": "opportunity_rover",
     "pinned": true,
     "text": {
-     "ja": "ほんとの話👇\n\nNEARシューメーカーは、小惑星のまわりを回った世界で最初の探査機です。2000年2月から1年間、小惑星エロスを回って調べました。\n\n■ 着陸用には作られていなかった\n回って調べるための探査機で、着陸のための足はありません。1年間の仕事のあと、ゆっくりとエロスに降りていきました。\n\n■ 降りながら写真を69枚\n最後の1枚は高さ120mから撮ったものです。写真の下がすじになっているのは、送っている途中で着地して、信号がとぎれたからです。\n\n■ 時速約6kmで着地、そして無事\n2001年2月12日、歩くくらいの速さで着地しました。こわれずに、そのあと約2週間、地面からデータを送りつづけました。小惑星に着陸した最初の探査機になりました。\n\n■ 最後の通信\n2001年2月28日。−173℃の寒さのなかでした。今もエロスの上にあります。\n\n※チャットの会話は、わたしたちが考えた演出です。NEARと地球のチームが、実際にこういう言葉をやりとりしたわけではありません。写真と出来事は本物です。",
-     "en": "The real story 👇\n\nNEAR Shoemaker was the first spacecraft to orbit an asteroid. It studied asteroid Eros from orbit for a year, starting in February 2000.\n\n■ It was not built to land\nIt was an orbiter with no landing legs. After its year of work, it made a slow, controlled descent to Eros.\n\n■ 69 photos on the way down\nThe last one was taken from 120 m up. The streaks at the bottom are where the signal was lost as it touched down while still sending the picture.\n\n■ It touched down at about 6 km/h and survived\nOn Feb. 12, 2001 it landed at walking speed, then kept returning data from the surface for about two weeks. It became the first spacecraft to land on an asteroid.\n\n■ Last contact\nFeb. 28, 2001, in cold of minus 173°C. It is still sitting on Eros.\n\nNote: the chat is our dramatization. NEAR and its team never exchanged these words. The photos and events are real."
+     "ja": "ほんとの話👇\n\nオポチュニティは、2004年から火星を走りつづけた探査車です。太陽の光で電気を作って動いていました。\n\n■ 2018年6月、砂あらし\n火星全体をおおう大きな砂あらしが起きて、太陽の光がとどかなくなりました。6月10日の通信が最後になりました。\nチャットの中の暗い写真は、そのとき最後に届いた本物のデータです。太陽を撮ろうとしましたが、砂あらしで空が暗く、ほとんど何も写っていません。下が黒いのは、写真を全部送りきる前に通信がとぎれたからです。\n\n■ 1000回以上の呼びかけ\nNASAのチームは、通信を取りもどすために1000回以上の命令を送りました。2019年2月12日が最後の呼びかけでした。返事はなく、次の日、NASAは活動の終わりを発表しました。\n\n■ 予定は90日\n計画は「火星の90日間はたらいて、1,000m走る」こと。実際は14年以上はたらき、45km以上を走りました。昔の火星に水があった証拠も見つけました。\n\n■ 今は？\n今も火星の「パーシビアランス谷」にいます。\n\n※チャットの会話と「未読」の表示は演出です。NASAが送ったのは、文字のメッセージではなく、機械への命令です。",
+     "en": "The real story 👇\n\nOpportunity was a rover that drove on Mars from 2004. It ran on solar power.\n\n■ June 2018: the dust storm\nA storm covered the whole planet and blocked the sunlight. Its last message came on June 10.\nThe dark photo in the chat is the real last data it sent. It tried to photograph the Sun, but the storm had made the sky so dark that almost nothing shows. The bottom is black because contact was lost before the whole picture was sent.\n\n■ More than a thousand calls\nNASA's team sent more than a thousand commands to restore contact. The last attempt was on Feb. 12, 2019. No answer came, and the next day NASA announced the mission was over.\n\n■ The plan was 90 days\nIt was designed to last 90 Martian days and drive 1,000 meters. It worked for more than 14 years and drove over 45 km. It also found evidence that ancient Mars had water.\n\n■ And now?\nIt is still in Perseverance Valley on Mars.\n\nNote: the chat and the \"Not read\" labels are our dramatization. What NASA sent were commands to the machine, not text messages."
     }
    }
   ],
@@ -1348,94 +1446,78 @@
      "en": "Fact check",
      "ja": "事実確認"
     },
-    "title": "NEAR Shoemaker (NASA Science): not designed as a lander, 69 photos, 6.4 km/h touchdown, two weeks of data, last contact Feb. 28, 2001",
-    "url": "https://science.nasa.gov/mission/near-shoemaker/"
+    "title": "NASA: Opportunity Rover Mission on Mars Comes to End (more than a thousand commands; last attempt Feb. 12, 2019; designed for 90 Martian days and 1,000 m)",
+    "url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
    },
    {
     "kind": {
      "en": "Image",
      "ja": "画像"
     },
-    "title": "PIA03148 Final Eros Images: Last, Closest Image of Eros (streaks = loss of signal at touchdown) (NASA/JPL/JHUAPL)",
-    "url": "https://photojournal.jpl.nasa.gov/catalog/PIA03148"
+    "title": "PIA22929 Opportunity's last data, June 10, 2018 (incomplete image) (NASA/JPL-Caltech/Cornell/ASU)",
+    "url": "https://photojournal.jpl.nasa.gov/catalog/PIA22929"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Mars Exploration Rovers (NASA Science): 45.16 km; last communication June 10, 2018; evidence of past water",
+    "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/"
    },
    {
     "kind": {
      "en": "Image",
      "ja": "画像"
     },
-    "title": "PIA02467 NEAR First Whole-Eros Mosaic from Orbit (NASA/JPL/JHUAPL)",
-    "url": "https://photojournal.jpl.nasa.gov/catalog/PIA02467"
+    "title": "PIA22928 Looking Back on a Golden Opportunity (NASA/JPL-Caltech)",
+    "url": "https://photojournal.jpl.nasa.gov/catalog/PIA22928"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA16120 Opportunity's afternoon shadow at Endeavour Crater (NASA/JPL-Caltech)",
+    "url": "https://photojournal.jpl.nasa.gov/catalog/PIA16120"
    },
    {
     "kind": {
      "en": "Music",
      "ja": "BGM"
     },
-    "title": "\"Sneaky Snitch\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (shortened to a loop)",
+    "title": "\"Heartbreaking\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (shortened to a loop)",
     "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Music",
+     "ja": "BGM"
+    },
+    "title": "\"Wholesome\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (shortened to a loop)",
+    "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Sound effect",
+     "ja": "効果音"
+    },
+    "title": "Interface sounds: synthesized by the team (tools/motion/make_sfx.py, no third-party audio)",
+    "url": "https://github.com/taiyoishikawa2003/out-of-range"
    }
   ],
-  "type": "carousel",
-  "slides": [
-   {
-    "bg": {
-     "ja": "media/near/1.ja.jpg?v=d7ee9116",
-     "en": "media/near/1.en.jpg?v=fa878b78"
-    },
-    "alt": {
-     "ja": "チャット。地球：1年間おつかれさま！小惑星エロスを回る仕事は全部おわり。最後にひとつだけ。着陸してみない？ NEAR：は？",
-     "en": "Chat. Earth: Great work this year! Your job orbiting asteroid Eros is done. One last thing. Want to try landing? NEAR: What?"
-    },
-    "dur": 7
+  "type": "video",
+  "video": {
+   "src": {
+    "ja": "media/opportunity/unread.ja.mp4?v=004b2404",
+    "en": "media/opportunity/unread.en.mp4?v=46bb4c5b"
    },
-   {
-    "bg": {
-     "ja": "media/near/2.ja.jpg?v=581eeb20",
-     "en": "media/near/2.en.jpg?v=b936acbd"
-    },
-    "alt": {
-     "ja": "NEAR：足ないんですけど。回る用に作られたんですけど。地球：ゆっくり降りれば、いけると思う。降りながら写真もよろしく。NEAR：…やります",
-     "en": "NEAR: I have no legs. I was built to orbit. Earth: If you go down slowly, we think it will work. Take photos on the way. NEAR: …OK"
-    },
-    "dur": 7
+   "poster": {
+    "ja": "media/opportunity/unread.poster.ja.jpg?v=442f8b23",
+    "en": "media/opportunity/unread.poster.en.jpg?v=a3bea94f"
    },
-   {
-    "bg": {
-     "ja": "media/near/3.ja.jpg?v=7a7dac0c",
-     "en": "media/near/3.en.jpg?v=5535c842"
-    },
-    "alt": {
-     "ja": "NEARが写真を送信。最後の1枚、高さ120mから。下がザーッとなっているのは、送っている途中で着地したから",
-     "en": "NEAR sends a photo: the last one, from 120 m up. The streaks at the bottom are there because it touched down while still sending"
-    },
-    "dur": 7.5
-   },
-   {
-    "bg": {
-     "ja": "media/near/4.ja.jpg?v=1d6f18fa",
-     "en": "media/near/4.en.jpg?v=d824599f"
-    },
-    "alt": {
-     "ja": "NEAR：着いた。歩くくらいの速さ（時速6km）で。生きてる。地球：！？着陸用じゃないのに！？",
-     "en": "NEAR: I landed. At walking speed, 6 km/h. I’m alive. Earth: !? But you weren’t built to land!"
-    },
-    "dur": 6.5
-   },
-   {
-    "bg": {
-     "ja": "media/near/5.ja.jpg?v=f43143ba",
-     "en": "media/near/5.en.jpg?v=bce2f391"
-    },
-    "alt": {
-     "ja": "ほんとの話：小惑星に着陸した世界で最初の探査機。そのあと約2週間、地面からデータを送りつづけた。最後の通信は2001年2月28日",
-     "en": "True story: the first spacecraft ever to land on an asteroid. It kept sending data from the surface for about two weeks. Last contact: February 28, 2001"
-    },
-    "dur": 7
-   }
-  ],
-  "noSourceSlide": true,
-  "fit": "contain",
+   "fit": "contain"
+  },
   "stats": {
    "likes": 0,
    "saves": 0
@@ -1647,7 +1729,6 @@
   "id": "ranking-overtime-1",
   "account": "machine_ranking",
   "place": "mars",
-  "audio": "media/music/hyperfun.mp3?v=3ba60e7e",
   "caption": {
    "ja": "「ちょっとだけでいいよ」と言われた機械たち、予定の何倍はたらいた？TOP5 #ランキング #火星 #オポチュニティ",
    "en": "Told “just a short job is fine.” How many times longer did they work? TOP 5 #ranking #mars #opportunity"
@@ -1658,8 +1739,8 @@
    "opportunity"
   ],
   "sound": {
-   "ja": "Kevin MacLeod「Hyperfun」(CC BY 4.0)",
-   "en": "Kevin MacLeod – Hyperfun (CC BY 4.0)"
+   "ja": "Kevin MacLeod「Hyperfun」「Wholesome」(CC BY 4.0)",
+   "en": "Kevin MacLeod – Hyperfun / Wholesome (CC BY 4.0)"
   },
   "comments": [
    {
@@ -1791,79 +1872,36 @@
     },
     "title": "\"Hyperfun\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (shortened to a loop)",
     "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Music",
+     "ja": "BGM"
+    },
+    "title": "\"Wholesome\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (shortened to a loop)",
+    "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Sound effect",
+     "ja": "効果音"
+    },
+    "title": "Interface sounds: synthesized by the team (tools/motion/make_sfx.py, no third-party audio)",
+    "url": "https://github.com/taiyoishikawa2003/out-of-range"
    }
   ],
-  "type": "carousel",
-  "slides": [
-   {
-    "bg": {
-     "ja": "media/ranking/1.ja.jpg?v=dc5f45a2",
-     "en": "media/ranking/1.en.jpg?v=01372ed7"
-    },
-    "alt": {
-     "ja": "ランキング：「ちょっとだけでいいよ」と言われた機械たち。予定の何倍はたらいた？TOP5",
-     "en": "Ranking: machines that were told “just a short job is fine.” How many times longer than planned did they work? Top 5"
-    },
-    "dur": 4.5
+  "type": "video",
+  "video": {
+   "src": {
+    "ja": "media/ranking/top5.ja.mp4?v=936ec4d3",
+    "en": "media/ranking/top5.en.mp4?v=364e8776"
    },
-   {
-    "bg": {
-     "ja": "media/ranking/2.ja.jpg?v=4602b23e",
-     "en": "media/ranking/2.en.jpg?v=17df96ab"
-    },
-    "alt": {
-     "ja": "5位：インジェニュイティ。予定は5回飛ぶこと、実際は72回。約14倍",
-     "en": "No. 5: Ingenuity. Plan: 5 flights. Actual: 72 flights. About 14 times"
-    },
-    "dur": 5
+   "poster": {
+    "ja": "media/ranking/top5.poster.ja.jpg?v=15ad4145",
+    "en": "media/ranking/top5.poster.en.jpg?v=68e1ec18"
    },
-   {
-    "bg": {
-     "ja": "media/ranking/3.ja.jpg?v=91dfdc06",
-     "en": "media/ranking/3.en.jpg?v=8663b3d6"
-    },
-    "alt": {
-     "ja": "4位：パイオニア10号。予定は21か月、実際は30年以上。約18倍",
-     "en": "No. 4: Pioneer 10. Plan: 21 months. Actual: over 30 years. About 18 times"
-    },
-    "dur": 5
-   },
-   {
-    "bg": {
-     "ja": "media/ranking/4.ja.jpg?v=36019fc6",
-     "en": "media/ranking/4.en.jpg?v=3e25e797"
-    },
-    "alt": {
-     "ja": "2位（ほぼ同点）：スピリットとバイキング1号。どちらも予定は90日、実際は6年以上。約25倍",
-     "en": "No. 2 (a near tie): Spirit and Viking 1. Both planned for 90 days, both worked over 6 years. About 25 times"
-    },
-    "dur": 6
-   },
-   {
-    "bg": {
-     "ja": "media/ranking/5.ja.jpg?v=560f0309",
-     "en": "media/ranking/5.en.jpg?v=e75ce299"
-    },
-    "alt": {
-     "ja": "1位：オポチュニティ。予定は90日、実際は14年以上。約57倍",
-     "en": "No. 1: Opportunity. Plan: 90 days. Actual: over 14 years. About 57 times"
-    },
-    "dur": 6
-   },
-   {
-    "bg": {
-     "ja": "media/ranking/6.ja.jpg?v=367ee3c7",
-     "en": "media/ranking/6.en.jpg?v=9f621ec5"
-    },
-    "alt": {
-     "ja": "置いていかれたんじゃない。最後まで働いて、そこで止まった。だから今も、火星や宇宙にいる",
-     "en": "They were not thrown away. They worked to the very end and stopped right there. That is why they are still out there"
-    },
-    "dur": 6
-   }
-  ],
-  "noSourceSlide": true,
-  "fit": "contain",
+   "fit": "contain"
+  },
   "stats": {
    "likes": 0,
    "saves": 0

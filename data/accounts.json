@@ -156,5 +156,31 @@
    "ja": "NASAの火星探査車オポチュニティ（2004〜）を、映画の予告編の形で描きました。学生が作っています。画像はNASAの本物、事実はNASAの資料で確認しています。 これは作品の中の「予告」で、本物の広告ではありません。"
   },
   "avatar": "media/avatars/opportunity_trailer.jpg"
+ },
+ "opportunity_rover": {
+  "name": {
+   "en": "Opportunity (fan-made story)",
+   "ja": "オポチュニティ（ファンメイドの物語）"
+  },
+  "place": "mars",
+  "followers": 0,
+  "avatar": "media/avatars/opportunity_rover.jpg",
+  "bio": {
+   "en": "Mars rover, 2004–2018. Planned for 90 days, kept going for over 14 years. Made by students; facts checked against NASA sources.",
+   "ja": "火星探査車（2004〜2018）。予定は90日、実際は14年以上。学生が作っています。事実はNASAの資料で確認しています。"
+  }
+ },
+ "tanken_shindan": {
+  "name": {
+   "en": "Which Space Machine Are You? (fan-made)",
+   "ja": "探査機タイプ診断（ファンメイド）"
+  },
+  "place": "deep",
+  "followers": 0,
+  "avatar": "media/avatars/tanken_shindan.jpg",
+  "bio": {
+   "en": "A just-for-fun quiz. The quiz is play; the facts about the machines are real. Made by students; facts checked against NASA sources.",
+   "ja": "お遊びの診断です。診断はお遊び、機械の話は本当です。学生が作っています。事実はNASAの資料で確認しています。"
+  }
  }
 }

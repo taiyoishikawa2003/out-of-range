@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../slides/slides.css"><link rel="stylesheet" href="motion.css"></head>
+<body><div class="s" id="stage"></div>
+<script type="module">
+// Ranking countdown: how many times longer than planned each machine worked (about 31 s). Numbers: NASA; ratios: our calculation.
+import { M, T, LANG, el, img, sfx, music, win, pop, kb, punch, shake, flash, count, scene, add, tag, h, bx, done } from './motion.js';
+const st = document.getElementById('stage'); M.dur = 31.2; M.poster = 22.6; const ja = LANG === 'ja';
+music('Hyperfun', 0, 24.7, { from: 0.2, gain: 0.6, fadeOut: 0.25 });
+music('Wholesome', 24.7, M.dur, { from: 0.5, fadeIn: 0.3, fadeOut: 0.6 });
+
+let s = scene(st, 0, 3.6, { bg: 'PIA04422', pos: '35% 50%', filt: 'brightness(.55)', move: { s0: 1.0, s1: 1.1 }, cr: T('本物の写真：打ち上げ前の火星探査車と、先輩ソジャーナの予備機（NASA/JPL）', 'Real photo: Mars rovers before launch, with a spare of the earlier Sojourner rover (NASA/JPL)') });
+add(s.col, tag(T('ランキング', 'Ranking'), 'pink sm'), 0.15);
+add(s.col, h(T('「ちょっとだけで<br>いいよ」と言われた<br>機械たち', 'Machines that were<br>told “just a short<br>job is fine”')), 0.5);
+add(s.col, bx(T('予定の何倍はたらいた？ TOP5', 'How many times longer did they work? TOP 5'), 'sm yellow'), 2.0);
+
+function rank(t0, t1, n, name, plan, actual, x, o) {
+  const s = scene(st, t0, t1, { ...o, colStyle: 'top:300px;gap:20px' }); if (n === 1) flash(s.sc, t0, 0.35, 0.9);
+  const r = add(s.col, `<div class="rk">${ja ? `${n}<small>位</small>` : `<small>No.</small>${n}`}</div>`, t0 + 0.12, { snd: 'thud', from: 'scale(2.4)', dur: 0.22 }); shake(s.sc, t0 + 0.3, 0.3, n === 1 ? 18 : 9);
+  add(s.col, h(name, 'md'), t0 + 0.55);
+  const p = el(`<div class="wrap"><div class="plan"><span>${T('予定', 'Plan')}</span><div>${plan}</div><span class="a1">${T('実際', 'Actual')}</span><div class="a2"><em>${actual}</em></div></div></div>`, s.col);
+  pop(p, t0 + 1.0); const a1 = p.querySelector('.a1'), a2 = p.querySelector('.a2'); pop(a1, t0 + 1.75, { snd: null }); pop(a2, t0 + 1.75, { snd: 'pop' });
+  const dur = n === 1 ? 1.7 : 1.0, xw = el(`<div class="wrap"><div class="x">${ja ? '約<em class="n">1</em>倍' : 'about <em class="n">1</em>×'}</div></div>`, s.col); pop(xw, t0 + 2.4, { snd: null });
+  count(xw.querySelector('.n'), t0 + 2.45, dur, 1, x); sfx(t0 + 2.5 + dur, 'ding'); punch(xw, t0 + 2.5 + dur, { scale: n === 1 ? 1.35 : 1.2 });
+}
+rank(3.6, 8.4, 5, T('インジェニュイティ', 'Ingenuity'), T('5回飛ぶ', '5 flights'), T('72回飛んだ', '72 flights'), 14,
+  { bg: 'PIA24648', pos: '18% 50%', filt: 'brightness(.85)', move: { s0: 1.3, s1: 1.42 }, cr: T('本物の写真：5回目の飛行を終えたインジェニュイティ（NASA/JPL-Caltech/ASU/MSSS）', 'Real photo: Ingenuity after its 5th flight (NASA/JPL-Caltech/ASU/MSSS)') });
+rank(8.4, 13.2, 4, T('パイオニア10号', 'Pioneer 10'), T('21か月', '21 months'), T('30年以上', 'over 30 years'), 18,
+  { bg: 'ARC-1973-AC73-9019_c', pos: '50% 40%', filt: 'brightness(.75)', move: { s0: 1.0, s1: 1.1 }, cr: T('本物の写真：組み立て中のパイオニア10号（NASA Ames）', 'Real photo: Pioneer 10 being assembled (NASA Ames)') });
+rank(13.2, 18.4, 2, T('スピリット ＆ バイキング1号<br>（ほぼ同点）', 'Spirit &amp; Viking 1<br>(a near tie)'), T('どちらも90日', '90 days each'), T('どちらも6年以上', 'over 6 years each'), 25,
+  { bg: 'PIA16442', filt: 'brightness(.8)', move: { s0: 1.0, s1: 1.12 }, cr: T('本物の写真：スピリットが自分のまわりを撮った写真（NASA/JPL-Caltech/Cornell Univ./Arizona State Univ.）', 'Real photo: Spirit’s view of itself and its surroundings (NASA/JPL-Caltech/Cornell Univ./Arizona State Univ.)') });
+sfx(17.5, 'riser');
+rank(18.4, 24.7, 1, T('オポチュニティ', 'Opportunity'), T('90日', '90 days'), T('14年以上', 'over 14 years'), 57,
+  { bg: 'PIA22928', filt: 'brightness(.8)', move: { s0: 1.0, s1: 1.14 }, cr: T('本物の写真：オポチュニティがふり返って撮った自分の車輪のあと（NASA/JPL-Caltech）', 'Real photo: Opportunity looking back at its own tracks (NASA/JPL-Caltech)') });
+
+s = scene(st, 24.7, M.dur, { bg: 'PIA22928', filt: 'brightness(.42)', shade: 'all', move: { s0: 1.14, s1: 1.0 }, colCls: 'mid', cr: T('本物の写真：オポチュニティの車輪のあと（NASA/JPL-Caltech）', 'Real photo: Opportunity’s tracks (NASA/JPL-Caltech)') });
+add(s.col, h(T('置いていかれたんじゃない', 'They weren’t thrown away'), 'md'), 25.0, { snd: 'whoosh' });
+add(s.col, h(T('<em>最後まで働いて</em>、<br>そこで止まった', 'They <em>worked to<br>the very end</em>'), 'lg'), 26.5, { snd: 'ding' });
+add(s.col, bx(T('だから今も、火星や宇宙にいる', 'That’s why they are still out there'), 'sm green'), 28.5);
+done();
+</script></body></html>

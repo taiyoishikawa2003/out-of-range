@@ -20,6 +20,7 @@ export const account = h => db.accounts[h] || { name: h, handle: h };
 export const postsBy = h => allPosts().filter(p => p.account === h);
 export function thumbOf(p) {
   if (p.type === 'video') return L(p.video.poster);
+  if (p.type === 'app') return L(p.poster) || '';
   const s = p.slides?.[0] || {};
   return L(s.bg) || '';
 }

@@ -4,6 +4,7 @@ import { loadData } from './data.js';
 import { renderFeed } from './feed.js';
 import { renderDiscover, renderProfile, renderMe, renderAbout } from './pages.js';
 import { renderCreate } from './create.js';
+import { renderMap } from './map.js';
 import { closeSheet } from './sheets.js';
 
 const view = document.getElementById('view');
@@ -13,7 +14,7 @@ function route() {
   closeSheet();
   destroy?.(); destroy = null;
   const [, a = '', b = ''] = (location.hash || '#/').split('/');
-  const nav = { '': 'feed', p: 'feed', discover: 'discover', create: 'create', me: 'me', u: 'discover', about: 'about' }[a] || 'feed';
+  const nav = { '': 'feed', p: 'feed', discover: 'discover', create: 'create', me: 'me', u: 'discover', about: 'about', map: 'discover' }[a] || 'feed';
   document.querySelectorAll('[data-nav]').forEach(n => { const on = n.dataset.nav === nav; n.classList.toggle('on', on); if (on) n.setAttribute('aria-current', 'page'); else n.removeAttribute('aria-current'); });
   const id = decodeURIComponent(b);
   switch (a) {
@@ -23,6 +24,7 @@ function route() {
     case 'me': renderMe(view); break;
     case 'create': renderCreate(view); break;
     case 'about': renderAbout(view); break;
+    case 'map': renderMap(view, id); break;
     default: destroy = renderFeed(view);
   }
   if (a !== '' && a !== 'p') view.focus({ preventScroll: true });

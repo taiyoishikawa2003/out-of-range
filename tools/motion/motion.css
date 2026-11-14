@@ -1,0 +1,17 @@
+/* Extra styles for motion videos (on top of tools/slides/slides.css) */
+.sc{position:absolute;inset:0;overflow:hidden;opacity:0}
+.sc .bg{will-change:transform}
+.wrap{display:inline-block}
+.flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+.black{position:absolute;inset:0;background:#000;opacity:0}
+.endcard{position:absolute;left:0;right:0;bottom:210px;text-align:center;font-size:30px;font-weight:700;color:#fff;opacity:.92;-webkit-text-stroke:6px rgba(0,0,0,.6);paint-order:stroke fill}
+/* chat */
+.chat2{position:absolute;inset:0;background:#0e141d}
+.chat2 .chbar{top:150px}
+.chat2 .view{position:absolute;left:0;right:0;top:272px;bottom:560px;overflow:hidden}
+.chat2 .list{position:absolute;left:36px;right:176px;top:0;display:flex;flex-direction:column;gap:20px;padding-top:26px}
+.typing{align-self:flex-start;background:#273243;border-radius:34px;border-bottom-left-radius:8px;padding:26px 30px;display:flex;gap:12px}
+.typing i{width:18px;height:18px;border-radius:50%;background:#8fa0b5;display:block}
+.m .st{display:block;font-size:24px;font-weight:700;color:#cfe0ff;opacity:.85;margin-top:6px;text-align:right}
+.daysep{align-self:center;font-size:26px;font-weight:700;color:#8fa0b5;background:#18212d;padding:6px 20px;border-radius:999px}
+.bigcap{position:absolute;left:40px;right:160px;text-align:center}

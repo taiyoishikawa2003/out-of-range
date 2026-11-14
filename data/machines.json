@@ -1,0 +1,797 @@
+{
+ "maps": {
+  "moon": {
+   "img": "media/maps/moon.jpg",
+   "lon": [
+    -70,
+    70
+   ],
+   "lat": [
+    -55,
+    45
+   ],
+   "credit": "NASA’s Scientific Visualization Studio (CGI Moon Kit, LRO)",
+   "url": "https://svs.gsfc.nasa.gov/4720"
+  },
+  "mars": {
+   "img": "media/maps/mars.jpg",
+   "lon": [
+    -180,
+    180
+   ],
+   "lat": [
+    -90,
+    90
+   ],
+   "credit": "NASA 3D Resources (Mars texture)",
+   "url": "https://github.com/nasa/NASA-3D-Resources"
+  }
+ },
+ "machines": [
+  {
+   "id": "apollo11",
+   "body": "moon",
+   "lat": 0.67416,
+   "lon": 23.47314,
+   "year": 1969,
+   "status": "used",
+   "link": "#/p/runway-looks-1",
+   "img": "media/library/lm.jpg",
+   "name": {
+    "ja": "アポロ11号の着陸船と実験装置",
+    "en": "Apollo 11 lander and experiments"
+   },
+   "what": {
+    "ja": "人が初めて月に降りたときの着陸船です。上半分は宇宙飛行士を乗せて帰り、下半分と実験装置が残りました。",
+    "en": "The first lander to carry people to the Moon. The top half took the astronauts home. The bottom half and the experiments stayed."
+   },
+   "found": {
+    "ja": "置いてきた反射鏡に地球からレーザーを当てて、月までの距離を正確に測れるようになりました。光が行って帰るまで約2.5秒。月が1年に約3.8cmずつ遠ざかっていることも分かりました。",
+    "en": "A reflector left here lets us measure the distance to the Moon by bouncing laser light off it. The light takes about 2.5 seconds to go and come back. This is how we learned the Moon drifts about 3.8 cm farther away every year."
+   },
+   "now": {
+    "ja": "静かの海にあります。反射鏡は今も使われています。はしごには「全人類のために、平和のうちに来た」と書いたプレートがあります。",
+    "en": "In the Sea of Tranquility. The reflector is still used today. A plaque on the ladder reads “We came in peace for all mankind.”"
+   },
+   "src": [
+    {
+     "title": "NSSDCA: Apollo 11 Lunar Module / EASEP",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059C"
+    },
+    {
+     "title": "NASA: Laser Beams Reflected Between Earth and Moon Boost Science",
+     "url": "https://www.nasa.gov/missions/lro/laser-beams-reflected-between-earth-and-moon-boost-science/"
+    }
+   ]
+  },
+  {
+   "id": "apollo12",
+   "body": "moon",
+   "lat": -3.0128,
+   "lon": -23.4219,
+   "year": 1969,
+   "status": "silent",
+   "link": "#/p/surveyor-pov-1",
+   "img": "media/library/apollo12.jpg",
+   "name": {
+    "ja": "アポロ12号の着陸船とサーベイヤー3号",
+    "en": "Apollo 12 lander and Surveyor 3"
+   },
+   "what": {
+    "ja": "サーベイヤー3号は、人が降りる前に月の地面を調べに来た探査機です（1967年）。2年半後、アポロ12号がすぐそばに着陸しました。",
+    "en": "Surveyor 3 came in 1967 to test the Moon’s surface before people landed. Two and a half years later, Apollo 12 landed right next to it."
+   },
+   "found": {
+    "ja": "月の地面は、人が乗る着陸船を支えられると分かりました。宇宙飛行士はサーベイヤー3号のカメラを持ち帰り、月に2年半置いた機械がどうなるかを調べました。",
+    "en": "It showed the ground could hold a lander carrying people. The astronauts took Surveyor 3’s camera home to study what 2.5 years on the Moon does to a machine."
+   },
+   "now": {
+    "ja": "嵐の大洋で、約180mはなれて並んでいます。",
+    "en": "In the Ocean of Storms, about 180 m apart."
+   },
+   "src": [
+    {
+     "title": "NSSDCA: Apollo 12 Lunar Module / ALSEP",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-099C"
+    },
+    {
+     "title": "NASA Science: Surveyor 3",
+     "url": "https://science.nasa.gov/mission/surveyor-3/"
+    }
+   ],
+   "nudge": [
+    -7,
+    -3
+   ]
+  },
+  {
+   "id": "apollo14",
+   "body": "moon",
+   "lat": -3.64589,
+   "lon": -17.47194,
+   "year": 1971,
+   "status": "used",
+   "link": "lost/",
+   "img": "",
+   "name": {
+    "ja": "アポロ14号の着陸船と実験装置",
+    "en": "Apollo 14 lander and experiments"
+   },
+   "what": {
+    "ja": "月の高地「フラ・マウロ」に降りた着陸船の下半分と、実験装置です。",
+    "en": "The bottom half of the lander that set down in the Fra Mauro highlands, and its experiments."
+   },
+   "found": {
+    "ja": "ここにもレーザーの反射鏡があります。アポロ11号の反射鏡と合わせて、月までの距離を今も測りつづけています。",
+    "en": "There is a laser reflector here too. Together with Apollo 11’s, it is still used to measure the distance to the Moon."
+   },
+   "now": {
+    "ja": "宇宙飛行士がここで打ったゴルフボールも、月に残っています。",
+    "en": "The golf balls an astronaut hit here are still on the Moon too."
+   },
+   "src": [
+    {
+     "title": "NSSDCA: Apollo 14 Lunar Module / ALSEP",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-008C"
+    },
+    {
+     "title": "NASA: Laser Beams Reflected Between Earth and Moon Boost Science",
+     "url": "https://www.nasa.gov/missions/lro/laser-beams-reflected-between-earth-and-moon-boost-science/"
+    },
+    {
+     "title": "Smithsonian National Air and Space Museum: Apollo 14 (golf shots)",
+     "url": "https://airandspace.si.edu/apollo-missions/apollo-14"
+    }
+   ],
+   "nudge": [
+    11,
+    7
+   ]
+  },
+  {
+   "id": "apollo15",
+   "body": "moon",
+   "lat": 26.13239,
+   "lon": 3.6333,
+   "year": 1971,
+   "status": "silent",
+   "link": "",
+   "img": "",
+   "name": {
+    "ja": "アポロ15号の着陸船と月面車",
+    "en": "Apollo 15 lander and lunar rover"
+   },
+   "what": {
+    "ja": "月で初めて車（月面車）を使ったミッションです。車は月に置いてきました。",
+    "en": "The first mission to drive a car (the lunar rover) on the Moon. The rover was left there."
+   },
+   "found": {
+    "ja": "車のおかげで、着陸船から5kmはなれた場所まで行って、岩や土を集められました。走った距離は合わせて27.9kmです。",
+    "en": "With the rover, the astronauts could explore up to 5 km from the lander and collect rocks and soil. They covered 27.9 km in all."
+   },
+   "now": {
+    "ja": "「雨の海」のふち、アペニン山脈のふもとにあります。",
+    "en": "At the edge of Mare Imbrium, at the foot of the Apennine mountains."
+   },
+   "src": [
+    {
+     "title": "NSSDCA: Apollo 15 Lunar Module / ALSEP",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1971-063C"
+    }
+   ]
+  },
+  {
+   "id": "apollo16",
+   "body": "moon",
+   "lat": -8.973,
+   "lon": 15.5002,
+   "year": 1972,
+   "status": "silent",
+   "link": "",
+   "img": "",
+   "name": {
+    "ja": "アポロ16号の着陸船と月面車",
+    "en": "Apollo 16 lander and lunar rover"
+   },
+   "what": {
+    "ja": "月の高地「デカルト」に降りた着陸船の下半分と、月面車、実験装置です。",
+    "en": "The bottom half of the lander that set down in the Descartes highlands, with its lunar rover and experiments."
+   },
+   "found": {
+    "ja": "宇宙飛行士が月面車で走り、月の高地の岩や土を集めました。",
+    "en": "The astronauts drove the lunar rover and collected rocks and soil from the lunar highlands."
+   },
+   "now": {
+    "ja": "デカルト高地にあります。",
+    "en": "In the Descartes highlands."
+   },
+   "src": [
+    {
+     "title": "NSSDCA: Apollo 16 Lunar Module / ALSEP",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-031C"
+    }
+   ]
+  },
+  {
+   "id": "apollo17",
+   "body": "moon",
+   "lat": 20.1911,
+   "lon": 30.7723,
+   "year": 1972,
+   "status": "silent",
+   "link": "#/p/runway-looks-1",
+   "img": "media/library/lrv.jpg",
+   "name": {
+    "ja": "アポロ17号の着陸船と月面車",
+    "en": "Apollo 17 lander and lunar rover"
+   },
+   "what": {
+    "ja": "アポロ計画で、最後に月に降りたミッションです。着陸船の下半分と月面車が残っています。",
+    "en": "The last Apollo mission to land on the Moon. The bottom half of the lander and the lunar rover are still there."
+   },
+   "found": {
+    "ja": "月面車の泥よけが割れて、月の砂をあびました。宇宙飛行士は月の地図とテープとクリップで直しました。月の砂がとても細かくて、やっかいだと分かる出来事です。",
+    "en": "The rover’s fender broke and Moon dust sprayed everywhere. The astronauts fixed it with lunar maps, tape and clamps. It shows how fine and troublesome Moon dust is."
+   },
+   "now": {
+    "ja": "タウルス・リットロー谷にあります。",
+    "en": "In the Taurus-Littrow valley."
+   },
+   "src": [
+    {
+     "title": "NSSDCA: Apollo 17 Lunar Module / ALSEP",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1972-096C"
+    },
+    {
+     "title": "NASA image AS17-137-20979: makeshift fender repair",
+     "url": "https://images.nasa.gov/details/as17-137-20979"
+    }
+   ]
+  },
+  {
+   "id": "surveyor1",
+   "body": "moon",
+   "lat": -2.4745,
+   "lon": -43.3398,
+   "year": 1966,
+   "status": "silent",
+   "link": "",
+   "img": "",
+   "name": {
+    "ja": "サーベイヤー1号",
+    "en": "Surveyor 1"
+   },
+   "what": {
+    "ja": "アメリカで初めて、月にこわれずに着陸した探査機です。",
+    "en": "The first U.S. spacecraft to make a soft landing on the Moon."
+   },
+   "found": {
+    "ja": "月に着陸して作業するための技術が使えることを確かめました。あとに続くアポロ計画の準備でした。",
+    "en": "It proved the technology needed to land and work on the Moon, preparing the way for Apollo."
+   },
+   "now": {
+    "ja": "嵐の大洋にあります。",
+    "en": "In the Ocean of Storms."
+   },
+   "src": [
+    {
+     "title": "NSSDCA: Surveyor 1",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1966-045A"
+    }
+   ]
+  },
+  {
+   "id": "surveyor5",
+   "body": "moon",
+   "lat": 1.4551,
+   "lon": 23.1943,
+   "year": 1967,
+   "status": "silent",
+   "link": "",
+   "img": "",
+   "nudge": [
+    0,
+    -20
+   ],
+   "name": {
+    "ja": "サーベイヤー5号",
+    "en": "Surveyor 5"
+   },
+   "what": {
+    "ja": "月の土に何がふくまれているかを、その場で調べた最初の探査機です。",
+    "en": "The first spacecraft to analyze what lunar soil is made of, right on the Moon."
+   },
+   "found": {
+    "ja": "月の土の成分のデータを、初めて月の上で手に入れました。",
+    "en": "It returned the first on-site data about the composition of lunar soil."
+   },
+   "now": {
+    "ja": "静かの海にあります。アポロ11号の着陸地点の近くです。",
+    "en": "In the Sea of Tranquility, not far from the Apollo 11 site."
+   },
+   "src": [
+    {
+     "title": "NSSDCA: Surveyor 5",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-084A"
+    }
+   ]
+  },
+  {
+   "id": "surveyor6",
+   "body": "moon",
+   "lat": 0.4742,
+   "lon": -1.4275,
+   "year": 1967,
+   "status": "silent",
+   "link": "",
+   "img": "",
+   "name": {
+    "ja": "サーベイヤー6号",
+    "en": "Surveyor 6"
+   },
+   "what": {
+    "ja": "月に着陸したあと、エンジンをふかして一度うき上がり、約2.4mとなりに着陸しなおしました。",
+    "en": "After landing, it fired its engines, lifted off a few meters and landed again about 2.4 m away."
+   },
+   "found": {
+    "ja": "月面から初めて飛び立った機械になりました。月でロケットをふかすと地面がどうなるかが分かりました。",
+    "en": "It made the first powered takeoff from the Moon, and showed what firing rocket engines does to the lunar surface."
+   },
+   "now": {
+    "ja": "月のまん中あたり「中央の入江」にあります。",
+    "en": "In Sinus Medii, near the center of the Moon’s face."
+   },
+   "src": [
+    {
+     "title": "NSSDCA: Surveyor 6",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1967-112A"
+    }
+   ]
+  },
+  {
+   "id": "surveyor7",
+   "body": "moon",
+   "lat": -40.9812,
+   "lon": -11.5127,
+   "year": 1968,
+   "status": "silent",
+   "link": "",
+   "img": "",
+   "name": {
+    "ja": "サーベイヤー7号",
+    "en": "Surveyor 7"
+   },
+   "what": {
+    "ja": "最後のサーベイヤーです。月の高地に着陸しました。",
+    "en": "The last Surveyor. It landed in the lunar highlands."
+   },
+   "found": {
+    "ja": "最初の月の昼のあいだだけで、写真を20,993枚送りました。",
+    "en": "It sent back 20,993 pictures during its first lunar day alone."
+   },
+   "now": {
+    "ja": "ティコ・クレーターの北にあります。",
+    "en": "North of Tycho crater."
+   },
+   "src": [
+    {
+     "title": "NSSDCA: Surveyor 7",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1968-001A"
+    }
+   ]
+  },
+  {
+   "id": "viking1",
+   "body": "mars",
+   "lat": 22.27,
+   "lon": -47.95,
+   "year": 1976,
+   "status": "silent",
+   "link": "#/p/viking-casefile-1",
+   "img": "media/library/viking.jpg",
+   "name": {
+    "ja": "バイキング1号",
+    "en": "Viking 1"
+   },
+   "what": {
+    "ja": "火星への着陸に本当の意味で成功した、最初の探査機です。火星に生き物がいるかを調べるために送られました。",
+    "en": "The first truly successful landing on Mars. It was sent to look for signs of life."
+   },
+   "found": {
+    "ja": "火星の地面の写真を初めて送り、6年以上、写真や天気の報告を続けました。",
+    "en": "It sent the first photos from the surface of Mars, and kept sending photos and weather reports for over six years."
+   },
+   "now": {
+    "ja": "クリュセ平原にあります。1982年、地球から送った命令のまちがいで通信がとぎれました。",
+    "en": "On Chryse Planitia. In 1982 a faulty command from Earth cut off contact."
+   },
+   "src": [
+    {
+     "title": "NASA Science: Viking 1",
+     "url": "https://science.nasa.gov/mission/viking-1/"
+    },
+    {
+     "title": "NSSDCA: Viking 1 Lander",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-075C"
+    }
+   ],
+   "nudge": [
+    -8,
+    -5
+   ]
+  },
+  {
+   "id": "viking2",
+   "body": "mars",
+   "lat": 47.6673,
+   "lon": 134.2809,
+   "year": 1976,
+   "status": "silent",
+   "link": "",
+   "img": "",
+   "name": {
+    "ja": "バイキング2号",
+    "en": "Viking 2"
+   },
+   "what": {
+    "ja": "バイキング1号のふたごです。火星の反対がわの、もっと北に着陸しました。",
+    "en": "Viking 1’s twin. It landed farther north, on the other side of Mars."
+   },
+   "found": {
+    "ja": "片足が岩に乗って、8.2度かたむいたまま着陸しましたが、すぐに写真を撮りはじめました。火星で1281日（火星の日数）はたらきました。",
+    "en": "It came down with one leg on a rock, tilted 8.2 degrees, and started taking pictures right away. It worked for 1,281 Mars days."
+   },
+   "now": {
+    "ja": "ユートピア平原にあります。1980年4月、電池が使えなくなって止まりました。",
+    "en": "On Utopia Planitia. It was turned off in April 1980 when its batteries failed."
+   },
+   "src": [
+    {
+     "title": "NSSDCA: Viking 2 Lander",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-083C"
+    }
+   ]
+  },
+  {
+   "id": "sojourner",
+   "body": "mars",
+   "lat": 19.33,
+   "lon": -33.55,
+   "year": 1997,
+   "status": "silent",
+   "link": "",
+   "img": "",
+   "name": {
+    "ja": "マーズ・パスファインダーとソジャーナ",
+    "en": "Mars Pathfinder and Sojourner"
+   },
+   "what": {
+    "ja": "着陸機と、重さ10.6kgの小さな探査車ソジャーナです。「安い費用でも火星に着陸して探検できるか」を試すために送られました。",
+    "en": "A lander and Sojourner, a small 10.6 kg rover. They were sent to test whether Mars could be landed on and explored at low cost."
+   },
+   "found": {
+    "ja": "その方法でうまくいくことを示しました。",
+    "en": "They showed that it could be done."
+   },
+   "now": {
+    "ja": "アレス谷にあります。1997年9月27日のデータが最後です。",
+    "en": "In Ares Vallis. The final data came on Sept. 27, 1997."
+   },
+   "src": [
+    {
+     "title": "NASA Science: Mars Pathfinder",
+     "url": "https://science.nasa.gov/mission/mars-pathfinder/"
+    },
+    {
+     "title": "NSSDCA: Mars Pathfinder",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1996-068A"
+    }
+   ],
+   "nudge": [
+    9,
+    7
+   ]
+  },
+  {
+   "id": "spirit",
+   "body": "mars",
+   "lat": -14.572,
+   "lon": 175.478,
+   "year": 2004,
+   "status": "silent",
+   "link": "#/u/spirit_rover",
+   "img": "media/library/spirit.jpg",
+   "name": {
+    "ja": "スピリット",
+    "en": "Spirit"
+   },
+   "what": {
+    "ja": "昔の火星に水があったかを調べるために送られた、ふたごの探査車のひとつです。",
+    "en": "One of twin rovers sent to find out whether ancient Mars had water."
+   },
+   "found": {
+    "ja": "こわれた車輪を引きずって走ったら、地面からほぼ純粋なシリカが出てきました。昔、温泉や蒸気があった証拠です。",
+    "en": "Dragging a broken wheel, it dug up nearly pure silica: evidence of ancient hot springs or steam."
+   },
+   "now": {
+    "ja": "グセフ・クレーターにあります。7.7km走り、2010年に通信が終わりました。",
+    "en": "In Gusev Crater. It drove 7.7 km, and contact ended in 2010."
+   },
+   "src": [
+    {
+     "title": "NASA Science: Mars Exploration Rovers",
+     "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/"
+    },
+    {
+     "title": "NSSDCA: Spirit",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-027A"
+    }
+   ]
+  },
+  {
+   "id": "opportunity",
+   "body": "mars",
+   "lat": -1.946,
+   "lon": -5.527,
+   "year": 2004,
+   "status": "silent",
+   "link": "#/p/opportunity-unread-1",
+   "img": "media/library/oppy.jpg",
+   "name": {
+    "ja": "オポチュニティ",
+    "en": "Opportunity"
+   },
+   "what": {
+    "ja": "スピリットのふたごです。火星の反対がわに着陸しました。予定は90日でした。",
+    "en": "Spirit’s twin, landed on the opposite side of Mars. The plan was 90 days."
+   },
+   "found": {
+    "ja": "14年以上はたらいて45.16km走り、昔の火星に水があった証拠を見つけました。",
+    "en": "It worked for over 14 years, drove 45.16 km and found evidence that ancient Mars had water."
+   },
+   "now": {
+    "ja": "メリディアニ平原のはし、パーシビアランス谷にあります。2018年の砂あらしで通信がとぎれました。",
+    "en": "In Perseverance Valley, at the edge of Meridiani Planum. A dust storm in 2018 ended contact."
+   },
+   "src": [
+    {
+     "title": "NASA: Opportunity Rover Mission on Mars Comes to End",
+     "url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+    },
+    {
+     "title": "NSSDCA: Opportunity",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-032A"
+    }
+   ]
+  },
+  {
+   "id": "phoenix",
+   "body": "mars",
+   "lat": 68.15,
+   "lon": -125.9,
+   "year": 2008,
+   "status": "silent",
+   "link": "",
+   "img": "",
+   "name": {
+    "ja": "フェニックス",
+    "en": "Phoenix"
+   },
+   "what": {
+    "ja": "火星の北極の近くに降りた着陸機です。それまでのどの探査機よりも北でした。水の歴史を調べるために送られました。",
+    "en": "A lander that set down near Mars’ north pole, farther north than any mission before it. It was sent to study the history of water."
+   },
+   "found": {
+    "ja": "地面をほって、すぐ下に水の氷があることを確かめました。",
+    "en": "It dug into the ground and confirmed water ice just below the surface."
+   },
+   "now": {
+    "ja": "火星の北の平原にあります。2008年11月2日の信号が最後です。",
+    "en": "On the northern plains of Mars. Its last signal came on Nov. 2, 2008."
+   },
+   "src": [
+    {
+     "title": "NASA Science: Phoenix",
+     "url": "https://science.nasa.gov/mission/mars-phoenix/"
+    },
+    {
+     "title": "NSSDCA: Phoenix Mars Lander",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-034A"
+    }
+   ]
+  },
+  {
+   "id": "insight",
+   "body": "mars",
+   "lat": 4.5,
+   "lon": 135.9,
+   "year": 2018,
+   "status": "silent",
+   "link": "#/u/insight_lander",
+   "img": "media/library/insight.jpg",
+   "name": {
+    "ja": "インサイト",
+    "en": "InSight"
+   },
+   "what": {
+    "ja": "火星の中身を調べるために送られた着陸機です。地面のゆれを感じとる地震計を置きました。",
+    "en": "A lander sent to study the inside of Mars. It placed a seismometer on the ground to feel it shake."
+   },
+   "found": {
+    "ja": "火星にも地震があることを記録し、隕石が落ちたときのゆれもとらえました。",
+    "en": "It recorded quakes on Mars, and even the shaking from a meteoroid impact."
+   },
+   "now": {
+    "ja": "エリシウム平原にあります。太陽電池に砂がつもり、2022年12月に通信が終わりました。",
+    "en": "On Elysium Planitia. Dust covered its solar panels, and contact ended in December 2022."
+   },
+   "src": [
+    {
+     "title": "NASA Science: InSight",
+     "url": "https://science.nasa.gov/mission/insight/"
+    }
+   ]
+  },
+  {
+   "id": "ingenuity",
+   "body": "mars",
+   "lat": 18.4,
+   "lon": 77.5,
+   "approx": true,
+   "year": 2021,
+   "status": "silent",
+   "link": "#/p/ranking-overtime-1",
+   "img": "media/library/ingenuity.jpg",
+   "name": {
+    "ja": "インジェニュイティ",
+    "en": "Ingenuity"
+   },
+   "what": {
+    "ja": "「火星の空を飛べるか」を試すために送られた小さなヘリコプターです。",
+    "en": "A small helicopter sent to test whether flight is possible in the air of Mars."
+   },
+   "found": {
+    "ja": "地球ではない星で初めて、動力で飛ぶことに成功しました。5回の予定が72回飛び、探査車のための偵察もしました。",
+    "en": "It made the first powered, controlled flight on another planet. Planned for 5 flights, it made 72 and scouted ahead for the rover."
+   },
+   "now": {
+    "ja": "ジェゼロ・クレーターにあります。2024年1月の飛行が最後です。（地図の位置はおおよそです）",
+    "en": "In Jezero Crater. Its last flight was in January 2024. (The map position is approximate.)"
+   },
+   "src": [
+    {
+     "title": "NASA Science: Ingenuity Mars Helicopter",
+     "url": "https://science.nasa.gov/mission/mars-2020-perseverance/ingenuity-mars-helicopter/"
+    },
+    {
+     "title": "NSSDCA: Mars 2020 (landing in Jezero Crater)",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2020-052A"
+    }
+   ]
+  },
+  {
+   "id": "near",
+   "body": "deep",
+   "year": 2001,
+   "status": "silent",
+   "link": "#/u/near_shoemaker",
+   "img": "media/library/eros.jpg",
+   "name": {
+    "ja": "NEARシューメーカー（小惑星エロスの上）",
+    "en": "NEAR Shoemaker (on asteroid Eros)"
+   },
+   "what": {
+    "ja": "小惑星のまわりを回って調べるために送られた探査機です。",
+    "en": "A spacecraft sent to orbit and study an asteroid."
+   },
+   "found": {
+    "ja": "1年間エロスを回ったあと、着陸用ではないのに着陸に成功し、約2週間データを送りました。",
+    "en": "After a year in orbit, it landed on Eros even though it was not built to land, and sent data for about two weeks."
+   },
+   "now": {
+    "ja": "今も小惑星エロスの上にあります。",
+    "en": "It is still sitting on asteroid Eros."
+   },
+   "src": [
+    {
+     "title": "NASA Science: NEAR Shoemaker",
+     "url": "https://science.nasa.gov/mission/near-shoemaker/"
+    }
+   ]
+  },
+  {
+   "id": "dawn",
+   "body": "deep",
+   "year": 2018,
+   "status": "silent",
+   "link": "",
+   "img": "",
+   "name": {
+    "ja": "ドーン（準惑星ケレスのまわり）",
+    "en": "Dawn (in orbit around dwarf planet Ceres)"
+   },
+   "what": {
+    "ja": "火星と木星のあいだにある2つの天体、小惑星ベスタと準惑星ケレスを、順番に回って調べるために送られました。",
+    "en": "Sent to orbit and study two worlds between Mars and Jupiter, one after the other: the giant asteroid Vesta and the dwarf planet Ceres."
+   },
+   "found": {
+    "ja": "地球ではない2つの天体に、長くとどまって調べることに成功しました。",
+    "en": "It succeeded in making long stays at two different worlds beyond Earth."
+   },
+   "now": {
+    "ja": "2018年10月31日に通信が終わりました。今もケレスのまわりを回っていて、数百年は落ちないとされています。",
+    "en": "Contact ended on Oct. 31, 2018. It is still orbiting Ceres, in an orbit expected to stay stable for several hundred years."
+   },
+   "src": [
+    {
+     "title": "NASA Science: Dawn",
+     "url": "https://science.nasa.gov/mission/dawn/"
+    },
+    {
+     "title": "NSSDCA: Dawn",
+     "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-043A"
+    }
+   ]
+  },
+  {
+   "id": "kepler",
+   "body": "deep",
+   "year": 2018,
+   "status": "silent",
+   "link": "#/u/kepler_uranai",
+   "img": "",
+   "name": {
+    "ja": "ケプラー（太陽のまわり）",
+    "en": "Kepler (in orbit around the Sun)"
+   },
+   "what": {
+    "ja": "ほかの星のまわりにある惑星を見つけるために送られた宇宙望遠鏡です。",
+    "en": "A space telescope sent to find planets around other stars."
+   },
+   "found": {
+    "ja": "9年間で、太陽系の外の惑星を2,600個以上見つけました。",
+    "en": "In nine years it found more than 2,600 planets beyond our solar system."
+   },
+   "now": {
+    "ja": "2018年に燃料がなくなり、地球からはなれた安全な軌道で、太陽のまわりを回っています。",
+    "en": "It ran out of fuel in 2018 and was retired in a safe orbit around the Sun, away from Earth."
+   },
+   "src": [
+    {
+     "title": "NASA Science: Kepler",
+     "url": "https://science.nasa.gov/mission/kepler"
+    }
+   ]
+  },
+  {
+   "id": "pioneer10",
+   "body": "deep",
+   "year": 2003,
+   "status": "silent",
+   "link": "#/u/pioneer10",
+   "img": "",
+   "name": {
+    "ja": "パイオニア10号（太陽系の外へ）",
+    "en": "Pioneer 10 (leaving the solar system)"
+   },
+   "what": {
+    "ja": "木星の近くを通って調べるために送られた、NASAで最初の外惑星探査機です。",
+    "en": "NASA’s first mission to the outer planets, sent to fly past Jupiter."
+   },
+   "found": {
+    "ja": "21か月の予定でしたが、30年以上も信号を送りつづけました。",
+    "en": "Planned for 21 months, it kept sending signals for more than 30 years."
+   },
+   "now": {
+    "ja": "最後の信号は2003年。今もアルデバランの方向へ飛んでいて、着くまで200万年以上かかります。",
+    "en": "Its last signal came in 2003. It is still flying toward Aldebaran, which will take more than 2 million years."
+   },
+   "src": [
+    {
+     "title": "NASA Science: Pioneer 10",
+     "url": "https://science.nasa.gov/mission/pioneer-10/"
+    }
+   ]
+  }
+ ]
+}

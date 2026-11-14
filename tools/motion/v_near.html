@@ -1,0 +1,48 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../slides/slides.css"><link rel="stylesheet" href="motion.css"></head>
+<body><div class="s" id="stage"></div>
+<script type="module">
+// NEAR Shoemaker, group chat (about 35 s). The chat is our dramatization; the events and photos are real (NASA/JPL/JHUAPL).
+import { M, T, el, img, sfx, music, win, pop, kb, punch, shake, flash, scene, add, tag, h, bx, chat, done } from './motion.js';
+const st = document.getElementById('stage'); M.dur = 35.4; M.poster = 8.6;
+music('Sneaky_Snitch', 0, 28.7, { from: 0, gain: 0.55, fadeOut: 0.3 });
+music('Carefree', 28.7, M.dur, { from: 0.1, gain: 0.8, fadeOut: 0.6 });
+
+let s = scene(st, 0, 2.4, { bg: 'PIA18177', pos: '50% 50%', filt: 'brightness(.7)', shade: 'all', move: { s0: 1.05, s1: 1.16 }, colCls: 'mid', cr: T('想像図：小惑星エロスとNEAR（NASA/JPL）', 'Artist’s concept: NEAR at asteroid Eros (NASA/JPL)') });
+add(s.col, tag(T('実話', 'TRUE STORY'), 'pink sm'), 0.15);
+add(s.col, h(T('回るために作られた探査機、<br><em>着陸</em>をたのまれる', 'Built to orbit.<br>Asked to <em>land</em>.')), 0.4);
+
+await document.fonts.ready;
+const c = chat(st, 2.4, 28.7, { title: T('NEARチーム', 'Team NEAR'), sub: T('※会話は演出です。出来事と写真は本物', 'The chat is dramatized. The events and photos are real') });
+sfx(2.4, 'whoosh');
+const E = T('地球', 'Earth'), N = 'NEAR';
+c.who(3.3, E); c.L(3.3, T('1年間おつかれさま！', 'Great work this year!'));
+c.L(4.5, T('小惑星エロスを回る仕事、ぜんぶ終わり！', 'Your job orbiting asteroid Eros is all done!'));
+c.who(5.5, N, 'r'); c.R(5.5, T('やったー！', 'Yay!'));
+c.who(6.7, E); c.L(6.7, T('で、最後にひとつだけ', 'So, one last thing'));
+c.L(8.1, T('<b>着陸してみない？</b>', '<b>Want to try landing?</b>'), 'big', 0.95);
+c.who(9.3, N, 'r'); c.R(9.3, T('は？', 'What?'), 'big', 'thud');
+c.R(10.5, T('足、ないんですけど', 'I don’t have legs'));
+c.R(11.7, T('回る用に作られたんですけど', 'I was built to orbit, not to land'));
+c.who(13.2, E); c.L(13.2, T('ゆっくり降りれば、いけると思う', 'If you go down slowly, we think it’ll work'), '', 0.9);
+c.L(14.6, T('降りながら写真もよろしく📷', 'Take photos on the way down 📷'));
+c.who(16.0, N, 'r'); c.R(16.0, T('……やります', '…OK, I’ll do it'), 'big');
+c.R(17.6, `<img src="${img('PIA03148')}" style="width:520px;height:414px;object-fit:cover"><div class="imgcap">${T('本物の写真（NASA/JPL/JHUAPL）', 'Real photo (NASA/JPL/JHUAPL)')}</div>`, 'img');
+c.R(19.1, T('最後の1枚。高さ120mから', 'Last photo. From 120 m up'));
+c.R(20.6, T('下がザーッてなってるのは<br><b>送ってる途中で着地したから</b>', 'The streaks at the bottom?<br><b>I landed while sending it</b>'));
+c.who(22.3, E); c.L(22.3, T('え', 'Wait'), 'big', 0.6);
+c.who(23.4, N, 'r'); c.R(23.4, T('着いた', 'I’m down'));
+c.R(24.4, T('歩くくらいの速さ（時速6km）で', 'At walking speed (6 km/h)'));
+c.R(25.6, T('<b>生きてる</b>', '<b>I’m alive</b>'), 'big', 'ding');
+c.who(26.8, E); c.L(26.8, T('！？！？', '!?!?'), 'big', 0.5);
+c.L(27.8, T('着陸用じゃないのに！？', 'But you weren’t built to land!?'), '', 0.55);
+c.build(); shake(c.root, 9.3, 0.4, 12);
+
+s = scene(st, 28.7, M.dur, { bg: 'PIA02467', filt: 'brightness(.9)', move: { s0: 1.22, s1: 1.36 }, cr: T('本物の写真：NEARシューメーカーが撮った小惑星エロス（NASA/JPL/JHUAPL）', 'Real photo: asteroid Eros, taken by NEAR Shoemaker (NASA/JPL/JHUAPL)') });
+flash(s.sc, 28.7);
+add(s.col, tag(T('ほんとの話', 'True story'), 'yellow'), 28.9, { snd: 'ding' });
+add(s.col, h(T('小惑星に着陸した<br><em>世界で最初の探査機</em>', 'The <em>first spacecraft</em><br>to land on an asteroid'), 'md'), 29.5);
+add(s.col, bx(T('そのあと約2週間、地面からデータを送りつづけた', 'It kept sending data from the surface for about two weeks'), 'sm'), 31.2);
+add(s.col, bx(T('最後の通信は2001年2月28日。今もエロスの上にいる', 'Last contact: Feb 28, 2001. It is still sitting on Eros'), 'sm green'), 32.9);
+done();
+</script></body></html>

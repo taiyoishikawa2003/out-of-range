@@ -1,0 +1,56 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../slides/slides.css"><link rel="stylesheet" href="motion.css"></head>
+<body><div class="s" id="stage"></div>
+<script type="module">
+// Surveyor 3, POV story (about 32 s). Photos: NASA (Apollo 12, 1969) and LRO (2009). Music: Kevin MacLeod (CC BY 4.0).
+import { M, T, el, img, sfx, music, win, pop, kb, punch, shake, flash, scene, add, tag, h, bx, done } from './motion.js';
+const st = document.getElementById('stage'); M.dur = 32.4; M.poster = 6.4;
+music('Gymnopedie_No_1', 0, 4.6, { from: 0.2, fadeOut: 0.15 });
+music('Carefree', 4.6, 11.6, { from: 0.1, fadeOut: 0.05 });
+music('Gymnopedie_No_1', 12.9, 19.0, { from: 13.2, fadeIn: 0.4, fadeOut: 0.3, gain: 0.9 });
+music('Wholesome', 19.0, 32.4, { from: 0.5, fadeIn: 0.3, fadeOut: 0.6 });
+
+let s = scene(st, 0, 4.6, { bg: 'as12-48-7121', pos: '42% 50%', move: { s0: 1.0, s1: 1.1 }, cr: T('本物の写真：月面のサーベイヤー3号（NASA）', 'Real photo: Surveyor 3 on the Moon (NASA)') });
+add(s.col, tag('POV', 'pink'), 0.35);
+add(s.col, h(T('月で<em>2年半</em>、<br>ひとりで待ってた', 'Alone on the Moon<br>for <em>2.5 years</em>')), 0.8);
+add(s.col, bx(T('通信もとぎれて、ずっと動けない', 'No signal. Can’t move.'), 'sm'), 2.3);
+
+s = scene(st, 4.6, 8.2, { bg: 'AS12-48-7133', pos: '55% 50%', move: { s0: 1.16, s1: 1.02 }, cr: T('本物の写真：1969年11月。奥に見えるのがアポロ12号の着陸船（NASA）', 'Real photo: Nov 1969. Apollo 12’s lander is in the background (NASA)') });
+flash(s.sc, 4.6);
+let w = add(s.col, h(T('…<em>人が来た！！</em>', '…<em>PEOPLE!!</em>'), 'lg'), 4.68, { snd: 'ding' }); punch(w, 4.94, { scale: 1.2 });
+add(s.col, bx(T('アポロ12号。たった180m先に着陸', 'Apollo 12 landed just 180 m away'), 'sm'), 5.9);
+
+s = scene(st, 8.2, 11.6, { bg: 'AS12-48-7134', pos: '62% 50%', move: { s0: 1.2, s1: 1.34, x1: -30 }, cr: T('本物の写真：サーベイヤー3号を調べる宇宙飛行士（NASA）', 'Real photo: an astronaut examines Surveyor 3 (NASA)') });
+add(s.col, h(T('え、わざわざ<br>会いに来てくれたの？', 'Wait… you came<br>all this way for me?'), 'md'), 8.4);
+add(s.col, bx(T('うれしい…', 'I’m so happy…'), 'sm'), 10.0);
+
+s = scene(st, 11.6, 15.4, { bg: 'as12-48-7136', pos: '45% 50%', move: { s0: 1.15, s1: 1.2 }, cr: T('本物の写真：このあとテレビカメラなどを取り外した（NASA）', 'Real photo: they removed the TV camera and other parts (NASA)') });
+add(s.col, tag(T('現実', 'Reality')), 11.75, { snd: 'thud' });
+w = add(s.col, h(T('カメラ、<b>もぎ取られた</b>', 'They <b>took my camera</b>')), 12.3, { snd: 'thud', gain: 0.7 }); shake(s.sc, 12.3, 0.45, 16);
+add(s.col, bx(T('スコップも持っていかれた', 'And my scoop'), 'sm'), 13.6);
+
+s = scene(st, 15.4, 19.0, { bg: 'as12-48-7099', filt: 'brightness(.8)', move: { s0: 1.22, s1: 1.0 }, cr: T('本物の写真：月面のサーベイヤー3号（NASA）', 'Real photo: Surveyor 3 on the Moon (NASA)') });
+add(s.col, h(T('そして帰っていった', 'And then they left')), 15.65, { snd: 'whoosh' });
+add(s.col, bx(T('また、ひとり', 'Alone again'), 'sm'), 17.1);
+
+s = scene(st, 19.0, 25.4, { bg: 'as12-48-7110', pos: '50% 60%', filt: 'brightness(.55)', shade: 'all', move: { s0: 1.0, s1: 1.12 }, cr: T('本物の写真：サーベイヤー3号の足と、土を掘ったあと（NASA）', 'Real photo: Surveyor 3’s footpad and the trenches it dug (NASA)') });
+add(s.col, tag(T('でも実は', 'But actually'), 'yellow'), 19.2, { snd: 'ding' });
+add(s.col, h(T('カメラは<em>地球に<br>持ち帰って</em>調べた', 'The camera went<br><em>back to Earth</em>'), 'md'), 19.8);
+add(s.col, bx(T('月に2年半置いた機械は、どうなる？', 'What do 2.5 years on the Moon do to a machine?'), 'sm'), 21.3);
+add(s.col, bx(T('それを知る、めったにないチャンスだった', 'It was a rare chance to find out'), 'sm green'), 23.0);
+
+// last scene: the site from orbit, with markers
+const sc = el('<div class="sc"></div>', st); win(sc, 25.4, M.dur);
+const mapw = el('<div style="position:absolute;inset:0;transform-origin:560px 960px"></div>', sc); kb(mapw, 25.4, M.dur, { s0: 1.0, s1: 1.07 });
+el(`<img src="${img('PIA12922')}" style="position:absolute;left:-1000px;top:-480px;width:2400px;height:2400px;filter:contrast(1.15) brightness(.9)">`, mapw);
+el('<div class="shade top"></div>', sc);
+const col = el('<div class="col"></div>', sc);
+add(col, tag(T('40年後、月の上空から', '40 years later, from orbit'), 'white sm'), 25.6);
+add(col, h(T('今も<em>同じ場所</em>にいる', 'It’s <em>still there</em>')), 26.1, { snd: 'ding' });
+const mk = (x, y, label, lx, at) => { const g = el(`<div style="position:absolute;inset:0"><div class="mark" style="left:${x}px;top:${y}px"></div><div class="mlabel" style="${lx}">${label}</div></div>`, mapw); pop(g, at); };
+mk(248, 732, T('アポロ12号の着陸船', 'Apollo 12 lander'), 'left:300px;top:806px', 27.5);
+mk(877, 1186, T('サーベイヤー3号', 'Surveyor 3'), 'right:240px;top:1100px;transform:none', 28.5);
+add(col, bx(T('宇宙飛行士の足あとも、まだ残ってる', 'So are the astronauts’ footpaths'), 'sm'), 29.6);
+el(`<div class="cr">${T('本物の写真：2009年、月を回る探査機LROが撮ったアポロ12号の着陸地点（NASA/GSFC/Arizona State University）', 'Real photo: the Apollo 12 site seen by the LRO orbiter, 2009 (NASA/GSFC/Arizona State University)')}</div>`, sc);
+done();
+</script></body></html>

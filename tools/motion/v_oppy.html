@@ -1,0 +1,42 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../slides/slides.css"><link rel="stylesheet" href="motion.css">
+<style>.counter{position:absolute;left:40px;right:160px;top:1400px;text-align:center;font-size:54px;-webkit-text-stroke:11px #000;paint-order:stroke fill}.counter em{font-style:normal;color:#ffd21f;font-size:84px}.chbar .av img{width:76px;height:76px;border-radius:50%;object-fit:cover}</style></head>
+<body><div class="s" id="stage"></div>
+<script type="module">
+// Opportunity: more than a thousand commands, no reply (about 32 s). The chat is our dramatization; the events and photos are real.
+import { M, T, LANG, el, img, sfx, music, win, pop, kb, punch, shake, flash, count, fadeIn, scene, add, tag, h, bx, chat, done } from './motion.js';
+const st = document.getElementById('stage'); M.dur = 32.4; M.poster = 1.9; const ja = LANG === 'ja';
+music('Heartbreaking', 0, 23.4, { from: 0.4, gain: 0.5, fadeOut: 1.2 });
+music('Wholesome', 24.2, M.dur, { from: 0.5, gain: 0.8, fadeIn: 0.5, fadeOut: 0.7 });
+
+let s = scene(st, 0, 2.7, { bg: 'PIA22928', filt: 'brightness(.6)', shade: 'all', move: { s0: 1.04, s1: 1.14 }, colCls: 'mid', cr: T('本物の写真：オポチュニティの車輪のあと（NASA/JPL-Caltech）', 'Real photo: Opportunity’s wheel tracks (NASA/JPL-Caltech)') });
+add(s.col, tag(T('実話', 'TRUE STORY'), 'pink sm'), 0.15);
+add(s.col, h(T('1000回送っても、<br><em>既読がつかなかった</em>', 'We texted 1,000 times.<br><em>No reply.</em>')), 0.45);
+
+await document.fonts.ready;
+const c = chat(st, 2.7, 24.2, { title: T('オポチュニティ（火星）', 'Opportunity (Mars)'), sub: T('※会話は演出です。出来事と写真は本物', 'The chat is dramatized. The events and photos are real'), avatar: `<img src="${img('PIA16120')}">` });
+sfx(2.7, 'whoosh');
+const U = T('未読', 'Not read'), R = (at, t, cls = '') => c.R(at, `${t}<span class="st">${U}</span>`, cls);
+c.sep(3.0, T('2018年6月10日', 'June 10, 2018'));
+c.L(4.0, `<img src="${img('PIA22929')}" style="width:520px;height:520px;object-fit:cover"><div class="imgcap">${T('火星から届いた最後のデータ（本物、NASA/JPL-Caltech/Cornell/ASU）', 'The last data from Mars (real, NASA/JPL-Caltech/Cornell/ASU)')}</div>`, 'img', 0.9);
+R(5.7, T('空がまっ暗だ。砂あらし、ひどいね', 'The sky is so dark. That dust storm is bad'));
+R(7.2, T('電気、足りてる？', 'Do you have enough power?'));
+R(8.6, T('おーい', 'Hello?'));
+c.sep(9.9, T('数か月後', 'Months later'));
+R(10.4, T('砂あらし、おさまったよ', 'The storm is over now'));
+R(11.6, T('起きて', 'Wake up'));
+const burst = ja ? ['聞こえる？', '返事して', '起きて', 'おーい', '起きて', 'オポチュニティ', '起きて', '返事して', '起きて', 'おーい', '起きて', '起きて'] : ['Can you hear us?', 'Please answer', 'Wake up', 'Hello?', 'Wake up', 'Opportunity', 'Wake up', 'Please answer', 'Wake up', 'Hello?', 'Wake up', 'Wake up'];
+let t = 12.6, gap = 0.62; for (const b of burst) { R(t, b); t += gap; gap = Math.max(0.2, gap * 0.84); }
+c.sep(18.9, T('2019年2月12日', 'February 12, 2019'));
+R(19.6, T('これが最後の呼びかけです', 'This is our last call'), 'big');
+c.build();
+const cn = el(`<div class="counter">${T('送ったメッセージ<br><em><span class="n">1</span>回以上</em>', 'Messages sent<br><em>over <span class="n">1</span></em>')}</div>`, c.root); fadeIn(cn, 12.4, 0.3);
+count(cn.querySelector('.n'), 12.6, 6.0, 1, 1000, v => Math.round(v).toLocaleString('en-US'), { snd: null });
+
+s = scene(st, 24.2, M.dur, { bg: 'PIA22928', filt: 'brightness(.7)', move: { s0: 1.16, s1: 1.0 }, cr: T('本物の写真：オポチュニティがふり返って撮った自分の車輪のあと（NASA/JPL-Caltech）', 'Real photo: Opportunity looking back at its own tracks (NASA/JPL-Caltech)') });
+add(s.col, h(T('返事は、こなかった', 'No reply ever came'), 'lg'), 24.6, { snd: null });
+add(s.col, bx(T('次の日、NASAは活動の終わりを発表した', 'The next day, NASA announced the mission was over'), 'sm'), 26.3);
+add(s.col, bx(T('予定は90日。はたらいたのは、14年', 'The plan was 90 days. It worked for 14 years'), 'sm yellow'), 28.0, { snd: 'ding' });
+add(s.col, bx(T('今も、火星にいる', 'It is still on Mars'), 'sm green'), 29.8);
+done();
+</script></body></html>

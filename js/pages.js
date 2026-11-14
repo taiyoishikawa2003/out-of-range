@@ -37,6 +37,7 @@ export function renderDiscover(view, q = '') {
     const posts = allPosts().filter(p => (place === 'all' || p.place === place) && (!qq || searchText(p).includes(qq)));
     const accs = Object.entries(db.accounts).filter(([k, a]) => !a.hidden && (place === 'all' || a.place === place) && (!qq || (k + ' ' + L(a.name) + ' ' + L(a.bio)).toLowerCase().includes(qq)));
     res.replaceChildren(
+      (place === 'all' && !qq) ? h('a', { class: 'mapbanner', href: '#/map' }, h('b', { text: t('map.title') }), h('span', { text: t('map.sub') })) : '',
       accs.length ? h('h2', { text: t('disc.accounts') }) : '',
       accs.length ? h('div', { class: 'chips' }, accs.map(([k, a]) => h('a', { class: 'chip', href: '#/u/' + k, style: { display: 'flex', alignItems: 'center', textDecoration: 'none' }, text: L(a.name) }))) : '',
       h('h2', { text: t('disc.posts') }),

@@ -84,6 +84,7 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
   else feed.append(h('section', { class: 'feed-end', 'aria-label': t('feed.end.title') }, h('h2', { text: t('feed.end.title') }), h('p', { text: t('feed.end.text') }),
     h('button', { class: 'btn', type: 'button', text: t('feed.replay'), onclick: () => go(0, 'auto') }),
     h('a', { class: 'btn ghost', href: '#/create', text: t('feed.makeOwn') }),
+    h('a', { class: 'btn ghost', href: '#/map', text: t('map.title') }),
     h('a', { class: 'btn ghost', href: 'lost/', text: t('feed.lost') })));
 
   function build(i) {
@@ -171,6 +172,7 @@ function buildPost(p, el, { setMuted, onSlide, onComments }) {
   const stage = h('div', { class: 'stage' });
   let media = null; // {activate, deactivate, preload, unload, togglePlay, applyMute, slide, currentText}
   if (p.type === 'video') media = videoPost(p, el, stage, setMuted);
+  else if (p.type === 'app') media = appPost(p, el, stage);
   else media = carouselPost(p, el, stage, onSlide);
 
   /* rail */
@@ -208,7 +210,7 @@ function buildPost(p, el, { setMuted, onSlide, onComments }) {
   const cap = h('p', { class: 'cap' }, capText, ' ', tagText);
   const more = h('button', { class: 'more', type: 'button', text: t('more'), onclick: e => { e.stopPropagation(); const o = cap.classList.toggle('open'); more.textContent = t(o ? 'less' : 'more'); } });
   if ((capText + tagText).length < 38) more.hidden = true;
-  const cta = p.ad ? h('button', { class: 'cta', type: 'button', onclick: e => { e.stopPropagation(); onComments ? onComments(p, drawCounts) : openComments(p, drawCounts); } }, h('span', { text: L(p.cta) || t('ad.cta') }), icon('right')) : null;
+  const cta = p.ad ? h('button', { class: 'cta', type: 'button', onclick: e => { e.stopPropagation(); if (p.ctaLink) location.hash = p.ctaLink; else onComments ? onComments(p, drawCounts) : openComments(p, drawCounts); } }, h('span', { text: L(p.cta) || t('ad.cta') }), icon('right')) : null;
   if (p.ad) { el.classList.add('ad'); const ps = L(p.video?.poster); if (ps) stage.style.setProperty('--poster', `url("${new URL(ps, location.href).href}")`); }
   const meta = h('div', { class: 'meta' }, h('div', { class: 'whoRow' }, h('a', { class: 'who', href: '#/u/' + p.account, text: '@' + p.account }), p.ad ? h('span', { class: 'adtag', text: t('ad.label') }) : null), cap, more, cta,
     h('div', { class: 'snd' }, icon('music'), h('span', { text: L(p.sound) || 'Original sound - OUT OF RANGE' })));
@@ -225,6 +227,7 @@ function buildPost(p, el, { setMuted, onSlide, onComments }) {
   stage.addEventListener('pointermove', e => { if (down && Math.hypot(e.clientX - down.x, e.clientY - down.y) > 10) { clearTimeout(lpTimer); } });
   stage.addEventListener('pointerup', e => {
     endPress();
+    if (p.type === 'app') return; // taps belong to the mini-app
     if (longPressed || !down || Math.hypot(e.clientX - down.x, e.clientY - down.y) > 10) return;
     if (e.target.closest('button,a,input,.progress')) return;
     const now = Date.now();
@@ -242,6 +245,17 @@ function buildPost(p, el, { setMuted, onSlide, onComments }) {
 
   el.replaceChildren(stage, rail, meta, ...(media.extra || []).filter(Boolean));
   return { ...media, like, drawCounts };
+}
+
+/* interactive post: a small app (js/apps/<name>.js) mounted in the stage */
+function appPost(p, el, stage) {
+  el.classList.add('app');
+  const box = h('div', { class: 'appbox' }); stage.append(box);
+  let api = null, want = false;
+  import(`./apps/${p.app}.js`).then(m => { api = m.mount(box, { post: p, L, t, lang: getLang(), toast }); if (want) api.activate?.(); })
+    .catch(() => { box.append(h('p', { class: 'verr', text: t('err.media') })); });
+  return { activate() { want = true; el.classList.add('playing'); api?.activate?.(); }, deactivate() { want = false; el.classList.remove('playing'); api?.deactivate?.(); },
+    preload() {}, unload() {}, applyMute() {}, slide() {}, currentText: () => L(p.caption) };
 }
 
 function videoPost(p, el, stage, setMuted) {
