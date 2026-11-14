@@ -217,3 +217,10 @@ table.t th,table.t td{border-bottom:1px solid var(--line);padding:8px 6px;text-a
 }
 @media (max-width:799px){.feedarrows{display:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* start gate (one tap unlocks sound) */
+.gate{position:absolute;inset:0;z-index:30;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:0;color:#fff;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);cursor:pointer;font:inherit}
+.gate-ic{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.16);border:2px solid rgba(255,255,255,.7)}
+.gate-ic svg{width:40px;height:40px;margin-left:5px}
+.gate b{font-size:20px;letter-spacing:.04em}
+.gate small{font-size:14px;opacity:.8}

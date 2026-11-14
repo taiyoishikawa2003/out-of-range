@@ -1,7 +1,7 @@
 import { get, set, del } from '../vendor/idb-keyval.js';
 
 const KEY = 'oor.state.v1';
-const def = { likes: {}, saves: {}, follows: {}, comments: {}, muted: true, read: false, cc: true };
+const def = { likes: {}, saves: {}, follows: {}, comments: {}, muted: false, read: false, cc: true };
 let st;
 try { st = { ...def, ...JSON.parse(localStorage.getItem(KEY) || '{}') }; } catch { st = { ...def }; }
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch {} };

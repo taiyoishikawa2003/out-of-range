@@ -21,6 +21,7 @@ async function loadVtt(url) {
   vttCache.set(url, p); return p;
 }
 
+let started = false;
 export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
   const wrap = h('div', { class: 'feedwrap' });
   const feed = h('div', { class: 'feed', role: 'feed', 'aria-label': 'Posts' });
@@ -46,6 +47,19 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
   function setMuted(m) {
     S.setMuted(m); drawTop();
     items.forEach(it => it.api?.applyMute?.());
+  }
+
+  /* start gate: browsers only allow sound after one tap, so the first tap starts everything with sound */
+  let gate = null;
+  if (!started) {
+    gate = h('button', { class: 'gate', type: 'button', 'aria-label': t('gate.play') },
+      h('span', { class: 'gate-ic' }, icon('play')), h('b', { text: t('gate.play') }), h('small', { text: t('gate.sound') }));
+    gate.addEventListener('click', e => {
+      e.stopPropagation(); started = true; gate.remove(); gate = null;
+      setMuted(false);
+      const it = items[active]; const vid = it?.el.querySelector('video'); if (vid) vid.currentTime = 0;
+      if (it?.api) { it.api.deactivate(); it.api.activate(); }
+    });
   }
 
   /* posts */
@@ -125,7 +139,7 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
     h('button', { type: 'button', 'aria-label': 'Previous', onclick: () => go(cur() - 1) }, icon('up')),
     h('button', { type: 'button', 'aria-label': 'Next', onclick: () => go(cur() + 1) }, icon('down')));
 
-  wrap.append(feed); view.replaceChildren(wrap, top, arrows);
+  wrap.append(feed); if (gate) wrap.append(gate); view.replaceChildren(wrap, top, arrows);
   // first paint: build the first posts right away so the first frame is never empty
   let si = startId ? Math.max(0, items.findIndex(x => x.post.id === startId)) : 0;
   for (let j = si - 1; j <= si + 2; j++) build(j);
@@ -240,7 +254,7 @@ function videoPost(p, el, stage, setMuted) {
   const applyMute = () => { v.muted = S.isMuted(); unmute.hidden = !S.isMuted() || !isActive; };
   const play = () => { src(); wantPlay = true; v.play().then(() => { el.classList.add('playing'); el.classList.remove('paused'); }).catch(() => {
     // autoplay with sound blocked → fall back to muted
-    if (!v.muted) { S.setMuted(true); v.muted = true; applyMute(); v.play().catch(() => el.classList.add('paused')); } else el.classList.add('paused');
+    if (!v.muted) { v.muted = true; unmute.hidden = !isActive; v.play().catch(() => el.classList.add('paused')); } else el.classList.add('paused');
   }); };
   const pause = () => { wantPlay = false; v.pause(); el.classList.remove('playing'); };
   let raf;
@@ -267,7 +281,7 @@ function videoPost(p, el, stage, setMuted) {
     setRate(r) { v.playbackRate = r; rate.hidden = r === 1; if (r !== 1) unmute.hidden = true; else applyMute(); },
     applyCC: drawCC,
     unload() { pause(); cancelAnimationFrame(raf); if (loaded) { v.removeAttribute('src'); v.load(); loaded = false; } },
-    togglePlay() { if (v.paused) { play(); } else if (S.isMuted()) { setMuted(false); } else { pause(); el.classList.add('paused'); } },
+    togglePlay() { if (v.paused) { play(); } else if (v.muted) { setMuted(false); } else { pause(); el.classList.add('paused'); } },
     applyMute, slide() {}, currentText: () => L(p.caption)
   };
 }
