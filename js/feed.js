@@ -338,7 +338,9 @@ function carouselPost(p, el, stage, onSlide) {
     auto = setTimeout(() => { if (idx >= slides.length - 1) go(0, 'instant'); else go(idx + 1); }, d);
   };
   const hold = () => { held = true; stopAuto(); };
-  ['pointerdown', 'wheel', 'keydown'].forEach(ev => car.addEventListener(ev, hold, { passive: true }));
+  car.addEventListener('pointerdown', e => { if (e.isPrimary) hold(); }, { passive: true });
+  // only a sideways wheel/trackpad gesture counts as touching; vertical scrolling between posts does not
+  car.addEventListener('wheel', e => { if (Math.abs(e.deltaX) > Math.abs(e.deltaY) && Math.abs(e.deltaX) > 4) hold(); }, { passive: true });
   let st;
   car.addEventListener('scroll', () => {
     clearTimeout(st); st = setTimeout(() => {
