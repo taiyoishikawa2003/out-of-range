@@ -5,6 +5,9 @@ NASA Space Apps Challenge 2026 — *Abandoned but not Forgotten: Storytelling ab
 
 **Live:** https://<user>.github.io/<repo>/ — no login, works on phones, tablets and PCs.
 
+## Lunar Lost & Found (`/lost/`)
+A second, separate piece: a lost-and-found counter for things left on the Moon (golf balls, a family photo, waste bags, Surveyor 3's camera). Each claim slip leads to the machine kept next to it and a small hands-on science scene (laser ranging, moonquakes, Moon gravity). Plain HTML/CSS/JS in `lost/`; photos load from the NASA Image and Video Library.
+
 ## Features
 - Vertical swipe feed (CSS scroll-snap) with autoplaying video, captions (WebVTT, EN/JA), seek bar, tap to unmute/pause, double-tap to like
 - Swipeable photo posts with 8 slide layouts (photo+text, big number, quiz, before/after, chat, paper/form, tier list, photo dump)

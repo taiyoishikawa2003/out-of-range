@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>月面遺失物センター — Lunar Lost &amp; Found</title>
+<meta name="description" content="The things NASA left on the Moon, handed over at a lost-and-found counter — with the real science of the machines next to them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Klee+One:wght@400;600&family=DotGothic16&family=Zen+Old+Mincho:wght@600;900&display=swap">
+<link rel="stylesheet" href="lost.css">
+</head>
+<body>
+<div class="app">
+  <header class="sign">
+    <a href="#/" class="sign-title" id="signTitle">月面遺失物センター</a>
+    <button class="lang" id="langBtn" type="button" aria-label="Change language">EN</button>
+  </header>
+  <div class="awning" aria-hidden="true"></div>
+  <main id="view" tabindex="-1"></main>
+  <footer class="counter">
+    <div class="ticket" aria-live="polite"><span id="callLabel">呼出番号</span> <b id="callNo">014</b></div>
+    <nav class="foot-links">
+      <a href="#/sources" id="lnkSources">出典</a>
+      <a href="#/about" id="lnkAbout">この作品について</a>
+    </nav>
+  </footer>
+</div>
+<script src="lost.js"></script>
+</body>
+</html>
