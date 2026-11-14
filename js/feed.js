@@ -4,6 +4,7 @@ import { t, L, getLang } from './i18n.js';
 import * as S from './store.js';
 import { account, allPosts } from './data.js';
 import { openComments, openSources, openShare, toast, fmt, sheetOpen, commentsView } from './sheets.js';
+import { furiButton } from './furi.js';
 import { speak, stopSpeak } from './speech.js';
 
 /* ---------- WebVTT (minimal parser for captions) ---------- */
@@ -62,13 +63,14 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
   function openCm(p, onCount) { if (panelOn() && panelView) panelView.focus(); else openComments(p, onCount); }
 
   /* start gate: browsers only allow sound after one tap, so the first tap starts everything with sound */
-  let gate = null;
+  let gate = null, gateOpt = null;
   if (!started) {
     gate = h('button', { class: 'gate', type: 'button', 'aria-label': t('gate.play') },
       h('span', { class: 'gate-brand', text: 'OUT OF RANGE' }), h('span', { class: 'gate-tag', text: t('gate.tag') }),
       h('span', { class: 'gate-ic' }, icon('play')), h('b', { text: t('gate.play') }), h('small', { text: t('gate.sound') }));
+    gateOpt = furiButton('gate-opt');
     gate.addEventListener('click', e => {
-      e.stopPropagation(); AU.unlock(); started = true; gate.remove(); gate = null;
+      e.stopPropagation(); AU.unlock(); started = true; gate.remove(); gate = null; gateOpt.remove();
       setMuted(false);
       const it = items[active]; const vid = it?.el.querySelector('video'); if (vid) vid.currentTime = 0;
       if (it?.api) { it.api.deactivate(); it.api.activate(); }
@@ -77,7 +79,7 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
 
   /* posts */
   posts.forEach((p, i) => {
-    const el = h('article', { class: 'post', 'data-id': p.id, 'aria-posinset': i + 1, 'aria-setsize': posts.length, 'aria-label': `@${p.account}: ${L(p.caption)}` });
+    const el = h('article', { class: 'post' + (p.account === 'you' ? ' nofuri' : ''), 'data-id': p.id, 'aria-posinset': i + 1, 'aria-setsize': posts.length, 'aria-label': `@${p.account}: ${L(p.caption)}` });
     feed.append(el); items.push({ post: p, el, api: null, built: false });
   });
   if (!posts.length) feed.append(h('div', { class: 'feed-end' }, h('p', { text: t('feed.followEmpty') }), h('button', { class: 'btn', type: 'button', text: t('feed.foryou'), onclick: () => { destroy(); renderFeed(view, { tab: 'foryou' }); } })));
@@ -154,7 +156,7 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
     h('button', { type: 'button', 'aria-label': 'Previous', onclick: () => go(cur() - 1) }, icon('up')),
     h('button', { type: 'button', 'aria-label': 'Next', onclick: () => go(cur() + 1) }, icon('down')));
 
-  wrap.append(feed); if (gate) wrap.append(gate); view.replaceChildren(wrap, top, arrows, panel);
+  wrap.append(feed); if (gate) wrap.append(gate, gateOpt); view.replaceChildren(wrap, top, arrows, panel);
   // first paint: build the first posts right away so the first frame is never empty
   let si = startId ? Math.max(0, items.findIndex(x => x.post.id === startId)) : 0;
   for (let j = si - 1; j <= si + 2; j++) build(j);

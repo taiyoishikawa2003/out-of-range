@@ -47,6 +47,7 @@ Beyond the feed:
 - **Create**: kids make their own true post in the browser. A source is required. Posts stay on the device
 - Discover (search, Moon / Mars / Deep space filters) and a profile page for every machine
 - Read-aloud for photo posts, English / 日本語, keyboard controls, reduced-motion support
+- ふりがな (furigana): a reading aid for younger Japanese readers. One tap adds small kana above words that use kanji taught after grade 2. The word list is built from the app's own text and checked by a script (`tools/furigana/`)
 - Privacy: no accounts, no ads, no tracking. Likes, follows, comments and created posts stay in the browser
 - Works offline after the first visit (service worker)
 
@@ -80,7 +81,8 @@ Then open http://localhost:8000/. There is no build step for the site itself (pl
   - `tools/motion/motion.js`: the small timeline runtime; `tools/motion/make_sfx.py` synthesizes the interface sounds
   - `node tools/motion/build.mjs <page> <output>` records the frames with headless Chrome and mixes the sound with ffmpeg; `python3 tools/motion/publish.py` puts the videos into `data/posts.json`
 - `data/machines.json` holds the map entries (position, what / why / found / now, sources). `js/map.js` draws the map.
-- Interactive posts live in `js/apps/` (for example `shindan.js`, the quiz).
+- Interactive posts live in `js/apps/` (`shindan.js`, the quiz; `lag.js`, the rover-driving game).
+- The furigana word list `data/furi.json` is built by `node tools/furigana/build.mjs` (needs `npm install kuromoji`). It splits every Japanese string the app shows into words, keeps the ones with kanji taught after grade 2, and checks that looking the words up gives the same result as the word-by-word analysis. Readings fixed by hand are in `tools/furigana/overrides.json`. Run it again after changing Japanese text.
 - `tools/build_*.py` build the earlier videos and photo posts. `tools/version_media.py` adds a content hash to every media path.
 - `tools/nasa_collect.py` collects candidate media for every machine on the official challenge resource list (`data/nasa_catalog.json`).
 

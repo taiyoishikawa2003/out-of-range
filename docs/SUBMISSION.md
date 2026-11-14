@@ -59,7 +59,7 @@ The challenge says school-age kids "often hear only about active, ongoing missio
 - *Discoveries they still make*: some of these machines are still doing science. The laser reflector Apollo 11 left is still used today to measure the distance to the Moon (light takes about 2.5 seconds to go and come back), which is how we know the Moon moves about 3.8 cm farther away each year. The map says so on its pin, and the Lunar Lost & Found has a hands-on scene for it.
 - *A personal connection*: the machines speak in the first person, and the last post ends on one line: "They weren't thrown away. They worked to the very end."
 - *Age group*: upper elementary to junior high (about 9 to 15). *Perspective*: the machines' own. *Scope*: broad, from the Moon to interstellar space.
-- *Accessibility*: no login, any phone or PC, English and Japanese, read-aloud for photo posts, keyboard controls, reduced-motion support, works offline after the first visit.
+- *Accessibility*: no login, any phone or PC, English and Japanese, read-aloud for photo posts, a one-tap reading aid in Japanese (furigana: small kana above the harder kanji, for younger readers), keyboard controls, reduced-motion support, works offline after the first visit.
 
 **How we keep it accurate**
 
@@ -74,7 +74,7 @@ A static web app in plain HTML, CSS and JavaScript (no framework, no server, no 
 
 **What is next**
 
-Classroom tests with kids, a furigana (reading aid) mode for younger Japanese readers, and more machines and formats.
+Classroom tests with kids, reading help inside the videos themselves, and more machines and formats.
 
 ## NASA Data
 

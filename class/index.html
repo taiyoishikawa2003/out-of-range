@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OUT OF RANGE: classroom worksheet</title>
+<meta name="description" content="A printable one-page worksheet for a 10-minute activity with OUT OF RANGE. English and Japanese.">
+<style>
+  :root { --ink: #111; --line: #9a9a9a; --accent: #ffc400; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #e9e9e9; color: var(--ink); font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, system-ui, sans-serif; line-height: 1.6; }
+  .bar { display: flex; gap: 10px; justify-content: center; padding: 14px; }
+  .bar button, .bar a { font: inherit; font-weight: 700; padding: 9px 18px; border-radius: 999px; border: 2px solid #111; background: #fff; color: #111; text-decoration: none; cursor: pointer; }
+  .bar button.main { background: var(--accent); }
+  .sheet { width: 210mm; min-height: 297mm; margin: 0 auto 30px; background: #fff; padding: 13mm 14mm 10mm; box-shadow: 0 4px 24px rgba(0,0,0,.18); }
+  header { display: grid; grid-template-columns: 1fr 27mm; gap: 8mm; align-items: center; border-bottom: 3px solid #111; padding-bottom: 4mm; }
+  .brand { font-size: 10pt; font-weight: 900; letter-spacing: .16em; background: #111; color: var(--accent); display: inline-block; padding: 1px 8px; }
+  h1 { font-size: 19pt; margin: 2mm 0 1mm; line-height: 1.3; }
+  .sub { font-size: 9.5pt; margin: 0; }
+  .qr { text-align: center; font-size: 6.5pt; line-height: 1.3; word-break: break-all; }
+  .qr img { width: 27mm; height: 27mm; display: block; }
+  .name { display: flex; gap: 8mm; font-size: 10pt; margin: 4mm 0 1mm; }
+  .name span { flex: 1; border-bottom: 1.5px solid var(--line); padding-bottom: 5mm; }
+  section { margin-top: 4.5mm; break-inside: avoid; }
+  h2 { font-size: 12pt; margin: 0 0 1mm; display: flex; align-items: center; gap: 3mm; }
+  h2 b { background: var(--accent); border: 2px solid #111; border-radius: 50%; width: 7.5mm; height: 7.5mm; display: grid; place-items: center; font-size: 11pt; flex: none; }
+  h2 small { font-weight: 500; font-size: 9pt; }
+  p { margin: 0 0 1mm; font-size: 10.5pt; }
+  .w { border-bottom: 1.5px solid var(--line); height: 8.5mm; }
+  .q { display: grid; grid-template-columns: 34mm 1fr; align-items: end; font-size: 10.5pt; }
+  .q.wide { grid-template-columns: 52mm 1fr; }
+  .q div { border-bottom: 1.5px solid var(--line); height: 8.5mm; }
+  footer { margin-top: 5mm; border-top: 1.5px solid #111; padding-top: 2.5mm; font-size: 8pt; line-height: 1.5; color: #222; }
+  rt { font-size: .55em; }
+  [data-l] { display: none; }
+  html[lang="ja"] [data-l="ja"], html[lang="en"] [data-l="en"] { display: revert; }
+  html[lang="ja"] .q[data-l="ja"], html[lang="en"] .q[data-l="en"] { display: grid; }
+  @media (max-width: 220mm) { .sheet { width: auto; min-height: 0; margin: 0 8px 20px; padding: 18px 16px; } header { grid-template-columns: 1fr 84px; } .qr img { width: 84px; height: 84px; } }
+  @page { size: A4; margin: 0; }
+  @media print { body { background: #fff; } .bar { display: none; } .sheet { box-shadow: none; margin: 0; width: 210mm; min-height: 0; padding: 12mm 14mm 8mm; } }
+</style>
+</head>
+<body>
+<div class="bar">
+  <button class="main" type="button" onclick="print()"><span data-l="ja">印刷する</span><span data-l="en">Print</span></button>
+  <button type="button" id="sw"><span data-l="ja">English</span><span data-l="en">日本語</span></button>
+  <a href="../"><span data-l="ja">作品を開く</span><span data-l="en">Open the feed</span></a>
+</div>
+
+<main class="sheet">
+  <header>
+    <div>
+      <span class="brand">OUT OF RANGE</span>
+      <h1 data-l="ja"><ruby>置<rt>お</rt></ruby>いてきた<ruby>機械<rt>きかい</rt></ruby>の、本当の話をさがそう</h1>
+      <h1 data-l="en">Find the true story of a machine we left behind</h1>
+      <p class="sub" data-l="ja">10分でできるワークシート（小学校高学年〜中学生）。スマホかタブレットで、右のコードを読みこもう。</p>
+      <p class="sub" data-l="en">A 10-minute worksheet (ages 9 to 15). Scan the code with a phone or tablet.</p>
+    </div>
+    <div class="qr"><img src="qr.svg" alt="QR code for the site">taiyoishikawa2003.github.io/out-of-range</div>
+  </header>
+
+  <div class="name"><span data-l="ja">名前</span><span data-l="en">Name</span><span data-l="ja">日づけ</span><span data-l="en">Date</span></div>
+
+  <section>
+    <h2><b>1</b><span data-l="ja">見る <small>（3分）</small></span><span data-l="en">Watch <small>(3 min)</small></span></h2>
+    <p data-l="ja"><ruby>投稿<rt>とうこう</rt></ruby>を3本見よう。いちばん「えっ！」と思ったのは、どの<ruby>機械<rt>きかい</rt></ruby>の話？ どこが「えっ！」だった？</p>
+    <p data-l="en">Watch three posts. Which machine's story surprised you most? What was the surprising part?</p>
+    <div class="w"></div><div class="w"></div>
+  </section>
+
+  <section>
+    <h2><b>2</b><span data-l="ja">たしかめる <small>（2分）</small></span><span data-l="en">Check <small>(2 min)</small></span></h2>
+    <p data-l="ja">その<ruby>投稿<rt>とうこう</rt></ruby>の「<ruby>出典<rt>しゅってん</rt></ruby>」（紙のマーク）を開こう。話のもとになった NASA のページの名前を書こう。</p>
+    <p data-l="en">Open “Sources” (the page icon) on that post. Write the name of the NASA page the story comes from.</p>
+    <div class="w"></div>
+  </section>
+
+  <section>
+    <h2><b>3</b><span data-l="ja">3つの問い <small>（3分）</small></span><span data-l="en">Three questions <small>(3 min)</small></span></h2>
+    <p data-l="ja">地図（「見つける」の中）か、コメントのいちばん上を読んで、その<ruby>機械<rt>きかい</rt></ruby>について<ruby>調<rt>しら</rt></ruby>べよう。</p>
+    <p data-l="en">Use the map (in Discover) or the top comment on the post to find out about that machine.</p>
+    <div class="q" data-l="ja"><span>何の<ruby>機械<rt>きかい</rt></ruby>？</span><div></div></div>
+    <div class="q" data-l="ja"><span>なぜ<ruby>送<rt>おく</rt></ruby>られた？</span><div></div></div>
+    <div class="q" data-l="ja"><span>何を見つけた？</span><div></div></div>
+    <div class="q wide" data-l="en"><span>What is it?</span><div></div></div>
+    <div class="q wide" data-l="en"><span>Why was it sent?</span><div></div></div>
+    <div class="q wide" data-l="en"><span>What did it find?</span><div></div></div>
+  </section>
+
+  <section>
+    <h2><b>4</b><span data-l="ja">作る <small>（5分）</small></span><span data-l="en">Make <small>(5 min)</small></span></h2>
+    <p data-l="ja">＋ をおして、自分の「本当の話」の<ruby>投稿<rt>とうこう</rt></ruby>を1つ作ろう。<ruby>出典<rt>しゅってん</rt></ruby>を書かないと、<ruby>投稿<rt>とうこう</rt></ruby>できないよ。書いた<ruby>出典<rt>しゅってん</rt></ruby>は？</p>
+    <p data-l="en">Press + and make one true post of your own. The app will not post it without a source. Which source did you use?</p>
+    <div class="w"></div>
+  </section>
+
+  <section>
+    <h2><b>5</b><span data-l="ja">考える</span><span data-l="en">Think</span></h2>
+    <p data-l="ja">この<ruby>機械<rt>きかい</rt></ruby>は「すてられた」と思う？ それとも、ちがう言い方がある？ 自分の言葉で書こう。</p>
+    <p data-l="en">Was this machine “thrown away”? Or is there a better way to say it? Use your own words.</p>
+    <div class="w"></div><div class="w"></div><div class="w"></div>
+  </section>
+
+  <footer>
+    <div data-l="ja"><b>先生・保護者の方へ：</b>登録もログインもいりません。子どもが作った投稿やコメントは、その端末の中にだけ保存され、外には送られません。投稿の事実は NASA などの資料で確認し、どの投稿にも出典があります。笑いや怖さは見せ方だけで、中身は本当の話です。日本語は「ふりがな」ボタンで、むずかしい漢字に読みがなが付きます。ゲーム「わたしをラジコンで運転してみて」は、火星までの電波のおくれ（片道3〜22分）を体験する教材として使えます。</div>
+    <div data-l="en"><b>For teachers and families:</b> no sign-up and no login. Posts and comments a child makes stay on that device and are never uploaded. The facts are checked against NASA and other primary sources, and every post lists its sources. The jokes and the spooky tone are only in the format; the content is true. The game “Try driving me like an RC car” lets students feel the radio delay to Mars (3 to 22 minutes each way).</div>
+    <div style="margin-top:1.5mm">OUT OF RANGE · NASA Space Apps Challenge 2026 · Team SunSunWorld · Apache-2.0 · Not endorsed by NASA.</div>
+  </footer>
+</main>
+
+<script>
+  // Language: ?lang=ja|en, else the choice saved by the main app, else the browser's language.
+  var q = new URLSearchParams(location.search).get('lang'), saved = null;
+  try { saved = localStorage.getItem('oor.lang'); } catch (e) {}
+  var lang = q || saved || ((navigator.language || 'en').indexOf('ja') === 0 ? 'ja' : 'en');
+  function set(l) { document.documentElement.lang = l; document.title = l === 'ja' ? 'OUT OF RANGE：授業用ワークシート' : 'OUT OF RANGE: classroom worksheet'; }
+  set(lang === 'ja' ? 'ja' : 'en');
+  document.getElementById('sw').onclick = function () { set(document.documentElement.lang === 'ja' ? 'en' : 'ja'); };
+</script>
+</body>
+</html>

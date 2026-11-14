@@ -15,7 +15,7 @@ export function renderCreate(view) {
   const d = { slides: [blank()], cur: 0, caption: '', srcTitle: '', srcUrl: '' };
   const pv = h('div', { class: 'pv', 'aria-label': 'Preview' });
   const form = h('div', {});
-  const page = h('div', { class: 'page' }, h('h1', { text: t('cr.title') }), h('div', { class: 'cr' }, pv, form));
+  const page = h('div', { class: 'page nofuri' }, h('h1', { text: t('cr.title') }), h('div', { class: 'cr' }, pv, form));
 
   const f = () => d.slides[d.cur];
   const drawPreview = () => { const el = renderSlide(compile(f())); pv.replaceChildren(el); loadImgs(el, true); };

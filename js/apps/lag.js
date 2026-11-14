@@ -54,6 +54,8 @@ export function mount(box, { lang, toast }) {
   const X = TX[lang] || TX.en;
   box.classList.add('lag');
   let raf = 0, timers = [];
+  const post = box.closest('.post');
+  const play = on => { if (post) post.classList.toggle('app-play', on); };   // while playing, the caption makes room for the game
   const later = (fn, ms) => { timers.push(setTimeout(fn, ms)); };
   const halt = () => { cancelAnimationFrame(raf); timers.forEach(clearTimeout); timers = []; };
   const frame = (...kids) => { halt(); const w = el('div', 'sd-in lg-in'); w.append(...kids); box.replaceChildren(w); return w; };
@@ -66,11 +68,13 @@ export function mount(box, { lang, toast }) {
 
   function intro() {
     frame(rover('lg-hero'), lines('h2', 'sd-title', X.title), say(el('p', 'sd-sub'), X.sub), btn('sd-start', X.start, () => round1(false)), el('p', 'sd-note', X.note));
+    play(false);
     const bg = el('img', 'lg-bg'); bg.src = 'media/lag/tracks.jpg'; bg.alt = ''; box.prepend(bg, el('div', 'sd-shade'));
   }
 
   // Round 1: what you see is LAG old, and what you press arrives LAG later.
   function round1(ghost) {
+    play(true);
     const R = 0.56 + Math.random() * 0.28;
     const scr = el('div', 'lg-scr'), rov = rover('lg-rov'), real = rover('lg-rov lg-real'), rock = el('i', 'lg-rock'), boom = el('i', 'lg-boom', '💥');
     real.append(el('em', '', X.real)); real.hidden = !ghost; rock.hidden = boom.hidden = true; rock.style.left = R * 100 + '%';
@@ -104,6 +108,7 @@ export function mount(box, { lang, toast }) {
 
   // Round 2: plan a path on the map, send it once, and the rover runs it. A rock the map did not show makes the rover stop itself.
   function round2() {
+    play(true);
     const N = 5, T = [2, 0], rocks = new Set(['1,2', '2,2', '3,2']), DIRS = { l: [-1, 0, 3, '←'], u: [0, -1, 0, '↑'], d: [0, 1, 2, '↓'], r: [1, 0, 1, '→'] };
     let pos = [2, 4], dir = 0, ang = 0, sol = 1, plan = [], surprise = false, busy = false;
     const board = el('div', 'lg-board'), cells = [], keys = {};

@@ -107,12 +107,13 @@ export function commentsView(post, onCount) {
           ...longText(L(c.text)),
           actions(post.id + ':s' + i, c.likes || 0))));
     });
+    if ((post.comments || []).some(c => !c.pinned)) list.append(h('p', { class: 'cm-note', text: t('cm.cast') }));
     const mine = localComments(post.id);
     mine.forEach((c, i) => list.append(h('div', { class: 'ycm' },
       h('div', { class: 'av me', text: '★' }),
       h('div', { class: 'ycm-main' },
         h('div', { class: 'yhd' }, h('span', { class: 'yname', text: t('mine') }), c.at ? h('span', { class: 'ytime', text: ago(c.at) }) : '', h('span', { class: 'ytime', text: '· ' + t('cm.local') })),
-        h('div', { class: 'ytx', text: c.text }),
+        h('div', { class: 'ytx nofuri', text: c.text }),
         actions(post.id + ':m' + i)))));
     if (!mine.length) list.append(h('p', { class: 'cm-empty', text: t('cm.first') }));
   };

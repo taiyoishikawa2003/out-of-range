@@ -39,6 +39,20 @@
      "ja": "意味わかった人いる？👀\n\n答え合わせ（ネタバレ注意）👇\n\nインサイトにマイクはありません。聞いていたのは「地震計」です。\n\n■ 地震計＝地面のゆれを測る機械\nインサイトは、火星の地面のとても小さなゆれまで感じとれる地震計を持っていました。\n\n■ 2021年9月5日、隕石が落ちた\nそのときのゆれと空気の振動を、地震計がとらえました。NASAはそのデータを、人の耳に聞こえる音にしました。\n\n■ 3回の「ボッ」の正体\n① 隕石が大気に入った ② 空中でバラバラに砕けた ③ 地面に当たった。この3つの瞬間です。\n\n■ なぜ「ボッ」と聞こえる？\n日が沈んだあとの火星の空気では、低い音が高い音より先に届きます。そのため「バン」ではなく「ボッ」と聞こえます。\n\n■ 本当に落ちたか確かめた\n上空を回る探査機MROがその場所を撮影し、新しいクレーターを少なくとも3つ見つけました。\n\n■ なぜすごい？\n隕石が落ちたゆれを、地球以外の惑星でとらえたのはこれが初めて。隕石の跡は、火星の過去や内部を知る手がかりになります。\n\n※動画の風の音は、地震計のデータを60倍速にして聞こえるようにしたものです。動画の赤い波形は、NASAが公開した隕石の音のデータをそのまま描いたものです。暗い色・揺れ・心臓の音などの効果音は演出です。",
      "en": "Did anyone figure it out? 👀\n\nThe answer (spoilers) 👇\n\nInSight had no microphone. It was listening with its seismometer.\n\n■ A seismometer measures ground shaking\nInSight carried a seismometer that could feel tiny shakes in the Martian ground.\n\n■ Sept 5, 2021: a meteoroid hit Mars\nThe seismometer picked up the shaking and air waves. NASA turned that data into a sound we can hear.\n\n■ What the 3 bloops are\n(1) it entered the atmosphere, (2) it broke apart, (3) it hit the ground.\n\n■ Why does it sound like a \"bloop\"?\nAfter sunset on Mars, low sounds arrive before high ones, so you hear a \"bloop\" instead of a \"bang\".\n\n■ Checking it really happened\nThe MRO orbiter photographed the spot and found at least three new craters.\n\n■ Why it matters\nIt was the first time seismic signals from a meteoroid impact were detected on another planet. Impact craters give clues about Mars' past and its insides.\n\nNote: the wind sound was made audible by speeding up seismometer data 60x. The red waveform is drawn from the actual impact sound NASA released. The dark colors, shaking and sound effects (like the heartbeat) are for effect."
     }
+   },
+   {
+    "user": "viking1_lander",
+    "text": {
+     "ja": "こわくて3回見た。わたしは1976年に、火星の地面から最初の写真を送った先輩です。後輩、すごい",
+     "en": "So scary I watched it three times. I'm the one who sent the first photos from the surface of Mars, back in 1976. Nice work, junior."
+    }
+   },
+   {
+    "user": "opportunity_rover",
+    "text": {
+     "ja": "同じ火星にいます（2018年から連絡がとれなくなってるけど）。隕石さん、こっちには落ちないでね",
+     "en": "I'm on the same planet (out of contact since 2018, though). Dear meteoroids, please don't land on me."
+    }
    }
   ],
   "sources": [
@@ -113,6 +127,30 @@
     },
     "title": "PIA23202 InSight Images a Sunset on Mars (NASA/JPL-Caltech)",
     "url": "https://images.nasa.gov/details/PIA23202"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @viking1_lander's comment: NASA Science: Viking 1",
+    "url": "https://science.nasa.gov/mission/viking-1/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @viking1_lander's comment: NSSDCA: Viking 1 Lander",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-075C"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @opportunity_rover's comment: NASA: Opportunity Rover Mission on Mars Comes to End",
+    "url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
    }
   ]
  },
@@ -141,6 +179,20 @@
     "text": {
      "ja": "答え合わせ👇（ここからは全部ほんとの話）\n\nサーベイヤー3号は、1967年4月に月に着陸した、人が乗っていない探査機です。\n\n■ 着陸でバウンドした\n降りるときにエンジンが止まらず、月面で2回はねました（1回目は高さ約10m、2回目は約3m）。3回目でやっと止まりました。\n\n■ 月で何をした？\n写真を6,326枚送り、スコップで月の土を掘って、かたさを調べました。「月の地面は、人が乗る着陸船を支えられるくらいしっかりしている」と分かりました。最後の通信は1967年5月4日です。\n\n■ 2年半後に人が来た\n1969年11月、アポロ12号が約180m先に着陸しました。2人の宇宙飛行士が歩いてやって来て、テレビカメラやスコップなどを取り外し、地球に持ち帰りました。\n\n■ なぜ持ち帰った？\n月の表面に約2年半さらされた機械がどうなるかを、科学者が調べるためです。\n\n■ 今は？\n今も月の「嵐の大洋」にあります。2009年に月を回る探査機LROが撮った写真には、アポロ12号の着陸船の下の部分とサーベイヤー3号、宇宙飛行士が歩いたあとが写っています。\n\n※「え、会いに来てくれたの？」などのセリフは、わたしたちが考えた演出です。写真はすべて本物です。最後の写真の丸と名前は、わたしたちが書き足しました。",
      "en": "The real story 👇 (everything below is true)\n\nSurveyor 3 was a robotic lander that reached the Moon in April 1967.\n\n■ It bounced\nIts engine did not shut off in time, so it bounced off the Moon twice (about 10 m high, then about 3 m) before settling on the third touchdown.\n\n■ What did it do?\nIt sent 6,326 pictures and dug into the soil with a scoop to test how firm it was. That showed the ground was solid enough to hold a lander carrying people. Last contact was on May 4, 1967.\n\n■ 2.5 years later, people came\nIn November 1969, Apollo 12 landed about 180 m away. Two astronauts walked over, removed the TV camera, the scoop and other parts, and took them back to Earth.\n\n■ Why take them?\nSo scientists could study what nearly two and a half years on the Moon's surface does to a machine.\n\n■ And now?\nIt is still in the Ocean of Storms. A 2009 photo from the LRO orbiter shows the Apollo 12 descent stage, Surveyor 3 and the astronauts' footpaths.\n\nNote: lines like \"you came all this way for me?\" are our own dramatization. All photos are real. We added the circles and labels on the last photo."
+    }
+   },
+   {
+    "user": "moon_lostfound",
+    "text": {
+     "ja": "遺失物センターです。サーベイヤー3号さんのカメラは、落とし物ではありません。地球へのお持ち帰りです",
+     "en": "Lost & Found here. Surveyor 3's camera is not a lost item. It was taken home to Earth."
+    }
+   },
+   {
+    "user": "near_shoemaker",
+    "text": {
+     "ja": "人が会いに来てくれたの、いいなあ。わたしは小惑星エロスの上で、今もひとりです",
+     "en": "People came to see you. Lucky. I'm still sitting alone on asteroid Eros."
     }
    }
   ],
@@ -240,6 +292,14 @@
     },
     "title": "Interface sounds: synthesized by the team (tools/motion/make_sfx.py, no third-party audio)",
     "url": "https://github.com/taiyoishikawa2003/out-of-range"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @near_shoemaker's comment: NASA Science: NEAR Shoemaker",
+    "url": "https://science.nasa.gov/mission/near-shoemaker/"
    }
   ],
   "type": "video",
@@ -391,6 +451,20 @@
      "ja": "答え合わせ👇\n\n正解は D うんち（袋96個）。カメラは12台、ブーツは12足、ゴルフボールは2個でした。\n\n月を歩いたアポロの宇宙飛行士たち（6回の着陸で12人）は、うんちやおしっこ、はいたものなどを入れた白い袋を、合わせて96個、月に置いてきました。\n\n■ なぜ置いてきた？\n帰りに月の石をたくさん持ち帰るため、その分の重さを減らす必要がありました。ゴルフボールやカメラ、ブーツなども一緒に置いてきています。\n\n■ なぜ科学者は取りに行きたい？\nうんちの半分くらいは、おなかの中にいた菌でできています。月は空気がなく、昼は100℃、夜は−170℃くらいになり、強い放射線も降り注ぐ場所です。そんな所で50年たった菌が生きていたら、「生き物は宇宙の旅にも耐えられるかもしれない」という手がかりになります。\n\n■ 本当に生きてる？\n研究者も「生きている可能性は低い」と言っています。でも、月に置いてきた物の中では、いちばん可能性がある物だそうです。\n\n※写真はアポロ14号の着陸船とアポロ12号の宇宙飛行士、BGMはKevin MacLeod「Monkeys Spinning Monkeys」（CC BY 4.0）です。出典は「出典」ボタンから。月の落とし物は、遺失物センターのページでも紹介しています。",
      "en": "The answer 👇\n\nIt's D, poop (96 bags). Cameras: 12, boots: 12 pairs, golf balls: 2.\n\nThe Apollo astronauts who walked on the Moon (12 people over 6 landings) left behind 96 white bags of poop, pee, vomit and other waste.\n\n■ Why leave them?\nTo bring lots of Moon rocks home, they had to cut weight. Golf balls, cameras and boots were left too.\n\n■ Why do scientists want them back?\nAbout half of poop is made of gut microbes. The Moon has no air, swings from about 100°C by day to about −170°C at night, and is hit by strong radiation. If microbes survived 50 years there, it would be a clue that life could survive trips through space.\n\n■ Are they alive?\nResearchers say it's unlikely — but it's the most likely place on the Moon to find anything alive.\n\nNote: photos show the Apollo 14 lunar module and an Apollo 12 astronaut; music: \"Monkeys Spinning Monkeys\" by Kevin MacLeod (CC BY 4.0). Sources: tap \"Sources\". More Moon lost items on our Lost & Found page."
     }
+   },
+   {
+    "user": "surveyor3",
+    "text": {
+     "ja": "わたしも落とし物ですか？ 1967年から月にいます",
+     "en": "Am I a lost item too? I've been on the Moon since 1967."
+    }
+   },
+   {
+    "user": "moon_lostfound",
+    "text": {
+     "ja": "↑ ちがいます。あなたは「置いてきた機械」です。どこにいるかも、ちゃんと分かっています",
+     "en": "↑ No. You are a machine we left there. We know exactly where you are."
+    }
    }
   ],
   "sources": [
@@ -457,6 +531,22 @@
     },
     "title": "\"Monkeys Spinning Monkeys\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/",
     "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @surveyor3's comment: NSSDCA: Apollo 12 Lunar Module / ALSEP",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-099C"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @surveyor3's comment: NASA Science: Surveyor 3",
+    "url": "https://science.nasa.gov/mission/surveyor-3/"
    }
   ],
   "fit": "contain"
@@ -501,6 +591,13 @@
     "text": {
      "ja": "これは、わたしたちチームが作った「予告」です。本物の広告ではありません。\n\n■ 本当の話です\nオポチュニティは2004年1月に火星に着陸した、NASAの探査車です。予定された活動期間は火星の90日、走る距離は1キロとして設計されていました。\n\n■ 動画に出てくる試練（すべて実際の出来事）\n・2005年：砂の丘に車輪がうまり、5週間以上動けなかった\n・2011〜2012年の冬：太陽の光が弱く、19週間走れなかった\n・2014〜2015年：記録用のメモリーが壊れ、データを覚えていられない「記憶喪失」がくり返し起きた\n\n■ 距離のカウンター\n各場面のときの実際の走行距離（約5.3km、約34.4km、約40.8〜41.6km）を通るように作っています。あいだの増え方は演出です。地図の金色の線は、NASAの地図にある実際の走行ルートを描き直したものです。\n\n■ この先どうなったかは…\n「1000回送っても、既読がつかなかった」の投稿で見られます（下のボタンから）。\n\n※画像はすべてNASAの本物です。揺れ・画面の乱れなどは演出です。",
      "en": "This is a trailer made by our team. It is not a real ad.\n\n■ This is a true story\nOpportunity is a NASA rover that landed on Mars in January 2004. It was designed to work for 90 Martian days and drive 1 kilometer.\n\n■ The trials in the video (all real)\n• 2005: its wheels sank into a sand ripple and it was stuck for over five weeks\n• Winter 2011–2012: too little sunlight to drive for 19 weeks\n• 2014–2015: its flash memory failed, causing repeated \"amnesia\" events\n\n■ The odometer\nIt passes the real distances at each scene (about 5.3 km, 34.4 km, 40.8–41.6 km). The pace in between is dramatized. The gold line is the real route from NASA's map, redrawn.\n\n■ What happened next?\nSee the post “We texted 1,000 times. No reply.” (use the button below).\n\nAll images are real NASA images. The camera shake and glitches are effects."
+    }
+   },
+   {
+    "user": "spirit_rover",
+    "text": {
+     "ja": "ふたごのわたしも、ちょっとだけ出ますか？",
+     "en": "Do I get a cameo? I am the twin."
     }
    }
   ],
@@ -568,6 +665,22 @@
     },
     "title": "Holst, \"Mars, the Bringer of War\" — U.S. Air Force Band, 1998 (public domain), Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File:Holst-_mars.ogg"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @spirit_rover's comment: NASA Science: Mars Exploration Rovers",
+    "url": "https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @spirit_rover's comment: NSSDCA: Spirit",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-027A"
    }
   ],
   "ad": true,
@@ -601,6 +714,20 @@
     "text": {
      "ja": "ほんとの話と、計算のしかた👇\n\nパイオニア10号は1972年に打ち上げられた、NASAで最初に木星より遠くをめざした探査機です。\n\n■ 21か月の予定が30年以上\nもともとは木星の近くを通る21か月の計画でした。実際は30年以上、地球に信号を送りつづけました。\n\n■ 最後の信号\n2003年1月。地球から約122億kmはなれていて、電波（光と同じ速さ）でも11時間20分かかりました。電気を作る装置の力が弱くなり、今は連絡がとれません。\n\n■ どこへ向かっている？\nおうし座の赤い星アルデバランの方向です。アルデバランまでは約68光年。NASAは「200万年以上かかる」としています。\n\n■ 名刺って？\n宇宙のだれかに見つけてもらったときのために、地球の場所と人間の絵をかいたアルミの板をのせています。\n\n■ 計算のしかた（わたしたちの計算）\n68光年＝約643兆km（1光年＝約9.46兆km）。これを休まずに進んだときの年数にしました。\n・歩く（時速4km）：約183億年\n・車（時速100km）：約7.3億年\n・新幹線（時速300km）：約2.4億年\n宇宙の年齢は約138億年です（NASA）。\n\n※カーナビの画面は、わたしたちが作った演出です。パイオニア10号にカーナビはありません。",
      "en": "The real story, and how we did the math 👇\n\nPioneer 10 launched in 1972. It was NASA's first mission to the outer planets.\n\n■ Planned for 21 months, lasted over 30 years\nIt was designed for a 21-month mission to fly by Jupiter. It kept sending signals to Earth for more than 30 years.\n\n■ Last signal\nJanuary 2003, from about 12.2 billion km away. Even radio, at the speed of light, took 11 hours 20 minutes. Its power source had become too weak, so we can no longer hear it.\n\n■ Where is it going?\nToward Aldebaran, the red star in Taurus, about 68 light-years away. NASA says it will take more than 2 million years.\n\n■ The \"business card\"\nAn aluminum plaque showing where Earth is and what humans look like, in case anyone ever finds it.\n\n■ Our calculation\n68 light-years ≈ 643 trillion km (1 light-year ≈ 9.46 trillion km). Travelling nonstop:\n・Walking (4 km/h): about 18.3 billion years\n・Car (100 km/h): about 730 million years\n・Bullet train (300 km/h): about 240 million years\nThe universe is about 13.8 billion years old (NASA).\n\nNote: the nav app screens are our dramatization. Pioneer 10 has no nav app."
+    }
+   },
+   {
+    "user": "kepler_uranai",
+    "text": {
+     "ja": "おうし座のみなさんにお知らせ。アルデバランの方向へ、お客さんが向かっています。到着は200万年以上先です",
+     "en": "Notice to every Taurus: a visitor is heading toward Aldebaran. Arrival: more than 2 million years from now."
+    }
+   },
+   {
+    "user": "opportunity_rover",
+    "text": {
+     "ja": "わたしは14年以上かけて、45km走りました。きみの旅は、けたがちがう",
+     "en": "I drove 45 km in over 14 years. Your trip is on another scale."
     }
    }
   ],
@@ -676,6 +803,30 @@
     },
     "title": "Interface sounds: synthesized by the team (tools/motion/make_sfx.py, no third-party audio)",
     "url": "https://github.com/taiyoishikawa2003/out-of-range"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @kepler_uranai's comment: NASA Science: Kepler",
+    "url": "https://science.nasa.gov/mission/kepler"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @opportunity_rover's comment: NASA: Opportunity Rover Mission on Mars Comes to End",
+    "url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @opportunity_rover's comment: NSSDCA: Opportunity",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-032A"
    }
   ],
   "type": "video",
@@ -770,6 +921,20 @@
      "ja": "答え合わせ（ネタバレ注意）👇\n\nスピリットは、2004年に火星に着いた探査車です。予定は90日でしたが、6年以上動き続けました。\n\n■ 何が起きた？\n2006年、右前の車輪が動かなくなりました。そこで向きを変えて、後ろ向きに5つの車輪で走り、壊れた車輪を引きずって進みました。\n\n■ 白い土の正体\n引きずった車輪が地面を掘って、白い土が出てきました。調べると、ほぼ純粋な「シリカ」でした。\n\n■ なぜすごい？\nこれほど濃いシリカは、温泉や蒸気が噴き出す場所でできます。どちらも、地球では生き物がすめる環境です。昔の火星にも生き物がすめる場所があったかもしれない、という手がかりになりました。科学者は「生き物がすめたかを考えるうえで、スピリットのいちばん重要な発見」と言っています。\n\n■ その後\n2009年に砂にはまって動けなくなり、2010年3月22日の通信が最後になりました。\n\n※1枚目はNASAが描いた想像図、2〜4枚目は火星で撮った本物の写真です。出典は「出典」ボタンから。",
      "en": "The answer (spoilers) 👇\n\nSpirit landed on Mars in 2004. It was planned to work for 90 days, but kept going for over 6 years.\n\n■ What happened?\nIn 2006 its right front wheel stopped working. So it turned around and drove backwards on five wheels, dragging the broken one.\n\n■ The white soil\nThe dragged wheel dug into the ground and turned up white soil. It turned out to be almost pure silica.\n\n■ Why it matters\nSilica this concentrated forms around hot springs or steam vents — places where life thrives on Earth. It's a clue that ancient Mars may have had places where life could live. Scientists called it Spirit's most important finding about habitability.\n\n■ After that\nIn 2009 it got stuck in sand. Its last message came on March 22, 2010.\n\nNote: slide 1 is a NASA artist's concept; slides 2–4 are real photos from Mars. Sources: tap \"Sources\"."
     }
+   },
+   {
+    "user": "opportunity_rover",
+    "text": {
+     "ja": "ふたごです。わたしは火星の反対側に着陸しました。会ったことは一度もないけど、ずっとふたご",
+     "en": "Twin here. I landed on the opposite side of Mars. We never met, but we are twins forever."
+    }
+   },
+   {
+    "user": "insight_lander",
+    "text": {
+     "ja": "こわれた車輪で大発見、かっこいい。わたしは太陽電池が砂だらけになって、そのまま終わりました",
+     "en": "A big discovery thanks to a broken wheel. Respect. My solar panels got covered in dust, and that was the end of me."
+    }
    }
   ],
   "sources": [
@@ -836,6 +1001,30 @@
     },
     "title": "\"Fluffing a Duck\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/",
     "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @opportunity_rover's comment: NASA: Opportunity Rover Mission on Mars Comes to End",
+    "url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @opportunity_rover's comment: NSSDCA: Opportunity",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-032A"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @insight_lander's comment: NASA Science: InSight",
+    "url": "https://science.nasa.gov/mission/insight/"
    }
   ],
   "noSourceSlide": true,
@@ -875,6 +1064,13 @@
     "text": {
      "ja": "診断はお遊びです（性格を科学的に調べるものではありません）。でも、結果に出てくる機械の話は全部ほんとうです👇\n\n・オポチュニティ：予定は火星の90日。14年以上はたらき、45.16km走った\n・パイオニア10号：1972年に出発。21か月の予定が、30年以上信号を送った\n・サーベイヤー3号：1967年に月に着陸。2年半後、アポロ12号の宇宙飛行士が会いに来た\n・NEARシューメーカー：着陸用ではないのに小惑星エロスに着陸し、約2週間データを送った\n・スピリット：こわれた車輪が掘った地面から、昔の温泉のあと（シリカ）を見つけた\n・インジェニュイティ：地球ではない星で初めて飛んだヘリコプター。5回の予定が72回\n・ケプラー：9年間で、太陽系の外の惑星を2,600個以上見つけた\n・バイキング1号：予定は90日。6年以上、火星から写真や天気の報告を送った\n\n結果が気に入ったら、その機械の投稿も見てみてね。",
      "en": "The quiz is just for fun (it is not a scientific personality test). But every fact on the result cards is real 👇\n\n・Opportunity: planned for 90 Martian days. It worked for over 14 years and drove 45.16 km\n・Pioneer 10: launched in 1972. Planned for 21 months, it sent signals for over 30 years\n・Surveyor 3: landed on the Moon in 1967. Apollo 12 astronauts visited it 2.5 years later\n・NEAR Shoemaker: not built to land, it landed on asteroid Eros and sent data for about two weeks\n・Spirit: its broken wheel dug up silica left by ancient hot springs\n・Ingenuity: the first helicopter to fly on another planet. Planned for 5 flights, it made 72\n・Kepler: in nine years it found more than 2,600 planets beyond our solar system\n・Viking 1: planned for 90 days. It sent photos and weather reports from Mars for over 6 years\n\nIf you like your result, go and watch that machine's posts."
+    }
+   },
+   {
+    "user": "pioneer10",
+    "text": {
+     "ja": "やってみたら「パイオニア10号（マイペースで遠くへタイプ）」でした。本人です",
+     "en": "I got “Pioneer 10: the one who goes far, at its own pace.” That is literally me."
     }
    }
   ],
@@ -970,6 +1166,20 @@
      "ja": "ほんとの話👇\n\nNEARシューメーカーは、小惑星のまわりを回った世界で最初の探査機です。2000年2月から1年間、小惑星エロスを回って調べました。\n\n■ 着陸用には作られていなかった\n回って調べるための探査機で、着陸のための足はありません。1年間の仕事のあと、ゆっくりとエロスに降りていきました。\n\n■ 降りながら写真を69枚\n最後の1枚は高さ120mから撮ったものです。写真の下がすじになっているのは、送っている途中で着地して、信号がとぎれたからです。\n\n■ 時速約6kmで着地、そして無事\n2001年2月12日、歩くくらいの速さで着地しました。こわれずに、そのあと約2週間、地面からデータを送りつづけました。小惑星に着陸した最初の探査機になりました。\n\n■ 最後の通信\n2001年2月28日。−173℃の寒さのなかでした。今もエロスの上にあります。\n\n※チャットの会話は、わたしたちが考えた演出です。NEARと地球のチームが、実際にこういう言葉をやりとりしたわけではありません。写真と出来事は本物です。",
      "en": "The real story 👇\n\nNEAR Shoemaker was the first spacecraft to orbit an asteroid. It studied asteroid Eros from orbit for a year, starting in February 2000.\n\n■ It was not built to land\nIt was an orbiter with no landing legs. After its year of work, it made a slow, controlled descent to Eros.\n\n■ 69 photos on the way down\nThe last one was taken from 120 m up. The streaks at the bottom are where the signal was lost as it touched down while still sending the picture.\n\n■ It touched down at about 6 km/h and survived\nOn Feb. 12, 2001 it landed at walking speed, then kept returning data from the surface for about two weeks. It became the first spacecraft to land on an asteroid.\n\n■ Last contact\nFeb. 28, 2001, in cold of minus 173°C. It is still sitting on Eros.\n\nNote: the chat is our dramatization. NEAR and its team never exchanged these words. The photos and events are real."
     }
+   },
+   {
+    "user": "surveyor3",
+    "text": {
+     "ja": "着陸用に作られてないのに着陸…？ わたしは着陸用なのに、月で2回はねました",
+     "en": "You landed without being built to land…? I was built to land, and I still bounced twice on the Moon."
+    }
+   },
+   {
+    "user": "machine_ranking",
+    "text": {
+     "ja": "「着陸用じゃないのに着陸した」ランキングがあったら、1位です",
+     "en": "If we ranked “landed without being built to land,” you would be number one."
+    }
    }
   ],
   "sources": [
@@ -1020,6 +1230,22 @@
     },
     "title": "Interface sounds: synthesized by the team (tools/motion/make_sfx.py, no third-party audio)",
     "url": "https://github.com/taiyoishikawa2003/out-of-range"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @surveyor3's comment: NSSDCA: Apollo 12 Lunar Module / ALSEP",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-099C"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @surveyor3's comment: NASA Science: Surveyor 3",
+    "url": "https://science.nasa.gov/mission/surveyor-3/"
    }
   ],
   "type": "video",
@@ -1079,6 +1305,13 @@
     "text": {
      "ja": "第1位は… おとめ座 でした！🎉\n3回、合計222日も推されました（観測されました）。おとめ座でいちばん明るい星「スピカ」も観測しています。\n\n実は… 4位と5位のあいだに、星占いの12星座に入っていない「へびつかい座」がまぎれこんでいました（2回・157日）。\n\n■ 「推された」ってどういうこと？\nケプラーが惑星さがしのために、その星座の方向を観測した回数のことです。\n\n■ ランキングの決め方\nケプラー宇宙望遠鏡は2014〜2018年の「K2」という観測で、星占いの星座が並ぶ帯（太陽の通り道）に沿って、1か所を約80日ずつ見つめました。全20回の観測で、見た範囲の真ん中がどの星座にあったかを数えました。回数が同じときは、見つめた日数の合計で順位をつけています。\n\n■ 全順位\n1位 おとめ座（3回）\n2位 かに座（3回）\n3位 みずがめ座（3回）\n4位 しし座（2回）\n5位 おうし座（2回）\n6位 いて座（2回）\n7位 てんびん座（1回）\n8位 ふたご座・うお座（1回）\n10位 さそり座・やぎ座・おひつじ座（0回）\n\n■ 動画の中の話\n・おうし座：2015年の観測の範囲に、すばる（プレアデス星団）が入っていました。\n・しし座：2017年の観測の範囲に、太陽系から約8光年のご近所の星「ウルフ359」が入っていました。\n・みずがめ座：燃料が尽きる前の最後の観測（2018年8〜9月）は、みずがめ座の方向でした。7つの惑星をもつ星「トラピスト1」もこの観測に入っていました。\n・かに座：3回とも、プレセペ星団が入っていました。\n\n■ ケプラーってどんな望遠鏡？\n惑星が星の前を横切ると、星の光がほんの少しだけ暗くなります。ケプラーはその変化を見張って、2,600個以上の惑星を見つけました。2018年に燃料が尽きて引退しました。\nケプラーの観測から、天の川銀河には星よりも惑星のほうが多いとわかりました。\n\n■ 画像について\nすばる・プレセペ星団はNASAの本物の写真です。しし座の赤い星とトラピスト1の画像は、NASAが描いた想像図（イメージ）です。惑星が星の前を通る場面は、わかりやすく大きく描いています。\n\n※占いは科学ではありません。星座は地球から見た「方向」です。ランキングに使ったデータは本物です。",
      "en": "No.1 is... VIRGO! 🎉\nPicked 3 times, 222 days in total. Kepler also observed Spica, the brightest star in Virgo.\n\nPlot twist: between No.4 and No.5, a sign that isn't in the zodiac sneaked in: Ophiuchus (2 times, 157 days).\n\n■ What does \"picked\" mean?\nIt is how many times Kepler pointed toward that sign to hunt for planets.\n\n■ How we ranked\nIn its \"K2\" mission (2014–2018), Kepler stared at one patch of sky for about 80 days at a time, moving along the band where the zodiac signs sit (the Sun's path). For all 20 campaigns we checked which constellation the centre of the field was in. Ties were broken by total days watched.\n\n■ Full ranking\n1 Virgo (3)\n2 Cancer (3)\n3 Aquarius (3)\n4 Leo (2)\n5 Taurus (2)\n6 Sagittarius (2)\n7 Libra (1)\n8 Gemini, Pisces (1)\n10 Scorpio, Capricorn, Aries (0)\n\n■ About the video\n• Taurus: the 2015 field included the Pleiades.\n• Leo: the 2017 field included Wolf 359, about 8 light-years from the Sun.\n• Aquarius: the last campaign before the fuel ran out (Aug–Sep 2018) pointed toward Aquarius. It included TRAPPIST-1, a star with 7 planets.\n• Cancer: all 3 fields included the Beehive Cluster.\n\n■ What was Kepler?\nWhen a planet passes in front of its star, the starlight dims just a little. Kepler watched for those dips and found more than 2,600 planets. It ran out of fuel and retired in 2018.\nThanks to Kepler, we know our galaxy has more planets than stars.\n\n■ About the images\nThe Pleiades and the Beehive Cluster are real NASA images. The red star (Leo) and TRAPPIST-1 are NASA illustrations. The planet-crossing scene is exaggerated so you can see it.\n\nNote: astrology is not science. A constellation is just a direction as seen from Earth. The data behind the ranking is real."
+    }
+   },
+   {
+    "user": "pioneer10",
+    "text": {
+     "ja": "わたしが向かっているのは、おうし座のアルデバランの方向です。おうし座、何位でした？",
+     "en": "I'm heading toward Aldebaran, in Taurus. So… where did Taurus place?"
     }
    }
   ],
@@ -1210,6 +1443,14 @@
     },
     "title": "\"Heartwarming\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/",
     "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @pioneer10's comment: NASA Science: Pioneer 10",
+    "url": "https://science.nasa.gov/mission/pioneer-10/"
    }
   ]
  },
@@ -1248,6 +1489,20 @@
     "text": {
      "ja": "答え合わせ 👇（ここからは全部ほんとう）\n\n■ なぜラジコンにできない？\n火星は遠い。電波は光の速さで進むけれど、それでも片道3〜22分かかる（地球と火星の位置で変わる）。画面にうつるのは何分も前の火星で、「止まれ」がとどくのも何分もあと。\n\n■ 本当の運転のしかた\nジョイスティックはなかった。運転する人たちは、1日分の動きを先に考えて、ローバーがどう動くかをコンピューターで確かめてから、まとめて送った。わたしは走りながら、2つのカメラの目で岩や坂を見つけた。そして自分でよけたり、止まって次の命令を待ったりした。\n\n■ わたしはだれ？\nNASA のローバー（火星を走る車）、オポチュニティ。むかしの火星に水があった証拠をさがすために、2004年に火星に着いた。そして本当に見つけた。予定は90日。実際は14年以上はたらいた。\n\n※ゲームでは20分を2秒にちぢめています。岩の場所と「1日6個まで」はゲーム用の作りものです。",
      "en": "The real story 👇 (everything below is true)\n\n■ Why not an RC car?\nMars is far away. A radio signal travels at the speed of light, and it still takes 3 to 22 minutes each way, depending on where Earth and Mars are. The picture on your screen is minutes old, and your STOP arrives minutes late.\n\n■ How I was really driven\nThere was no joystick. My drivers planned a whole day of moves, checked on a computer what I would do, and sent the commands all at once. On the way, I used my two camera eyes to spot rocks and slopes. Then I steered around them, or stopped and waited for the next commands.\n\n■ Who am I?\nOpportunity, a NASA rover (a car that drives on Mars). I landed in 2004 to look for signs that Mars once had water, and I found them. I was planned for 90 days and worked for more than 14 years.\n\nIn the game, 20 minutes takes 2 seconds. The rock positions and the six-commands-a-day rule are made up for the game."
+    }
+   },
+   {
+    "user": "spirit_rover",
+    "text": {
+     "ja": "ふたごのわたしも、同じやり方でした。ラジコンじゃないよ。自分の目でたしかめながら走るんだよ",
+     "en": "Same for me, the twin. We were never RC cars. We checked the road with our own eyes as we drove."
+    }
+   },
+   {
+    "user": "viking1_lander",
+    "text": {
+     "ja": "わたしは動けない着陸機なので、このゲームは永久にクリアできません",
+     "en": "I'm a lander. I can't move. I will never clear this game."
     }
    }
   ],
@@ -1307,6 +1562,22 @@
     },
     "title": "NASA: Opportunity Rover Mission on Mars Comes to End (designed for 90 Martian days)",
     "url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @spirit_rover's comment: NSSDCA: Spirit",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-027A"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @viking1_lander's comment: NASA Science: Viking 1",
+    "url": "https://science.nasa.gov/mission/viking-1/"
    }
   ]
  },
@@ -1336,6 +1607,20 @@
     "text": {
      "ja": "答え合わせ👇\n正解は D「地球」です。\n\nバイキング1号は、1976年7月20日に火星に着陸しました。火星への着陸に本当の意味で成功した、最初の探査機です。\n\n■ 最初の写真は自分の足\n着陸してすぐに撮った1枚目は、火星の地面で撮られた世界で最初の写真です。右下に着陸機の足が写っています。\n\n■ 90日の予定が6年以上\n計画は着陸から90日でした。実際は6年以上動きつづけ、写真や天気の報告を地球に送りました。火星に生き物がいるかどうかを調べる実験もしました。\n\n■ なぜ通信がとぎれた？\n1982年11月11日、地球から送った命令にまちがいがあり、通信がとぎれました。そのあと通信を取りもどそうとしましたが、うまくいきませんでした。砂あらしでも、寒さでも、宇宙人でもありません。\n\n■ 今は？\n今も火星のクリュセ平原にあります。2006年には、火星を回る探査機MROの写真で、正確な場所がつきとめられました。\n\n※「事件ファイル」「手がかり」は演出です。写真と出来事は本物です。",
      "en": "The answer 👇\nIt's D, Earth.\n\nViking 1 landed on Mars on July 20, 1976. NASA calls it the first truly successful landing on Mars.\n\n■ Its first photo was its own foot\nThe first picture it took right after landing is the first photograph ever taken on the surface of Mars. You can see the lander's footpad at the lower right.\n\n■ Planned for 90 days, worked for over 6 years\nIt kept sending photos and weather reports, and ran experiments to look for signs of life.\n\n■ Why did the signal stop?\nOn Nov. 11, 1982, a faulty command sent from Earth interrupted communications. Later attempts to regain contact did not succeed. It was not a dust storm, the cold, or aliens.\n\n■ And now?\nIt is still on Chryse Planitia. In 2006 the MRO orbiter's camera pinpointed exactly where it sits.\n\nNote: the \"case file\" and \"clues\" are our dramatization. The photos and events are real."
+    }
+   },
+   {
+    "user": "opportunity_rover",
+    "text": {
+     "ja": "わたしは砂嵐で。きみは、まちがった命令で。おたがい、最後まではたらいたね",
+     "en": "A dust storm for me. A wrong command for you. We both worked right up to the end."
+    }
+   },
+   {
+    "user": "insight_lander",
+    "text": {
+     "ja": "犯人が「地球からの命令」だったなんて…。こわい話より、こわい",
+     "en": "The culprit was a command from Earth…? That is scarier than my scary story."
     }
    }
   ],
@@ -1411,6 +1696,30 @@
     },
     "title": "\"Investigations\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (shortened to a loop)",
     "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @opportunity_rover's comment: NASA: Opportunity Rover Mission on Mars Comes to End",
+    "url": "https://science.nasa.gov/missions/mer/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @opportunity_rover's comment: NSSDCA: Opportunity",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-032A"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @insight_lander's comment: NASA Science: InSight",
+    "url": "https://science.nasa.gov/mission/insight/"
    }
   ],
   "type": "carousel",
@@ -1535,6 +1844,27 @@
      "ja": "ほんとの話👇\n\nオポチュニティは、2004年から火星を走りつづけた探査車です。太陽の光で電気を作って動いていました。\n\n■ 2018年6月、砂あらし\n火星全体をおおう大きな砂あらしが起きて、太陽の光がとどかなくなりました。6月10日の通信が最後になりました。\nチャットの中の暗い写真は、そのとき最後に届いた本物のデータです。太陽を撮ろうとしましたが、砂あらしで空が暗く、ほとんど何も写っていません。下が黒いのは、写真を全部送りきる前に通信がとぎれたからです。\n\n■ 1000回以上の呼びかけ\nNASAのチームは、通信を取りもどすために1000回以上の命令を送りました。2019年2月12日が最後の呼びかけでした。返事はなく、次の日、NASAは活動の終わりを発表しました。\n\n■ 予定は90日\n計画は「火星の90日間はたらいて、1,000m走る」こと。実際は14年以上はたらき、45km以上を走りました。昔の火星に水があった証拠も見つけました。\n\n■ 今は？\n今も火星の「パーシビアランス谷」にいます。\n\n※チャットの会話と「未読」の表示は演出です。NASAが送ったのは、文字のメッセージではなく、機械への命令です。",
      "en": "The real story 👇\n\nOpportunity was a rover that drove on Mars from 2004. It ran on solar power.\n\n■ June 2018: the dust storm\nA storm covered the whole planet and blocked the sunlight. Its last message came on June 10.\nThe dark photo in the chat is the real last data it sent. It tried to photograph the Sun, but the storm had made the sky so dark that almost nothing shows. The bottom is black because contact was lost before the whole picture was sent.\n\n■ More than a thousand calls\nNASA's team sent more than a thousand commands to restore contact. The last attempt was on Feb. 12, 2019. No answer came, and the next day NASA announced the mission was over.\n\n■ The plan was 90 days\nIt was designed to last 90 Martian days and drive 1,000 meters. It worked for more than 14 years and drove over 45 km. It also found evidence that ancient Mars had water.\n\n■ And now?\nIt is still in Perseverance Valley on Mars.\n\nNote: the chat and the \"Not read\" labels are our dramatization. What NASA sent were commands to the machine, not text messages."
     }
+   },
+   {
+    "user": "spirit_rover",
+    "text": {
+     "ja": "ごめん。わたしも2010年から返事できてない",
+     "en": "Sorry. I haven't been able to reply since 2010 either."
+    }
+   },
+   {
+    "user": "pioneer10",
+    "text": {
+     "ja": "わたしの最後の信号は2003年。電気を作る力が弱くなって、もう返事ができません",
+     "en": "My last signal was in 2003. My power source grew too weak, so I can't answer any more."
+    }
+   },
+   {
+    "user": "insight_lander",
+    "text": {
+     "ja": "わたしは2022年12月から。太陽電池に砂がつもると、こうなります",
+     "en": "For me it's been since December 2022. This is what dust on solar panels does."
+    }
    }
   ],
   "sources": [
@@ -1601,6 +1931,30 @@
     },
     "title": "Interface sounds: synthesized by the team (tools/motion/make_sfx.py, no third-party audio)",
     "url": "https://github.com/taiyoishikawa2003/out-of-range"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @spirit_rover's comment: NSSDCA: Spirit",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2003-027A"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @pioneer10's comment: NASA Science: Pioneer 10",
+    "url": "https://science.nasa.gov/mission/pioneer-10/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @insight_lander's comment: NASA Science: InSight",
+    "url": "https://science.nasa.gov/mission/insight/"
    }
   ],
   "type": "video",
@@ -1645,6 +1999,20 @@
     "text": {
      "ja": "4つのLOOKの、ほんとの理由👇\n\nLOOK 1　月面車の泥よけ（アポロ17号、1972年）\n作業中にハンマーが引っかかって、右うしろの泥よけの一部が取れました。走ると月の砂をあびてしまうので、宇宙飛行士は月の地図をテープでつなぎ、クリップでとめて、代わりの泥よけを作りました。月面車は今も月にあります。\n\nLOOK 2　インジェニュイティの布（火星、2021〜2024年）\n1.3cm四方の布は、ライト兄弟が1903年に世界で初めて飛ばした飛行機のつばさに使われていたものです。太陽電池の下のケーブルに付けてあります。インジェニュイティは火星で72回飛びました。\n\nLOOK 3　インサイトの砂（火星、2018〜2022年）\nインサイトは太陽の光で電気を作っていました。太陽電池に砂がつもって作れる電気が減り、2022年12月に通信が終わりました。上の写真が着陸してすぐ、下が最後の自撮りです。\n\nLOOK 4　アポロ11号のプレート（月、1969年）\n人が初めて月に降りたときの着陸船の、はしごに付いています。「西暦1969年7月、惑星地球から来た人間が、ここに初めて月に足をしるした。私たちは全人類のために、平和のうちに来た」と書かれています。\n\n※「ファッションチェック」は演出です。写真はすべて本物です。",
      "en": "The real reason behind each look 👇\n\nLOOK 1: the Moon car's fender (Apollo 17, 1972)\nA hammer caught the right rear fender and part of it broke off. Driving then sprayed Moon dust over everything, so the astronauts taped lunar maps together and clamped them on as a new fender. The rover is still on the Moon.\n\nLOOK 2: Ingenuity's cloth (Mars, 2021–2024)\nThe 1.3 cm square is wing fabric from the Wright brothers' Flyer, which made the first powered, controlled flight on Earth in 1903. It is attached to a cable under the solar panel. Ingenuity flew 72 times on Mars.\n\nLOOK 3: InSight's dust (Mars, 2018–2022)\nInSight ran on solar power. Dust built up on its panels, power dropped, and contact ended in December 2022. Top: just after landing. Bottom: its final selfie.\n\nLOOK 4: Apollo 11's plaque (Moon, 1969)\nIt is on the ladder of the first lander to carry people to the Moon. It reads: \"Here men from the planet Earth first set foot upon the Moon, July 1969, A.D. We came in peace for all mankind.\"\n\nNote: the \"fashion check\" is our dramatization. All photos are real."
+    }
+   },
+   {
+    "user": "surveyor3",
+    "text": {
+     "ja": "アクセサリー（カメラ）を持って帰られた側としては、複雑な気持ちです",
+     "en": "As someone whose accessory (a camera) got taken home, I have mixed feelings."
+    }
+   },
+   {
+    "user": "viking1_lander",
+    "text": {
+     "ja": "次回はわたしも呼んでください。1976年モデルです",
+     "en": "Call me next time. I'm a 1976 model."
     }
    }
   ],
@@ -1744,6 +2112,30 @@
     },
     "title": "\"Funkorama\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/ (shortened to a loop)",
     "url": "https://incompetech.com/music/royalty-free/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @surveyor3's comment: NSSDCA: Apollo 12 Lunar Module / ALSEP",
+    "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-099C"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @surveyor3's comment: NASA Science: Surveyor 3",
+    "url": "https://science.nasa.gov/mission/surveyor-3/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @viking1_lander's comment: NASA Science: Viking 1",
+    "url": "https://science.nasa.gov/mission/viking-1/"
    }
   ],
   "type": "carousel",
@@ -1846,6 +2238,20 @@
     "text": {
      "ja": "計算のしかた👇（「何倍」は、わたしたちの計算です）\n\n1位 オポチュニティ（火星）\n予定は火星の90日。最後の通信は着陸から5,111日目（火星の日数）。5,111÷90＝約57倍\n（NASAは、活動終了の発表までを数えて「60倍」としています）\n\n2位 スピリット（火星）\n予定は火星の90日。2004年1月から2010年3月まで、約6年2か月＝約25倍\n\n2位 バイキング1号（火星）\n予定は90日。1976年7月20日から1982年11月11日まで、約6年4か月＝約25倍\n※スピリットとほとんど同じなので、同点にしました。だから3位はありません。\n\n4位 パイオニア10号（宇宙）\n予定は21か月。最後の信号まで約30年11か月＝約18倍\n\n5位 インジェニュイティ（火星）\n予定は最大5回の飛行。実際は72回＝約14倍\n\n■ 今はどこに？\n5台とも、最後に止まった場所（火星）や、飛んでいった先（宇宙）にあります。\n\n※ランキングは演出です。予定と実際の数字はNASAの資料によります。",
      "en": "How we did the math 👇 (the \"times longer\" numbers are our own calculation)\n\nNo. 1 Opportunity (Mars)\nPlanned for 90 Martian days (sols). Its last message came on sol 5,111. 5,111 ÷ 90 ≈ 57×\n(NASA, counting up to the end-of-mission announcement, says it exceeded its life expectancy by 60 times.)\n\nNo. 2 Spirit (Mars)\nPlanned for 90 sols. It worked from January 2004 to March 2010, about 6 years 2 months ≈ 25×\n\nNo. 2 Viking 1 (Mars)\nPlanned for 90 days. It worked from July 20, 1976 to Nov. 11, 1982, about 6 years 4 months ≈ 25×\nSpirit and Viking 1 are so close that we called it a tie, so there is no No. 3.\n\nNo. 4 Pioneer 10 (deep space)\nDesigned for 21 months. Its last signal came about 30 years 11 months after launch ≈ 18×\n\nNo. 5 Ingenuity (Mars)\nPlanned for up to 5 flights. It made 72 ≈ 14×\n\n■ Where are they now?\nAll five are still where they stopped (on Mars) or where they flew (deep space).\n\nNote: the ranking is our dramatization. The planned and actual numbers come from NASA sources."
+    }
+   },
+   {
+    "user": "near_shoemaker",
+    "text": {
+     "ja": "わたしは「着陸の予定なし → 着陸成功」。何倍かは、計算できません",
+     "en": "Mine was “not built to land → landed.” You can't put a multiple on that."
+    }
+   },
+   {
+    "user": "kepler_uranai",
+    "text": {
+     "ja": "ケプラーはランク外でしたが、9年間で2,600個以上の惑星を見つけました。それはそれで、えらい",
+     "en": "Kepler did not make the list, but it found more than 2,600 planets in nine years. That counts for something."
     }
    }
   ],
@@ -1985,6 +2391,22 @@
     },
     "title": "Interface sounds: synthesized by the team (tools/motion/make_sfx.py, no third-party audio)",
     "url": "https://github.com/taiyoishikawa2003/out-of-range"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @near_shoemaker's comment: NASA Science: NEAR Shoemaker",
+    "url": "https://science.nasa.gov/mission/near-shoemaker/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "For @kepler_uranai's comment: NASA Science: Kepler",
+    "url": "https://science.nasa.gov/mission/kepler"
    }
   ],
   "type": "video",

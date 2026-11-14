@@ -76,6 +76,10 @@
      "ja": "左上の吹き出しで、スライドを読み上げます。"
     },
     {
+     "en": "In Japanese, the ふりがな button adds reading help: small kana above the harder kanji. It is on the start screen and at the top of this page.",
+     "ja": "「ふりがな」ボタンで、むずかしい漢字に読みがなが付きます。スタート画面と、このページの上にあります（動画と写真の中の文字には付きません）。"
+    },
+    {
      "en": "Press + to make your own true post. It stays on your device.",
      "ja": "＋で自分の「本当の話」の投稿を作れます。作った投稿はこの端末にだけ残ります。"
     },
@@ -152,8 +156,17 @@
      "ja": "5分：＋を押して、自分の「本当の話」を1つ作る。出典を書かないと投稿できない仕組みです。"
     },
     {
-     "en": "Reading help: the speech bubble at the top left reads photo posts aloud. English / 日本語 can be switched at any time.",
-     "ja": "読むのが苦手な子には：左上の吹き出しで、写真の投稿を読み上げます。English／日本語はいつでも切り替えられます。"
+     "en": "Reading help: the speech bubble at the top left reads photo posts aloud. English / 日本語 can be switched at any time. In Japanese, the ふりがな button adds readings to words that use kanji taught after grade 2.",
+     "ja": "読むのが苦手な子には：左上の吹き出しで、写真の投稿を読み上げます。English／日本語はいつでも切り替えられます。「ふりがな」ボタンを押すと、小学3年生より上で習う漢字をふくむ言葉に、読みがなが付きます。"
+    }
+   ],
+   "links": [
+    {
+     "label": {
+      "en": "🖨 Printable worksheet (1 page, English / 日本語)",
+      "ja": "🖨 印刷できるワークシート（1ページ）"
+     },
+     "href": "class/"
     }
    ]
   },

@@ -1,4 +1,5 @@
 import { h, icon, img, loadImgs, slideText } from './render.js';
+import { furiButton } from './furi.js';
 import { t, L, getLang } from './i18n.js';
 import * as S from './store.js';
 import { db, allPosts, account, postsBy, thumbOf, reloadMine } from './data.js';
@@ -88,7 +89,7 @@ export function renderMe(view, tab = 'mine') {
       tab === 'mine' ? h('a', { class: 'btn', href: '#/create', text: t('cr.title') }) : ''));
   };
   draw();
-  view.replaceChildren(h('div', { class: 'page' }, h('div', { class: 'backbar', style: { justifyContent: 'flex-end' } }, h('button', { class: 'btn ghost sm', type: 'button', 'data-action': 'lang', text: t('lang') })), h('div', { class: 'prof' }, h('div', { class: 'big', style: { background: '#ffb000', color: '#111' }, text: '★' }), h('h1', { style: { margin: 0 }, text: t('me.title') }),
+  view.replaceChildren(h('div', { class: 'page' }, h('div', { class: 'backbar', style: { justifyContent: 'flex-end', gap: '8px' } }, furiButton(), h('button', { class: 'btn ghost sm', type: 'button', 'data-action': 'lang', text: t('lang') })), h('div', { class: 'prof' }, h('div', { class: 'big', style: { background: '#ffb000', color: '#111' }, text: '★' }), h('h1', { style: { margin: 0 }, text: t('me.title') }),
     h('p', { class: 'hint', text: t('me.local') })), tabsEl, body));
 }
 
@@ -103,7 +104,7 @@ export async function renderAbout(view) {
   const seen = new Map();
   db.posts.forEach(p => (p.sources || []).forEach(s => { const k = s.url || L(s.title); if (!seen.has(k)) seen.set(k, { ...s, posts: [] }); seen.get(k).posts.push(p.id); }));
   const page = h('div', { class: 'page' },
-    h('div', { class: 'backbar', style: { justifyContent: 'space-between' } }, h('h1', { style: { margin: 0 }, text: 'OUT OF RANGE' }), h('button', { class: 'btn ghost sm', type: 'button', 'data-action': 'lang', text: t('lang') })),
+    h('div', { class: 'backbar', style: { justifyContent: 'space-between' } }, h('h1', { style: { margin: 0 }, text: 'OUT OF RANGE' }), h('div', { style: { display: 'flex', gap: '8px' } }, furiButton(), h('button', { class: 'btn ghost sm', type: 'button', 'data-action': 'lang', text: t('lang') }))),
     ...(about.sections || []).map(s => sec(L(s.title), ...para(s.body),
       s.table ? h('table', { class: 't' }, h('tr', {}, s.table.head.map(x => h('th', { text: L(x) }))), s.table.rows.map(r => h('tr', {}, r.map(c => h('td', { text: L(c) }))))) : '',
       s.list ? h('ul', {}, s.list.map(x => h('li', { text: L(x) }))) : '',

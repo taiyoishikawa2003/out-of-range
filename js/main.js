@@ -6,6 +6,7 @@ import { renderDiscover, renderProfile, renderMe, renderAbout } from './pages.js
 import { renderCreate } from './create.js';
 import { renderMap } from './map.js';
 import { closeSheet } from './sheets.js';
+import { initFuri } from './furi.js';
 
 const view = document.getElementById('view');
 let destroy = null;
@@ -44,4 +45,5 @@ onLang(() => route());
   window.addEventListener('hashchange', route);
   if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
   route();
+  initFuri();
 })();

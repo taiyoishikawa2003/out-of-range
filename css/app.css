@@ -242,6 +242,7 @@ table.t th,table.t td{border-bottom:1px solid var(--line);padding:8px 6px;text-a
 .cmlike.on{color:#fe2c55}.cmlike.on svg{fill:currentColor;stroke:none}
 .cm.pinned{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:4px}
 .cm-empty{color:#8a8a8a;font-size:14px;text-align:center;padding:18px 0}
+.cm-note{color:#8a8a8a;font-size:11.5px;line-height:1.5;margin:2px 0 12px 52px}
 /* explainer */
 .xp{margin-top:8px}
 .xp-cover{width:100%;display:flex;flex-direction:column;align-items:center;gap:6px;padding:22px 12px;border-radius:12px;border:1px dashed #555;background:repeating-linear-gradient(45deg,#1b1b1b 0 10px,#222 10px 20px);color:#fff;font:inherit;cursor:pointer}
@@ -414,6 +415,8 @@ img.av{object-fit:cover}
 /* lag game (app post): drive a Mars rover with a signal delay */
 .lag{display:flex;justify-content:center;align-items:center}
 .lag .lg-in{gap:10px}
+.post.app-play .meta{display:none}
+.post.app-play .lag .lg-in{padding-bottom:calc(22px + env(safe-area-inset-bottom))}
 .lag .sd-title{font-size:clamp(21px,6.2vw,30px)}
 .lg-ph{display:inline-block}
 .lg-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 50%;opacity:.5}
@@ -452,7 +455,7 @@ img.av{object-fit:cover}
 .lg-why{margin:0;font-size:14px;line-height:1.55}
 .lg-fact{margin:0;font-size:13.5px;line-height:1.55;background:rgba(255,255,255,.1);border-radius:12px;padding:9px 12px;text-align:left}
 .lg-next{font-size:15.5px;padding:11px 22px;margin-top:2px}
-.lg-board{position:relative;display:grid;grid-template-columns:repeat(5,1fr);width:min(100%,30vh);aspect-ratio:1;border-radius:12px;overflow:hidden;background:#a4552d;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+.lg-board{position:relative;display:grid;grid-template-columns:repeat(5,1fr);width:min(100%,36vh);aspect-ratio:1;border-radius:12px;overflow:hidden;background:#a4552d;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
 .lg-cell{position:relative;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);font-style:normal;font-size:13px;font-weight:800;color:#fff;text-shadow:0 1px 2px #000}
 .lg-cell.rock::before{content:"";width:74%;height:66%;background:radial-gradient(circle at 35% 30%,#8f857c,#4a413c 70%);border-radius:46% 54% 50% 50%/60% 58% 42% 40%;box-shadow:2px 3px 0 rgba(0,0,0,.35)}
 .lg-cell.new::before{animation:lgpop .5s ease-out;outline:2px solid #ffc400;outline-offset:3px}
@@ -471,4 +474,14 @@ img.av{object-fit:cover}
 .lg-send{margin-top:0;font-size:16px;padding:11px 26px}
 .lg-pic{width:100%;height:104px;object-fit:cover;object-position:40% 60%;border-radius:12px}
 .lg-cap{margin:0;font-size:11.5px;line-height:1.5;opacity:.85;text-align:left}
-@media (max-height:700px){.lag .lg-in{gap:6px}.lg-hero{width:70px;height:70px}.lg-scr{height:92px}.lg-board{width:min(100%,31vh)}.lg-r2 .lg-task,.lg-r2 .lg-link{display:none}.lg-msg{font-size:12.5px;min-height:2.7em}.lg-big{padding:12px 0;font-size:18px}.lg-key{height:40px}.lg-pic{height:60px}.lg-cap{font-size:11px;line-height:1.4}.lg-task{font-size:17px}.lg-why,.lg-fact{font-size:12.5px;line-height:1.45}.lg-send{padding:9px 22px;font-size:15px}.lg-chips{min-height:24px}.lg-chips b{width:22px;height:22px;font-size:14px}}
+@media (max-height:700px){.lag .lg-in{gap:6px}.lg-hero{width:70px;height:70px}.lg-scr{height:92px}.lg-board{width:min(100%,34vh)}.lg-msg{font-size:12.5px;min-height:2.7em}.lg-big{padding:12px 0;font-size:18px}.lg-key{height:40px}.lg-pic{height:60px}.lg-cap{font-size:11px;line-height:1.4}.lg-task{font-size:17px}.lg-why,.lg-fact{font-size:12.5px;line-height:1.45}.lg-send{padding:9px 22px;font-size:15px}.lg-chips{min-height:24px}.lg-chips b{width:22px;height:22px;font-size:14px}}
+
+/* furigana: a reading aid for younger Japanese readers (js/furi.js) */
+.furi ruby{ruby-align:center}
+.furi rt{font-size:.5em;font-weight:500;letter-spacing:0;line-height:1.1;opacity:.95;-webkit-user-select:none;user-select:none}
+.gate-opt{position:absolute;left:50%;bottom:calc(26px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:31;border:1.5px solid rgba(255,255,255,.7);border-radius:999px;background:rgba(0,0,0,.45);color:#fff;font:inherit;font-size:14px;font-weight:700;padding:9px 18px;cursor:pointer}
+.gate-opt[aria-pressed="true"]{background:#ffc400;border-color:#ffc400;color:#111}
+html.furi-on .meta .cap{line-height:1.95;max-height:3.9em}
+html.furi-on .ytx,html.furi-on .mcard p,html.furi-on .sec p,html.furi-on .sd-facts li,html.furi-on .lg-fact,html.furi-on .lg-why{line-height:1.95}
+[data-action="furi"]{white-space:nowrap}
+[data-action="furi"].btn[aria-pressed="true"]{background:#ffc400;border-color:#ffc400;color:#111}
