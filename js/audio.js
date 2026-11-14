@@ -1,22 +1,22 @@
-// Web Audio player: unlocked once by a user tap, then music/sfx can play on any later swipe (Safari-safe).
-let ctx = null; const bufs = {};
+// Background music for photo posts. One shared <audio> element is "unlocked" by the first tap,
+// then reused for every post: it keeps playing on later swipes (Safari) and ignores the iPhone silent switch
+// (Web Audio would be muted by it).
+let el = null;
 export function unlock() {
   try {
-    ctx ||= new (window.AudioContext || window.webkitAudioContext)();
-    if (ctx.state !== 'running') ctx.resume();
-    const s = ctx.createBufferSource(); s.buffer = ctx.createBuffer(1, 1, 22050); s.connect(ctx.destination); s.start(0);
+    if (!el) { el = new Audio(); el.loop = true; el.preload = 'auto'; el.setAttribute('playsinline', ''); }
+    if (!el.src) { el.src = 'media/silence.mp3'; }
+    el.play().catch(() => {});
   } catch {}
 }
-export const ready = () => !!ctx;
-const load = url => bufs[url] ||= fetch(url).then(r => r.arrayBuffer()).then(a => new Promise((res, rej) => ctx.decodeAudioData(a, res, rej)));
-export function preload(url) { if (ctx && url) load(url).catch(() => {}); }
-export function once(url, vol = 1) {
-  if (!ctx) return;
-  load(url).then(b => { const s = ctx.createBufferSource(); s.buffer = b; const g = ctx.createGain(); g.gain.value = vol; s.connect(g).connect(ctx.destination); s.start(); }).catch(() => {});
-}
-export function loop(url, vol = 1) {
-  if (!ctx) return { stop() {} };
-  let src = null, stopped = false; const g = ctx.createGain(); g.gain.value = vol; g.connect(ctx.destination);
-  load(url).then(b => { if (stopped) return; src = ctx.createBufferSource(); src.buffer = b; src.loop = true; src.connect(g); src.start(); }).catch(() => {});
-  return { stop() { stopped = true; try { g.gain.setTargetAtTime(0, ctx.currentTime, .04); src?.stop(ctx.currentTime + .25); } catch {} } };
+export const ready = () => !!el;
+export function preload() {}
+export function once(url) { try { const a = new Audio(url); a.play().catch(() => {}); } catch {} }
+export function loop(url) {
+  if (!el) return { stop() {} };
+  const abs = new URL(url, location.href).href;
+  if (el.src !== abs) { el.src = abs; }
+  el.currentTime = 0; el.loop = true;
+  el.play().catch(() => {});
+  return { stop() { if (el.src === abs) el.pause(); } };
 }
