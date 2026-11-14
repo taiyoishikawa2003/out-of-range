@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the "What did people leave most on the Moon?" quiz (3 slides, ja/en) + BGM.
 Usage: python3 tools/build_lost_quiz.py <img_dir> <audio_dir> <out_dir>
-  img_dir needs as14-66-09277.jpg; audio_dir needs gal.mp4 (NASA "Sounds from Around the Milky Way").
+  img_dir needs as14-66-09277.jpg; audio_dir needs "Monkeys Spinning Monkeys.mp3" (Kevin MacLeod, incompetech.com, CC BY 4.0).
 Counts (from sources in data/posts.json): bags of waste 96, cameras 12, pairs of boots 12, golf balls 2.
 """
 import sys, os, subprocess
@@ -20,13 +20,21 @@ T = {
             rows=[('うんち（袋）', '96個', 3), ('カメラ', '12台', 0), ('ブーツ', '12足', 1), ('ゴルフボール', '2個', 2)],
             why_q=['なんで置いてきたの？'], why=['帰りに月の石をたくさん', '持ち帰るため、', '重さを減らしたから'],
             sci_q=['今も残ってるなら', 'どうなってるの？'], sci=['科学者は「取りに行きたい」', '50年たった菌が生きていたら', '生き物は宇宙の旅にも', '耐えられるかもしれない'],
-            note='写真：アポロ14号の着陸船（NASA）'),
+            note='写真：アポロ14号の着陸船（NASA）',
+            s3=[('なんで置いてきたの？', 46, (255, 255, 255), (20, 20, 20), 0), ('月の石をたくさん持ち帰るため', 42, (0, 0, 0), (255, 255, 255), 0), ('重さを減らした', 42, (0, 0, 0), (255, 255, 255), 70),
+                ('でも科学者は', 50, (255, 255, 255), (20, 20, 20), 0), ('取りに行きたい！', 76, (255, 206, 0), (20, 20, 20), 70),
+                ('50年たった菌が', 46, (0, 0, 0), (255, 255, 255), 0), ('まだ生きていたら…', 46, (0, 0, 0), (255, 255, 255), 0),
+                ('生き物は宇宙の旅にも', 48, (40, 190, 90), (255, 255, 255), 0), ('耐えられるかも', 48, (40, 190, 90), (255, 255, 255), 0)]),
  'en': dict(tag='Replying to your question', q=['What did people leave', 'on the Moon the most', 'of?'],
             ch=['Cameras', 'Boots', 'Golf balls', 'Poop'], ans='Answer: D, poop (96 bags)',
             rows=[('Poop (bags)', '96', 3), ('Cameras', '12', 0), ('Boots (pairs)', '12', 1), ('Golf balls', '2', 2)],
             why_q=['Why leave it there?'], why=['To bring lots of', 'Moon rocks home,', 'they had to cut weight'],
             sci_q=['So what is it', 'doing now?'], sci=['Scientists want it back.', 'If microbes survived 50 years,', 'life might survive', 'trips through space'],
-            note='Photo: Apollo 14 lunar module (NASA)'),
+            note='Photo: Apollo 14 lunar module (NASA)',
+            s3=[('Why leave it there?', 46, (255, 255, 255), (20, 20, 20), 0), ('To bring lots of Moon rocks home', 40, (0, 0, 0), (255, 255, 255), 0), ('they had to cut weight', 40, (0, 0, 0), (255, 255, 255), 70),
+                ('But scientists', 50, (255, 255, 255), (20, 20, 20), 0), ('want it back!', 76, (255, 206, 0), (20, 20, 20), 70),
+                ('If microbes are still alive', 44, (0, 0, 0), (255, 255, 255), 0), ('after 50 years...', 44, (0, 0, 0), (255, 255, 255), 0),
+                ('life might survive', 48, (40, 190, 90), (255, 255, 255), 0), ('trips through space', 48, (40, 190, 90), (255, 255, 255), 0)]),
 }
 def sticker(d, top, tag, lines, size=44, color=(20, 20, 20)):
     h = 110 + len(lines) * int(size * 1.45)
@@ -55,13 +63,18 @@ def main():
             d.rounded_rectangle((130, y + 64, 130 + w, y + 110), 22, fill=COL[ci] if i == 0 else (195, 195, 195))
             d.text((145 + w, y + 87), n, font=F(40), fill=(20, 20, 20), anchor='lm')
         im.save(f'{OUT}/quiz2.{lang}.jpg', quality=85)
-        # 3 why + science
+        # 3 science: TikTok-style text pills on the photo
         im = bg2.copy(); d = ImageDraw.Draw(im)
-        b = sticker(d, 300, t['tag'], t['why_q'], 48); b = sticker(d, b + 24, t['tag'], t['why'], 40, (60, 60, 60))
-        b = sticker(d, b + 50, t['tag'], t['sci_q'], 48); sticker(d, b + 24, t['tag'], t['sci'], 40, (40, 120, 220))
+        def pill(cy, text, size, bg, fg):
+            f = F(size); w = d.textlength(text, font=f); cx = (W - 110) / 2
+            d.rounded_rectangle((cx - w / 2 - 30, cy - size * .75 - 14, cx + w / 2 + 30, cy + size * .75 + 14), 24, fill=bg)
+            d.text((cx, cy), text, font=f, fill=fg, anchor='mm')
+        y = 360
+        for text, size, bg, fg, gap in t['s3']:
+            pill(y, text, size, bg, fg); y += size * 1.5 + 28 + gap
         im.save(f'{OUT}/quiz3.{lang}.jpg', quality=85)
-    # BGM: NASA Chandra sonification, first 60 s, faded for looping
-    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', f'{AUD}/gal.mp4', '-vn', '-t', '60', '-af', 'afade=t=in:d=1,afade=t=out:st=58:d=2,loudnorm=I=-18',
-                    '-ac', '2', '-c:a', 'libmp3lame', '-b:a', '112k', f'{OUT}/bgm_milkyway.mp3'], check=True)
+    # BGM: Kevin MacLeod "Monkeys Spinning Monkeys" (CC BY 4.0), passed as <audio_dir>/Monkeys Spinning Monkeys.mp3
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', f'{AUD}/Monkeys Spinning Monkeys.mp3', '-map_metadata', '-1', '-af', 'loudnorm=I=-18',
+                    '-ac', '2', '-c:a', 'libmp3lame', '-b:a', '128k', f'{OUT}/bgm_monkeys.mp3'], check=True)
     print('done')
 main()
