@@ -6,12 +6,12 @@
   "place": "mars",
   "video": {
    "src": {
-    "en": "media/insight/kaidan1.en.mp4?v=9b11823c",
-    "ja": "media/insight/kaidan1.ja.mp4?v=cdcb81af"
+    "en": "media/insight/kaidan1.en.mp4?v=5a6cd036",
+    "ja": "media/insight/kaidan1.ja.mp4?v=7e3de14d"
    },
    "poster": {
-    "en": "media/insight/kaidan1.poster.en.jpg?v=d6622c9c",
-    "ja": "media/insight/kaidan1.poster.ja.jpg?v=78e665b5"
+    "en": "media/insight/kaidan1.poster.en.jpg?v=3c9f664e",
+    "ja": "media/insight/kaidan1.poster.ja.jpg?v=74b8fe35"
    }
   },
   "caption": {
@@ -36,8 +36,8 @@
     "user": "insight_lander",
     "pinned": true,
     "text": {
-     "ja": "意味わかった人いる？👀\n\n答え合わせ（ネタバレ注意）👇\n\nインサイトにマイクはありません。聞いていたのは「地震計」です。\n\n■ 地震計＝地面のゆれを測る機械\nインサイトは、火星の地面のとても小さなゆれまで感じとれる地震計を持っていました。\n\n■ 2021年9月5日、隕石が落ちた\nそのときのゆれと空気の振動を、地震計がとらえました。NASAはそのデータを、人の耳に聞こえる音にしました。\n\n■ 3回の「ボッ」の正体\n① 隕石が大気に入った ② 空中でバラバラに砕けた ③ 地面に当たった。この3つの瞬間です。\n\n■ なぜ「ボッ」と聞こえる？\n日が沈んだあとの火星の空気では、低い音が高い音より先に届きます。そのため「バン」ではなく「ボッ」と聞こえます。\n\n■ 本当に落ちたか確かめた\n上空を回る探査機MROがその場所を撮影し、新しいクレーターを少なくとも3つ見つけました。\n\n■ なぜすごい？\n隕石が落ちたゆれを、地球以外の惑星でとらえたのはこれが初めて。隕石の跡は、火星の過去や内部を知る手がかりになります。\n\n※動画の風の音は、地震計のデータを60倍速にして聞こえるようにしたものです。動画の暗い色・揺れ・効果音は演出です。",
-     "en": "Did anyone figure it out? 👀\n\nThe answer (spoilers) 👇\n\nInSight had no microphone. It was listening with its seismometer.\n\n■ A seismometer measures ground shaking\nInSight carried a seismometer that could feel tiny shakes in the Martian ground.\n\n■ Sept 5, 2021: a meteoroid hit Mars\nThe seismometer picked up the shaking and air waves. NASA turned that data into a sound we can hear.\n\n■ What the 3 bloops are\n(1) it entered the atmosphere, (2) it broke apart, (3) it hit the ground.\n\n■ Why does it sound like a \"bloop\"?\nAfter sunset on Mars, low sounds arrive before high ones, so you hear a \"bloop\" instead of a \"bang\".\n\n■ Checking it really happened\nThe MRO orbiter photographed the spot and found at least three new craters.\n\n■ Why it matters\nIt was the first time seismic signals from a meteoroid impact were detected on another planet. Impact craters give clues about Mars' past and its insides.\n\nNote: the wind sound was made audible by speeding up seismometer data 60x. The dark colors, shaking and sound effects in the video are for effect."
+     "ja": "意味わかった人いる？👀\n\n答え合わせ（ネタバレ注意）👇\n\nインサイトにマイクはありません。聞いていたのは「地震計」です。\n\n■ 地震計＝地面のゆれを測る機械\nインサイトは、火星の地面のとても小さなゆれまで感じとれる地震計を持っていました。\n\n■ 2021年9月5日、隕石が落ちた\nそのときのゆれと空気の振動を、地震計がとらえました。NASAはそのデータを、人の耳に聞こえる音にしました。\n\n■ 3回の「ボッ」の正体\n① 隕石が大気に入った ② 空中でバラバラに砕けた ③ 地面に当たった。この3つの瞬間です。\n\n■ なぜ「ボッ」と聞こえる？\n日が沈んだあとの火星の空気では、低い音が高い音より先に届きます。そのため「バン」ではなく「ボッ」と聞こえます。\n\n■ 本当に落ちたか確かめた\n上空を回る探査機MROがその場所を撮影し、新しいクレーターを少なくとも3つ見つけました。\n\n■ なぜすごい？\n隕石が落ちたゆれを、地球以外の惑星でとらえたのはこれが初めて。隕石の跡は、火星の過去や内部を知る手がかりになります。\n\n※動画の風の音は、地震計のデータを60倍速にして聞こえるようにしたものです。動画の赤い波形は、NASAが公開した隕石の音のデータをそのまま描いたものです。暗い色・揺れ・心臓の音などの効果音は演出です。",
+     "en": "Did anyone figure it out? 👀\n\nThe answer (spoilers) 👇\n\nInSight had no microphone. It was listening with its seismometer.\n\n■ A seismometer measures ground shaking\nInSight carried a seismometer that could feel tiny shakes in the Martian ground.\n\n■ Sept 5, 2021: a meteoroid hit Mars\nThe seismometer picked up the shaking and air waves. NASA turned that data into a sound we can hear.\n\n■ What the 3 bloops are\n(1) it entered the atmosphere, (2) it broke apart, (3) it hit the ground.\n\n■ Why does it sound like a \"bloop\"?\nAfter sunset on Mars, low sounds arrive before high ones, so you hear a \"bloop\" instead of a \"bang\".\n\n■ Checking it really happened\nThe MRO orbiter photographed the spot and found at least three new craters.\n\n■ Why it matters\nIt was the first time seismic signals from a meteoroid impact were detected on another planet. Impact craters give clues about Mars' past and its insides.\n\nNote: the wind sound was made audible by speeding up seismometer data 60x. The red waveform is drawn from the actual impact sound NASA released. The dark colors, shaking and sound effects (like the heartbeat) are for effect."
     }
    }
   ],
@@ -105,6 +105,14 @@
     },
     "title": "InSight 'hears' Martian winds with its seismometer and air pressure sensor (NASA JPL, 2018)",
     "url": "https://www.jpl.nasa.gov/news/nasa-insight-lander-hears-martian-winds/"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA23202 InSight Images a Sunset on Mars (NASA/JPL-Caltech)",
+    "url": "https://images.nasa.gov/details/PIA23202"
    }
   ]
  },
