@@ -8,7 +8,7 @@ OUT OF RANGE
 
 ## High-Level Project Summary
 
-OUT OF RANGE is a short-video style feed for kids who grew up on short videos, including kids who are not interested in space. The machines NASA left on the Moon, on Mars and in deep space post about their own lives, in formats those kids already know: a scary story, a POV, a group chat, a nav app, a ranking, a movie trailer, a quiz, a game. The jokes are only in the format. Every fact is true. Each post says what the machine is, why it was sent and what it found, is built from real NASA images and sound, and links to its NASA sources. A map shows where every machine rests now, and kids can make their own true post, which the app will not publish without a source. It runs in any browser with no login, in English and Japanese.
+OUT OF RANGE brings the machines NASA left on the Moon, on Mars and in deep space back to life: they post their own true stories in a short-video style feed for school-age kids. Space fans get the full stories, a map and every source. Casual viewers, even kids who are not into space yet, get the formats they already watch: a scary story, a POV, a group chat, a nav app, a ranking, a movie trailer, a quiz, a game. The jokes are only in the format. Every fact is true. Each post says what the machine is, why it was sent and what it found, is built from real NASA images and sound, and links to its NASA sources. A map shows where every machine rests now, and kids can make their own true post, which the app will not publish without a source. It runs in any browser with no login, in English and Japanese.
 
 ## Link to Project Demo
 
@@ -26,7 +26,7 @@ OUT OF RANGE looks and works like the short-video apps kids already use: a verti
 
 **Why this form**
 
-The challenge says school-age kids "often hear only about active, ongoing missions", and that the history of past missions sits in "dense technical websites". We asked where those kids already spend their attention. The answer is short-video feeds. So instead of asking kids to come to a space site, we took the machines to the place and the formats kids already know. A kid with no interest in space will still stop for a scary story, a group chat or a ranking. The space fact is the punchline.
+The challenge says school-age kids "often hear only about active, ongoing missions", and that the history of past missions sits in "dense technical websites" that do not capture "a younger or more casual audience's attention". We asked where those kids already spend their attention. The answer is short-video feeds. So instead of asking kids to come to a space site, we took the machines to the place and the formats kids already know. A kid with no interest in space will still stop for a scary story, a group chat or a ranking. The space fact is the punchline. That is how we read the goal of teaching "school-age and casual space enthusiasts": start with the casual ones, and give the enthusiasts every source.
 
 **What is in the feed** (14 posts: videos with sound, swipeable photo posts, a playable game and a quiz)
 
@@ -58,6 +58,7 @@ The challenge says school-age kids "often hear only about active, ongoing missio
 
 - *What they are, why they were sent, what they found*: every post carries this in its pinned "answer" comment, in plain words for kids, and the map gives the same three answers for every machine.
 - *Showing how missions operated rather than listing facts*: each post is built around one moment. A lander photographing its own foot. A camera detached and carried home. A last photo cut short by touchdown. And one post is a game: kids feel the signal delay themselves, then drive the rover the way its drivers really did.
+- *Engineering meets science*: Spirit's broken wheel is an engineering failure that led to its best discovery (silica from ancient hot springs or steam vents). The fashion check explains four looks by their engineering reasons. The game shows why rovers had to check for hazards themselves.
 - *Discoveries they still make*: some of these machines are still doing science. The laser reflector Apollo 11 left is still used today to measure the distance to the Moon (light takes about 2.5 seconds to go and come back), which is how we know the Moon moves about 3.8 cm farther away each year. The map says so on its pin, and the Lunar Lost & Found has a hands-on scene for it.
 - *A personal connection*: the machines speak in the first person, and the last post ends on one line: "They weren't thrown away. They worked to the very end."
 - *Age group*: upper elementary to junior high (about 9 to 15). *Perspective*: the machines' own. *Scope*: broad, from the Moon to interstellar space.
