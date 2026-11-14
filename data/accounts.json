@@ -1,4 +1,16 @@
 {
+ "spirit_rover": {
+  "name": {
+   "en": "Spirit (fan-made story)",
+   "ja": "スピリット（ファンメイドの物語）"
+  },
+  "place": "mars",
+  "followers": 2208,
+  "bio": {
+   "en": "Mars rover, 2004–2010. Planned for 90 days, kept going for over 6 years. Stories are by students; facts checked against NASA sources.",
+   "ja": "火星探査車（2004〜2010）。予定は90日、実際は6年以上。学生が作った物語です。事実はNASAの資料などで確認しています。"
+  }
+ },
  "insight_lander": {
   "name": {
    "en": "InSight (fan-made story)",

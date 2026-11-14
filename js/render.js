@@ -60,7 +60,7 @@ const txt = (o, cls = 'label') => h('span', { class: 'tx tx-' + cls, text: L(o) 
 export function renderSlide(s, { post } = {}) {
   const el = h('section', { class: 'slide', 'aria-roledescription': 'slide' });
   if (s.layout === 'sources') { el.append(sourcesBlock(post)); return el; }
-  if (s.bg) el.append(img(s.bg, 'bg', L(s.alt) || ''));
+  if (s.bg) el.append(img(L(s.bg), 'bg', L(s.alt) || ''));
   if (s.pos === 'bottom') el.append(h('div', { class: 'shade' }));
   el.append(h('div', { class: 'lay ' + (s.pos || 'top') }, (s.texts || []).map(x => txt(x.t, x.style || 'label'))));
   return el;

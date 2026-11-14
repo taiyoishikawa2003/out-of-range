@@ -35,103 +35,9 @@
    {
     "user": "insight_lander",
     "pinned": true,
-    "spoiler": {
-     "ja": "タップして答えを見る",
-     "en": "Tap to see the answer"
-    },
-    "explain": {
-     "title": {
-      "ja": "答え合わせ",
-      "en": "The answer"
-     },
-     "lead": {
-      "ja": "インサイトにマイクはありません。聞いていたのは「地震計」です。",
-      "en": "InSight had no microphone. It was listening with its seismometer."
-     },
-     "steps": [
-      {
-       "h": {
-        "ja": "地震計＝地面のゆれを測る機械",
-        "en": "A seismometer measures ground shaking"
-       },
-       "t": {
-        "ja": "インサイトは、火星の地面のとても小さなゆれまで感じとれる地震計を持っていました。写真のドームの下に入っています。",
-        "en": "InSight carried a seismometer that could feel tiny shakes in the Martian ground. It sits under the dome in this photo."
-       },
-       "img": "media/insight/cm_seis.jpg",
-       "alt": {
-        "ja": "火星の地面に置かれたインサイトの地震計のドーム",
-        "en": "InSight's seismometer dome on the Martian surface"
-       },
-       "cap": {
-        "ja": "地震計のカバー（NASA/JPL-Caltech）",
-        "en": "Seismometer cover (NASA/JPL-Caltech)"
-       }
-      },
-      {
-       "h": {
-        "ja": "2021年9月5日、隕石が落ちた",
-        "en": "Sept 5, 2021: a meteoroid hit Mars"
-       },
-       "t": {
-        "ja": "そのときのゆれと空気の振動を、地震計がとらえました。NASAはそのデータを、人の耳に聞こえる音にしました。",
-        "en": "The seismometer picked up the shaking and air waves. NASA turned that data into a sound we can hear."
-       }
-      },
-      {
-       "h": {
-        "ja": "3回の「ボッ」の正体",
-        "en": "What the 3 bloops are"
-       },
-       "t": {
-        "ja": "① 隕石が大気に入った ② 空中でバラバラに砕けた ③ 地面に当たった。この3つの瞬間です。",
-        "en": "(1) it entered the atmosphere, (2) it broke apart, (3) it hit the ground."
-       }
-      },
-      {
-       "h": {
-        "ja": "なぜ「ボッ」と聞こえる？",
-        "en": "Why does it sound like a \"bloop\"?"
-       },
-       "t": {
-        "ja": "日が沈んだあとの火星の空気では、低い音が高い音より先に届きます。そのため「バン」ではなく「ボッ」と聞こえます。",
-        "en": "After sunset on Mars, low sounds arrive before high ones, so you hear a \"bloop\" instead of a \"bang\"."
-       }
-      },
-      {
-       "h": {
-        "ja": "本当に落ちたか確かめた",
-        "en": "Checking it really happened"
-       },
-       "t": {
-        "ja": "上空を回る探査機MROがその場所を撮影し、新しいクレーターを少なくとも3つ見つけました。",
-        "en": "The MRO orbiter photographed the spot and found at least three new craters."
-       },
-       "img": "media/insight/cm_crater.jpg",
-       "alt": {
-        "ja": "隕石でできた青っぽいクレーター",
-        "en": "Craters made by the meteoroid, shown in blue"
-       },
-       "cap": {
-        "ja": "MRO HiRISEで撮影。青はほこりが吹き飛んだ場所（色を強調）",
-        "en": "MRO HiRISE. Blue = dust blown away (enhanced color)"
-       }
-      }
-     ],
-     "why": {
-      "h": {
-       "ja": "なぜすごい？",
-       "en": "Why it matters"
-      },
-      "t": {
-       "ja": "隕石が落ちたゆれを、地球以外の惑星でとらえたのはこれが初めて。隕石の跡は、火星の過去や内部を知る手がかりになります。",
-       "en": "It was the first time seismic signals from a meteoroid impact were detected on another planet. Impact craters give clues about Mars' past and its insides."
-      }
-     },
-     "note": {
-      "ja": "※動画の風の音は、地震計のデータを60倍速にして聞こえるようにしたものです。動画の暗い色・揺れ・効果音は演出です。",
-      "en": "Note: the wind sound was made audible by speeding up seismometer data 60x. The dark colors, shaking and sound effects in the video are for effect."
-     }
+    "text": {
+     "ja": "意味わかった人いる？👀\n\n答え合わせ（ネタバレ注意）👇\n\nインサイトにマイクはありません。聞いていたのは「地震計」です。\n\n■ 地震計＝地面のゆれを測る機械\nインサイトは、火星の地面のとても小さなゆれまで感じとれる地震計を持っていました。\n\n■ 2021年9月5日、隕石が落ちた\nそのときのゆれと空気の振動を、地震計がとらえました。NASAはそのデータを、人の耳に聞こえる音にしました。\n\n■ 3回の「ボッ」の正体\n① 隕石が大気に入った ② 空中でバラバラに砕けた ③ 地面に当たった。この3つの瞬間です。\n\n■ なぜ「ボッ」と聞こえる？\n日が沈んだあとの火星の空気では、低い音が高い音より先に届きます。そのため「バン」ではなく「ボッ」と聞こえます。\n\n■ 本当に落ちたか確かめた\n上空を回る探査機MROがその場所を撮影し、新しいクレーターを少なくとも3つ見つけました。\n\n■ なぜすごい？\n隕石が落ちたゆれを、地球以外の惑星でとらえたのはこれが初めて。隕石の跡は、火星の過去や内部を知る手がかりになります。\n\n※動画の風の音は、地震計のデータを60倍速にして聞こえるようにしたものです。動画の暗い色・揺れ・効果音は演出です。",
+     "en": "Did anyone figure it out? 👀\n\nThe answer (spoilers) 👇\n\nInSight had no microphone. It was listening with its seismometer.\n\n■ A seismometer measures ground shaking\nInSight carried a seismometer that could feel tiny shakes in the Martian ground.\n\n■ Sept 5, 2021: a meteoroid hit Mars\nThe seismometer picked up the shaking and air waves. NASA turned that data into a sound we can hear.\n\n■ What the 3 bloops are\n(1) it entered the atmosphere, (2) it broke apart, (3) it hit the ground.\n\n■ Why does it sound like a \"bloop\"?\nAfter sunset on Mars, low sounds arrive before high ones, so you hear a \"bloop\" instead of a \"bang\".\n\n■ Checking it really happened\nThe MRO orbiter photographed the spot and found at least three new craters.\n\n■ Why it matters\nIt was the first time seismic signals from a meteoroid impact were detected on another planet. Impact craters give clues about Mars' past and its insides.\n\nNote: the wind sound was made audible by speeding up seismometer data 60x. The dark colors, shaking and sound effects in the video are for effect."
     }
    }
   ],
@@ -201,6 +107,139 @@
     "url": "https://www.jpl.nasa.gov/news/nasa-insight-lander-hears-martian-winds/"
    }
   ]
+ },
+ {
+  "id": "spirit-ideal-1",
+  "type": "carousel",
+  "account": "spirit_rover",
+  "place": "mars",
+  "slides": [
+   {
+    "bg": {
+     "ja": "media/spirit/s1.ja.jpg",
+     "en": "media/spirit/s1.en.jpg"
+    },
+    "alt": {
+     "ja": "NASAが描いた探査車の想像図",
+     "en": "NASA artist's concept of the rover"
+    }
+   },
+   {
+    "bg": {
+     "ja": "media/spirit/s2.ja.jpg",
+     "en": "media/spirit/s2.en.jpg"
+    },
+    "alt": {
+     "ja": "引きずった車輪の跡が残る火星の地面",
+     "en": "Track left by the dragged wheel"
+    }
+   },
+   {
+    "bg": {
+     "ja": "media/spirit/s3.ja.jpg",
+     "en": "media/spirit/s3.en.jpg"
+    },
+    "alt": {
+     "ja": "溝から出てきた白い土",
+     "en": "White soil in the rut"
+    }
+   },
+   {
+    "bg": {
+     "ja": "media/spirit/s4.ja.jpg",
+     "en": "media/spirit/s4.en.jpg"
+    },
+    "alt": {
+     "ja": "白い土のアップ",
+     "en": "Close-up of the white soil"
+    }
+   }
+  ],
+  "caption": {
+   "ja": "火星探査機の理想と現実 #理想と現実 #火星 #スピリット",
+   "en": "Mars rover: expectation vs reality #expectationvsreality #mars #spirit"
+  },
+  "tags": [
+   "mars",
+   "spirit"
+  ],
+  "sound": {
+   "ja": "オリジナル音源",
+   "en": "Original sound"
+  },
+  "stats": {
+   "likes": 0,
+   "saves": 0
+  },
+  "comments": [
+   {
+    "user": "spirit_rover",
+    "pinned": true,
+    "text": {
+     "ja": "答え合わせ（ネタバレ注意）👇\n\nスピリットは、2004年に火星に着いた探査車です。予定は90日でしたが、6年以上動き続けました。\n\n■ 何が起きた？\n2006年、右前の車輪が動かなくなりました。そこで向きを変えて、後ろ向きに5つの車輪で走り、壊れた車輪を引きずって進みました。\n\n■ 白い土の正体\n引きずった車輪が地面を掘って、白い土が出てきました。調べると、ほぼ純粋な「シリカ」でした。\n\n■ なぜすごい？\nこれほど濃いシリカは、温泉や蒸気が噴き出す場所でできます。どちらも、地球では生き物がすめる環境です。昔の火星にも生き物がすめる場所があったかもしれない、という手がかりになりました。科学者は「生き物がすめたかを考えるうえで、スピリットのいちばん重要な発見」と言っています。\n\n■ その後\n2009年に砂にはまって動けなくなり、2010年3月22日の通信が最後になりました。\n\n※1枚目はNASAが描いた想像図、2〜4枚目は火星で撮った本物の写真です。出典は「出典」ボタンから。",
+     "en": "The answer (spoilers) 👇\n\nSpirit landed on Mars in 2004. It was planned to work for 90 days, but kept going for over 6 years.\n\n■ What happened?\nIn 2006 its right front wheel stopped working. So it turned around and drove backwards on five wheels, dragging the broken one.\n\n■ The white soil\nThe dragged wheel dug into the ground and turned up white soil. It turned out to be almost pure silica.\n\n■ Why it matters\nSilica this concentrated forms around hot springs or steam vents — places where life thrives on Earth. It's a clue that ancient Mars may have had places where life could live. Scientists called it Spirit's most important finding about habitability.\n\n■ After that\nIn 2009 it got stuck in sand. Its last message came on March 22, 2010.\n\nNote: slide 1 is a NASA artist's concept; slides 2–4 are real photos from Mars. Sources: tap \"Sources\"."
+    }
+   }
+  ],
+  "sources": [
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA04413 Artist Concept of Rover on Mars (NASA/JPL)",
+    "url": "https://images.nasa.gov/details/PIA04413"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA11823 Spirit Begins Drive Around Home Plate (NASA/JPL-Caltech)",
+    "url": "https://images.nasa.gov/details/PIA11823"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA09491 Silica-Rich Soil Found by Spirit (NASA/JPL-Caltech/Cornell)",
+    "url": "https://images.nasa.gov/details/PIA09491"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "NASA/JPL news release: Spirit faces circuitous route (2009) — dragged wheel, silica & hot springs",
+    "url": "https://spaceflightnow.com/news/n0903/10spirit"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "NASA JPL video: Spirit — Six Years of Roving Mars",
+    "url": "https://www.jpl.nasa.gov/videos/spirit-six-years-of-roving-mars/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "The Planetary Society: Silica Soils Near Home Plate",
+    "url": "https://planetary.org/space-images/silica-soils-near-home-plate"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "Space.com: Spirit rover (90-sol plan, last contact March 22, 2010)",
+    "url": "https://www.space.com/18766-spirit-rover.html"
+   }
+  ],
+  "noSourceSlide": true
  },
  {
   "id": "test-video-1",

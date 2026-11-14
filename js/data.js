@@ -21,5 +21,5 @@ export const postsBy = h => allPosts().filter(p => p.account === h);
 export function thumbOf(p) {
   if (p.type === 'video') return L(p.video.poster);
   const s = p.slides?.[0] || {};
-  return s.bg || '';
+  return L(s.bg) || '';
 }
