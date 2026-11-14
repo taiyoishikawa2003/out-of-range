@@ -252,7 +252,8 @@
    }
   ],
   "noSourceSlide": true,
-  "audio": "media/music/fluffing_a_duck.mp3?v=cfc6741d"
+  "audio": "media/music/fluffing_a_duck.mp3?v=cfc6741d",
+  "fit": "contain"
  },
  {
   "id": "lost-quiz-1",
@@ -437,7 +438,8 @@
     "title": "\"Monkeys Spinning Monkeys\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/",
     "url": "https://incompetech.com/music/royalty-free/"
    }
-  ]
+  ],
+  "fit": "contain"
  },
  {
   "id": "test-video-1",

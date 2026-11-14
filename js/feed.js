@@ -300,6 +300,7 @@ function videoPost(p, el, stage, setMuted) {
 }
 
 function carouselPost(p, el, stage, onSlide) {
+  if (p.fit === 'contain') el.classList.add('contain');
   const slides = [...(p.slides || [])];
   if (p.sources?.length && !p.noSourceSlide) slides.push({ layout: 'sources' });
   const car = h('div', { class: 'car', 'aria-roledescription': 'carousel' });

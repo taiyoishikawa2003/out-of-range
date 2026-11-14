@@ -329,7 +329,11 @@ table.t th,table.t td{border-bottom:1px solid var(--line);padding:8px 6px;text-a
 .ymore:hover{color:#f1f1f1}
 
 /* tappable quiz choices (kept between the top bar and the caption on any screen height) */
-.qz{position:absolute;left:9%;right:calc(9% + 56px);top:34.5%;bottom:32.5%;z-index:6;display:flex;flex-direction:column;gap:2%}
+.slide{container-type:size}
+.post.contain .slide{background:#000}
+.post.contain .slide img.bg{object-fit:contain}
+/* buttons sit on the picture itself (9:16, centred), whatever the screen shape */
+.qz{position:absolute;left:50%;transform:translateX(calc(-50% - 0.05 * min(100cqw, 56.25cqh)));width:calc(0.66 * min(100cqw, 56.25cqh));top:calc(50cqh - 0.135 * min(100cqh, 177.78cqw));bottom:calc(50cqh - 0.165 * min(100cqh, 177.78cqw));z-index:6;display:flex;flex-direction:column;gap:2%}
 .qz-b{flex:1;min-height:0;display:flex;align-items:center;gap:14px;padding:0 18px;border:0;border-radius:14px;color:#fff;font:inherit;font-weight:900;font-size:clamp(15px,2.6vh,22px);text-align:left;cursor:pointer;box-shadow:0 3px 0 rgba(0,0,0,.25);transition:transform .1s,opacity .2s}
 .qz-b:active{transform:scale(.97)}
 .qz-b b{width:18px}
@@ -339,4 +343,3 @@ table.t th,table.t td{border-bottom:1px solid var(--line);padding:8px 6px;text-a
 .qz-b.wrong{opacity:1;background:#555}
 .qz-res{position:absolute;inset:0;margin:0;display:grid;place-items:center;pointer-events:none;font-weight:900;font-size:clamp(28px,5vh,44px);color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.9)}
 .qz-res:empty{display:none}
-@media (min-width:800px){.qz{right:calc(9% + 70px)}}
