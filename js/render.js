@@ -63,6 +63,10 @@ export function renderSlide(s, { post } = {}) {
   if (s.bg) el.append(img(L(s.bg), 'bg', L(s.alt) || ''));
   if (s.pos === 'bottom') el.append(h('div', { class: 'shade' }));
   el.append(h('div', { class: 'lay ' + (s.pos || 'top') }, (s.texts || []).map(x => txt(x.t, x.style || 'label'))));
+  if (s.quiz) el.append(h('div', { class: 'qz', role: 'group', 'aria-label': 'Quiz' },
+    s.quiz.choices.map((c, i) => h('button', { class: 'qz-b c' + i, type: 'button', 'data-i': i },
+      h('b', { text: 'ABCD'[i] }), h('span', { text: L(c) }))),
+    h('p', { class: 'qz-res', 'aria-live': 'polite' })));
   return el;
 }
 

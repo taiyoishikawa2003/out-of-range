@@ -11,10 +11,31 @@
      "ja": "media/lost/quiz1.ja.jpg",
      "en": "media/lost/quiz1.en.jpg"
     },
-    "dur": 5,
+    "dur": 7,
     "alt": {
      "ja": "クイズ：月に人間が残した物で、いちばん数が多いのは？ A カメラ B ブーツ C ゴルフボール D うんち",
      "en": "Quiz: what did people leave on the Moon the most of? A cameras B boots C golf balls D poop"
+    },
+    "quiz": {
+     "choices": [
+      {
+       "ja": "カメラ",
+       "en": "Cameras"
+      },
+      {
+       "ja": "ブーツ",
+       "en": "Boots"
+      },
+      {
+       "ja": "ゴルフボール",
+       "en": "Golf balls"
+      },
+      {
+       "ja": "うんち",
+       "en": "Poop"
+      }
+     ],
+     "answer": 3
     }
    },
    {
@@ -160,115 +181,6 @@
     },
     "title": "\"Monkeys Spinning Monkeys\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/",
     "url": "https://incompetech.com/music/royalty-free/"
-   }
-  ]
- },
- {
-  "id": "insight-kaidan-1",
-  "type": "video",
-  "account": "insight_lander",
-  "place": "mars",
-  "video": {
-   "src": {
-    "en": "media/insight/kaidan1.en.mp4",
-    "ja": "media/insight/kaidan1.ja.mp4"
-   },
-   "poster": {
-    "en": "media/insight/kaidan1.poster.en.jpg",
-    "ja": "media/insight/kaidan1.poster.ja.jpg"
-   }
-  },
-  "caption": {
-   "en": "No one was on Mars. Something made a sound. 3 times. Part 1 #creepy #mars #InSight",
-   "ja": "誰もいない火星で、音が3回。Part1 #意味がわかると怖い話 #火星 #インサイト"
-  },
-  "tags": [
-   "mars",
-   "insight",
-   "kaidan"
-  ],
-  "sound": {
-   "en": "Original sound – NASA InSight data",
-   "ja": "オリジナル音源 – NASA インサイトの観測データ"
-  },
-  "stats": {
-   "likes": 0,
-   "saves": 0
-  },
-  "comments": [
-   {
-    "user": "insight_lander",
-    "pinned": true,
-    "text": {
-     "ja": "意味わかった人いる？👀\n\n答え合わせ（ネタバレ注意）👇\n\nインサイトにマイクはありません。聞いていたのは「地震計」です。\n\n■ 地震計＝地面のゆれを測る機械\nインサイトは、火星の地面のとても小さなゆれまで感じとれる地震計を持っていました。\n\n■ 2021年9月5日、隕石が落ちた\nそのときのゆれと空気の振動を、地震計がとらえました。NASAはそのデータを、人の耳に聞こえる音にしました。\n\n■ 3回の「ボッ」の正体\n① 隕石が大気に入った ② 空中でバラバラに砕けた ③ 地面に当たった。この3つの瞬間です。\n\n■ なぜ「ボッ」と聞こえる？\n日が沈んだあとの火星の空気では、低い音が高い音より先に届きます。そのため「バン」ではなく「ボッ」と聞こえます。\n\n■ 本当に落ちたか確かめた\n上空を回る探査機MROがその場所を撮影し、新しいクレーターを少なくとも3つ見つけました。\n\n■ なぜすごい？\n隕石が落ちたゆれを、地球以外の惑星でとらえたのはこれが初めて。隕石の跡は、火星の過去や内部を知る手がかりになります。\n\n※動画の風の音は、地震計のデータを60倍速にして聞こえるようにしたものです。動画の暗い色・揺れ・効果音は演出です。",
-     "en": "Did anyone figure it out? 👀\n\nThe answer (spoilers) 👇\n\nInSight had no microphone. It was listening with its seismometer.\n\n■ A seismometer measures ground shaking\nInSight carried a seismometer that could feel tiny shakes in the Martian ground.\n\n■ Sept 5, 2021: a meteoroid hit Mars\nThe seismometer picked up the shaking and air waves. NASA turned that data into a sound we can hear.\n\n■ What the 3 bloops are\n(1) it entered the atmosphere, (2) it broke apart, (3) it hit the ground.\n\n■ Why does it sound like a \"bloop\"?\nAfter sunset on Mars, low sounds arrive before high ones, so you hear a \"bloop\" instead of a \"bang\".\n\n■ Checking it really happened\nThe MRO orbiter photographed the spot and found at least three new craters.\n\n■ Why it matters\nIt was the first time seismic signals from a meteoroid impact were detected on another planet. Impact craters give clues about Mars' past and its insides.\n\nNote: the wind sound was made audible by speeding up seismometer data 60x. The dark colors, shaking and sound effects in the video are for effect."
-    }
-   }
-  ],
-  "sources": [
-   {
-    "kind": {
-     "en": "Video / sound",
-     "ja": "動画・音"
-    },
-    "title": "InSight Captures Sound of a Meteoroid Striking Mars (NASA/JPL-Caltech et al.)",
-    "url": "https://images.nasa.gov/details/JPL-20220919-INSIGHf-0001-InSight Captures Sound of a Meteoroid Striking Mars_1080"
-   },
-   {
-    "kind": {
-     "en": "Sound (wind)",
-     "ja": "音（風）"
-    },
-    "title": "First Likely Marsquake Heard by NASA's InSight (NASA/JPL-Caltech)",
-    "url": "https://images.nasa.gov/details/JPL-20190423-INSIGHf-0001-First Likely Marsquake Heard by NASAs InSight"
-   },
-   {
-    "kind": {
-     "en": "Image",
-     "ja": "画像"
-    },
-    "title": "PIA23376 The Best View of InSight (NASA/JPL-Caltech/Univ. of Arizona)",
-    "url": "https://images.nasa.gov/details/PIA23376"
-   },
-   {
-    "kind": {
-     "en": "Image",
-     "ja": "画像"
-    },
-    "title": "PIA22871 Full View of InSight's Deck (NASA/JPL-Caltech)",
-    "url": "https://images.nasa.gov/details/PIA22871"
-   },
-   {
-    "kind": {
-     "en": "Image",
-     "ja": "画像"
-    },
-    "title": "PIA23177 InSight's Seismometer on the Martian Surface (NASA/JPL-Caltech)",
-    "url": "https://images.nasa.gov/details/PIA23177"
-   },
-   {
-    "kind": {
-     "en": "Image",
-     "ja": "画像"
-    },
-    "title": "PIA25408 InSight Detects an Impact for the First Time (NASA/JPL-Caltech/Univ. of Arizona)",
-    "url": "https://images.nasa.gov/details/PIA25408"
-   },
-   {
-    "kind": {
-     "en": "Image",
-     "ja": "画像"
-    },
-    "title": "PIA22876 InSight's First Selfie (NASA/JPL-Caltech)",
-    "url": "https://images.nasa.gov/details/PIA22876"
-   },
-   {
-    "kind": {
-     "en": "Fact check",
-     "ja": "事実確認"
-    },
-    "title": "InSight 'hears' Martian winds with its seismometer and air pressure sensor (NASA JPL, 2018)",
-    "url": "https://www.jpl.nasa.gov/news/nasa-insight-lander-hears-martian-winds/"
    }
   ]
  },
@@ -674,6 +586,115 @@
    {
     "title": "TEST source",
     "url": "https://www.nasa.gov/"
+   }
+  ]
+ },
+ {
+  "id": "insight-kaidan-1",
+  "type": "video",
+  "account": "insight_lander",
+  "place": "mars",
+  "video": {
+   "src": {
+    "en": "media/insight/kaidan1.en.mp4",
+    "ja": "media/insight/kaidan1.ja.mp4"
+   },
+   "poster": {
+    "en": "media/insight/kaidan1.poster.en.jpg",
+    "ja": "media/insight/kaidan1.poster.ja.jpg"
+   }
+  },
+  "caption": {
+   "en": "No one was on Mars. Something made a sound. 3 times. Part 1 #creepy #mars #InSight",
+   "ja": "誰もいない火星で、音が3回。Part1 #意味がわかると怖い話 #火星 #インサイト"
+  },
+  "tags": [
+   "mars",
+   "insight",
+   "kaidan"
+  ],
+  "sound": {
+   "en": "Original sound – NASA InSight data",
+   "ja": "オリジナル音源 – NASA インサイトの観測データ"
+  },
+  "stats": {
+   "likes": 0,
+   "saves": 0
+  },
+  "comments": [
+   {
+    "user": "insight_lander",
+    "pinned": true,
+    "text": {
+     "ja": "意味わかった人いる？👀\n\n答え合わせ（ネタバレ注意）👇\n\nインサイトにマイクはありません。聞いていたのは「地震計」です。\n\n■ 地震計＝地面のゆれを測る機械\nインサイトは、火星の地面のとても小さなゆれまで感じとれる地震計を持っていました。\n\n■ 2021年9月5日、隕石が落ちた\nそのときのゆれと空気の振動を、地震計がとらえました。NASAはそのデータを、人の耳に聞こえる音にしました。\n\n■ 3回の「ボッ」の正体\n① 隕石が大気に入った ② 空中でバラバラに砕けた ③ 地面に当たった。この3つの瞬間です。\n\n■ なぜ「ボッ」と聞こえる？\n日が沈んだあとの火星の空気では、低い音が高い音より先に届きます。そのため「バン」ではなく「ボッ」と聞こえます。\n\n■ 本当に落ちたか確かめた\n上空を回る探査機MROがその場所を撮影し、新しいクレーターを少なくとも3つ見つけました。\n\n■ なぜすごい？\n隕石が落ちたゆれを、地球以外の惑星でとらえたのはこれが初めて。隕石の跡は、火星の過去や内部を知る手がかりになります。\n\n※動画の風の音は、地震計のデータを60倍速にして聞こえるようにしたものです。動画の暗い色・揺れ・効果音は演出です。",
+     "en": "Did anyone figure it out? 👀\n\nThe answer (spoilers) 👇\n\nInSight had no microphone. It was listening with its seismometer.\n\n■ A seismometer measures ground shaking\nInSight carried a seismometer that could feel tiny shakes in the Martian ground.\n\n■ Sept 5, 2021: a meteoroid hit Mars\nThe seismometer picked up the shaking and air waves. NASA turned that data into a sound we can hear.\n\n■ What the 3 bloops are\n(1) it entered the atmosphere, (2) it broke apart, (3) it hit the ground.\n\n■ Why does it sound like a \"bloop\"?\nAfter sunset on Mars, low sounds arrive before high ones, so you hear a \"bloop\" instead of a \"bang\".\n\n■ Checking it really happened\nThe MRO orbiter photographed the spot and found at least three new craters.\n\n■ Why it matters\nIt was the first time seismic signals from a meteoroid impact were detected on another planet. Impact craters give clues about Mars' past and its insides.\n\nNote: the wind sound was made audible by speeding up seismometer data 60x. The dark colors, shaking and sound effects in the video are for effect."
+    }
+   }
+  ],
+  "sources": [
+   {
+    "kind": {
+     "en": "Video / sound",
+     "ja": "動画・音"
+    },
+    "title": "InSight Captures Sound of a Meteoroid Striking Mars (NASA/JPL-Caltech et al.)",
+    "url": "https://images.nasa.gov/details/JPL-20220919-INSIGHf-0001-InSight Captures Sound of a Meteoroid Striking Mars_1080"
+   },
+   {
+    "kind": {
+     "en": "Sound (wind)",
+     "ja": "音（風）"
+    },
+    "title": "First Likely Marsquake Heard by NASA's InSight (NASA/JPL-Caltech)",
+    "url": "https://images.nasa.gov/details/JPL-20190423-INSIGHf-0001-First Likely Marsquake Heard by NASAs InSight"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA23376 The Best View of InSight (NASA/JPL-Caltech/Univ. of Arizona)",
+    "url": "https://images.nasa.gov/details/PIA23376"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA22871 Full View of InSight's Deck (NASA/JPL-Caltech)",
+    "url": "https://images.nasa.gov/details/PIA22871"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA23177 InSight's Seismometer on the Martian Surface (NASA/JPL-Caltech)",
+    "url": "https://images.nasa.gov/details/PIA23177"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA25408 InSight Detects an Impact for the First Time (NASA/JPL-Caltech/Univ. of Arizona)",
+    "url": "https://images.nasa.gov/details/PIA25408"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA22876 InSight's First Selfie (NASA/JPL-Caltech)",
+    "url": "https://images.nasa.gov/details/PIA22876"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "InSight 'hears' Martian winds with its seismometer and air pressure sensor (NASA JPL, 2018)",
+    "url": "https://www.jpl.nasa.gov/news/nasa-insight-lander-hears-martian-winds/"
    }
   ]
  }

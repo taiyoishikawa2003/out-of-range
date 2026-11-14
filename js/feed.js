@@ -338,6 +338,21 @@ function carouselPost(p, el, stage, onSlide) {
     auto = setTimeout(() => { if (idx >= slides.length - 1) go(0, 'instant'); else go(idx + 1); }, d);
   };
   const hold = () => { held = true; stopAuto(); };
+  /* tappable quiz choices: mark right/wrong, then show the answer slide */
+  car.querySelectorAll('.qz').forEach(qz => {
+    const qi = [...car.children].indexOf(qz.closest('.slide')); const q = slides[qi]?.quiz; if (!q) return;
+    const res = qz.querySelector('.qz-res');
+    qz.querySelectorAll('.qz-b').forEach(btn => {
+      ['pointerdown', 'pointerup'].forEach(ev => btn.addEventListener(ev, e => e.stopPropagation()));
+      btn.addEventListener('click', e => {
+        e.stopPropagation(); hold();
+        const i = +btn.dataset.i, ok = i === q.answer;
+        qz.querySelectorAll('.qz-b').forEach((b, j) => { b.classList.toggle('right', j === q.answer); b.classList.toggle('wrong', j === i && !ok); b.disabled = true; });
+        res.textContent = t(ok ? 'quiz.right' : 'quiz.wrong');
+        setTimeout(() => go(qi + 1), 1300);
+      });
+    });
+  });
   car.addEventListener('pointerdown', e => { if (e.isPrimary) hold(); }, { passive: true });
   // only a sideways wheel/trackpad gesture counts as touching; vertical scrolling between posts does not
   car.addEventListener('wheel', e => { if (Math.abs(e.deltaX) > Math.abs(e.deltaY) && Math.abs(e.deltaX) > 4) hold(); }, { passive: true });
