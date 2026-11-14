@@ -75,6 +75,10 @@ The challenge says school-age kids "often hear only about active, ongoing missio
 
 A static web app in plain HTML, CSS and JavaScript (no framework, no server, no accounts), hosted on GitHub Pages. Posts are data (JSON). Photo posts are small HTML slides rendered to images. Motion videos are web pages with a timeline, recorded frame by frame with headless Chrome and mixed with ffmpeg, in both languages. Everything personal (likes, follows, comments, created posts) stays in the browser. Open source under Apache 2.0: https://github.com/taiyoishikawa2003/out-of-range
 
+**A longer look**
+
+A walkthrough in under 3 minutes (Japanese, with English subtitles): https://taiyoishikawa2003.github.io/out-of-range/walkthrough/
+
 **What is next**
 
 Classroom tests with kids, reading help inside the videos themselves, and more machines and formats.
