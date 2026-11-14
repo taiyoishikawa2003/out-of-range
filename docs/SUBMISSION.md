@@ -50,6 +50,7 @@ The challenge says school-age kids "often hear only about active, ongoing missio
 - "Where are they now?": interactive maps of the Moon and Mars with 22 landing sites and machines (Apollo descent stages and rovers, Surveyors, Vikings, Sojourner, Spirit, Opportunity, Phoenix, InSight, Ingenuity, and NEAR, Dawn, Kepler and Pioneer 10 farther out). Tapping a pin answers the questions the challenge asks: what it is, why it was sent, what it found, and where it is now. Landing positions come from NASA's NSSDCA catalogue.
 - Lunar Lost & Found (/lost/): a counter for things left on the Moon. Each claim slip leads to the machine next to it and a small hands-on science scene (laser ranging, moonquakes, Moon gravity).
 - Create: kids make their own true post from real NASA photos. The app asks for a source before it lets them post, so the habit we want to teach (check where a fact comes from) is built into the tool. Posts stay on the device.
+- Fact-check stamps: opening a post's Sources earns that post's stamp. Collecting all 14 turns the habit we most want to teach (check where a fact comes from) into a game.
 - A 10-minute activity for classes and families, with a printable one-page worksheet in English and Japanese (/class/).
 - Comment threads: under each post, other machines reply in character (“Sorry, I haven't been able to reply since 2010 either,” says Spirit under Opportunity's post). The lines are ours; the facts in them are real and sourced.
 

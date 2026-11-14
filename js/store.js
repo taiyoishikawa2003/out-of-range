@@ -1,7 +1,7 @@
 import { get, set, del } from '../vendor/idb-keyval.js';
 
 const KEY = 'oor.state.v1';
-const def = { likes: {}, saves: {}, follows: {}, comments: {}, muted: false, read: false, cc: true };
+const def = { likes: {}, saves: {}, follows: {}, comments: {}, stamps: {}, muted: false, read: false, cc: true };
 let st;
 try { st = { ...def, ...JSON.parse(localStorage.getItem(KEY) || '{}') }; } catch { st = { ...def }; }
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch {} };
@@ -27,6 +27,13 @@ export const localComments = id => st.comments[id] || [];
 export function addComment(id, text) {
   (st.comments[id] ||= []).push({ text, at: Date.now() });
   save(); emit('comments', id);
+}
+/* fact-check stamps: one for each post whose sources the reader has opened */
+export const stampIds = () => Object.keys(st.stamps || {});
+export function addStamp(id) {
+  if (!st.stamps) st.stamps = {};
+  if (st.stamps[id]) return false;
+  st.stamps[id] = Date.now(); save(); emit('stamps', id); return true;
 }
 export const isMuted = () => st.muted;
 export function setMuted(m) { st.muted = m; save(); emit('muted', m); }

@@ -1,13 +1,13 @@
 import { h, icon, sourcesBlock } from './render.js';
 import { t, L, getLang } from './i18n.js';
-import { localComments, addComment } from './store.js';
-import { account } from './data.js';
+import { localComments, addComment, addStamp, stampIds } from './store.js';
+import { account, db } from './data.js';
 
 let tmr;
-export function toast(msg) {
+export function toast(msg, gold = false) {
   const el = document.getElementById('toast');
-  el.textContent = msg; el.classList.add('show');
-  clearTimeout(tmr); tmr = setTimeout(() => el.classList.remove('show'), 1600);
+  el.textContent = msg; el.classList.add('show'); el.classList.toggle('gold', gold);
+  clearTimeout(tmr); tmr = setTimeout(() => el.classList.remove('show'), gold ? 2800 : 1600);
 }
 export const fmt = n => new Intl.NumberFormat(getLang() === 'ja' ? 'ja-JP' : 'en', { notation: 'compact', maximumFractionDigits: 1 }).format(n);
 
@@ -152,6 +152,11 @@ export function openSources(post) {
       s.url ? h('a', { href: s.url, target: '_blank', rel: 'noopener', text: L(s.title) || s.url }) : h('b', { text: L(s.title) }),
       s.note ? h('div', { class: 'hint', text: L(s.note) }) : ''))));
   openSheet(t('src.title'), body);
+  // opening the sources is the habit we want to reward: it earns that post's fact-check stamp
+  if (db.posts.some(p => p.id === post.id) && addStamp(post.id)) {
+    const ids = new Set(db.posts.map(p => p.id)), n = stampIds().filter(id => ids.has(id)).length;
+    toast(t(n === ids.size ? 'stamp.all' : 'stamp.got').replace('{n}', n).replace('{m}', ids.size), true);
+  }
 }
 
 export function postUrl(post) {

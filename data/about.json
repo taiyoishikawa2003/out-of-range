@@ -68,8 +68,8 @@
      "ja": "動画をタップで一時停止。2回タップでいいね。"
     },
     {
-     "en": "The page icon shows the sources for that post.",
-     "ja": "紙のアイコンで、その投稿の出典が見られます。"
+     "en": "The page icon shows the sources for that post. Opening it earns that post's fact-check stamp. Your stamps are under “You”.",
+     "ja": "紙のアイコンで、その投稿の出典が見られます。開くと、その投稿の「たしかめスタンプ」がもらえます（「じぶん」で見られます）。"
     },
     {
      "en": "The speech bubble at the top left reads slides aloud.",
@@ -95,9 +95,26 @@
     "ja": "事実の確かめ方"
    },
    "body": {
-    "en": "Every fact is checked against NASA or other primary sources before it is posted. Where a number is our own calculation (for example walking time), the assumptions are written in the sources.",
-    "ja": "投稿の事実は、NASA などの一次資料で確かめてから載せています。自分たちで計算した数字（たとえば歩いてかかる時間）は、計算の前提を出典に書いています。"
-   }
+    "en": [
+     "Every fact is checked against NASA or other primary sources before it is posted. Where a number is our own calculation (for example walking time), the assumptions are written in the sources.",
+     "Real photos are labelled as real photos. Drawings by NASA are labelled as artist's concepts. Lines we made up for the machines (chats, thoughts, comments) are labelled as our own.",
+     "The sources were last checked on November 14 and 15, 2026. If you find a mistake, please tell us and we will fix it."
+    ],
+    "ja": [
+     "投稿の事実は、NASA などの一次資料で確かめてから載せています。自分たちで計算した数字（たとえば歩いてかかる時間）は、計算の前提を出典に書いています。",
+     "本物の写真には「本物の写真」と書いています。NASA がかいた絵は「想像図」と書いています。機械のセリフ（チャット、心の声、コメント）は、わたしたちが考えたものだと書いています。",
+     "出典を最後に確かめたのは、2026年11月14日と15日です。まちがいを見つけたら、教えてください。直します。"
+    ]
+   },
+   "links": [
+    {
+     "label": {
+      "en": "Report a mistake (GitHub)",
+      "ja": "まちがいを知らせる（GitHub）"
+     },
+     "href": "https://github.com/taiyoishikawa2003/out-of-range/issues"
+    }
+   ]
   },
   {
    "title": {

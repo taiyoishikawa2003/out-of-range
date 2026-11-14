@@ -1475,8 +1475,8 @@
    "opportunity"
   ],
   "sound": {
-   "ja": "音はありません",
-   "en": "No sound"
+   "ja": "効果音：チームが作った音",
+   "en": "Sound effects made by our team"
   },
   "stats": {
    "likes": 0,
@@ -1578,6 +1578,14 @@
     },
     "title": "For @viking1_lander's comment: NASA Science: Viking 1",
     "url": "https://science.nasa.gov/mission/viking-1/"
+   },
+   {
+    "kind": {
+     "en": "Sound effect",
+     "ja": "効果音"
+    },
+    "title": "Game sound effects: synthesized by our team (tools/motion/make_sfx.py). They are not NASA recordings.",
+    "url": "https://github.com/taiyoishikawa2003/out-of-range/blob/main/tools/motion/make_sfx.py"
    }
   ]
  },

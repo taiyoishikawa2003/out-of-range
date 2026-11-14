@@ -2,7 +2,7 @@ import * as AU from './audio.js';
 import { h, icon, img, loadImgs, renderSlide, slideText } from './render.js';
 import { t, L, getLang } from './i18n.js';
 import * as S from './store.js';
-import { account, allPosts } from './data.js';
+import { account, allPosts, db } from './data.js';
 import { openComments, openSources, openShare, toast, fmt, sheetOpen, commentsView } from './sheets.js';
 import { furiButton } from './furi.js';
 import { speak, stopSpeak } from './speech.js';
@@ -85,6 +85,7 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
   if (!posts.length) feed.append(h('article', { class: 'feed-end' }, h('p', { text: t('feed.followEmpty') }), h('button', { class: 'btn', type: 'button', text: t('feed.foryou'), onclick: () => { destroy(); renderFeed(view, { tab: 'foryou' }); } })));
   else feed.append(h('article', { class: 'feed-end', 'aria-label': t('feed.end.title') }, h('h2', { text: t('feed.end.title') }), h('p', { text: t('feed.end.text') }),
     h('button', { class: 'btn', type: 'button', text: t('feed.replay'), onclick: () => go(0, 'auto') }),
+    h('a', { class: 'btn ghost', href: '#/me', text: `${t('stamp.title')} ${S.stampIds().filter(id => db.posts.some(p => p.id === id)).length}/${db.posts.length}` }),
     h('a', { class: 'btn ghost', href: '#/create', text: t('feed.makeOwn') }),
     h('a', { class: 'btn ghost', href: '#/map', text: t('map.title') }),
     h('a', { class: 'btn ghost', href: 'lost/', text: t('feed.lost') })));

@@ -1,11 +1,25 @@
 // "Try driving a Mars rover like an RC car." Round 1 lets you feel why a joystick cannot work with a signal delay.
 // Round 2 is how rover drivers really did it: plan the day's moves, send them at once, and let the rover check for hazards itself.
 // The delay (2 seconds stands for 20 minutes) and the rock positions are made up for the game. The facts are real (sources on the post).
+import * as S from '../store.js';
+
 const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
 const btn = (cls, text, fn) => { const b = el('button', cls, text); b.type = 'button'; b.onclick = fn; return b; };
 const LAG = 2000;          // one way, on screen. On the real Mars: 3 to 22 minutes
 const V = 0.11, X0 = 0.07, HIT = 0.07, CAM = 0.2, NEAR = 0.13;   // round 1, in fractions of the track width
 const ROVER = '<svg viewBox="0 0 40 40" aria-hidden="true"><g fill="#3a3a3a" stroke="#8d8d8d" stroke-width=".7"><rect x="4" y="5" width="6" height="9" rx="2.5"/><rect x="4" y="16" width="6" height="9" rx="2.5"/><rect x="4" y="27" width="6" height="9" rx="2.5"/><rect x="30" y="5" width="6" height="9" rx="2.5"/><rect x="30" y="16" width="6" height="9" rx="2.5"/><rect x="30" y="27" width="6" height="9" rx="2.5"/></g><path d="M12 13h16l5 9-5 12H12L7 22z" fill="#27407a" stroke="#a9bdea" stroke-width="1"/><path d="M11 18h18M9 23h22M11 28h18M20 13v21" stroke="#a9bdea" stroke-width=".6" opacity=".75"/><rect x="15.5" y="3" width="9" height="11" rx="2.5" fill="#eadfc4"/><circle cx="20" cy="8" r="2.6" fill="#fff"/><circle cx="20" cy="8" r="1.1" fill="#1b1b1b"/></svg>';
+
+// Small sounds made by our team (tools/motion/make_sfx.py). They are armed by the first tap so that phones allow them later.
+const SND = {};
+function arm() {
+  if (SND.armed) return; SND.armed = true;
+  for (const n of ['send', 'tick', 'thud', 'buzz', 'chime', 'pop']) {
+    const a = new Audio(`media/sfx/${n}.mp3`); a.preload = 'auto'; a.muted = true; SND[n] = a;
+    const p = a.play(); if (p) p.then(() => { a.pause(); a.currentTime = 0; a.muted = false; }).catch(() => { a.muted = false; });
+  }
+}
+const snd = n => { const a = SND[n]; if (!a || S.isMuted()) return; try { a.currentTime = 0; const p = a.play(); if (p) p.catch(() => {}); } catch {} };
+const buzz = ms => { try { if (navigator.vibrate) navigator.vibrate(ms); } catch {} };
 
 const TX = {
   ja: {
@@ -67,7 +81,7 @@ export function mount(box, { lang, toast }) {
   const ping = (link, cls) => { const d = el('i', 'lg-dot' + (cls ? ' ' + cls : '')); link.children[1].append(d); later(() => d.remove(), LAG + 60); };
 
   function intro() {
-    frame(rover('lg-hero'), lines('h2', 'sd-title', X.title), say(el('p', 'sd-sub'), X.sub), btn('sd-start', X.start, () => round1(false)), el('p', 'sd-note', X.note));
+    frame(rover('lg-hero'), lines('h2', 'sd-title', X.title), say(el('p', 'sd-sub'), X.sub), btn('sd-start', X.start, () => { arm(); round1(false); }), el('p', 'sd-note', X.note));
     play(false);
     const bg = el('img', 'lg-bg'); bg.src = 'media/lag/tracks.jpg'; bg.alt = ''; box.prepend(bg, el('div', 'sd-shade'));
   }
@@ -80,8 +94,8 @@ export function mount(box, { lang, toast }) {
     real.append(el('em', '', X.real)); real.hidden = !ghost; rock.hidden = boom.hidden = true; rock.style.left = R * 100 + '%';
     scr.append(el('span', 'lg-lab', X.screen), rock, real, rov, boom);
     const link = wire(), msg = status(X.ready), row = el('div', 'lg-row');
-    const go = btn('lg-big go', X.go, () => { go.disabled = true; st.disabled = false; tGo = performance.now() + LAG; ping(link); tick(); });
-    const st = btn('lg-big stop', X.stop, () => { st.disabled = true; pressed = true; tStop = performance.now() + LAG; ping(link, 'red'); });
+    const go = btn('lg-big go', X.go, () => { snd('send'); go.disabled = true; st.disabled = false; tGo = performance.now() + LAG; ping(link); tick(); });
+    const st = btn('lg-big stop', X.stop, () => { snd('send'); st.disabled = true; pressed = true; tStop = performance.now() + LAG; ping(link, 'red'); });
     st.disabled = true; row.append(go, st);
     const w = frame(el('p', 'lg-round', X.r1), el('h2', 'lg-task', X.r1task), scr, link, msg, row);
     let tGo = Infinity, tStop = Infinity, pressed = false;
@@ -99,6 +113,7 @@ export function mount(box, { lang, toast }) {
     }
     function finish(kind) {
       rock.hidden = false;
+      snd(kind === 'crash' ? 'thud' : kind === 'lucky' ? 'chime' : 'pop'); if (kind === 'crash') buzz(120);
       if (kind === 'crash') { boom.hidden = false; boom.style.left = (R - 0.02) * 100 + '%'; }
       link.remove(); msg.remove(); row.remove();
       const again = btn('sd-ghost', X.again, () => round1(true));
@@ -137,20 +152,20 @@ export function mount(box, { lang, toast }) {
       if (plan.length >= 6) return toast(X.full);
       if (c < 0 || r < 0 || c >= N || r >= N) return toast(X.edge);
       if (rocks.has(c + ',' + r)) return toast(X.isRock);
-      plan.push(k); draw();
+      plan.push(k); draw(); snd('tick');
     }
     function run() {
       if (busy || !plan.length) return;
-      busy = true; draw(); say(msg, X.r2sending); ping(link);
+      busy = true; draw(); say(msg, X.r2sending); ping(link); snd('send');
       later(function step() {
         if (!plan.length) return nextSol(X.dayEnd);
         const k = plan[0], c = pos[0] + DIRS[k][0], r = pos[1] + DIRS[k][1], goal = c === T[0] && r === T[1];
         face(DIRS[k][2]); say(msg, X.running);
         if (!surprise && pos[1] === 1 && r <= 1 && !goal) {      // just past the wall: a rock the map did not show
-          surprise = true; rocks.add(c + ',' + r); plan = []; draw(); cells[r * N + c].classList.add('new'); rv.classList.add('halt'); say(msg, X.hazard);
+          surprise = true; rocks.add(c + ',' + r); plan = []; draw(); cells[r * N + c].classList.add('new'); rv.classList.add('halt'); say(msg, X.hazard); snd('buzz'); buzz(120);
           return later(() => { rv.classList.remove('halt'); nextSol(X.hazard2); }, 2800);
         }
-        pos = [c, r]; plan.shift(); draw();
+        pos = [c, r]; plan.shift(); draw(); snd(goal ? 'chime' : 'tick');
         if (goal) { say(msg, X.arrived(sol)); return later(() => fin(sol), 1500); }
         later(step, 450);
       }, LAG);

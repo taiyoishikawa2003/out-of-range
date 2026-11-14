@@ -487,3 +487,14 @@ html.furi-on .ytx,html.furi-on .mcard p,html.furi-on .sec p,html.furi-on .sd-fac
 [data-action="furi"].btn[aria-pressed="true"]{background:#ffc400;border-color:#ffc400;color:#111}
 .car:focus{outline:none}
 .car:focus-visible{outline:2px solid #ffc400;outline-offset:-2px}
+/* fact-check stamps (Me page) */
+.stamps{margin:4px 0 20px;padding:14px 16px;border:1px solid #2a2a2a;border-radius:14px;background:var(--panel,#121212)}
+.stamps h2{font-size:17px;margin:0 0 4px}
+.stamps .hint{margin:0}
+.stamp-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:12px}
+.stamp{position:relative;aspect-ratio:1;border-radius:50%;border:2px dashed #555;display:grid;place-items:center;text-decoration:none;color:#777}
+.stamp img{width:100%;height:100%;object-fit:cover;border-radius:50%;filter:grayscale(1) brightness(.4)}
+.stamp.on{border:2px solid #ffc400}
+.stamp.on img{filter:none}
+.stamp b{position:absolute;right:-4px;bottom:-4px;width:19px;height:19px;border-radius:50%;background:#ffc400;color:#111;font-size:12px;display:grid;place-items:center;font-style:normal}
+#toast.gold{background:#ffc400;color:#111;font-weight:800;box-shadow:0 6px 24px rgba(0,0,0,.5)}

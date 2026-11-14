@@ -72,6 +72,19 @@ export function renderProfile(view, handle) {
   view.replaceChildren(page);
 }
 
+/* fact-check stamps: one per post, earned by opening that post's sources */
+function stamps() {
+  const got = new Set(S.stampIds()), n = db.posts.filter(p => got.has(p.id)).length;
+  return h('section', { class: 'stamps', 'aria-label': t('stamp.title') },
+    h('h2', { text: `${t('stamp.title')} ${n}/${db.posts.length}` }),
+    h('p', { class: 'hint', text: t(n === db.posts.length && n ? 'stamp.all' : 'stamp.how') }),
+    h('div', { class: 'stamp-grid' }, db.posts.map(p => {
+      const a = account(p.account), on = got.has(p.id);
+      return h('a', { class: 'stamp' + (on ? ' on' : ''), href: '#/p/' + encodeURIComponent(p.id), 'aria-label': `@${p.account}: ${t(on ? 'stamp.yes' : 'stamp.no')}` },
+        a.avatar ? h('img', { src: a.avatar, alt: '' }) : h('span', { text: '?' }), on ? h('b', { text: '✓' }) : '');
+    })));
+}
+
 export function renderMe(view, tab = 'mine') {
   const tabs = [['mine', 'me.mine'], ['liked', 'me.liked'], ['saved', 'me.saved']];
   const body = h('div', {});
@@ -90,7 +103,7 @@ export function renderMe(view, tab = 'mine') {
   };
   draw();
   view.replaceChildren(h('div', { class: 'page' }, h('div', { class: 'backbar', style: { justifyContent: 'flex-end', gap: '8px' } }, furiButton(), h('button', { class: 'btn ghost sm', type: 'button', 'data-action': 'lang', text: t('lang') })), h('div', { class: 'prof' }, h('div', { class: 'big', style: { background: '#ffb000', color: '#111' }, text: '★' }), h('h1', { style: { margin: 0 }, text: t('me.title') }),
-    h('p', { class: 'hint', text: t('me.local') })), tabsEl, body));
+    h('p', { class: 'hint', text: t('me.local') })), stamps(), tabsEl, body));
 }
 
 /* ---------- About (for judges and teachers) ---------- */
@@ -108,7 +121,7 @@ export async function renderAbout(view) {
     ...(about.sections || []).map(s => sec(L(s.title), ...para(s.body),
       s.table ? h('table', { class: 't' }, h('tr', {}, s.table.head.map(x => h('th', { text: L(x) }))), s.table.rows.map(r => h('tr', {}, r.map(c => h('td', { text: L(c) }))))) : '',
       s.list ? h('ul', {}, s.list.map(x => h('li', { text: L(x) }))) : '',
-      s.links ? h('p', { style: { display: 'flex', gap: '8px', flexWrap: 'wrap' } }, s.links.map(l => h('a', { class: 'btn ghost sm', href: l.href, text: L(l.label) }))) : '')),
+      s.links ? h('p', { style: { display: 'flex', gap: '8px', flexWrap: 'wrap' } }, s.links.map(l => h('a', { class: 'btn ghost sm', href: l.href, text: L(l.label), ...(/^https?:/.test(l.href) ? { target: '_blank', rel: 'noopener' } : {}) }))) : '')),
     sec(lang === 'ja' ? 'この作品で使った NASA などの資料' : 'NASA data and resources used in this project',
       h('ul', { class: 'srclist' }, [...seen.values()].map(s => h('li', {}, s.kind ? h('span', { class: 'k', text: L(s.kind) }) : '',
         s.url ? h('a', { href: s.url, target: '_blank', rel: 'noopener', text: L(s.title) || s.url }) : h('b', { text: L(s.title) }))))),
