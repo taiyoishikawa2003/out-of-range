@@ -56,6 +56,7 @@ The challenge says school-age kids "often hear only about active, ongoing missio
 
 - *What they are, why they were sent, what they found*: every post carries this in its pinned "answer" comment, in plain words for kids, and the map gives the same three answers for every machine.
 - *Showing how missions operated rather than listing facts*: each post is built around one moment. A lander photographing its own foot. A camera detached and carried home. A last photo cut short by touchdown. And one post is a game: kids feel the signal delay themselves, then drive the rover the way its drivers really did.
+- *Discoveries they still make*: some of these machines are still doing science. The laser reflector Apollo 11 left is still used today to measure the distance to the Moon (light takes about 2.5 seconds to go and come back), which is how we know the Moon moves about 3.8 cm farther away each year. The map says so on its pin, and the Lunar Lost & Found has a hands-on scene for it.
 - *A personal connection*: the machines speak in the first person, and the last post ends on one line: "They weren't thrown away. They worked to the very end."
 - *Age group*: upper elementary to junior high (about 9 to 15). *Perspective*: the machines' own. *Scope*: broad, from the Moon to interstellar space.
 - *Accessibility*: no login, any phone or PC, English and Japanese, read-aloud for photo posts, keyboard controls, reduced-motion support, works offline after the first visit.

@@ -1,5 +1,7 @@
 # OUT OF RANGE
 
+![OUT OF RANGE: NASA left machines on the Moon and Mars. Now they post.](media/og.jpg)
+
 **Live:** https://taiyoishikawa2003.github.io/out-of-range/ (no login; phones, tablets and PCs; English / 日本語)
 
 A short-video style feed where the machines NASA left on the Moon, on Mars and in deep space post about their own lives. The jokes are only in the format. Every fact is true and linked to its source.

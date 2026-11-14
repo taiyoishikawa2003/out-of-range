@@ -21,6 +21,20 @@
    "links": [
     {
      "label": {
+      "en": "▶ Start with the scary story (sound on)",
+      "ja": "▶ まずは「こわい話」から（音あり）"
+     },
+     "href": "#/p/insight-kaidan-1"
+    },
+    {
+     "label": {
+      "en": "🎮 Game: drive a rover with a 20-minute lag",
+      "ja": "🎮 ゲーム：ラグ20分でローバーを運転"
+     },
+     "href": "#/p/lag-1"
+    },
+    {
+     "label": {
       "en": "🗺 Where are they now? (map)",
       "ja": "🗺 今どこにいる？マップ"
      },
