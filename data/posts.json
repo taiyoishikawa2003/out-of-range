@@ -329,8 +329,8 @@
    },
    {
     "bg": {
-     "ja": "media/lost/quiz5.ja.jpg?v=85579a34",
-     "en": "media/lost/quiz5.en.jpg?v=1ca22e7d"
+     "ja": "media/lost/quiz5.ja.jpg?v=08b8b1a6",
+     "en": "media/lost/quiz5.en.jpg?v=b3b5bb6b"
     },
     "dur": 3.5,
     "alt": {
@@ -351,8 +351,8 @@
    },
    {
     "bg": {
-     "ja": "media/lost/quiz7.ja.jpg?v=93685fab",
-     "en": "media/lost/quiz7.en.jpg?v=db6e8b24"
+     "ja": "media/lost/quiz7.ja.jpg?v=201e908f",
+     "en": "media/lost/quiz7.en.jpg?v=fdcccab5"
     },
     "dur": 5,
     "alt": {
@@ -429,6 +429,22 @@
     },
     "title": "Business Insider: 96 bags and the 'Poo Bags Paradox'",
     "url": "https://businessinsider.in/science/space/article/lunar-loo-did-apollo-astronauts-96-bags-of-poop-and-urine-seed-the-moon-with-life/articleshow/113413267.cms"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "AS08-14-2383 Earthrise (Apollo 8, NASA)",
+    "url": "https://images.nasa.gov/details/as08-14-2383"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "iss073e0027806 Anne McClain processes bacteria samples (NASA)",
+    "url": "https://images.nasa.gov/details/iss073e0027806"
    },
    {
     "kind": {
@@ -612,265 +628,6 @@
     },
     "title": "\"Heartwarming\" Kevin MacLeod (incompetech.com), Licensed under Creative Commons: By Attribution 4.0 License, http://creativecommons.org/licenses/by/4.0/",
     "url": "https://incompetech.com/music/royalty-free/"
-   }
-  ]
- },
- {
-  "id": "test-video-1",
-  "type": "video",
-  "account": "test_rover",
-  "place": "mars",
-  "video": {
-   "src": "media/test/v1.mp4?v=8b39c9a3",
-   "poster": "media/test/v1.jpg?v=d8172ffc",
-   "captions": {
-    "en": "media/test/v1.en.vtt?v=5f1a6421",
-    "ja": "media/test/v1.ja.vtt?v=0060e169"
-   }
-  },
-  "caption": {
-   "en": "TEST video post with captions.",
-   "ja": "テストの動画投稿（字幕つき）"
-  },
-  "tags": [
-   "test"
-  ],
-  "sound": {
-   "en": "Test tone",
-   "ja": "テスト音"
-  },
-  "stats": {
-   "likes": 12400,
-   "saves": 2041
-  },
-  "comments": [
-   {
-    "user": "team_oor",
-    "text": {
-     "en": "Test comment from the team.",
-     "ja": "チームからのテストコメント"
-    }
-   }
-  ],
-  "sources": [
-   {
-    "kind": {
-     "en": "Video",
-     "ja": "動画"
-    },
-    "title": "TEST source",
-    "url": "https://www.nasa.gov/"
-   }
-  ]
- },
- {
-  "id": "test-carousel-1",
-  "type": "carousel",
-  "account": "test_lander",
-  "place": "moon",
-  "caption": {
-   "en": "TEST photo post (generic slides).",
-   "ja": "テストのめくり投稿（共通のスライド）"
-  },
-  "tags": [
-   "test",
-   "moon"
-  ],
-  "stats": {
-   "likes": 8800,
-   "saves": 960
-  },
-  "slides": [
-   {
-    "bg": "media/test/p1.jpg?v=de72d3f1",
-    "pos": "top",
-    "texts": [
-     {
-      "t": {
-       "en": "TEST text (top)",
-       "ja": "テスト文字（上）"
-      },
-      "style": "title"
-     },
-     {
-      "t": {
-       "en": "TEST label",
-       "ja": "テストのラベル"
-      },
-      "style": "label"
-     }
-    ]
-   },
-   {
-    "bg": "media/test/p2.jpg?v=243faf50",
-    "pos": "center",
-    "texts": [
-     {
-      "t": {
-       "en": "TEST text (center)",
-       "ja": "テスト文字（中）"
-      },
-      "style": "title"
-     },
-     {
-      "t": {
-       "en": "TEST label",
-       "ja": "テストのラベル"
-      },
-      "style": "label"
-     }
-    ]
-   },
-   {
-    "bg": "media/test/p3.jpg?v=ef8e280f",
-    "pos": "bottom",
-    "texts": [
-     {
-      "t": {
-       "en": "TEST text (bottom)",
-       "ja": "テスト文字（下）"
-      },
-      "style": "title"
-     },
-     {
-      "t": {
-       "en": "TEST label",
-       "ja": "テストのラベル"
-      },
-      "style": "label"
-     }
-    ]
-   }
-  ],
-  "comments": [],
-  "sources": [
-   {
-    "kind": {
-     "en": "Fact",
-     "ja": "事実"
-    },
-    "title": "TEST source A",
-    "url": "https://www.nasa.gov/"
-   },
-   {
-    "kind": {
-     "en": "Photo",
-     "ja": "写真"
-    },
-    "title": "TEST photo credit",
-    "url": "https://images.nasa.gov/"
-   }
-  ]
- },
- {
-  "id": "test-video-2",
-  "type": "video",
-  "account": "test_lander",
-  "place": "moon",
-  "video": {
-   "src": "media/test/v2.mp4?v=49f95894",
-   "poster": "media/test/v2.jpg?v=9210ae4f"
-  },
-  "caption": {
-   "en": "TEST video 2 (no captions).",
-   "ja": "テスト動画2（字幕なし）"
-  },
-  "tags": [
-   "test"
-  ],
-  "stats": {
-   "likes": 3100
-  },
-  "sources": [
-   {
-    "title": "TEST source",
-    "url": "https://www.nasa.gov/"
-   }
-  ]
- },
- {
-  "id": "test-carousel-2",
-  "type": "carousel",
-  "account": "test_rover",
-  "place": "mars",
-  "caption": {
-   "en": "TEST photo post (generic slides).",
-   "ja": "テストのめくり投稿（共通のスライド）"
-  },
-  "tags": [
-   "test",
-   "mars"
-  ],
-  "stats": {
-   "likes": 5600,
-   "saves": 400
-  },
-  "slides": [
-   {
-    "bg": "media/test/p4.jpg?v=860dde9d",
-    "pos": "top",
-    "texts": [
-     {
-      "t": {
-       "en": "TEST text (top)",
-       "ja": "テスト文字（上）"
-      },
-      "style": "title"
-     },
-     {
-      "t": {
-       "en": "TEST label",
-       "ja": "テストのラベル"
-      },
-      "style": "label"
-     }
-    ]
-   },
-   {
-    "bg": "media/test/p5.jpg?v=c754b18b",
-    "pos": "center",
-    "texts": [
-     {
-      "t": {
-       "en": "TEST text (center)",
-       "ja": "テスト文字（中）"
-      },
-      "style": "title"
-     },
-     {
-      "t": {
-       "en": "TEST label",
-       "ja": "テストのラベル"
-      },
-      "style": "label"
-     }
-    ]
-   },
-   {
-    "bg": "media/test/p6.jpg?v=fe284fe1",
-    "pos": "bottom",
-    "texts": [
-     {
-      "t": {
-       "en": "TEST text (bottom)",
-       "ja": "テスト文字（下）"
-      },
-      "style": "title"
-     },
-     {
-      "t": {
-       "en": "TEST label",
-       "ja": "テストのラベル"
-      },
-      "style": "label"
-     }
-    ]
-   }
-  ],
-  "sources": [
-   {
-    "title": "TEST source",
-    "url": "https://www.nasa.gov/"
    }
   ]
  }
