@@ -214,7 +214,7 @@ function buildPost(p, el, { setMuted, onSlide }) {
 }
 
 function videoPost(p, el, stage, setMuted) {
-  const v = h('video', { playsinline: true, 'webkit-playsinline': true, loop: true, preload: 'none', poster: p.video.poster, muted: true, 'aria-label': L(p.caption) });
+  const v = h('video', { playsinline: true, 'webkit-playsinline': true, loop: true, preload: 'none', poster: L(p.video.poster), muted: true, 'aria-label': L(p.caption) });
   v.muted = true;
   if (p.video.fit === 'contain') el.classList.add('contain');
   const capBox = h('div', { class: 'captions', 'aria-hidden': 'true' });
@@ -236,7 +236,7 @@ function videoPost(p, el, stage, setMuted) {
   const mmss = x => `${Math.floor(x / 60)}:${String(Math.floor(x % 60)).padStart(2, '0')}`;
   let loaded = false, isActive = false, cues = [], wantPlay = false;
   const loadCues = async () => { cues = await loadVtt(p.video.captions?.[getLang()] || p.video.captions?.en); };
-  const src = () => { if (!loaded) { v.src = p.video.src; loaded = true; loadCues(); } };
+  const src = () => { if (!loaded) { v.src = L(p.video.src); loaded = true; loadCues(); } };
   const applyMute = () => { v.muted = S.isMuted(); unmute.hidden = !S.isMuted() || !isActive; };
   const play = () => { src(); wantPlay = true; v.play().then(() => { el.classList.add('playing'); el.classList.remove('paused'); }).catch(() => {
     // autoplay with sound blocked → fall back to muted

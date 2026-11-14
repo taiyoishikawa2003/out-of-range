@@ -1,5 +1,105 @@
 [
  {
+  "id": "insight-kaidan-1",
+  "type": "video",
+  "account": "insight_lander",
+  "place": "mars",
+  "video": {
+   "src": {
+    "en": "media/insight/kaidan1.en.mp4",
+    "ja": "media/insight/kaidan1.ja.mp4"
+   },
+   "poster": {
+    "en": "media/insight/kaidan1.poster.en.jpg",
+    "ja": "media/insight/kaidan1.poster.ja.jpg"
+   }
+  },
+  "caption": {
+   "en": "No one was on Mars. Something made a sound. 3 times. Part 1 #creepy #mars #InSight",
+   "ja": "誰もいない火星で、音が3回。Part1 #意味がわかると怖い話 #火星 #インサイト"
+  },
+  "tags": [
+   "mars",
+   "insight",
+   "kaidan"
+  ],
+  "sound": {
+   "en": "Original sound – NASA InSight data",
+   "ja": "オリジナル音源 – NASA インサイトの観測データ"
+  },
+  "stats": {
+   "likes": 0,
+   "saves": 0
+  },
+  "comments": [
+   {
+    "user": "team_oor",
+    "text": {
+     "en": "📌 Answer: InSight had no microphone. Its seismometer felt the ground shake, and NASA turned that data into sound. The 3 bloops: a meteoroid entering the atmosphere, breaking apart, and hitting the ground (Sept 5, 2021). It sounds like a \"bloop\" because low sounds arrive before high ones. NASA's MRO orbiter later photographed the new craters.",
+     "ja": "📌 答え：インサイトにはマイクがない。地震計が「地面のゆれ」を感じて、NASAがそのデータを音にした。3回の音は、隕石が大気に入る → 砕ける → 地面に当たる音（2021年9月5日）。低い音が先に届くので「ボッ」と聞こえる。あとで上空の探査機MROが新しいクレーターを撮影した。"
+    }
+   }
+  ],
+  "sources": [
+   {
+    "kind": {
+     "en": "Video / sound",
+     "ja": "動画・音"
+    },
+    "title": "InSight Captures Sound of a Meteoroid Striking Mars (NASA/JPL-Caltech et al.)",
+    "url": "https://images.nasa.gov/details/JPL-20220919-INSIGHf-0001-InSight Captures Sound of a Meteoroid Striking Mars_1080"
+   },
+   {
+    "kind": {
+     "en": "Sound (wind)",
+     "ja": "音（風）"
+    },
+    "title": "First Likely Marsquake Heard by NASA's InSight (NASA/JPL-Caltech)",
+    "url": "https://images.nasa.gov/details/JPL-20190423-INSIGHf-0001-First Likely Marsquake Heard by NASAs InSight"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA23376 The Best View of InSight (NASA/JPL-Caltech/Univ. of Arizona)",
+    "url": "https://images.nasa.gov/details/PIA23376"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA22871 Full View of InSight's Deck (NASA/JPL-Caltech)",
+    "url": "https://images.nasa.gov/details/PIA22871"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA25408 InSight Detects an Impact for the First Time (NASA/JPL-Caltech/Univ. of Arizona)",
+    "url": "https://images.nasa.gov/details/PIA25408"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA22876 InSight's First Selfie (NASA/JPL-Caltech)",
+    "url": "https://images.nasa.gov/details/PIA22876"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "InSight 'hears' Martian winds with its seismometer and air pressure sensor (NASA JPL, 2018)",
+    "url": "https://www.jpl.nasa.gov/news/nasa-insight-lander-hears-martian-winds/"
+   }
+  ]
+ },
+ {
   "id": "test-video-1",
   "type": "video",
   "account": "test_rover",

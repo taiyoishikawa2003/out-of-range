@@ -1,3 +1,4 @@
+import { L } from './i18n.js';
 import { loadMine } from './store.js';
 
 export const db = { posts: [], accounts: {}, library: [], mine: [] };
@@ -18,7 +19,7 @@ export const postById = id => allPosts().find(p => p.id === id);
 export const account = h => db.accounts[h] || { name: h, handle: h };
 export const postsBy = h => allPosts().filter(p => p.account === h);
 export function thumbOf(p) {
-  if (p.type === 'video') return p.video.poster;
+  if (p.type === 'video') return L(p.video.poster);
   const s = p.slides?.[0] || {};
   return s.bg || '';
 }
