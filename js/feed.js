@@ -2,7 +2,7 @@ import { h, icon, img, loadImgs, renderSlide, slideText } from './render.js';
 import { t, L, getLang } from './i18n.js';
 import * as S from './store.js';
 import { account, allPosts } from './data.js';
-import { openComments, openSources, openShare, toast, fmt, sheetOpen, commentsView } from './sheets.js';
+import { openComments, openSources, openShare, toast, fmt, sheetOpen } from './sheets.js';
 import { speak, stopSpeak } from './speech.js';
 
 /* ---------- WebVTT (minimal parser for captions) ---------- */
@@ -49,17 +49,6 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
     items.forEach(it => it.api?.applyMute?.());
   }
 
-  /* desktop: YouTube-style comment panel beside the video, follows the active post */
-  const panel = h('aside', { class: 'cpanel', 'aria-label': t('comments') });
-  let panelView = null;
-  const panelOn = () => panel.offsetParent !== null;
-  const drawPanel = () => {
-    const it = items[active]; if (!it) { panel.replaceChildren(); return; }
-    panelView = commentsView(it.post, () => it.api?.drawCounts?.());
-    panel.replaceChildren(h('h2', { class: 'cpanel-h', text: t('comments') }), panelView.root);
-  };
-  function openCm(p, onCount) { if (panelOn() && panelView) panelView.focus(); else openComments(p, onCount); }
-
   /* start gate: browsers only allow sound after one tap, so the first tap starts everything with sound */
   let gate = null;
   if (!started) {
@@ -85,7 +74,7 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
 
   function build(i) {
     const it = items[i]; if (!it || it.built) return;
-    it.built = true; it.api = buildPost(it.post, it.el, { setMuted, onSlide: () => i === active && readCurrent(), onComments: openCm });
+    it.built = true; it.api = buildPost(it.post, it.el, { setMuted, onSlide: () => i === active && readCurrent() });
   }
 
   function setActive(i) {
@@ -97,7 +86,7 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
     items[i]?.api?.activate();
     items[i + 1]?.api?.preload(); items[i + 2]?.api?.preloadLight?.();
     const id = items[i]?.post.id; if (id) history.replaceState(null, '', '#/p/' + encodeURIComponent(id));
-    readCurrent(); drawPanel();
+    readCurrent();
   }
   function readCurrent() {
     if (!S.isRead()) return;
@@ -150,7 +139,7 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
     h('button', { type: 'button', 'aria-label': 'Previous', onclick: () => go(cur() - 1) }, icon('up')),
     h('button', { type: 'button', 'aria-label': 'Next', onclick: () => go(cur() + 1) }, icon('down')));
 
-  wrap.append(feed); if (gate) wrap.append(gate); view.replaceChildren(wrap, top, arrows, panel);
+  wrap.append(feed); if (gate) wrap.append(gate); view.replaceChildren(wrap, top, arrows);
   // first paint: build the first posts right away so the first frame is never empty
   let si = startId ? Math.max(0, items.findIndex(x => x.post.id === startId)) : 0;
   for (let j = si - 1; j <= si + 2; j++) build(j);
@@ -164,7 +153,7 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
 }
 
 /* ---------- one post ---------- */
-function buildPost(p, el, { setMuted, onSlide, onComments }) {
+function buildPost(p, el, { setMuted, onSlide }) {
   const stage = h('div', { class: 'stage' });
   let media = null; // {activate, deactivate, preload, unload, togglePlay, applyMute, slide, currentText}
   if (p.type === 'video') media = videoPost(p, el, stage, setMuted);
@@ -181,7 +170,7 @@ function buildPost(p, el, { setMuted, onSlide, onComments }) {
 
   const base = p.stats || {};
   const likeBtn = h('button', { class: 'rb like', type: 'button' });
-  const cmBtn = h('button', { class: 'rb', type: 'button', onclick: e => { e.stopPropagation(); onComments ? onComments(p, drawCounts) : openComments(p, drawCounts); } });
+  const cmBtn = h('button', { class: 'rb', type: 'button', onclick: e => { e.stopPropagation(); openComments(p, drawCounts); } });
   const saveBtn = h('button', { class: 'rb save', type: 'button' });
   const drawCounts = () => {
     const lk = S.isLiked(p.id), sv = S.isSaved(p.id);
@@ -235,7 +224,7 @@ function buildPost(p, el, { setMuted, onSlide, onComments }) {
   stage.addEventListener('contextmenu', e => e.preventDefault());
 
   el.replaceChildren(stage, rail, meta, ...(media.extra || []).filter(Boolean));
-  return { ...media, like, drawCounts };
+  return { ...media, like };
 }
 
 function videoPost(p, el, stage, setMuted) {

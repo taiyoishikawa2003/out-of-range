@@ -50,33 +50,17 @@ function openSheet(title, body, footer) {
 
 const initial = s => (s || '?').replace(/^@/, '').slice(0, 1).toUpperCase();
 
-/* comment reactions (👍/👎) are kept on this device only */
-const CL = 'oor.cmreact';
-const reacts = () => { try { return JSON.parse(localStorage.getItem(CL) || '{}'); } catch { return {}; } };
-const setReact = (k, v) => { const r = reacts(); if (r[k] === v) delete r[k]; else r[k] = v; try { localStorage.setItem(CL, JSON.stringify(r)); } catch {} return r[k]; };
-const ago = ms => {
-  const m = Math.floor((Date.now() - ms) / 60000);
-  if (m < 1) return t('cm.now');
-  if (m < 60) return t('cm.min').replace('{n}', m);
-  const hr = Math.floor(m / 60); if (hr < 24) return t('cm.hour').replace('{n}', hr);
-  return t('cm.day').replace('{n}', Math.floor(hr / 24));
-};
-const THUMB = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10v11H3V10h4zm2 11h8.3a2 2 0 0 0 2-1.6l1.4-7A2 2 0 0 0 18.7 10H14l.8-4.2A1.8 1.8 0 0 0 13 3.6L9 9.5V21z"/></svg>';
+/* comment likes are kept on this device only */
+const CL = 'oor.cmlikes';
+const cmLikes = () => { try { return new Set(JSON.parse(localStorage.getItem(CL) || '[]')); } catch { return new Set(); } };
+const toggleCmLike = k => { const s = cmLikes(); s.has(k) ? s.delete(k) : s.add(k); try { localStorage.setItem(CL, JSON.stringify([...s])); } catch {} return s.has(k); };
 
-function actions(key, base = 0) {
-  const up = h('button', { class: 'ya', type: 'button', 'aria-label': t('like') });
-  const dn = h('button', { class: 'ya dn', type: 'button', 'aria-label': t('cm.dislike') });
-  const draw = () => {
-    const v = reacts()[key]; const n = base + (v === 1 ? 1 : 0);
-    up.innerHTML = THUMB; if (n) up.append(h('span', { text: fmt(n) }));
-    dn.innerHTML = THUMB;
-    up.classList.toggle('on', v === 1); dn.classList.toggle('on', v === -1);
-    up.setAttribute('aria-pressed', v === 1); dn.setAttribute('aria-pressed', v === -1);
-  };
-  up.addEventListener('click', () => { setReact(key, 1); draw(); });
-  dn.addEventListener('click', () => { setReact(key, -1); draw(); });
-  draw();
-  return h('div', { class: 'yacts' }, up, dn);
+function likeBtn(key, base = 0) {
+  const b = h('button', { class: 'cmlike', type: 'button' });
+  const draw = on => { b.replaceChildren(icon('heart'), h('span', { text: base + (on ? 1 : 0) ? fmt(base + (on ? 1 : 0)) : '' })); b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); b.setAttribute('aria-label', t('like')); };
+  draw(cmLikes().has(key));
+  b.addEventListener('click', () => draw(toggleCmLike(key)));
+  return b;
 }
 
 function explainCard(post, c) {
@@ -90,69 +74,51 @@ function explainCard(post, c) {
         st.img ? h('figure', {}, h('img', { src: st.img, alt: L(st.alt) || '', loading: 'lazy' }), st.cap ? h('figcaption', { text: L(st.cap) }) : '') : '')))),
     e.why ? h('div', { class: 'xp-why' }, h('b', { text: L(e.why.h) }), h('p', { text: L(e.why.t) })) : '',
     e.note ? h('p', { class: 'xp-note', text: L(e.note) }) : '',
-    h('div', { class: 'xp-foot' },
-      h('button', { class: 'ytxt', type: 'button', text: t('cm.sources'), onclick: () => openSources(post) }),
-      h('button', { class: 'ytxt', type: 'button', text: t('cm.hide'), onclick: () => { box.replaceChildren(cover()); } })));
-  const cover = () => h('button', { class: 'xp-cover', type: 'button', onclick: () => box.replaceChildren(full()) },
-    h('span', { text: L(c.spoiler) }), h('small', { text: t('cm.spoilerHint') }));
-  box.append(c.spoiler ? cover() : full());
+    h('button', { class: 'btn sm ghost xp-src', type: 'button', text: t('cm.sources'), onclick: () => openSources(post) }));
+  if (c.spoiler) {
+    const cover = h('button', { class: 'xp-cover', type: 'button' }, h('span', { class: 'xp-eye', text: '?' }), h('b', { text: L(c.spoiler) }), h('small', { text: t('cm.spoilerHint') }));
+    cover.addEventListener('click', () => { box.replaceChildren(full()); });
+    box.append(cover);
+  } else box.append(full());
   return box;
 }
 
-/* YouTube-style comment thread; used in the bottom sheet (phone) and the side panel (desktop) */
-export function commentsView(post, onCount) {
-  const root = h('div', { class: 'yc' });
-  const count = h('div', { class: 'yc-count' });
-  const list = h('div', { class: 'yc-list' });
-  const total = () => (post.comments?.length || 0) + localComments(post.id).length;
+export function openComments(post, onCount) {
+  const list = h('div', { class: 'cmlist' });
   const draw = () => {
-    count.textContent = t('cm.count').replace('{n}', total());
     list.replaceChildren();
-    (post.comments || []).forEach((c, i) => {
-      const a = account(c.user); const isAuthor = c.user === post.account;
-      list.append(h('div', { class: 'ycm' + (c.pinned ? ' pinned' : '') },
-        h('div', { class: 'av', text: initial(L(a.name) || c.user) }),
-        h('div', { class: 'ycm-main' },
-          c.pinned ? h('div', { class: 'ypin', text: '📌 ' + t('cm.pinnedBy').replace('{u}', '@' + c.user) }) : '',
-          h('div', { class: 'yhd' }, h('span', { class: 'yname' + (isAuthor ? ' author' : ''), text: '@' + c.user })),
-          c.explain ? h('div', { class: 'ytx' }, h('div', { text: L(c.text) || '' }), explainCard(post, c)) : h('div', { class: 'ytx', text: L(c.text) }),
-          actions(post.id + ':s' + i, c.likes || 0))));
-    });
+    const seeded = post.comments || [];
     const mine = localComments(post.id);
-    mine.forEach((c, i) => list.append(h('div', { class: 'ycm' },
+    seeded.forEach((c, i) => {
+      const a = account(c.user); const isAuthor = c.user === post.account;
+      const name = h('div', { class: 'n' }, h('span', { text: '@' + c.user }),
+        isAuthor ? h('span', { class: 'badge', text: t('cm.author') }) : '', c.pinned ? h('span', { class: 'badge pin', text: '📌 ' + t('cm.pinned') }) : '');
+      list.append(h('div', { class: 'cm' + (c.pinned ? ' pinned' : '') },
+        h('div', { class: 'av', text: initial(L(a.name) || c.user) }),
+        h('div', { class: 'cm-main' }, name, c.explain ? explainCard(post, c) : h('div', { class: 't', text: L(c.text) })),
+        likeBtn(post.id + ':s' + i, c.likes || 0)));
+    });
+    mine.forEach((c, i) => list.append(h('div', { class: 'cm' },
       h('div', { class: 'av me', text: '★' }),
-      h('div', { class: 'ycm-main' },
-        h('div', { class: 'yhd' }, h('span', { class: 'yname', text: t('mine') }), c.at ? h('span', { class: 'ytime', text: ago(c.at) }) : '', h('span', { class: 'ytime', text: '· ' + t('cm.local') })),
-        h('div', { class: 'ytx', text: c.text }),
-        actions(post.id + ':m' + i)))));
+      h('div', { class: 'cm-main' }, h('div', { class: 'n' }, h('span', { text: t('mine') })), h('div', { class: 't', text: c.text }), h('div', { class: 'loc', text: t('cm.local') })),
+      likeBtn(post.id + ':m' + i))));
     if (!mine.length) list.append(h('p', { class: 'cm-empty', text: t('cm.first') }));
   };
-  const input = h('textarea', { rows: 1, maxlength: '300', placeholder: t('cm.placeholder'), 'aria-label': t('cm.placeholder') });
-  const send = h('button', { class: 'ybtn primary', type: 'submit', text: t('cm.send') });
-  const cancel = h('button', { class: 'ybtn', type: 'button', text: t('cm.cancel') });
+  draw();
+  const input = h('input', { type: 'text', maxlength: '150', placeholder: t('cm.placeholder'), 'aria-label': t('cm.placeholder'), enterkeyhint: 'send' });
+  const send = h('button', { class: 'cmsend', type: 'submit', 'aria-label': t('cm.send'), text: t('cm.send') });
+  const sync = () => { send.disabled = !input.value.trim(); };
+  input.addEventListener('input', sync); sync();
   const chips = h('div', { class: 'cmchips' }, ['😱', '🫣', '👀', '🤯', '🔥', '👏'].map(em =>
     h('button', { type: 'button', text: em, 'aria-label': em, onclick: () => { input.value += em; sync(); input.focus(); } })));
-  const bar = h('div', { class: 'ybar' }, chips, h('div', { class: 'ybtns' }, cancel, send));
-  const form = h('form', { class: 'yform' }, h('div', { class: 'av me', text: '★' }), h('div', { class: 'yin' }, input, bar));
-  const sync = () => { send.disabled = !input.value.trim(); input.style.height = 'auto'; input.style.height = Math.min(input.scrollHeight, 120) + 'px'; };
-  input.addEventListener('input', sync);
-  input.addEventListener('focus', () => form.classList.add('open'));
-  input.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) { e.preventDefault(); form.requestSubmit(); } });
-  cancel.addEventListener('click', () => { input.value = ''; sync(); form.classList.remove('open'); input.blur(); });
-  form.addEventListener('submit', e => {
+  const form = h('form', { class: 'cmform', onsubmit: e => {
     e.preventDefault(); const v = input.value.trim(); if (!v) return;
-    addComment(post.id, v); input.value = ''; sync(); draw(); onCount?.();
-    list.querySelector('.ycm:last-of-type')?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-  });
-  sync(); draw();
-  root.append(count, form, list);
-  return { root, focus: () => input.focus(), count: total };
-}
-
-export function openComments(post, onCount) {
-  const v = commentsView(post, onCount);
-  openSheet(t('cm.count').replace('{n}', v.count()), v.root);
-  document.querySelector('#sheet-root .sheet')?.classList.add('tall');
+    addComment(post.id, v); input.value = ''; sync(); draw(); onCount?.(); list.querySelector('.cm-empty')?.remove();
+    list.lastElementChild?.scrollIntoView({ block: 'end', behavior: 'smooth' });
+  } }, chips, h('div', { class: 'cmrow' }, input, send));
+  const n = (post.comments?.length || 0) + localComments(post.id).length;
+  openSheet(t('cm.count').replace('{n}', n), list, form);
+  document.querySelector('.sheet:last-of-type')?.classList.add('tall');
 }
 
 export function openSources(post) {

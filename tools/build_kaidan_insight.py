@@ -24,52 +24,49 @@ STING = 24.0                                                # synth hit on "no m
 SC = [(0, 3.2, None), (3.2, 7.5, 'orbit'), (7.5, 11.4, 'deck'), (11.4, 17.0, None),
       (17.0, 21.5, 'crater'), (21.5, 26.0, 'selfie'), (26.0, TOTAL, None)]
 
-# captions: dict(a=appear, b=end, s=text ("^red^", "\n"), y, z=size, st=type|slam|whisper, fx="shake glitch ghost", x=offset, r=rotation)
-def C(a, b, s, y, z, st='type', fx='', x=0, r=0): return dict(a=a, b=b, s=s, y=y, z=z, st=st, fx=fx, x=x, r=r)
+# captions: (start, end, [(y, size, [(appear_time, text, red), ...]), ...])  one tuple list = one line
 def cap(lang):
-    h1, h2, h3 = HITS[3:]
     if lang == 'ja':
         return [
-          C(0, 3.2, '※イヤホン推奨', 190, 26, 'whisper'),
-          C(2.0, 3.2, '……今の、聞こえた？', 640, 58, 'type', 'shake'),
-          C(3.5, 7.5, 'これ、^火星^で録れた音。', 620, 54),
-          C(5.4, 7.5, 'まわりには、誰もいない。', 720, 38, 'whisper'),
-          C(7.8, 11.4, '聞こえるのは、風だけ。', 620, 54),
-          C(10.0, 11.4, '……の、^はずだった。^', 730, 62, 'slam', 'glitch shake'),
-          C(h1, 17.0, 'ボッ', 440, 110, 'slam', 'glitch', -140, -8),
-          C(h2, 17.0, 'ボッ', 610, 124, 'slam', 'glitch', 110, 7),
-          C(h3, 17.0, '^ボッ^', 800, 150, 'slam', 'glitch shake', -10, -3),
-          C(15.6, 17.0, '3回。', 300, 40, 'whisper'),
-          C(17.3, 21.5, '上から、撮ってみたら', 250, 46),
-          C(19.0, 21.5, '地面に、^穴^。', 360, 66, 'slam', 'shake'),
-          C(21.8, 26.0, '……ねえ。', 560, 44, 'whisper'),
-          C(22.8, 26.0, 'こいつ、', 660, 60),
-          C(STING, 26.0, '^マイク、ない。^', 790, 86, 'slam', 'glitch shake ghost'),
-          C(26.0, TOTAL, '素材：NASA/JPL-Caltech ほか　効果音：チーム制作', 170, 20, 'whisper'),
-          C(26.6, TOTAL, 'じゃあ……', 600, 62),
-          C(27.9, TOTAL, '^何^が、聞いてたの？', 710, 66, 'slam', 'shake ghost'),
-          C(29.2, TOTAL, '答えはコメ欄', 830, 32, 'whisper'),
+          (0.0, 3.2, [(190, 26, [(0.0, '※イヤホン推奨', 0)]),
+                      (640, 64, [(0.3, 'これ、', 0), (0.75, '火星', 1), (1.0, 'で', 0)]),
+                      (730, 64, [(1.3, '録れた音。', 0)])]),
+          (3.2, 7.5, [(640, 56, [(3.6, 'まわりに', 0), (4.0, '誰もいない。', 0)]),
+                      (740, 56, [(5.3, 'いるのは', 0)]),
+                      (830, 56, [(5.8, 'この機械', 0), (6.3, '1台だけ。', 1)])]),
+          (7.5, 11.4, [(640, 56, [(7.9, 'ずっと', 0), (8.3, '風の音だけ。', 0)]),
+                       (740, 56, [(9.8, '……の', 0), (10.3, 'はずだった。', 1)])]),
+          (11.4, 17.0, [(640, 96, [(HITS[3], 'ボッ', 0), (HITS[4], 'ボッ', 0), (HITS[5], 'ボッ', 1)]),
+                        (780, 44, [(15.4, '3回、鳴った。', 0)])]),
+          (17.0, 21.5, [(250, 52, [(17.3, 'あとで', 0), (17.7, '上から見たら', 0)]),
+                        (350, 52, [(18.8, '地面に', 0), (19.2, '黒い穴', 1), (19.6, 'が増えてた。', 0)])]),
+          (21.5, 26.0, [(560, 56, [(21.9, '……待って。', 0)]),
+                        (680, 66, [(23.2, 'こいつ、', 0), (STING, 'マイク', 1), (24.4, 'が', 0)]),
+                        (780, 66, [(24.7, 'ついてない。', 0)])]),
+          (26.0, TOTAL, [(170, 22, [(26.0, '素材：NASA/JPL-Caltech ほか　効果音：チーム制作', 0)]),
+                         (610, 70, [(26.5, 'じゃあ、', 0), (27.1, '何で', 1)]),
+                         (710, 70, [(27.6, '聞いたの？', 0)]),
+                         (830, 34, [(29.0, '答えはコメ欄', 0)])]),
         ]
     return [
-          C(0, 3.2, '(headphones on)', 190, 26, 'whisper'),
-          C(2.0, 3.2, '...did you hear that?', 640, 54, 'type', 'shake'),
-          C(3.5, 7.5, 'This was recorded\non ^Mars^.', 620, 52),
-          C(5.4, 7.5, 'No one around.', 760, 38, 'whisper'),
-          C(7.8, 11.4, 'All you hear\nis wind.', 620, 54),
-          C(10.0, 11.4, '...or ^so we thought.^', 760, 54, 'slam', 'glitch shake'),
-          C(h1, 17.0, 'bloop', 440, 92, 'slam', 'glitch', -120, -8),
-          C(h2, 17.0, 'bloop', 610, 104, 'slam', 'glitch', 100, 7),
-          C(h3, 17.0, '^bloop^', 800, 124, 'slam', 'glitch shake', -10, -3),
-          C(15.6, 17.0, '3 times.', 300, 40, 'whisper'),
-          C(17.3, 21.5, 'Seen from above,', 250, 46),
-          C(19.0, 21.5, 'new ^holes^.', 360, 66, 'slam', 'shake'),
-          C(21.8, 26.0, '...wait.', 560, 44, 'whisper'),
-          C(22.8, 26.0, 'This thing', 660, 58),
-          C(STING, 26.0, '^has no mic.^', 790, 84, 'slam', 'glitch shake ghost'),
-          C(26.0, TOTAL, 'Media: NASA/JPL-Caltech et al.  SFX: our team', 170, 20, 'whisper'),
-          C(26.6, TOTAL, 'So...', 600, 62),
-          C(27.9, TOTAL, '^what^ was listening?', 710, 62, 'slam', 'shake ghost'),
-          C(29.2, TOTAL, 'Answer in the comments', 830, 32, 'whisper'),
+          (0.0, 3.2, [(190, 26, [(0.0, '(headphones on)', 0)]),
+                      (640, 60, [(0.3, 'This', 0), (0.6, 'was', 0), (0.85, 'recorded', 0)]),
+                      (730, 60, [(1.3, 'on', 0), (1.5, 'Mars.', 1)])]),
+          (3.2, 7.5, [(640, 56, [(3.6, 'No one', 0), (4.0, 'around.', 0)]),
+                      (740, 56, [(5.3, 'Just', 0), (5.8, 'this machine.', 1)])]),
+          (7.5, 11.4, [(640, 56, [(7.9, 'Only', 0), (8.3, 'the wind.', 0)]),
+                       (740, 56, [(9.8, 'Or so', 0), (10.3, 'we thought.', 1)])]),
+          (11.4, 17.0, [(640, 80, [(HITS[3], 'bloop', 0), (HITS[4], 'bloop', 0), (HITS[5], 'bloop', 1)]),
+                        (780, 44, [(15.4, '3 times.', 0)])]),
+          (17.0, 21.5, [(250, 50, [(17.3, 'Later,', 0), (17.7, 'from above:', 0)]),
+                        (350, 50, [(18.8, 'new', 0), (19.2, 'holes', 1), (19.6, 'in the ground.', 0)])]),
+          (21.5, 26.0, [(560, 56, [(21.9, '...wait.', 0)]),
+                        (680, 64, [(23.2, 'It has', 0), (STING, 'no', 1)]),
+                        (780, 64, [(24.4, 'microphone.', 1)])]),
+          (26.0, TOTAL, [(170, 22, [(26.0, 'Media: NASA/JPL-Caltech et al.  SFX: our team', 0)]),
+                         (610, 66, [(26.5, 'So', 0), (27.1, 'how', 1)]),
+                         (710, 66, [(27.6, 'did it hear that?', 0)]),
+                         (830, 34, [(29.0, 'Answer in the comments', 0)])]),
     ]
 
 RED = (230, 30, 30)
@@ -101,89 +98,29 @@ def vignette():
     m = m.filter(ImageFilter.GaussianBlur(160))
     return Image.merge('RGBA', [Image.new('L', (W, H), 0)] * 3 + [ImageChops.invert(m).point(lambda v: v * .95)])
 
-F_CAP = ('/usr/share/fonts/opentype/noto/NotoSerifCJK-Black.ttc', 0)
-F_WH = ('/usr/share/fonts/opentype/noto/NotoSerifCJK-Medium.ttc', 0)
-
-def segs(s):
-    """'a^b^c' -> [(char, red)] with newlines kept."""
-    out, red = [], False
-    for ch in s:
-        if ch == '^': red = not red
-        else: out.append((ch, red))
-    return out
-
-def char_times(it):
-    """Irregular typewriter timing (pauses after punctuation)."""
-    rnd = random.Random(hash(it['s']) & 0xffff); t = it['a']; ts = []
-    for ch, _ in segs(it['s']):
-        ts.append(t)
-        t += (0.30 if ch in '、。…,.?？' else rnd.uniform(.045, .13)) if ch != '\n' else 0
-    return ts
-
 _cache = {}
-def text_img(it, n):
-    """RGBA image (cropped) of the first n characters, with shadow."""
-    key = (id(it), n)
+def caption_layer(lang, ci, lines, t):
+    vis = tuple(sum(1 for (tt, _, _) in ch if t >= tt) for (_, _, ch) in lines)
+    key = (lang, ci, vis)
     if key in _cache: return _cache[key]
-    f = font(F_WH if it['st'] == 'whisper' else F_CAP, it['z'])
-    cs = segs(it['s']); lines = [[]]
-    for c in cs:
-        if c[0] == '\n': lines.append([])
-        else: lines[-1].append(c)
-    lh = int(it['z'] * 1.3); pad = 30
-    tmp = ImageDraw.Draw(Image.new('L', (1, 1)))
-    lw = [sum(tmp.textlength(c, font=f) for c, _ in ln) for ln in lines]
-    Wd, Hd = int(max(lw) + pad * 2), int(lh * len(lines) + pad * 2)
-    lay = Image.new('RGBA', (Wd, Hd)); sh = Image.new('RGBA', (Wd, Hd))
+    lay = Image.new('RGBA', (W, H)); sh = Image.new('RGBA', (W, H))
     dl, ds = ImageDraw.Draw(lay), ImageDraw.Draw(sh)
-    k = 0
-    for li, ln in enumerate(lines):
-        x = pad + (max(lw) - lw[li]) / 2; y = pad + li * lh + lh / 2
-        for c, red in ln:
-            if k >= n: break
-            col = RED if red else ((222, 222, 222) if it['st'] == 'whisper' else (236, 232, 228))
-            ds.text((x, y + 2), c, font=f, fill=(0, 0, 0, 255), anchor='lm')
-            dl.text((x, y), c, font=f, fill=col + (255,), anchor='lm')
-            x += tmp.textlength(c, font=f); k += 1
-        k += 0
-    sh = sh.filter(ImageFilter.GaussianBlur(max(4, it['z'] // 10)))
-    out = Image.alpha_composite(Image.alpha_composite(sh, sh), lay)
-    if it['r']: out = out.rotate(it['r'], resample=Image.BICUBIC, expand=True)
+    for (y, sz, ch), n in zip(lines, vis):
+        if not n: continue
+        f = font(F_UI if sz < 30 else (F_JA if lang == 'ja' else F_EN), sz)
+        sep = '' if lang == 'ja' else ' '
+        widths = [dl.textlength(tx, font=f) for _, tx, _ in ch]
+        x = (W - 48 - (sum(widths) + dl.textlength(sep, font=f) * (len(ch) - 1))) / 2
+        for k, ((_, tx, red), w) in enumerate(zip(ch, widths)):
+            if k < n:
+                col = RED if red else ((200, 200, 200) if sz < 30 else (240, 240, 240))
+                ds.text((x + 2, y + 3), tx, font=f, fill=(0, 0, 0, 255), anchor='lm')
+                dl.text((x, y), tx, font=f, fill=col + (255,), anchor='lm')
+            x += w + dl.textlength(sep, font=f)
+    sh = sh.filter(ImageFilter.GaussianBlur(6))
+    out = Image.alpha_composite(sh, Image.alpha_composite(sh, lay))
     _cache[key] = out
     return out
-
-def draw_caption(fr, it, t, rnd):
-    if not (it['a'] <= t < it['b']): return fr
-    dt = t - it['a']; total = len([c for c, _ in segs(it['s']) if c != '\n'])
-    if it['st'] == 'type':
-        n = sum(1 for x, (c, _) in zip(char_times(it), segs(it['s'])) if c != '\n' and t >= x)
-    else: n = total
-    if n == 0: return fr
-    img = text_img(it, n)
-    alpha = 1.0; scale = 1.0
-    if it['st'] == 'whisper': alpha = min(1, dt / .5)
-    if it['st'] == 'slam': scale = 1 + .45 * max(0, 1 - dt / .12)
-    if t > it['b'] - .15: alpha *= max(0, (it['b'] - t) / .15)
-    if scale != 1: img = img.resize((int(img.width * scale), int(img.height * scale)), Image.BILINEAR)
-    fx = it['fx']
-    ox, oy = 0, 0
-    if 'shake' in fx: ox, oy = rnd.randint(-3, 3), rnd.randint(-2, 2)
-    glitch = 'glitch' in fx and (dt < .35 or rnd.random() < .04)
-    if glitch:
-        r, g, b, a = img.split()
-        img = Image.merge('RGBA', (ImageChops.offset(r, rnd.randint(4, 12), 0), g, ImageChops.offset(b, -rnd.randint(3, 9), 0), a))
-        sl = img.copy(); y0 = rnd.randint(0, max(1, img.height - 20)); hh = rnd.randint(6, 22)
-        band = sl.crop((0, y0, img.width, y0 + hh)); img.paste(band, (rnd.randint(-24, 24), y0), band)
-    if alpha < 1: img = img.copy(); img.putalpha(img.getchannel('A').point(lambda v: int(v * alpha)))
-    cx = W / 2 - 24 + it['x'] + ox; cy = it['y'] + oy
-    pos = (int(cx - img.width / 2), int(cy - img.height / 2))
-    if 'ghost' in fx:
-        gh = img.copy(); r, g, b, a = gh.split()
-        gh = Image.merge('RGBA', (r.point(lambda v: 200), g.point(lambda v: 0), b.point(lambda v: 0), a.point(lambda v: int(v * .28))))
-        drift = int(6 + 4 * abs(((t * 3) % 2) - 1))
-        fr.alpha_composite(gh, (pos[0] + drift, pos[1] - drift // 2))
-    fr.alpha_composite(img, pos)
-    return fr
 
 def main():
     os.makedirs(OUT, exist_ok=True)
@@ -227,7 +164,8 @@ def main():
                 if (n // 15) % 2 == 0: d.ellipse((34, 150, 50, 166), fill=(220, 20, 20, 255))
                 d.text((58, 158), 'REC', font=hud_f, fill=(230, 230, 230, 230), anchor='lm')
                 d.text((W - 34, 158), 'INSIGHT / ELYSIUM PLANITIA', font=hud_f, fill=(230, 230, 230, 200), anchor='rm')
-            for it in caps: fr = draw_caption(fr, it, t, rnd)
+            for ci, (ca, cb, lines) in enumerate(caps):
+                if ca <= t < cb: fr = Image.alpha_composite(fr, caption_layer(lang, ci, lines, t))
             fr = fr.convert('RGB')
             ff.stdin.write(fr.tobytes())
             if n == int(1.6 * FPS): fr.save(f'{OUT}/kaidan1.poster.{lang}.jpg', quality=82)

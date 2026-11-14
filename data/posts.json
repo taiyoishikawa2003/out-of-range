@@ -36,8 +36,8 @@
     "user": "insight_lander",
     "pinned": true,
     "spoiler": {
-     "ja": "答え合わせ",
-     "en": "The answer"
+     "ja": "タップして答えを見る",
+     "en": "Tap to see the answer"
     },
     "explain": {
      "title": {
@@ -132,10 +132,6 @@
       "ja": "※動画の風の音は、地震計のデータを60倍速にして聞こえるようにしたものです。動画の暗い色・揺れ・効果音は演出です。",
       "en": "Note: the wind sound was made audible by speeding up seismometer data 60x. The dark colors, shaking and sound effects in the video are for effect."
      }
-    },
-    "text": {
-     "ja": "意味わかった人いる？👀\n答えはここ↓",
-     "en": "Did anyone figure it out? 👀\nAnswer below ↓"
     }
    }
   ],
