@@ -1,6 +1,6 @@
 [
  {
-  "id": "lost-bags-1",
+  "id": "lost-quiz-1",
   "type": "carousel",
   "account": "moon_lostfound",
   "place": "moon",
@@ -8,61 +8,51 @@
   "slides": [
    {
     "bg": {
-     "ja": "media/lost/bags1.ja.jpg",
-     "en": "media/lost/bags1.en.jpg"
-    },
-    "dur": 3,
-    "alt": {
-     "ja": "月面の着陸船",
-     "en": "Lunar module on the Moon"
-    }
-   },
-   {
-    "bg": {
-     "ja": "media/lost/bags2.ja.jpg",
-     "en": "media/lost/bags2.en.jpg"
-    },
-    "dur": 3,
-    "alt": {
-     "ja": "着陸船の足元",
-     "en": "Base of the lunar module"
-    }
-   },
-   {
-    "bg": {
-     "ja": "media/lost/bags3.ja.jpg",
-     "en": "media/lost/bags3.en.jpg"
-    },
-    "dur": 3.5,
-    "alt": {
-     "ja": "文字：中身はうんち",
-     "en": "Text: poop"
-    }
-   },
-   {
-    "bg": {
-     "ja": "media/lost/bags4.ja.jpg",
-     "en": "media/lost/bags4.en.jpg"
+     "ja": "media/lost/quiz1.ja.jpg",
+     "en": "media/lost/quiz1.en.jpg"
     },
     "dur": 5,
     "alt": {
-     "ja": "文字：科学者は取りに行きたい",
-     "en": "Text: scientists want it back"
+     "ja": "クイズ：月に人間が残した物で、いちばん数が多いのは？ A カメラ B ブーツ C ゴルフボール D うんち",
+     "en": "Quiz: what did people leave on the Moon the most of? A cameras B boots C golf balls D poop"
+    }
+   },
+   {
+    "bg": {
+     "ja": "media/lost/quiz2.ja.jpg",
+     "en": "media/lost/quiz2.en.jpg"
+    },
+    "dur": 4.5,
+    "alt": {
+     "ja": "答え：D うんち（袋96個）。カメラ12台、ブーツ12足、ゴルフボール2個",
+     "en": "Answer: D, poop (96 bags). Cameras 12, boots 12 pairs, golf balls 2"
+    }
+   },
+   {
+    "bg": {
+     "ja": "media/lost/quiz3.ja.jpg",
+     "en": "media/lost/quiz3.en.jpg"
+    },
+    "dur": 6,
+    "alt": {
+     "ja": "なぜ置いてきた？月の石を持ち帰るため重さを減らした。科学者は取りに行きたい",
+     "en": "Why? To cut weight for Moon rocks. Scientists want it back"
     }
    }
   ],
-  "audio": "media/lost/dark_ambience.mp3",
+  "audio": "media/lost/bgm_milkyway.mp3",
   "caption": {
-   "ja": "月の落とし物、96個。持ち主は名乗り出ていません #怖い話 #月 #アポロ",
-   "en": "96 lost items on the Moon. No one has claimed them. #creepy #moon #apollo"
+   "ja": "月に人間が残した物で、いちばん多いのは？ 答えは2枚目 #クイズ #月 #アポロ",
+   "en": "What did people leave on the Moon the most of? Answer on slide 2 #quiz #moon #apollo"
   },
   "tags": [
    "moon",
-   "apollo"
+   "apollo",
+   "quiz"
   ],
   "sound": {
-   "ja": "効果音：チーム制作",
-   "en": "Ambience: our team"
+   "ja": "NASA「天の川の中心の音」（データを音にしたもの）",
+   "en": "NASA – Sounds from Around the Milky Way (sonification)"
   },
   "stats": {
    "likes": 0,
@@ -73,8 +63,8 @@
     "user": "moon_lostfound",
     "pinned": true,
     "text": {
-     "ja": "答え合わせ👇\n\n月を歩いたアポロの宇宙飛行士たち（6回の着陸で12人）は、うんちやおしっこ、はいたものなどを入れた白い袋を、合わせて96個、月に置いてきました。\n\n■ なぜ置いてきた？\n帰りに月の石をたくさん持ち帰るため、その分の重さを減らす必要がありました。ゴルフボールやカメラ、ブーツなども一緒に置いてきています。\n\n■ なぜ科学者は取りに行きたい？\nうんちの半分くらいは、おなかの中にいた菌でできています。月は空気がなく、昼は100℃、夜は−170℃くらいになり、強い放射線も降り注ぐ場所です。そんな所で50年たった菌が生きていたら、「生き物は宇宙の旅にも耐えられるかもしれない」という手がかりになります。\n\n■ 本当に生きてる？\n研究者も「生きている可能性は低い」と言っています。でも、月に置いてきた物の中では、いちばん可能性がある物だそうです。\n\n※写真はアポロ14号の着陸船です。出典は「出典」ボタンから。月の落とし物は、遺失物センターのページでも紹介しています。",
-     "en": "The answer 👇\n\nThe Apollo astronauts who walked on the Moon (12 people over 6 landings) left behind 96 white bags of poop, pee, vomit and other waste.\n\n■ Why leave them?\nTo bring lots of Moon rocks home, they had to cut weight. Golf balls, cameras and boots were left too.\n\n■ Why do scientists want them back?\nAbout half of poop is made of gut microbes. The Moon has no air, swings from about 100°C by day to about −170°C at night, and is hit by strong radiation. If microbes survived 50 years there, it would be a clue that life could survive trips through space.\n\n■ Are they alive?\nResearchers say it's unlikely — but it's the most likely place on the Moon to find anything alive.\n\nNote: photos show the Apollo 14 lunar module. Sources: tap \"Sources\". More Moon lost items on our Lost & Found page."
+     "ja": "答え合わせ👇\n\n正解は D うんち（袋96個）。カメラは12台、ブーツは12足、ゴルフボールは2個でした。\n\n月を歩いたアポロの宇宙飛行士たち（6回の着陸で12人）は、うんちやおしっこ、はいたものなどを入れた白い袋を、合わせて96個、月に置いてきました。\n\n■ なぜ置いてきた？\n帰りに月の石をたくさん持ち帰るため、その分の重さを減らす必要がありました。ゴルフボールやカメラ、ブーツなども一緒に置いてきています。\n\n■ なぜ科学者は取りに行きたい？\nうんちの半分くらいは、おなかの中にいた菌でできています。月は空気がなく、昼は100℃、夜は−170℃くらいになり、強い放射線も降り注ぐ場所です。そんな所で50年たった菌が生きていたら、「生き物は宇宙の旅にも耐えられるかもしれない」という手がかりになります。\n\n■ 本当に生きてる？\n研究者も「生きている可能性は低い」と言っています。でも、月に置いてきた物の中では、いちばん可能性がある物だそうです。\n\n※写真はアポロ14号の着陸船、BGMはNASAのチャンドラX線天文台などのデータを音にした「天の川の中心の音」です。出典は「出典」ボタンから。月の落とし物は、遺失物センターのページでも紹介しています。",
+     "en": "The answer 👇\n\nIt's D, poop (96 bags). Cameras: 12, boots: 12 pairs, golf balls: 2.\n\nThe Apollo astronauts who walked on the Moon (12 people over 6 landings) left behind 96 white bags of poop, pee, vomit and other waste.\n\n■ Why leave them?\nTo bring lots of Moon rocks home, they had to cut weight. Golf balls, cameras and boots were left too.\n\n■ Why do scientists want them back?\nAbout half of poop is made of gut microbes. The Moon has no air, swings from about 100°C by day to about −170°C at night, and is hit by strong radiation. If microbes survived 50 years there, it would be a clue that life could survive trips through space.\n\n■ Are they alive?\nResearchers say it's unlikely — but it's the most likely place on the Moon to find anything alive.\n\nNote: photos show the Apollo 14 lunar module; the music is NASA's sonification of the center of the Milky Way (Chandra and other telescopes). Sources: tap \"Sources\". More Moon lost items on our Lost & Found page."
     }
    }
   ],
@@ -113,13 +103,11 @@
    },
    {
     "kind": {
-     "en": "Sound",
-     "ja": "音"
+     "en": "Music",
+     "ja": "BGM"
     },
-    "title": {
-     "en": "Dark ambience: made by our team in code (tools/build_lost_bags.py)",
-     "ja": "暗い環境音：チームがプログラムで作成（tools/build_lost_bags.py）"
-    }
+    "title": "NASA: Sounds from Around the Milky Way (sonification; X-ray: NASA/CXC/SAO, Optical: NASA/STScI, IR: NASA/JPL-Caltech)",
+    "url": "https://images.nasa.gov/details/sonify_galactic_all"
    }
   ]
  },
