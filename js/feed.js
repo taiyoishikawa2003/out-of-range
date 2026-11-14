@@ -1,3 +1,4 @@
+import * as AU from './audio.js';
 import { h, icon, img, loadImgs, renderSlide, slideText } from './render.js';
 import { t, L, getLang } from './i18n.js';
 import * as S from './store.js';
@@ -66,7 +67,7 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
     gate = h('button', { class: 'gate', type: 'button', 'aria-label': t('gate.play') },
       h('span', { class: 'gate-ic' }, icon('play')), h('b', { text: t('gate.play') }), h('small', { text: t('gate.sound') }));
     gate.addEventListener('click', e => {
-      e.stopPropagation(); started = true; gate.remove(); gate = null;
+      e.stopPropagation(); AU.unlock(); started = true; gate.remove(); gate = null;
       setMuted(false);
       const it = items[active]; const vid = it?.el.querySelector('video'); if (vid) vid.currentTime = 0;
       if (it?.api) { it.api.deactivate(); it.api.activate(); }
@@ -310,16 +311,16 @@ function carouselPost(p, el, stage, onSlide) {
   const next = h('button', { class: 'carnav next', type: 'button', 'aria-label': 'Next slide', onclick: e => { e.stopPropagation(); go(idx + 1); } }, icon('right'));
   let idx = 0, loaded = false;
   /* sound: per-slide music (slide.music, inherited by later slides; "" = silence) + one-shot slide.sfx; p.audio = default */
-  const tracks = {}; let cur = null;
-  const track = src => tracks[src] ||= Object.assign(new Audio(src), { loop: true, preload: 'none' });
+  let cur = null, handle = null;
   const musicAt = i => { let m = p.audio || null; for (let k = 0; k <= i; k++) if (slides[k] && 'music' in slides[k]) m = slides[k].music || null; return m; };
   const live = () => el.classList.contains('playing') && !S.isMuted();
-  const stopAll = () => Object.values(tracks).forEach(a => a.pause());
+  const stopAll = () => { handle?.stop(); handle = null; cur = null; };
   const sound = (i, entering) => {
+    if (!live()) { stopAll(); return; }
     const m = musicAt(i);
-    if (m !== cur) { if (cur) tracks[cur]?.pause(); cur = m; if (m) { const a = track(m); a.currentTime = 0; if (live()) a.play().catch(() => {}); } }
-    else if (m && live() && track(m).paused) track(m).play().catch(() => {});
-    if (entering && slides[i]?.sfx && live()) { const s = new Audio(slides[i].sfx); s.play().catch(() => {}); }
+    if (m !== cur || !handle) { handle?.stop(); handle = m ? AU.loop(m) : null; cur = m; }
+    if (entering && slides[i]?.sfx) AU.once(slides[i].sfx);
+    slides.forEach(s => { AU.preload(s.music); AU.preload(s.sfx); });
   };
   const audio = (p.audio || slides.some(s => 'music' in s || s.sfx)) ? true : null;
   const draw = () => {
@@ -339,11 +340,11 @@ function carouselPost(p, el, stage, onSlide) {
   const load = () => { if (!loaded) { loadImgs(car); loaded = true; } };
   return {
     extra: [dots, counter, prev, next],
-    activate() { load(); el.classList.add('playing'); if (audio) { cur = null; sound(idx, idx > 0); } },
+    activate() { load(); el.classList.add('playing'); if (audio) { stopAll(); sound(idx, idx > 0); } },
     deactivate() { el.classList.remove('playing'); stopAll(); },
     preload: load, preloadLight() { const i = car.querySelector('img[data-src]'); if (i) { i.src = i.dataset.src; i.removeAttribute('data-src'); } },
     unload() { stopAll(); },
-    togglePlay() { if (!audio) return; const a = cur && tracks[cur]; if (a && !a.paused) a.pause(); else if (S.isMuted()) { S.setMuted(false); sound(idx, false); } else sound(idx, false); },
+    togglePlay() { if (!audio) return; if (handle) stopAll(); else { if (S.isMuted()) S.setMuted(false); sound(idx, false); } },
     applyMute() { if (!audio) return; if (S.isMuted()) stopAll(); else if (el.classList.contains('playing')) sound(idx, false); },
     slide: d => go(idx + d),
     currentText: () => slides[idx].layout === 'sources' ? t('true') : slideText(slides[idx])

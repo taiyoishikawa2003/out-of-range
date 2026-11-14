@@ -1,3 +1,4 @@
+import * as AU from './audio.js';
 import { applyStatic, setLang, getLang, onLang } from './i18n.js';
 import { loadData } from './data.js';
 import { renderFeed } from './feed.js';
@@ -31,6 +32,8 @@ document.addEventListener('click', e => {
   if (e.target.closest('[data-action="lang"]')) setLang(getLang() === 'ja' ? 'en' : 'ja');
 });
 onLang(() => route());
+// any first tap/key also unlocks Web Audio
+['pointerdown', 'keydown'].forEach(ev => addEventListener(ev, () => AU.unlock(), { once: true, capture: true }));
 
 (async () => {
   applyStatic();
