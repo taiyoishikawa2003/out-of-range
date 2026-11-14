@@ -85,5 +85,17 @@
    "en": "Zodiac rankings made from real NASA Kepler data. Just for fun: astrology is not science. Made by students.",
    "ja": "NASAのケプラー望遠鏡の本物のデータで作る星座ランキング。占いは科学ではありません（お遊びです）。学生が作っています。"
   }
+ },
+ "opportunity_trailer": {
+  "name": {
+   "en": "OPPORTUNITY (trailer)",
+   "ja": "OPPORTUNITY（予告編）"
+  },
+  "place": "mars",
+  "followers": 0,
+  "bio": {
+   "en": "A film-trailer style story about NASA's Opportunity rover (2004–). Made by students with real NASA images; facts checked against NASA sources.",
+   "ja": "NASAの火星探査車オポチュニティ（2004〜）を、映画の予告編の形で描きました。学生が作っています。画像はNASAの本物、事実はNASAの資料で確認しています。"
+  }
  }
 }

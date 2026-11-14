@@ -466,6 +466,116 @@
   "fit": "contain"
  },
  {
+  "id": "opportunity-trailer-1",
+  "type": "video",
+  "account": "opportunity_trailer",
+  "place": "mars",
+  "video": {
+   "src": {
+    "en": "media/opportunity/trailer.en.mp4?v=ad17c984",
+    "ja": "media/opportunity/trailer.ja.mp4?v=be382198"
+   },
+   "poster": {
+    "en": "media/opportunity/trailer.poster.en.jpg?v=be021877",
+    "ja": "media/opportunity/trailer.poster.ja.jpg?v=a699f4c3"
+   },
+   "fit": "contain"
+  },
+  "caption": {
+   "ja": "与えられた時間は、90日。 #予告編 #火星 #オポチュニティ #NASA",
+   "en": "It was given 90 days. #trailer #Mars #Opportunity #NASA"
+  },
+  "tags": [
+   "mars",
+   "opportunity",
+   "trailer"
+  ],
+  "sound": {
+   "ja": "ホルスト「火星」– 米空軍バンド（パブリックドメイン）",
+   "en": "Holst, \"Mars\" – U.S. Air Force Band (public domain)"
+  },
+  "stats": {
+   "likes": 0,
+   "saves": 0
+  },
+  "comments": [
+   {
+    "user": "opportunity_trailer",
+    "pinned": true,
+    "text": {
+     "ja": "■ 本当の話です\nオポチュニティは2004年1月に火星に着陸した、NASAの探査車です。予定された活動期間は火星の90日、走る距離は1キロとして設計されていました。\n\n■ 動画に出てくる試練（すべて実際の出来事）\n・2005年：砂の丘に車輪がうまり、5週間以上動けなかった\n・2011〜2012年の冬：太陽の光が弱く、19週間走れなかった\n・2014〜2015年：記録用のメモリーが壊れ、データを覚えていられない「記憶喪失」がくり返し起きた\n\n■ 距離のカウンター\n各場面のときの実際の走行距離（約5.3km、約34.4km、約40.8〜41.6km）を通るように作っています。あいだの増え方は演出です。地図の金色の線は、NASAの地図にある実際の走行ルートを描き直したものです。\n\n■ この先どうなったかは…\n自分で調べてみてください。\n\n※画像はすべてNASAの本物です。揺れ・画面の乱れなどは演出です。",
+     "en": "■ This is a true story\nOpportunity is a NASA rover that landed on Mars in January 2004. It was designed to work for 90 Martian days and drive 1 kilometer.\n\n■ The trials in the video (all real)\n• 2005: its wheels sank into a sand ripple and it was stuck for over five weeks\n• Winter 2011–2012: too little sunlight to drive for 19 weeks\n• 2014–2015: its flash memory failed, causing repeated \"amnesia\" events\n\n■ The odometer\nIt passes the real distances at each scene (about 5.3 km, 34.4 km, 40.8–41.6 km). The pace in between is dramatized. The gold line is the real route from NASA's map, redrawn.\n\n■ What happened next?\nLook it up yourself.\n\nAll images are real NASA images. The camera shake and glitches are effects."
+    }
+   }
+  ],
+  "sources": [
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "NASA JPL: NASA's Opportunity Rover Mission on Mars Comes to End (90 days, 1 km design)",
+    "url": "https://www.jpl.nasa.gov/news/nasas-opportunity-rover-mission-on-mars-comes-to-end/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "NASA JPL: Looking Back at 'Purgatory Dune' (PIA07999, 2005)",
+    "url": "https://www.jpl.nasa.gov/images/pia07999-looking-back-at-purgatory-dune"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "NASA JPL: Opportunity Rolling Again After Fifth Mars Winter (19 weeks)",
+    "url": "https://www.jpl.nasa.gov/news/opportunity-rolling-again-after-fifth-mars-winter/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "NASA JPL: Rover Amnesia Event Follows Latest Memory Reformatting (2015)",
+    "url": "https://www.jpl.nasa.gov/news/rover-amnesia-event-follows-latest-memory-reformatting/"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "NASA: Opportunity Rover's Full Marathon-Length Traverse (PIA19154, route map)",
+    "url": "https://science.nasa.gov/resource/opportunity-rovers-full-marathon-length-traverse"
+   },
+   {
+    "kind": {
+     "en": "Fact check",
+     "ja": "事実確認"
+    },
+    "title": "NASA rover status reports (odometry: 5,347.89 m in 2005; 34,361.37 m in Jan 2012; 41.30 km in Dec 2014), via SpaceRef / Mars Daily",
+    "url": "https://www.marsdaily.com/reports/Flash_Memory_Reformat_Planned_999.html"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "NASA Image and Video Library: KSC-03pd2090, PIA00407, PIA05144, PIA06739, PIA14129, PIA07999, PIA15689, PIA17956, PIA18614, PIA16923, PIA19155, PIA19154, PIA12131, PIA13088, PIA16120 (NASA/JPL-Caltech and partners)",
+    "url": "https://images.nasa.gov/"
+   },
+   {
+    "kind": {
+     "en": "Music",
+     "ja": "音楽"
+    },
+    "title": "Holst, \"Mars, the Bringer of War\" — U.S. Air Force Band, 1998 (public domain), Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File:Holst-_mars.ogg"
+   }
+  ]
+ },
+ {
   "id": "kepler-uranai-1",
   "type": "video",
   "account": "kepler_uranai",
