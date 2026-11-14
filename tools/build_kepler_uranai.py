@@ -63,42 +63,43 @@ BG_KEP = kepler_bg()
 # ---------- script ----------
 T = {
  'ja': dict(
-  title=(['NASAの宇宙望遠鏡が', 'いちばん見つめた'], ['星座', 'TOP5']),
-  ranks=[('第5位', ['その星座は', 'すばると一緒に', '見つめられていた'], 'おうし座', '見つめられた回数 2回'),
-         ('第4位', ['その星座では', '太陽系のすぐ近くの星も', '見つめられていた'], 'しし座', '見つめられた回数 2回'),
-         ('第3位', ['その星座は', '燃料が尽きる直前まで', '見つめられていた'], 'みずがめ座', '見つめられた回数 3回'),
-         ('第2位', ['その星座には', '同じ星団を見るために', '3回も会いに来た'], 'かに座', '見つめられた回数 3回')],
+  title=(['NASAに'], ['“推されていた”', '星座TOP5']),
+  ranks=[('第5位', ['その星座は', '有名人と縁がある'], ['一緒に写ったのは', '「すばる」'], 'おうし座', '推された回数 2回'),
+         ('第4位', ['その星座は', 'ご近所づきあいが上手'], ['太陽系から約8光年の', 'ご近所の星を観測'], 'しし座', '推された回数 2回'),
+         ('第3位', ['その星座は', '最後まで大切にされる'], ['燃料が尽きる前、', '最後に観測した星座'], 'みずがめ座', '推された回数 3回'),
+         ('第2位', ['その星座は', '一途に愛される'], ['同じ星団に', '3回も会いに来た'], 'かに座', '推された回数 3回')],
   one=(['第1位は…'], ['コメント欄で', '発表！']),
-  k1=(['この占いの正体は'], ['NASAの', 'ケプラー宇宙望遠鏡']),
-  k2=['星がほんの少し', '暗くなる瞬間を見張って', '惑星をさがした'],
+  k1=(['この推し活の正体は'], ['NASAの', 'ケプラー宇宙望遠鏡']),
+  k2=['星がほんの少し', '暗くなる瞬間を見張って', '惑星をさがしていた'],
   k3=(['見つけた惑星'], ['2,600個以上']),
   k4=(['あなたの星座の星にも', '惑星があるかも'], ['何位だったか', '教えてね']),
-  sizes=dict(title=84, big=150, desc=74, sign=150, sub=44)),
+  sizes=dict(title=110, big=130, desc=84, fact=60, sign=150, sub=44)),
  'en': dict(
-  title=(["NASA's space telescope", 'watched these signs', 'the most'], ['TOP 5']),
-  ranks=[('No.5', ['This sign was watched', 'together with', 'the Pleiades'], 'TAURUS', 'Watched 2 times'),
-         ('No.4', ['Here it also watched', "one of the Sun's", 'closest neighbors'], 'LEO', 'Watched 2 times'),
-         ('No.3', ['This sign was watched', 'until the fuel', 'was almost gone'], 'AQUARIUS', 'Watched 3 times'),
-         ('No.2', ['It came back 3 times', 'to see the same', 'star cluster'], 'CANCER', 'Watched 3 times')],
+  title=(["NASA's"], ['“favorite”', 'zodiac signs', 'TOP 5']),
+  ranks=[('No.5', ['This sign has', 'famous friends'], ['Pictured together:', 'the Pleiades'], 'TAURUS', 'Picked 2 times'),
+         ('No.4', ['This sign is', 'great with neighbors'], ['It observed a star', '~8 light-years from the Sun'], 'LEO', 'Picked 2 times'),
+         ('No.3', ['This sign is', 'cherished to the end'], ['The last sign observed', 'before the fuel ran out'], 'AQUARIUS', 'Picked 3 times'),
+         ('No.2', ['This sign is', 'loved faithfully'], ['It came back 3 times', 'to the same star cluster'], 'CANCER', 'Picked 3 times')],
   one=(['No.1 is...'], ['in the', 'comments!']),
-  k1=(['The fortune teller was...'], ["NASA's Kepler", 'Space Telescope']),
+  k1=(['Who was the superfan?'], ["NASA's Kepler", 'Space Telescope']),
   k2=['It hunted planets', 'by watching for stars', 'to dim, just a little'],
   k3=(['Planets found'], ['2,600+']),
   k4=(['The stars of your sign', 'may have planets too'], ['What rank', 'was your sign?']),
-  sizes=dict(title=76, big=150, desc=70, sign=140, sub=44)),
+  sizes=dict(title=100, big=120, desc=78, fact=56, sign=140, sub=44)),
 }
 
 def build_timeline(L):
     s = T[L]['sizes']; tl = []  # (start, end, bg, [(t_in, img, y_center, pop)], sparkle)
     t = 0.0
     a, b = T[L]['title']
-    tl.append((t, t + 3.6, BG_STARS, [(0.1, text_layer(a, s['title']), 560, True), (0.7, text_layer(b, s['big'], fill=GOLD, glow=(255, 170, 60), stroke=12), 930, True)], True)); t += 3.6
-    for rank, desc, sign, sub in T[L]['ranks']:
-        els = [(0.0, text_layer([rank], 120, fill=GOLD, glow=(255, 150, 40), stroke=12), 450, True),
-               (0.45, text_layer(desc, s['desc'], gap=1.3, hl={1}), 760, False),
-               (2.7, text_layer([sign], s['sign'], fill=WHITE, glow=(255, 190, 80), stroke=14), 1080, True),
-               (2.9, text_layer([sub], s['sub'], fill=(225, 225, 240), stroke=6), 1230, False)]
-        tl.append((t, t + 4.6, BG_STARS2 if len(tl) % 2 else BG_STARS, els, True)); t += 4.6
+    tl.append((t, t + 3.4, BG_STARS, [(0.1, text_layer(a, s['title']), 500, True), (0.5, text_layer(b, s['big'], fill=GOLD, glow=(255, 170, 60), stroke=12, gap=1.2), 870, True)], True)); t += 3.4
+    for rank, desc, fact, sign, sub in T[L]['ranks']:
+        els = [(0.0, text_layer([rank], 120, fill=GOLD, glow=(255, 150, 40), stroke=12), 430, True),
+               (0.4, text_layer(desc, s['desc'], gap=1.25, hl={1}), 640, False),
+               (1.9, text_layer(fact, s['fact'], gap=1.3, fill=(230, 230, 245), stroke=8), 860, False),
+               (3.3, text_layer([sign], s['sign'], fill=WHITE, glow=(255, 190, 80), stroke=14), 1080, True),
+               (3.5, text_layer([sub], s['sub'], fill=(225, 225, 240), stroke=6), 1230, False)]
+        tl.append((t, t + 5.4, BG_STARS2 if len(tl) % 2 else BG_STARS, els, True)); t += 5.4
     a, b = T[L]['one']
     tl.append((t, t + 3.2, BG_STARS, [(0.0, text_layer(a, 120, fill=GOLD, glow=(255, 150, 40), stroke=12), 560, True), (0.9, text_layer(b, 110, stroke=12, glow=(255, 120, 160)), 900, True)], True)); t += 3.2
     a, b = T[L]['k1']

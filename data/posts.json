@@ -448,17 +448,17 @@
   "place": "deep",
   "video": {
    "src": {
-    "en": "media/kepler/uranai.en.mp4?v=5866f0d0",
-    "ja": "media/kepler/uranai.ja.mp4?v=c236e94a"
+    "en": "media/kepler/uranai.en.mp4?v=63766475",
+    "ja": "media/kepler/uranai.ja.mp4?v=48616861"
    },
    "poster": {
-    "en": "media/kepler/uranai.poster.en.jpg?v=9cd41124",
-    "ja": "media/kepler/uranai.poster.ja.jpg?v=4c728d7c"
+    "en": "media/kepler/uranai.poster.en.jpg?v=f893687b",
+    "ja": "media/kepler/uranai.poster.ja.jpg?v=61e26524"
    }
   },
   "caption": {
-   "ja": "NASAの宇宙望遠鏡がいちばん見つめた星座TOP5🔭 あなたの星座は何位？ 1位はコメント欄へ #星座占い #ケプラー #NASA",
-   "en": "Top 5 zodiac signs NASA's space telescope watched the most 🔭 What rank is yours? No.1 is in the comments #zodiac #Kepler #NASA"
+   "ja": "NASAに“推されていた”星座TOP5🔭 あなたの星座は何位？ 1位はコメント欄へ #星座占い #ケプラー #NASA",
+   "en": "NASA's “favorite” zodiac signs TOP 5 🔭 What rank is yours? No.1 is in the comments #zodiac #Kepler #NASA"
   },
   "tags": [
    "kepler",
@@ -479,8 +479,8 @@
     "user": "kepler_uranai",
     "pinned": true,
     "text": {
-     "ja": "第1位は… おとめ座 でした！🎉\n3回、合計222日も見つめられました。おとめ座でいちばん明るい星「スピカ」も観測しています。\n\n実は… 4位と5位のあいだに、星占いの12星座に入っていない「へびつかい座」がまぎれこんでいました（2回・157日）。\n\n■ ランキングの決め方\nケプラー宇宙望遠鏡は2014〜2018年の「K2」という観測で、星占いの星座が並ぶ帯（太陽の通り道）に沿って、1か所を約80日ずつ見つめました。全20回の観測で、見た範囲の真ん中がどの星座にあったかを数えました。回数が同じときは、見つめた日数の合計で順位をつけています。\n\n■ 全順位\n1位 おとめ座（3回）\n2位 かに座（3回）\n3位 みずがめ座（3回）\n4位 しし座（2回）\n5位 おうし座（2回）\n6位 いて座（2回）\n7位 てんびん座（1回）\n8位 ふたご座・うお座（1回）\n10位 さそり座・やぎ座・おひつじ座（0回）\n\n■ 動画の中の話\n・おうし座：2015年の観測の範囲に、すばる（プレアデス星団）が入っていました。\n・しし座：2017年の観測の範囲に、太陽系のすぐ近くの星「ウルフ359」が入っていました。\n・みずがめ座：燃料が尽きる前の最後の観測（2018年8〜9月）は、みずがめ座の方向でした。\n・かに座：3回とも、プレセペ星団が入っていました。\n\n■ ケプラーってどんな望遠鏡？\n惑星が星の前を横切ると、星の光がほんの少しだけ暗くなります。ケプラーはその変化を見張って、2,600個以上の惑星を見つけました。2018年に燃料が尽きて引退しました。\nケプラーの観測から、天の川銀河には星よりも惑星のほうが多いとわかりました。\n\n※占いは科学ではありません。星座は地球から見た「方向」です。ランキングに使ったデータは本物です。",
-     "en": "No.1 is... VIRGO! 🎉\nWatched 3 times, 222 days in total. Kepler also observed Spica, the brightest star in Virgo.\n\nPlot twist: between No.4 and No.5, a sign that isn't in the zodiac sneaked in: Ophiuchus (2 times, 157 days).\n\n■ How we ranked\nIn its \"K2\" mission (2014–2018), Kepler stared at one patch of sky for about 80 days at a time, moving along the band where the zodiac signs sit (the Sun's path). For all 20 campaigns we checked which constellation the centre of the field was in. Ties were broken by total days watched.\n\n■ Full ranking\n1 Virgo (3)\n2 Cancer (3)\n3 Aquarius (3)\n4 Leo (2)\n5 Taurus (2)\n6 Sagittarius (2)\n7 Libra (1)\n8 Gemini, Pisces (1)\n10 Scorpio, Capricorn, Aries (0)\n\n■ About the video\n• Taurus: the 2015 field included the Pleiades.\n• Leo: the 2017 field included Wolf 359, one of the Sun's closest neighbors.\n• Aquarius: the last campaign before the fuel ran out (Aug–Sep 2018) pointed toward Aquarius.\n• Cancer: all 3 fields included the Beehive Cluster.\n\n■ What was Kepler?\nWhen a planet passes in front of its star, the starlight dims just a little. Kepler watched for those dips and found more than 2,600 planets. It ran out of fuel and retired in 2018.\nThanks to Kepler, we know our galaxy has more planets than stars.\n\nNote: astrology is not science. A constellation is just a direction as seen from Earth. The data behind the ranking is real."
+     "ja": "第1位は… おとめ座 でした！🎉\n3回、合計222日も推されました（観測されました）。おとめ座でいちばん明るい星「スピカ」も観測しています。\n\n実は… 4位と5位のあいだに、星占いの12星座に入っていない「へびつかい座」がまぎれこんでいました（2回・157日）。\n\n■ 「推された」ってどういうこと？\nケプラーが惑星さがしのために、その星座の方向を観測した回数のことです。\n\n■ ランキングの決め方\nケプラー宇宙望遠鏡は2014〜2018年の「K2」という観測で、星占いの星座が並ぶ帯（太陽の通り道）に沿って、1か所を約80日ずつ見つめました。全20回の観測で、見た範囲の真ん中がどの星座にあったかを数えました。回数が同じときは、見つめた日数の合計で順位をつけています。\n\n■ 全順位\n1位 おとめ座（3回）\n2位 かに座（3回）\n3位 みずがめ座（3回）\n4位 しし座（2回）\n5位 おうし座（2回）\n6位 いて座（2回）\n7位 てんびん座（1回）\n8位 ふたご座・うお座（1回）\n10位 さそり座・やぎ座・おひつじ座（0回）\n\n■ 動画の中の話\n・おうし座：2015年の観測の範囲に、すばる（プレアデス星団）が入っていました。\n・しし座：2017年の観測の範囲に、太陽系から約8光年のご近所の星「ウルフ359」が入っていました。\n・みずがめ座：燃料が尽きる前の最後の観測（2018年8〜9月）は、みずがめ座の方向でした。7つの惑星をもつ星「トラピスト1」もこの観測に入っていました。\n・かに座：3回とも、プレセペ星団が入っていました。\n\n■ ケプラーってどんな望遠鏡？\n惑星が星の前を横切ると、星の光がほんの少しだけ暗くなります。ケプラーはその変化を見張って、2,600個以上の惑星を見つけました。2018年に燃料が尽きて引退しました。\nケプラーの観測から、天の川銀河には星よりも惑星のほうが多いとわかりました。\n\n※占いは科学ではありません。星座は地球から見た「方向」です。ランキングに使ったデータは本物です。",
+     "en": "No.1 is... VIRGO! 🎉\nPicked 3 times, 222 days in total. Kepler also observed Spica, the brightest star in Virgo.\n\nPlot twist: between No.4 and No.5, a sign that isn't in the zodiac sneaked in: Ophiuchus (2 times, 157 days).\n\n■ What does \"picked\" mean?\nIt is how many times Kepler pointed toward that sign to hunt for planets.\n\n■ How we ranked\nIn its \"K2\" mission (2014–2018), Kepler stared at one patch of sky for about 80 days at a time, moving along the band where the zodiac signs sit (the Sun's path). For all 20 campaigns we checked which constellation the centre of the field was in. Ties were broken by total days watched.\n\n■ Full ranking\n1 Virgo (3)\n2 Cancer (3)\n3 Aquarius (3)\n4 Leo (2)\n5 Taurus (2)\n6 Sagittarius (2)\n7 Libra (1)\n8 Gemini, Pisces (1)\n10 Scorpio, Capricorn, Aries (0)\n\n■ About the video\n• Taurus: the 2015 field included the Pleiades.\n• Leo: the 2017 field included Wolf 359, about 8 light-years from the Sun.\n• Aquarius: the last campaign before the fuel ran out (Aug–Sep 2018) pointed toward Aquarius. It included TRAPPIST-1, a star with 7 planets.\n• Cancer: all 3 fields included the Beehive Cluster.\n\n■ What was Kepler?\nWhen a planet passes in front of its star, the starlight dims just a little. Kepler watched for those dips and found more than 2,600 planets. It ran out of fuel and retired in 2018.\nThanks to Kepler, we know our galaxy has more planets than stars.\n\nNote: astrology is not science. A constellation is just a direction as seen from Earth. The data behind the ranking is real."
     }
    }
   ],
