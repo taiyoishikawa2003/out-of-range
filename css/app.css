@@ -338,10 +338,10 @@ table.t th,table.t td{border-bottom:1px solid var(--line);padding:8px 6px;text-a
 .qz-b{flex:1;min-height:0;display:flex;align-items:center;gap:14px;padding:0 18px;border:0;border-radius:14px;color:#fff;font:inherit;font-weight:900;font-size:clamp(15px,2.6vh,22px);text-align:left;cursor:pointer;box-shadow:0 3px 0 rgba(0,0,0,.25);transition:transform .1s,opacity .2s}
 .qz-b:active{transform:scale(.97)}
 .qz-b b{width:18px}
-.qz-b.c0{background:#ff4081}.qz-b.c1{background:#3c8cff}.qz-b.c2{background:#ff9600}.qz-b.c3{background:#28be5a}
+.qz-b.c0{background:#d81b60}.qz-b.c1{background:#1f6fe0}.qz-b.c2{background:#ff9600;color:#111}.qz-b.c3{background:#28be5a;color:#111}
 .qz-b:disabled{opacity:.35;cursor:default}
 .qz-b.right{opacity:1;outline:4px solid #fff}
-.qz-b.wrong{opacity:1;background:#555}
+.qz-b.wrong{opacity:1;background:#555;color:#fff}
 .qz-res{position:absolute;inset:0;margin:0;display:grid;place-items:center;pointer-events:none;font-weight:900;font-size:clamp(28px,5vh,44px);color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.9)}
 .qz-res:empty{display:none}
 
@@ -373,7 +373,7 @@ img.av{object-fit:cover}
 .sd-dots{display:flex;gap:6px}.sd-dots i{width:22px;height:5px;border-radius:3px;background:rgba(255,255,255,.25)}.sd-dots i.on{background:#ffc400}
 .sd-q{font-size:clamp(20px,5.6vw,28px);line-height:1.35;font-weight:900;margin:6px 0 8px}
 .sd-opt{width:100%;border:0;border-radius:14px;color:#fff;font:inherit;font-weight:900;font-size:clamp(15px,4.2vw,19px);padding:16px 14px;text-align:left;cursor:pointer;box-shadow:0 3px 0 rgba(0,0,0,.25)}
-.sd-opt.c0{background:#ff4081}.sd-opt.c1{background:#3c8cff}.sd-opt.c2{background:#28be5a}
+.sd-opt.c0{background:#d81b60}.sd-opt.c1{background:#1f6fe0}.sd-opt.c2{background:#28be5a;color:#111}
 .sd-opt:active{transform:scale(.97)}
 .sd-res{gap:8px}
 .sd-you{margin:0;font-size:14px;opacity:.85}
@@ -485,3 +485,5 @@ html.furi-on .meta .cap{line-height:1.95;max-height:3.9em}
 html.furi-on .ytx,html.furi-on .mcard p,html.furi-on .sec p,html.furi-on .sd-facts li,html.furi-on .lg-fact,html.furi-on .lg-why{line-height:1.95}
 [data-action="furi"]{white-space:nowrap}
 [data-action="furi"].btn[aria-pressed="true"]{background:#ffc400;border-color:#ffc400;color:#111}
+.car:focus{outline:none}
+.car:focus-visible{outline:2px solid #ffc400;outline-offset:-2px}

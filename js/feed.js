@@ -82,8 +82,8 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
     const el = h('article', { class: 'post' + (p.account === 'you' ? ' nofuri' : ''), 'data-id': p.id, 'aria-posinset': i + 1, 'aria-setsize': posts.length, 'aria-label': `@${p.account}: ${L(p.caption)}` });
     feed.append(el); items.push({ post: p, el, api: null, built: false });
   });
-  if (!posts.length) feed.append(h('div', { class: 'feed-end' }, h('p', { text: t('feed.followEmpty') }), h('button', { class: 'btn', type: 'button', text: t('feed.foryou'), onclick: () => { destroy(); renderFeed(view, { tab: 'foryou' }); } })));
-  else feed.append(h('section', { class: 'feed-end', 'aria-label': t('feed.end.title') }, h('h2', { text: t('feed.end.title') }), h('p', { text: t('feed.end.text') }),
+  if (!posts.length) feed.append(h('article', { class: 'feed-end' }, h('p', { text: t('feed.followEmpty') }), h('button', { class: 'btn', type: 'button', text: t('feed.foryou'), onclick: () => { destroy(); renderFeed(view, { tab: 'foryou' }); } })));
+  else feed.append(h('article', { class: 'feed-end', 'aria-label': t('feed.end.title') }, h('h2', { text: t('feed.end.title') }), h('p', { text: t('feed.end.text') }),
     h('button', { class: 'btn', type: 'button', text: t('feed.replay'), onclick: () => go(0, 'auto') }),
     h('a', { class: 'btn ghost', href: '#/create', text: t('feed.makeOwn') }),
     h('a', { class: 'btn ghost', href: '#/map', text: t('map.title') }),
@@ -266,7 +266,7 @@ function videoPost(p, el, stage, setMuted) {
   if (p.video.fit === 'contain') el.classList.add('contain');
   const capBox = h('div', { class: 'captions', 'aria-hidden': 'true' });
   const playI = h('div', { class: 'playicon' }, icon('play'));
-  const bar = h('b'); const prog = h('div', { class: 'progress', role: 'slider', 'aria-label': 'Seek', tabindex: '0', 'aria-valuemin': 0, 'aria-valuemax': 100 }, h('i', {}, bar));
+  const bar = h('b'); const prog = h('div', { class: 'progress', role: 'slider', 'aria-label': 'Seek', tabindex: '0', 'aria-valuemin': 0, 'aria-valuemax': 100, 'aria-valuenow': 0 }, h('i', {}, bar));
   const unmute = h('button', { class: 'unmute', type: 'button', hidden: true, onclick: e => { e.stopPropagation(); setMuted(false); } }, icon('mute'), t('tap.unmute'));
   const spin = h('div', { class: 'spinner', 'aria-hidden': 'true' });
   const rate = h('div', { class: 'pill ratebadge', hidden: true, text: '2x ▶▶' });
@@ -325,7 +325,7 @@ function carouselPost(p, el, stage, onSlide) {
   if (p.fit === 'contain') el.classList.add('contain');
   const slides = [...(p.slides || [])];
   if (p.sources?.length && !p.noSourceSlide) slides.push({ layout: 'sources' });
-  const car = h('div', { class: 'car', 'aria-roledescription': 'carousel' });
+  const car = h('div', { class: 'car', role: 'group', 'aria-roledescription': 'carousel', 'aria-label': L(p.caption), tabindex: '0' });
   slides.forEach(s => car.append(renderSlide(s, { post: p })));
   stage.append(car);
   const dots = h('div', { class: 'dots', 'aria-hidden': 'true' }, slides.map(() => h('i')));

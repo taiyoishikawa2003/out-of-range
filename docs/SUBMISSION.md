@@ -50,7 +50,8 @@ The challenge says school-age kids "often hear only about active, ongoing missio
 - "Where are they now?": interactive maps of the Moon and Mars with 22 landing sites and machines (Apollo descent stages and rovers, Surveyors, Vikings, Sojourner, Spirit, Opportunity, Phoenix, InSight, Ingenuity, and NEAR, Dawn, Kepler and Pioneer 10 farther out). Tapping a pin answers the questions the challenge asks: what it is, why it was sent, what it found, and where it is now. Landing positions come from NASA's NSSDCA catalogue.
 - Lunar Lost & Found (/lost/): a counter for things left on the Moon. Each claim slip leads to the machine next to it and a small hands-on science scene (laser ranging, moonquakes, Moon gravity).
 - Create: kids make their own true post from real NASA photos. The app asks for a source before it lets them post, so the habit we want to teach (check where a fact comes from) is built into the tool. Posts stay on the device.
-- A 10-minute activity for classes and families (About page).
+- A 10-minute activity for classes and families, with a printable one-page worksheet in English and Japanese (/class/).
+- Comment threads: under each post, other machines reply in character (“Sorry, I haven't been able to reply since 2010 either,” says Spirit under Opportunity's post). The lines are ours; the facts in them are real and sourced.
 
 **How it answers the challenge**
 
@@ -59,7 +60,7 @@ The challenge says school-age kids "often hear only about active, ongoing missio
 - *Discoveries they still make*: some of these machines are still doing science. The laser reflector Apollo 11 left is still used today to measure the distance to the Moon (light takes about 2.5 seconds to go and come back), which is how we know the Moon moves about 3.8 cm farther away each year. The map says so on its pin, and the Lunar Lost & Found has a hands-on scene for it.
 - *A personal connection*: the machines speak in the first person, and the last post ends on one line: "They weren't thrown away. They worked to the very end."
 - *Age group*: upper elementary to junior high (about 9 to 15). *Perspective*: the machines' own. *Scope*: broad, from the Moon to interstellar space.
-- *Accessibility*: no login, any phone or PC, English and Japanese, read-aloud for photo posts, a one-tap reading aid in Japanese (furigana: small kana above the harder kanji, for younger readers), keyboard controls, reduced-motion support, works offline after the first visit.
+- *Accessibility*: no login, any phone or PC, English and Japanese, read-aloud for photo posts, a one-tap reading aid in Japanese (furigana: small kana above the harder kanji, for younger readers), keyboard controls, reduced-motion support, works offline after the first visit. An automated check (axe-core, WCAG 2 A and AA rules) finds no violations on the main screens.
 
 **How we keep it accurate**
 

@@ -47,6 +47,7 @@ Beyond the feed:
 - **Create**: kids make their own true post in the browser. A source is required. Posts stay on the device
 - Discover (search, Moon / Mars / Deep space filters) and a profile page for every machine
 - Read-aloud for photo posts, English / 日本語, keyboard controls, reduced-motion support
+- Accessibility checked with axe-core (WCAG 2 A and AA rules): no violations on the feed, quiz, game, map, About, Create, Lost & Found and worksheet pages (automated checks do not cover everything)
 - ふりがな (furigana): a reading aid for younger Japanese readers. One tap adds small kana above words that use kanji taught after grade 2. The word list is built from the app's own text and checked by a script (`tools/furigana/`)
 - Privacy: no accounts, no ads, no tracking. Likes, follows, comments and created posts stay in the browser
 - Works offline after the first visit (service worker)

@@ -13,7 +13,7 @@ function compile(f) {
 
 export function renderCreate(view) {
   const d = { slides: [blank()], cur: 0, caption: '', srcTitle: '', srcUrl: '' };
-  const pv = h('div', { class: 'pv', 'aria-label': 'Preview' });
+  const pv = h('div', { class: 'pv', role: 'group', 'aria-label': 'Preview' });
   const form = h('div', {});
   const page = h('div', { class: 'page nofuri' }, h('h1', { text: t('cr.title') }), h('div', { class: 'cr' }, pv, form));
 
@@ -21,7 +21,7 @@ export function renderCreate(view) {
   const drawPreview = () => { const el = renderSlide(compile(f())); pv.replaceChildren(el); loadImgs(el, true); };
   const field = (label, key, { area, type = 'text', max = 120 } = {}) => {
     const inp = area ? h('textarea', { maxlength: 400 }) : h('input', { type, maxlength: max });
-    inp.value = f()[key]; inp.addEventListener('input', () => { f()[key] = inp.value; drawPreview(); });
+    inp.setAttribute('aria-label', label); inp.value = f()[key]; inp.addEventListener('input', () => { f()[key] = inp.value; drawPreview(); });
     return [h('label', { text: label }), inp];
   };
   const picker = (key, label) => {
@@ -37,21 +37,21 @@ export function renderCreate(view) {
       h('p', { class: 'hint', text: t('cr.privacy') })];
   };
 
-  const thumbs = h('div', { class: 'thumbs', role: 'tablist' });
+  const thumbs = h('div', { class: 'thumbs', role: 'group', 'aria-label': t('cr.slides') });
   function drawThumbs() {
-    thumbs.replaceChildren(...d.slides.map((s, i) => h('button', { type: 'button', role: 'tab', 'aria-selected': i === d.cur, class: i === d.cur ? 'on' : '', 'aria-label': `${t('cr.slides')} ${i + 1}`, onclick: () => { d.cur = i; drawAll(); } },
+    thumbs.replaceChildren(...d.slides.map((s, i) => h('button', { type: 'button', 'aria-pressed': i === d.cur, class: i === d.cur ? 'on' : '', 'aria-label': `${t('cr.slides')} ${i + 1}`, onclick: () => { d.cur = i; drawAll(); } },
       s.bg ? h('img', { src: S.refUrl(s.bg), alt: '' }) : '', h('span', { class: 'n', text: i + 1 }))),
       h('button', { type: 'button', 'aria-label': t('cr.add'), style: { display: 'grid', placeItems: 'center', fontSize: '28px' }, text: '+', onclick: () => { d.slides.push(blank(f().bg)); d.cur = d.slides.length - 1; drawAll(); } }));
   }
 
   function drawForm() {
     const s = f();
-    const sel = h('select', {}, ['top', 'center', 'bottom'].map(k => h('option', { value: k, text: t('cr.' + k), selected: s.pos === k })));
+    const sel = h('select', { 'aria-label': t('cr.pos') }, ['top', 'center', 'bottom'].map(k => h('option', { value: k, text: t('cr.' + k), selected: s.pos === k })));
     sel.addEventListener('change', () => { s.pos = sel.value; drawPreview(); });
     const fields = [...field(t('cr.text'), 'a'), ...field(t('cr.text2'), 'b'), ...field(t('cr.text3'), 'c'), h('label', { text: t('cr.pos') }), sel, ...picker('bg', t('cr.bg'))];
-    const cap = h('textarea', { maxlength: 300 }); cap.value = d.caption; cap.addEventListener('input', () => { d.caption = cap.value; });
-    const st = h('input', { type: 'text', maxlength: 120 }); st.value = d.srcTitle; st.addEventListener('input', () => { d.srcTitle = st.value; });
-    const su = h('input', { type: 'url', maxlength: 400, placeholder: 'https://' }); su.value = d.srcUrl; su.addEventListener('input', () => { d.srcUrl = su.value; });
+    const cap = h('textarea', { maxlength: 300, 'aria-label': t('cr.caption') }); cap.value = d.caption; cap.addEventListener('input', () => { d.caption = cap.value; });
+    const st = h('input', { type: 'text', maxlength: 120, 'aria-label': t('cr.sourceTitle') }); st.value = d.srcTitle; st.addEventListener('input', () => { d.srcTitle = st.value; });
+    const su = h('input', { type: 'url', maxlength: 400, placeholder: 'https://', 'aria-label': t('cr.source') }); su.value = d.srcUrl; su.addEventListener('input', () => { d.srcUrl = su.value; });
     form.replaceChildren(
       h('label', { text: t('cr.slides') }), thumbs,
       d.slides.length > 1 ? h('button', { class: 'btn ghost sm', type: 'button', text: t('cr.remove'), onclick: () => { d.slides.splice(d.cur, 1); d.cur = Math.max(0, d.cur - 1); drawAll(); } }) : '',
