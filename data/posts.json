@@ -33,10 +33,105 @@
   },
   "comments": [
    {
-    "user": "team_oor",
-    "text": {
-     "en": "📌 Answer: InSight had no microphone. Its seismometer felt the ground shake, and NASA turned that data into sound. The 3 bloops: a meteoroid entering the atmosphere, breaking apart, and hitting the ground (Sept 5, 2021). It sounds like a \"bloop\" because low sounds arrive before high ones. NASA's MRO orbiter later photographed the new craters.",
-     "ja": "📌 答え：インサイトにはマイクがない。地震計が「地面のゆれ」を感じて、NASAがそのデータを音にした。3回の音は、隕石が大気に入る → 砕ける → 地面に当たる音（2021年9月5日）。低い音が先に届くので「ボッ」と聞こえる。あとで上空の探査機MROが新しいクレーターを撮影した。"
+    "user": "insight_lander",
+    "pinned": true,
+    "spoiler": {
+     "ja": "タップして答えを見る",
+     "en": "Tap to see the answer"
+    },
+    "explain": {
+     "title": {
+      "ja": "答え合わせ",
+      "en": "The answer"
+     },
+     "lead": {
+      "ja": "インサイトにマイクはありません。聞いていたのは「地震計」です。",
+      "en": "InSight had no microphone. It was listening with its seismometer."
+     },
+     "steps": [
+      {
+       "h": {
+        "ja": "地震計＝地面のゆれを測る機械",
+        "en": "A seismometer measures ground shaking"
+       },
+       "t": {
+        "ja": "インサイトは、火星の地面のとても小さなゆれまで感じとれる地震計を持っていました。写真のドームの下に入っています。",
+        "en": "InSight carried a seismometer that could feel tiny shakes in the Martian ground. It sits under the dome in this photo."
+       },
+       "img": "media/insight/cm_seis.jpg",
+       "alt": {
+        "ja": "火星の地面に置かれたインサイトの地震計のドーム",
+        "en": "InSight's seismometer dome on the Martian surface"
+       },
+       "cap": {
+        "ja": "地震計のカバー（NASA/JPL-Caltech）",
+        "en": "Seismometer cover (NASA/JPL-Caltech)"
+       }
+      },
+      {
+       "h": {
+        "ja": "2021年9月5日、隕石が落ちた",
+        "en": "Sept 5, 2021: a meteoroid hit Mars"
+       },
+       "t": {
+        "ja": "そのときのゆれと空気の振動を、地震計がとらえました。NASAはそのデータを、人の耳に聞こえる音にしました。",
+        "en": "The seismometer picked up the shaking and air waves. NASA turned that data into a sound we can hear."
+       }
+      },
+      {
+       "h": {
+        "ja": "3回の「ボッ」の正体",
+        "en": "What the 3 bloops are"
+       },
+       "t": {
+        "ja": "① 隕石が大気に入った ② 空中でバラバラに砕けた ③ 地面に当たった。この3つの瞬間です。",
+        "en": "(1) it entered the atmosphere, (2) it broke apart, (3) it hit the ground."
+       }
+      },
+      {
+       "h": {
+        "ja": "なぜ「ボッ」と聞こえる？",
+        "en": "Why does it sound like a \"bloop\"?"
+       },
+       "t": {
+        "ja": "日が沈んだあとの火星の空気では、低い音が高い音より先に届きます。そのため「バン」ではなく「ボッ」と聞こえます。",
+        "en": "After sunset on Mars, low sounds arrive before high ones, so you hear a \"bloop\" instead of a \"bang\"."
+       }
+      },
+      {
+       "h": {
+        "ja": "本当に落ちたか確かめた",
+        "en": "Checking it really happened"
+       },
+       "t": {
+        "ja": "上空を回る探査機MROがその場所を撮影し、新しいクレーターを少なくとも3つ見つけました。",
+        "en": "The MRO orbiter photographed the spot and found at least three new craters."
+       },
+       "img": "media/insight/cm_crater.jpg",
+       "alt": {
+        "ja": "隕石でできた青っぽいクレーター",
+        "en": "Craters made by the meteoroid, shown in blue"
+       },
+       "cap": {
+        "ja": "MRO HiRISEで撮影。青はほこりが吹き飛んだ場所（色を強調）",
+        "en": "MRO HiRISE. Blue = dust blown away (enhanced color)"
+       }
+      }
+     ],
+     "why": {
+      "h": {
+       "ja": "なぜすごい？",
+       "en": "Why it matters"
+      },
+      "t": {
+       "ja": "隕石が落ちたゆれを、地球以外の惑星でとらえたのはこれが初めて。隕石の跡は、火星の過去や内部を知る手がかりになります。",
+       "en": "It was the first time seismic signals from a meteoroid impact were detected on another planet. Impact craters give clues about Mars' past and its insides."
+      }
+     },
+     "note": {
+      "ja": "※動画の風の音は、地震計のデータを60倍速にして聞こえるようにしたものです。動画の暗い色・揺れ・効果音は演出です。",
+      "en": "Note: the wind sound was made audible by speeding up seismometer data 60x. The dark colors, shaking and sound effects in the video are for effect."
+     }
     }
    }
   ],
@@ -72,6 +167,14 @@
     },
     "title": "PIA22871 Full View of InSight's Deck (NASA/JPL-Caltech)",
     "url": "https://images.nasa.gov/details/PIA22871"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "PIA23177 InSight's Seismometer on the Martian Surface (NASA/JPL-Caltech)",
+    "url": "https://images.nasa.gov/details/PIA23177"
    },
    {
     "kind": {

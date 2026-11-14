@@ -252,7 +252,8 @@ function videoPost(p, el, stage, setMuted) {
   const loadCues = async () => { cues = await loadVtt(p.video.captions?.[getLang()] || p.video.captions?.en); };
   const src = () => { if (!loaded) { v.src = L(p.video.src); loaded = true; loadCues(); } };
   const applyMute = () => { v.muted = S.isMuted(); unmute.hidden = !S.isMuted() || !isActive; };
-  const play = () => { src(); wantPlay = true; v.play().then(() => { el.classList.add('playing'); el.classList.remove('paused'); }).catch(() => {
+  const play = () => { src(); wantPlay = true; v.play().then(() => { el.classList.add('playing'); el.classList.remove('paused'); }).catch(err => {
+    if (err?.name === 'AbortError') return; // interrupted by a newer play/pause, not a block
     // autoplay with sound blocked → fall back to muted
     if (!v.muted) { v.muted = true; unmute.hidden = !isActive; v.play().catch(() => el.classList.add('paused')); } else el.classList.add('paused');
   }); };
