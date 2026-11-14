@@ -33,10 +33,54 @@
      "ja": "media/lost/quiz3.ja.jpg",
      "en": "media/lost/quiz3.en.jpg"
     },
-    "dur": 6,
+    "dur": 3.5,
     "alt": {
-     "ja": "なんで置いてきた？月の石を持ち帰るため重さを減らした。でも科学者は取りに行きたい！50年たった菌がまだ生きていたら、生き物は宇宙の旅にも耐えられるかも",
-     "en": "Why? To cut weight for Moon rocks. But scientists want it back: if microbes survived 50 years, life might survive space travel"
+     "ja": "なんで置いてきた？帰りに月の石をたくさん持ち帰るため、いらない物は置いてきた",
+     "en": "Why? To carry Moon rocks home, they left what they didn't need"
+    }
+   },
+   {
+    "bg": {
+     "ja": "media/lost/quiz4.ja.jpg",
+     "en": "media/lost/quiz4.en.jpg"
+    },
+    "dur": 3,
+    "alt": {
+     "ja": "でも今、科学者がいちばん取りに行きたいのは、うんち",
+     "en": "What scientists most want back now: the poop"
+    }
+   },
+   {
+    "bg": {
+     "ja": "media/lost/quiz5.ja.jpg",
+     "en": "media/lost/quiz5.en.jpg"
+    },
+    "dur": 3.5,
+    "alt": {
+     "ja": "なんで？うんちの約半分はおなかの菌",
+     "en": "Why? About half of poop is gut microbes"
+    }
+   },
+   {
+    "bg": {
+     "ja": "media/lost/quiz6.ja.jpg",
+     "en": "media/lost/quiz6.en.jpg"
+    },
+    "dur": 4.5,
+    "alt": {
+     "ja": "月は空気がない、昼約100℃、夜約−170℃、放射線あびっぱなし。生き物には最悪の場所",
+     "en": "The Moon: no air, ~100°C day, ~−170°C night, nonstop radiation"
+    }
+   },
+   {
+    "bg": {
+     "ja": "media/lost/quiz7.ja.jpg",
+     "en": "media/lost/quiz7.en.jpg"
+    },
+    "dur": 5,
+    "alt": {
+     "ja": "50年以上たって菌が生きていたら、生き物は宇宙の旅にも耐えられるかも。○か×でコメント",
+     "en": "If microbes survived 50+ years, life might survive space travel. Comment O or X"
     }
    }
   ],
@@ -63,8 +107,8 @@
     "user": "moon_lostfound",
     "pinned": true,
     "text": {
-     "ja": "答え合わせ👇\n\n正解は D うんち（袋96個）。カメラは12台、ブーツは12足、ゴルフボールは2個でした。\n\n月を歩いたアポロの宇宙飛行士たち（6回の着陸で12人）は、うんちやおしっこ、はいたものなどを入れた白い袋を、合わせて96個、月に置いてきました。\n\n■ なぜ置いてきた？\n帰りに月の石をたくさん持ち帰るため、その分の重さを減らす必要がありました。ゴルフボールやカメラ、ブーツなども一緒に置いてきています。\n\n■ なぜ科学者は取りに行きたい？\nうんちの半分くらいは、おなかの中にいた菌でできています。月は空気がなく、昼は100℃、夜は−170℃くらいになり、強い放射線も降り注ぐ場所です。そんな所で50年たった菌が生きていたら、「生き物は宇宙の旅にも耐えられるかもしれない」という手がかりになります。\n\n■ 本当に生きてる？\n研究者も「生きている可能性は低い」と言っています。でも、月に置いてきた物の中では、いちばん可能性がある物だそうです。\n\n※写真はアポロ14号の着陸船、BGMはKevin MacLeod「Monkeys Spinning Monkeys」（CC BY 4.0）です。出典は「出典」ボタンから。月の落とし物は、遺失物センターのページでも紹介しています。",
-     "en": "The answer 👇\n\nIt's D, poop (96 bags). Cameras: 12, boots: 12 pairs, golf balls: 2.\n\nThe Apollo astronauts who walked on the Moon (12 people over 6 landings) left behind 96 white bags of poop, pee, vomit and other waste.\n\n■ Why leave them?\nTo bring lots of Moon rocks home, they had to cut weight. Golf balls, cameras and boots were left too.\n\n■ Why do scientists want them back?\nAbout half of poop is made of gut microbes. The Moon has no air, swings from about 100°C by day to about −170°C at night, and is hit by strong radiation. If microbes survived 50 years there, it would be a clue that life could survive trips through space.\n\n■ Are they alive?\nResearchers say it's unlikely — but it's the most likely place on the Moon to find anything alive.\n\nNote: photos show the Apollo 14 lunar module; music: \"Monkeys Spinning Monkeys\" by Kevin MacLeod (CC BY 4.0). Sources: tap \"Sources\". More Moon lost items on our Lost & Found page."
+     "ja": "答え合わせ👇\n\n正解は D うんち（袋96個）。カメラは12台、ブーツは12足、ゴルフボールは2個でした。\n\n月を歩いたアポロの宇宙飛行士たち（6回の着陸で12人）は、うんちやおしっこ、はいたものなどを入れた白い袋を、合わせて96個、月に置いてきました。\n\n■ なぜ置いてきた？\n帰りに月の石をたくさん持ち帰るため、その分の重さを減らす必要がありました。ゴルフボールやカメラ、ブーツなども一緒に置いてきています。\n\n■ なぜ科学者は取りに行きたい？\nうんちの半分くらいは、おなかの中にいた菌でできています。月は空気がなく、昼は100℃、夜は−170℃くらいになり、強い放射線も降り注ぐ場所です。そんな所で50年たった菌が生きていたら、「生き物は宇宙の旅にも耐えられるかもしれない」という手がかりになります。\n\n■ 本当に生きてる？\n研究者も「生きている可能性は低い」と言っています。でも、月に置いてきた物の中では、いちばん可能性がある物だそうです。\n\n※写真はアポロ14号の着陸船とアポロ12号の宇宙飛行士、BGMはKevin MacLeod「Monkeys Spinning Monkeys」（CC BY 4.0）です。出典は「出典」ボタンから。月の落とし物は、遺失物センターのページでも紹介しています。",
+     "en": "The answer 👇\n\nIt's D, poop (96 bags). Cameras: 12, boots: 12 pairs, golf balls: 2.\n\nThe Apollo astronauts who walked on the Moon (12 people over 6 landings) left behind 96 white bags of poop, pee, vomit and other waste.\n\n■ Why leave them?\nTo bring lots of Moon rocks home, they had to cut weight. Golf balls, cameras and boots were left too.\n\n■ Why do scientists want them back?\nAbout half of poop is made of gut microbes. The Moon has no air, swings from about 100°C by day to about −170°C at night, and is hit by strong radiation. If microbes survived 50 years there, it would be a clue that life could survive trips through space.\n\n■ Are they alive?\nResearchers say it's unlikely — but it's the most likely place on the Moon to find anything alive.\n\nNote: photos show the Apollo 14 lunar module and an Apollo 12 astronaut; music: \"Monkeys Spinning Monkeys\" by Kevin MacLeod (CC BY 4.0). Sources: tap \"Sources\". More Moon lost items on our Lost & Found page."
     }
    }
   ],
@@ -76,6 +120,14 @@
     },
     "title": "AS14-66-9277 View of Apollo 14 Lunar Module on the Moon (NASA)",
     "url": "https://images.nasa.gov/details/as14-66-09277"
+   },
+   {
+    "kind": {
+     "en": "Image",
+     "ja": "画像"
+    },
+    "title": "AS12-48-7133 Apollo 12 astronaut at Surveyor 3 (NASA)",
+    "url": "https://images.nasa.gov/details/AS12-48-7133"
    },
    {
     "kind": {

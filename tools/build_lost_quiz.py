@@ -13,6 +13,8 @@ def cover(im, cx=.5, cy=.5, z=1.0):
     if th > ih: th = ih; tw = th * W / H
     x0 = min(max(cx * iw - tw / 2, 0), iw - tw); y0 = min(max(cy * ih - th / 2, 0), ih - th)
     return im.resize((W, H), Image.LANCZOS, box=(x0, y0, x0 + tw, y0 + th))
+JA_STORY = [{'bg': 'astro', 'y': 560, 'note': '写真：アポロ12号の宇宙飛行士（NASA）', 'items': [('pill', 'なんで置いてきたの？', 52, (255, 255, 255), (0, 0, 0)), ('gap', 40), ('pill', '帰りに月の石を', 48, (0, 0, 0), (255, 255, 255)), ('pill', 'たくさん持ち帰るため', 48, (0, 0, 0), (255, 255, 255)), ('gap', 30), ('pill', 'いらない物は置いてきた', 56, (255, 206, 0), (0, 0, 0))]}, {'bg': 'lm', 'y': 600, 'items': [('pill', 'でも今、科学者が', 50, (255, 255, 255), (0, 0, 0)), ('pill', 'いちばん取りに行きたいのは', 50, (255, 255, 255), (0, 0, 0)), ('gap', 60), ('pill', 'うんち', 130, (255, 206, 0), (0, 0, 0))]}, {'bg': 'black', 'y': 560, 'items': [('pill', 'なんで？', 60, (255, 255, 255), (0, 0, 0)), ('gap', 50), ('pill', 'うんちの約半分は', 56, (0, 0, 0), (255, 255, 255)), ('pill', 'おなかの「菌」', 80, (40, 190, 90), (255, 255, 255)), ('gap', 40), ('pill', '生き物が入った袋なんです', 46, (255, 255, 255), (0, 0, 0))]}, {'bg': 'ground', 'y': 430, 'items': [('pill', 'しかも月はこんな場所', 52, (255, 255, 255), (0, 0, 0)), ('gap', 50), ('card', '空気', 'ない', (60, 140, 255)), ('card', '昼の温度', '約100℃', (230, 60, 60)), ('card', '夜の温度', '約−170℃', (60, 140, 255)), ('card', '放射線', 'あびっぱなし', (255, 150, 0)), ('gap', 10), ('pill', '生き物には最悪の場所', 52, (255, 206, 0), (0, 0, 0))]}, {'bg': 'black', 'y': 520, 'items': [('pill', 'そこで50年以上…', 56, (255, 255, 255), (0, 0, 0)), ('pill', 'もし菌が生きていたら', 56, (255, 255, 255), (0, 0, 0)), ('gap', 50), ('pill', '生き物は', 70, (40, 190, 90), (255, 255, 255)), ('pill', '宇宙の旅にも', 70, (40, 190, 90), (255, 255, 255)), ('pill', '耐えられるかも', 70, (40, 190, 90), (255, 255, 255)), ('gap', 70), ('pill', '生きてると思う？ ○か×でコメントしてね', 40, (255, 206, 0), (0, 0, 0))]}]
+EN_STORY = [{'bg': 'astro', 'y': 560, 'note': 'Photo: Apollo 12 astronaut (NASA)', 'items': [('pill', 'Why leave things there?', 50, (255, 255, 255), (0, 0, 0)), ('gap', 40), ('pill', 'To carry lots of', 48, (0, 0, 0), (255, 255, 255)), ('pill', 'Moon rocks home', 48, (0, 0, 0), (255, 255, 255)), ('gap', 30), ('pill', "they left what they didn't need", 46, (255, 206, 0), (0, 0, 0))]}, {'bg': 'lm', 'y': 600, 'items': [('pill', 'But what scientists', 50, (255, 255, 255), (0, 0, 0)), ('pill', 'most want back now is', 50, (255, 255, 255), (0, 0, 0)), ('gap', 60), ('pill', 'the poop', 120, (255, 206, 0), (0, 0, 0))]}, {'bg': 'black', 'y': 560, 'items': [('pill', 'Why?', 60, (255, 255, 255), (0, 0, 0)), ('gap', 50), ('pill', 'About half of poop is', 54, (0, 0, 0), (255, 255, 255)), ('pill', 'gut microbes', 80, (40, 190, 90), (255, 255, 255)), ('gap', 40), ('pill', 'Bags full of life', 46, (255, 255, 255), (0, 0, 0))]}, {'bg': 'ground', 'y': 430, 'items': [('pill', 'And the Moon is like this:', 50, (255, 255, 255), (0, 0, 0)), ('gap', 50), ('card', 'Air', 'none', (60, 140, 255)), ('card', 'Daytime', '~100°C', (230, 60, 60)), ('card', 'Night', '~−170°C', (60, 140, 255)), ('card', 'Radiation', 'nonstop', (255, 150, 0)), ('gap', 10), ('pill', 'The worst place for life', 50, (255, 206, 0), (0, 0, 0))]}, {'bg': 'black', 'y': 520, 'items': [('pill', 'After 50+ years there,', 54, (255, 255, 255), (0, 0, 0)), ('pill', 'if the microbes are alive', 54, (255, 255, 255), (0, 0, 0)), ('gap', 50), ('pill', 'life might', 70, (40, 190, 90), (255, 255, 255)), ('pill', 'survive trips', 70, (40, 190, 90), (255, 255, 255)), ('pill', 'through space', 70, (40, 190, 90), (255, 255, 255)), ('gap', 70), ('pill', 'Alive or not? Comment O or X', 42, (255, 206, 0), (0, 0, 0))]}]
 COL = [(255, 64, 129), (60, 140, 255), (255, 150, 0), (40, 190, 90)]
 T = {
  'ja': dict(tag='みんなの質問への返信', q=['月に人間が残した物で', 'いちばん数が多いのって', 'なに？'],
@@ -21,20 +23,14 @@ T = {
             why_q=['なんで置いてきたの？'], why=['帰りに月の石をたくさん', '持ち帰るため、', '重さを減らしたから'],
             sci_q=['今も残ってるなら', 'どうなってるの？'], sci=['科学者は「取りに行きたい」', '50年たった菌が生きていたら', '生き物は宇宙の旅にも', '耐えられるかもしれない'],
             note='写真：アポロ14号の着陸船（NASA）',
-            s3=[('なんで置いてきたの？', 46, (255, 255, 255), (20, 20, 20), 0), ('月の石をたくさん持ち帰るため', 42, (0, 0, 0), (255, 255, 255), 0), ('重さを減らした', 42, (0, 0, 0), (255, 255, 255), 70),
-                ('でも科学者は', 50, (255, 255, 255), (20, 20, 20), 0), ('取りに行きたい！', 76, (255, 206, 0), (20, 20, 20), 70),
-                ('50年たった菌が', 46, (0, 0, 0), (255, 255, 255), 0), ('まだ生きていたら…', 46, (0, 0, 0), (255, 255, 255), 0),
-                ('生き物は宇宙の旅にも', 48, (40, 190, 90), (255, 255, 255), 0), ('耐えられるかも', 48, (40, 190, 90), (255, 255, 255), 0)]),
+            story=JA_STORY),
  'en': dict(tag='Replying to your question', q=['What did people leave', 'on the Moon the most', 'of?'],
             ch=['Cameras', 'Boots', 'Golf balls', 'Poop'], ans='Answer: D, poop (96 bags)',
             rows=[('Poop (bags)', '96', 3), ('Cameras', '12', 0), ('Boots (pairs)', '12', 1), ('Golf balls', '2', 2)],
             why_q=['Why leave it there?'], why=['To bring lots of', 'Moon rocks home,', 'they had to cut weight'],
             sci_q=['So what is it', 'doing now?'], sci=['Scientists want it back.', 'If microbes survived 50 years,', 'life might survive', 'trips through space'],
             note='Photo: Apollo 14 lunar module (NASA)',
-            s3=[('Why leave it there?', 46, (255, 255, 255), (20, 20, 20), 0), ('To bring lots of Moon rocks home', 40, (0, 0, 0), (255, 255, 255), 0), ('they had to cut weight', 40, (0, 0, 0), (255, 255, 255), 70),
-                ('But scientists', 50, (255, 255, 255), (20, 20, 20), 0), ('want it back!', 76, (255, 206, 0), (20, 20, 20), 70),
-                ('If microbes are still alive', 44, (0, 0, 0), (255, 255, 255), 0), ('after 50 years...', 44, (0, 0, 0), (255, 255, 255), 0),
-                ('life might survive', 48, (40, 190, 90), (255, 255, 255), 0), ('trips through space', 48, (40, 190, 90), (255, 255, 255), 0)]),
+            story=EN_STORY),
 }
 def sticker(d, top, tag, lines, size=44, color=(20, 20, 20)):
     h = 110 + len(lines) * int(size * 1.45)
@@ -46,6 +42,11 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     lm = Image.open(f'{IMG}/as14-66-09277.jpg').convert('RGB')
     bg1, bg2 = cover(lm, .5, .5, 1.1), cover(lm, .3, .78, 2.0)
+    from PIL import ImageEnhance
+    astro = Image.open(f'{IMG}/AS12-48-7133.jpg').convert('RGB')
+    dim = lambda im, k=.45: ImageEnhance.Brightness(im).enhance(k)
+    story_bg = {'astro': dim(cover(astro, .55, .6, 1.3), .7), 'ground': dim(cover(lm, .5, .9, 2.6), .55),
+                'lm': dim(bg1, .5), 'black': Image.new('RGB', (W, H), (12, 12, 16))}
     for lang, t in T.items():
         # 1 question
         im = bg1.copy(); d = ImageDraw.Draw(im); sticker(d, 300, t['tag'], t['q'], 48)
@@ -63,16 +64,25 @@ def main():
             d.rounded_rectangle((130, y + 64, 130 + w, y + 110), 22, fill=COL[ci] if i == 0 else (195, 195, 195))
             d.text((145 + w, y + 87), n, font=F(40), fill=(20, 20, 20), anchor='lm')
         im.save(f'{OUT}/quiz2.{lang}.jpg', quality=85)
-        # 3 science: TikTok-style text pills on the photo
-        im = bg2.copy(); d = ImageDraw.Draw(im)
-        def pill(cy, text, size, bg, fg):
-            f = F(size); w = d.textlength(text, font=f); cx = (W - 110) / 2
-            d.rounded_rectangle((cx - w / 2 - 30, cy - size * .75 - 14, cx + w / 2 + 30, cy + size * .75 + 14), 24, fill=bg)
-            d.text((cx, cy), text, font=f, fill=fg, anchor='mm')
-        y = 360
-        for text, size, bg, fg, gap in t['s3']:
-            pill(y, text, size, bg, fg); y += size * 1.5 + 28 + gap
-        im.save(f'{OUT}/quiz3.{lang}.jpg', quality=85)
+        # 3..7: one idea per slide, TikTok-style text pills
+        for k, spec in enumerate(t['story'], start=3):
+            im = story_bg[spec['bg']].copy(); d = ImageDraw.Draw(im)
+            y = spec.get('y', 520)
+            for item in spec['items']:
+                kind = item[0]
+                if kind == 'pill':
+                    _, text, size, bg, fg = item; f = F(size); w = d.textlength(text, font=f); cx = (W - 110) / 2
+                    d.rounded_rectangle((cx - w / 2 - 30, y - size * .75 - 14, cx + w / 2 + 30, y + size * .75 + 14), 24, fill=bg)
+                    d.text((cx, y), text, font=f, fill=fg, anchor='mm'); y += size * 1.5 + 30
+                elif kind == 'gap': y += item[1]
+                elif kind == 'card':
+                    _, label, value, col = item
+                    d.rounded_rectangle((150, y - 60, 820, y + 60), 26, fill=(255, 255, 255))
+                    d.rounded_rectangle((150, y - 60, 170, y + 60), 10, fill=col)
+                    d.text((200, y), label, font=F(40, 'Bold'), fill=(110, 110, 110), anchor='lm')
+                    d.text((790, y), value, font=F(48), fill=(20, 20, 20), anchor='rm'); y += 150
+            if spec.get('note'): d.text((40, 1520), spec['note'], font=F(26, 'Bold'), fill=(235, 235, 235), stroke_width=3, stroke_fill=(0, 0, 0))
+            im.save(f'{OUT}/quiz{k}.{lang}.jpg', quality=85)
     # BGM: Kevin MacLeod "Monkeys Spinning Monkeys" (CC BY 4.0), passed as <audio_dir>/Monkeys Spinning Monkeys.mp3
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', f'{AUD}/Monkeys Spinning Monkeys.mp3', '-map_metadata', '-1', '-af', 'loudnorm=I=-18',
                     '-ac', '2', '-c:a', 'libmp3lame', '-b:a', '128k', f'{OUT}/bgm_monkeys.mp3'], check=True)
