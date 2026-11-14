@@ -37,5 +37,6 @@ onLang(() => route());
   try { await loadData(); }
   catch (e) { view.textContent = 'Could not load data. ' + e.message; return; }
   window.addEventListener('hashchange', route);
+  if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
   route();
 })();

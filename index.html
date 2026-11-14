@@ -8,6 +8,9 @@
 <title>OUT OF RANGE</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23000'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%23ffb000' stroke-width='2.5'/%3E%3Cpath d='M3 19c8-2 18-6 26-8' stroke='%23fff' stroke-width='2' fill='none'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/app.css">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
 <div id="app">
@@ -20,7 +23,7 @@
     <a href="#/about" data-nav="about"><svg viewBox="0 0 24 24" aria-hidden="true" class="st"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span data-i18n="nav.about"></span></a>
     <button class="langbtn" type="button" data-action="lang"></button>
   </nav>
-  <main id="view" tabindex="-1"></main>
+  <main id="view" tabindex="-1"><div class="boot" aria-label="Loading"><div class="spinner" style="display:block"></div></div></main>
   <nav class="tabbar" aria-label="Main">
     <a href="#/" data-nav="feed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8v10h-6v-6H9v6H3z"/></svg><span data-i18n="nav.home"></span></a>
     <a href="#/discover" data-nav="discover"><svg viewBox="0 0 24 24" aria-hidden="true" class="st"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span data-i18n="nav.discover"></span></a>

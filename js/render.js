@@ -53,76 +53,16 @@ export const loadImgs = (root, eager) => root.querySelectorAll('img[data-src]').
 
 const txt = (o, cls = 'label') => h('span', { class: 'tx tx-' + cls, text: L(o) });
 
-export function renderSlide(s, { post, interactive = true } = {}) {
-  const lay = s.layout || 'overlay';
-  const el = h('section', { class: 'slide lay-' + lay, 'aria-roledescription': 'slide' });
-  const bg = () => s.bg && el.append(img(s.bg, 'bg', L(s.alt) || ''));
-  switch (lay) {
-    case 'overlay': {
-      bg(); if (s.pos === 'bottom') el.append(h('div', { class: 'shade' }));
-      el.append(h('div', { class: 'lay ' + (s.pos || 'top') }, (s.texts || []).map(x => txt(x.t, x.style || 'label'))));
-      break;
-    }
-    case 'number': {
-      bg();
-      el.append(h('div', { class: 'lay center' }, s.label && txt(s.label, 'label'), h('span', { class: 'tx tx-big' + ([...L(s.value)].length > 5 ? ' long' : ''), text: L(s.value) }), s.note && txt(s.note, 'highlight')));
-      break;
-    }
-    case 'quiz': {
-      bg();
-      const box = h('div', { class: 'lay top quiz' }, txt(s.q, 'label'));
-      const exp = s.explain ? h('div', { class: 'qexp', hidden: true, text: L(s.explain) }) : null;
-      (s.options || []).forEach((o, i) => {
-        const b = h('button', { class: 'qopt', type: 'button', text: `${'ABCD'[i]}. ${L(o)}` });
-        if (interactive) b.addEventListener('click', ev => {
-          ev.stopPropagation();
-          box.querySelectorAll('.qopt').forEach((x, j) => x.classList.add(j === s.answer ? 'right' : (x === b ? 'wrong' : 'x')));
-          if (exp) exp.hidden = false;
-        });
-        box.append(b);
-      });
-      box.append(exp || '', h('span', { class: 'tx tx-note', text: t('quiz.tap') }));
-      el.append(box);
-      break;
-    }
-    case 'compare': {
-      el.append(h('div', { class: 'cmp' },
-        h('div', {}, img(s.bg, '', ''), h('span', { class: 'tag' }, txt(s.label1, 'label'))),
-        h('div', {}, img(s.bg2, '', ''), h('span', { class: 'tag' }, txt(s.label2, 'highlight')))));
-      if (s.note) el.append(h('div', { class: 'lay bottom' }, txt(s.note, 'note')));
-      break;
-    }
-    case 'chat': {
-      el.append(h('div', { class: 'chat' }, h('div', { class: 'who', text: L(s.name) }),
-        (s.msgs || []).map(m => h('div', { class: 'bub ' + (m.me ? 'me' : 'them'), text: L(m.t) }))));
-      break;
-    }
-    case 'document': {
-      bg();
-      el.append(h('div', { class: 'paper' }, h('h3', { text: L(s.title) }), s.big && h('div', { class: 'big', text: L(s.big) }),
-        (s.rows || []).map(r => h('div', { class: 'row' }, h('b', { text: L(r.k) + '：' }), h('span', { text: L(r.v) }))),
-        s.stamp && h('div', { class: 'stamp', text: L(s.stamp) })));
-      break;
-    }
-    case 'tier': {
-      const colors = { S: '#ff6b6b', A: '#ffb000', B: '#ffe066', C: '#8ce99a', D: '#74c0fc' };
-      el.style.background = '#111';
-      el.append(h('div', { class: 'tier' }, s.title && txt(s.title, 'label'),
-        (s.rows || []).map(r => h('div', { class: 'row' }, h('div', { class: 'k', style: { background: colors[r.tier] || '#ccc' }, text: r.tier }),
-          h('div', { class: 'v' }, (r.items || []).map(it => h('div', { class: 'it' }, img(it.img, '', L(it.label)), h('span', { text: L(it.label) }))))))));
-      break;
-    }
-    case 'dump': {
-      el.style.background = '#111';
-      el.append(h('div', { class: 'dump' }, (s.images || []).map(u => img(u, '', ''))));
-      if (s.texts) el.append(h('div', { class: 'lay bottom' }, s.texts.map(x => txt(x.t, x.style || 'label'))));
-      break;
-    }
-    case 'sources': {
-      el.append(sourcesBlock(post));
-      break;
-    }
-  }
+/**
+ * Generic slide: background media + text layers. Post templates are NOT defined here;
+ * a template is just data (which texts, where, in what style) chosen later by the team.
+ */
+export function renderSlide(s, { post } = {}) {
+  const el = h('section', { class: 'slide', 'aria-roledescription': 'slide' });
+  if (s.layout === 'sources') { el.append(sourcesBlock(post)); return el; }
+  if (s.bg) el.append(img(s.bg, 'bg', L(s.alt) || ''));
+  if (s.pos === 'bottom') el.append(h('div', { class: 'shade' }));
+  el.append(h('div', { class: 'lay ' + (s.pos || 'top') }, (s.texts || []).map(x => txt(x.t, x.style || 'label'))));
   return el;
 }
 
@@ -136,13 +76,7 @@ export function sourcesBlock(post) {
 }
 
 /** Plain text of a slide, for read-aloud and search. */
+/** Plain text of a slide, for read-aloud and search. */
 export function slideText(s) {
-  const parts = [];
-  const add = v => { const x = L(v); if (x) parts.push(x); };
-  (s.texts || []).forEach(x => add(x.t));
-  ['label', 'value', 'note', 'q', 'explain', 'label1', 'label2', 'title', 'big', 'stamp', 'name'].forEach(k => s[k] && add(s[k]));
-  (s.options || []).forEach(add);
-  (s.rows || []).forEach(r => { if (r.k) { add(r.k); add(r.v); } (r.items || []).forEach(i => add(i.label)); });
-  (s.msgs || []).forEach(m => add(m.t));
-  return parts.join('。 ');
+  return (s.texts || []).map(x => L(x.t)).filter(Boolean).join('。 ');
 }

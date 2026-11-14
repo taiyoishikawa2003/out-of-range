@@ -1,33 +1,261 @@
 [
-  {"id": "test-video-1", "type": "video", "account": "test_rover", "place": "mars",
-   "video": {"src": "media/test/v1.mp4", "poster": "media/test/v1.jpg", "captions": {"en": "media/test/v1.en.vtt", "ja": "media/test/v1.ja.vtt"}},
-   "caption": {"en": "TEST video post with captions.", "ja": "テストの動画投稿（字幕つき）"}, "tags": ["test"], "sound": {"en": "Test tone", "ja": "テスト音"},
-   "stats": {"likes": 12400, "saves": 2041},
-   "comments": [{"user": "team_oor", "text": {"en": "Test comment from the team.", "ja": "チームからのテストコメント"}}],
-   "sources": [{"kind": {"en": "Video", "ja": "動画"}, "title": "TEST source", "url": "https://www.nasa.gov/"}]},
-  {"id": "test-carousel-1", "type": "carousel", "account": "test_lander", "place": "moon",
-   "caption": {"en": "TEST carousel: photo text, number, quiz, before/after.", "ja": "テストのめくり投稿：写真＋文字、数字、クイズ、ビフォーアフター"}, "tags": ["test", "moon"],
-   "stats": {"likes": 8800, "saves": 960},
-   "slides": [
-     {"layout": "overlay", "bg": "media/test/p1.jpg", "pos": "top", "texts": [{"t": {"en": "TEST title", "ja": "テストの見出し"}, "style": "title"}, {"t": {"en": "Second line", "ja": "2行目"}, "style": "label"}, {"t": {"en": "Highlight", "ja": "強調"}, "style": "highlight"}]},
-     {"layout": "number", "bg": "media/test/p2.jpg", "label": {"en": "TEST number", "ja": "テストの数字"}, "value": "123", "note": {"en": "unit / note", "ja": "単位・ひとこと"}},
-     {"layout": "quiz", "bg": "media/test/p3.jpg", "q": {"en": "Q. TEST question?", "ja": "Q. テストの問題？"}, "options": [{"en": "Option A", "ja": "選択肢A"}, {"en": "Option B", "ja": "選択肢B"}, {"en": "Option C", "ja": "選択肢C"}], "answer": 1, "explain": {"en": "TEST explanation.", "ja": "テストの解説"}},
-     {"layout": "compare", "bg": "media/test/p4.jpg", "bg2": "media/test/p5.jpg", "label1": {"en": "Plan", "ja": "予定"}, "label2": {"en": "Reality", "ja": "現実"}, "note": {"en": "TEST note", "ja": "テストのメモ"}}
-   ],
-   "comments": [],
-   "sources": [{"kind": {"en": "Fact", "ja": "事実"}, "title": "TEST source A", "url": "https://www.nasa.gov/"}, {"kind": {"en": "Photo", "ja": "写真"}, "title": "TEST photo credit", "url": "https://images.nasa.gov/"}]},
-  {"id": "test-video-2", "type": "video", "account": "test_lander", "place": "moon",
-   "video": {"src": "media/test/v2.mp4", "poster": "media/test/v2.jpg"},
-   "caption": {"en": "TEST video 2 (no captions).", "ja": "テスト動画2（字幕なし）"}, "tags": ["test"], "stats": {"likes": 3100},
-   "sources": [{"title": "TEST source", "url": "https://www.nasa.gov/"}]},
-  {"id": "test-carousel-2", "type": "carousel", "account": "test_rover", "place": "mars",
-   "caption": {"en": "TEST carousel: chat, paper, tier list, photo dump.", "ja": "テストのめくり投稿：チャット、書類、ティア表、写真ダンプ"}, "tags": ["test", "mars"],
-   "stats": {"likes": 5600, "saves": 400},
-   "slides": [
-     {"layout": "chat", "name": {"en": "TEST chat", "ja": "テストのチャット"}, "msgs": [{"t": {"en": "Message", "ja": "メッセージ"}}, {"me": true, "t": {"en": "Reply", "ja": "返事"}}, {"t": {"en": "Another message", "ja": "もう1通"}}]},
-     {"layout": "document", "bg": "media/test/p6.jpg", "title": {"en": "TEST FORM", "ja": "テストの書類"}, "big": {"en": "Big line", "ja": "大きい行"}, "rows": [{"k": {"en": "Item", "ja": "項目"}, "v": {"en": "Value", "ja": "内容"}}, {"k": {"en": "Item", "ja": "項目"}, "v": {"en": "Value", "ja": "内容"}}], "stamp": {"en": "STAMP", "ja": "はんこ"}},
-     {"layout": "tier", "title": {"en": "TEST tier list", "ja": "テストのティア表"}, "rows": [{"tier": "S", "items": [{"img": "media/test/p1.jpg", "label": "A"}]}, {"tier": "A", "items": [{"img": "media/test/p2.jpg", "label": "B"}, {"img": "media/test/p3.jpg", "label": "C"}]}, {"tier": "B", "items": []}, {"tier": "C", "items": [{"img": "media/test/p4.jpg", "label": "D"}]}]},
-     {"layout": "dump", "images": ["media/test/p1.jpg", "media/test/p2.jpg", "media/test/p3.jpg", "media/test/p4.jpg"], "texts": [{"t": {"en": "TEST photo dump", "ja": "テストの写真ダンプ"}, "style": "label"}]}
-   ],
-   "sources": [{"title": "TEST source", "url": "https://www.nasa.gov/"}]}
+ {
+  "id": "test-video-1",
+  "type": "video",
+  "account": "test_rover",
+  "place": "mars",
+  "video": {
+   "src": "media/test/v1.mp4",
+   "poster": "media/test/v1.jpg",
+   "captions": {
+    "en": "media/test/v1.en.vtt",
+    "ja": "media/test/v1.ja.vtt"
+   }
+  },
+  "caption": {
+   "en": "TEST video post with captions.",
+   "ja": "テストの動画投稿（字幕つき）"
+  },
+  "tags": [
+   "test"
+  ],
+  "sound": {
+   "en": "Test tone",
+   "ja": "テスト音"
+  },
+  "stats": {
+   "likes": 12400,
+   "saves": 2041
+  },
+  "comments": [
+   {
+    "user": "team_oor",
+    "text": {
+     "en": "Test comment from the team.",
+     "ja": "チームからのテストコメント"
+    }
+   }
+  ],
+  "sources": [
+   {
+    "kind": {
+     "en": "Video",
+     "ja": "動画"
+    },
+    "title": "TEST source",
+    "url": "https://www.nasa.gov/"
+   }
+  ]
+ },
+ {
+  "id": "test-carousel-1",
+  "type": "carousel",
+  "account": "test_lander",
+  "place": "moon",
+  "caption": {
+   "en": "TEST photo post (generic slides).",
+   "ja": "テストのめくり投稿（共通のスライド）"
+  },
+  "tags": [
+   "test",
+   "moon"
+  ],
+  "stats": {
+   "likes": 8800,
+   "saves": 960
+  },
+  "slides": [
+   {
+    "bg": "media/test/p1.jpg",
+    "pos": "top",
+    "texts": [
+     {
+      "t": {
+       "en": "TEST text (top)",
+       "ja": "テスト文字（上）"
+      },
+      "style": "title"
+     },
+     {
+      "t": {
+       "en": "TEST label",
+       "ja": "テストのラベル"
+      },
+      "style": "label"
+     }
+    ]
+   },
+   {
+    "bg": "media/test/p2.jpg",
+    "pos": "center",
+    "texts": [
+     {
+      "t": {
+       "en": "TEST text (center)",
+       "ja": "テスト文字（中）"
+      },
+      "style": "title"
+     },
+     {
+      "t": {
+       "en": "TEST label",
+       "ja": "テストのラベル"
+      },
+      "style": "label"
+     }
+    ]
+   },
+   {
+    "bg": "media/test/p3.jpg",
+    "pos": "bottom",
+    "texts": [
+     {
+      "t": {
+       "en": "TEST text (bottom)",
+       "ja": "テスト文字（下）"
+      },
+      "style": "title"
+     },
+     {
+      "t": {
+       "en": "TEST label",
+       "ja": "テストのラベル"
+      },
+      "style": "label"
+     }
+    ]
+   }
+  ],
+  "comments": [],
+  "sources": [
+   {
+    "kind": {
+     "en": "Fact",
+     "ja": "事実"
+    },
+    "title": "TEST source A",
+    "url": "https://www.nasa.gov/"
+   },
+   {
+    "kind": {
+     "en": "Photo",
+     "ja": "写真"
+    },
+    "title": "TEST photo credit",
+    "url": "https://images.nasa.gov/"
+   }
+  ]
+ },
+ {
+  "id": "test-video-2",
+  "type": "video",
+  "account": "test_lander",
+  "place": "moon",
+  "video": {
+   "src": "media/test/v2.mp4",
+   "poster": "media/test/v2.jpg"
+  },
+  "caption": {
+   "en": "TEST video 2 (no captions).",
+   "ja": "テスト動画2（字幕なし）"
+  },
+  "tags": [
+   "test"
+  ],
+  "stats": {
+   "likes": 3100
+  },
+  "sources": [
+   {
+    "title": "TEST source",
+    "url": "https://www.nasa.gov/"
+   }
+  ]
+ },
+ {
+  "id": "test-carousel-2",
+  "type": "carousel",
+  "account": "test_rover",
+  "place": "mars",
+  "caption": {
+   "en": "TEST photo post (generic slides).",
+   "ja": "テストのめくり投稿（共通のスライド）"
+  },
+  "tags": [
+   "test",
+   "mars"
+  ],
+  "stats": {
+   "likes": 5600,
+   "saves": 400
+  },
+  "slides": [
+   {
+    "bg": "media/test/p4.jpg",
+    "pos": "top",
+    "texts": [
+     {
+      "t": {
+       "en": "TEST text (top)",
+       "ja": "テスト文字（上）"
+      },
+      "style": "title"
+     },
+     {
+      "t": {
+       "en": "TEST label",
+       "ja": "テストのラベル"
+      },
+      "style": "label"
+     }
+    ]
+   },
+   {
+    "bg": "media/test/p5.jpg",
+    "pos": "center",
+    "texts": [
+     {
+      "t": {
+       "en": "TEST text (center)",
+       "ja": "テスト文字（中）"
+      },
+      "style": "title"
+     },
+     {
+      "t": {
+       "en": "TEST label",
+       "ja": "テストのラベル"
+      },
+      "style": "label"
+     }
+    ]
+   },
+   {
+    "bg": "media/test/p6.jpg",
+    "pos": "bottom",
+    "texts": [
+     {
+      "t": {
+       "en": "TEST text (bottom)",
+       "ja": "テスト文字（下）"
+      },
+      "style": "title"
+     },
+     {
+      "t": {
+       "en": "TEST label",
+       "ja": "テストのラベル"
+      },
+      "style": "label"
+     }
+    ]
+   }
+  ],
+  "sources": [
+   {
+    "title": "TEST source",
+    "url": "https://www.nasa.gov/"
+   }
+  ]
+ }
 ]

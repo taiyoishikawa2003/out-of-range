@@ -70,7 +70,8 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
     for (let j = i - 1; j <= i + 2; j++) build(j);
     items.forEach((it, j) => { if (it.built && Math.abs(j - i) > 3) it.api.unload(); });
     items[i]?.api?.activate();
-    items[i + 1]?.api?.preload();
+    items[i + 1]?.api?.preload(); items[i + 2]?.api?.preloadLight?.();
+    const id = items[i]?.post.id; if (id) history.replaceState(null, '', '#/p/' + encodeURIComponent(id));
     readCurrent();
   }
   function readCurrent() {
@@ -107,6 +108,16 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
     else if (k === 'ArrowLeft') items[active]?.api?.slide(-1);
   };
   document.addEventListener('keydown', onKey);
+  // mouse wheel / trackpad: exactly one post per gesture (native snapping can skip several)
+  let wAcc = 0, wLock = 0, wIdle;
+  feed.addEventListener('wheel', e => {
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY) || e.ctrlKey) return;
+    e.preventDefault();
+    clearTimeout(wIdle); wIdle = setTimeout(() => { wAcc = 0; }, 180);
+    if (Date.now() < wLock) return;
+    wAcc += e.deltaY;
+    if (Math.abs(wAcc) > 30) { go(cur() + Math.sign(wAcc)); wAcc = 0; wLock = Date.now() + 650; }
+  }, { passive: false });
   const onVis = () => { if (document.hidden) items[active]?.api?.deactivate(); else items[active]?.api?.activate(); };
   document.addEventListener('visibilitychange', onVis);
 
@@ -171,11 +182,19 @@ function buildPost(p, el, { setMuted, onSlide }) {
   const meta = h('div', { class: 'meta' }, h('a', { class: 'who', href: '#/u/' + p.account, text: '@' + p.account }), cap, more,
     h('div', { class: 'snd' }, icon('music'), h('span', { text: L(p.sound) || 'Original sound - OUT OF RANGE' })));
 
-  /* gestures: single tap = play/pause (video), double tap = like */
-  let lastTap = 0, tapTimer, down = null;
-  stage.addEventListener('pointerdown', e => { down = { x: e.clientX, y: e.clientY }; });
+  /* gestures: tap = play/pause (or unmute), double tap = like, long press = 2x speed (video) */
+  let lastTap = 0, tapTimer, down = null, lpTimer, longPressed = false;
+  stage.addEventListener('pointerdown', e => {
+    down = { x: e.clientX, y: e.clientY }; longPressed = false;
+    clearTimeout(lpTimer);
+    if (media.setRate && !e.target.closest('button,a,input')) lpTimer = setTimeout(() => { longPressed = true; media.setRate(2); }, 450);
+  });
+  const endPress = () => { clearTimeout(lpTimer); if (longPressed) media.setRate(1); };
+  stage.addEventListener('pointercancel', () => { endPress(); down = null; });
+  stage.addEventListener('pointermove', e => { if (down && Math.hypot(e.clientX - down.x, e.clientY - down.y) > 10) { clearTimeout(lpTimer); } });
   stage.addEventListener('pointerup', e => {
-    if (!down || Math.hypot(e.clientX - down.x, e.clientY - down.y) > 10) return;
+    endPress();
+    if (longPressed || !down || Math.hypot(e.clientX - down.x, e.clientY - down.y) > 10) return;
     if (e.target.closest('button,a,input,.progress')) return;
     const now = Date.now();
     if (now - lastTap < 300) {
@@ -185,11 +204,12 @@ function buildPost(p, el, { setMuted, onSlide }) {
       el.append(ht); setTimeout(() => ht.remove(), 850);
     } else {
       lastTap = now;
-      tapTimer = setTimeout(() => media.togglePlay?.(), 300);
+      tapTimer = setTimeout(() => media.togglePlay?.(), 280);
     }
   });
+  stage.addEventListener('contextmenu', e => e.preventDefault());
 
-  el.replaceChildren(stage, rail, meta, ...(media.extra || []));
+  el.replaceChildren(stage, rail, meta, ...(media.extra || []).filter(Boolean));
   return { ...media, like };
 }
 
@@ -201,7 +221,19 @@ function videoPost(p, el, stage, setMuted) {
   const playI = h('div', { class: 'playicon' }, icon('play'));
   const bar = h('b'); const prog = h('div', { class: 'progress', role: 'slider', 'aria-label': 'Seek', tabindex: '0', 'aria-valuemin': 0, 'aria-valuemax': 100 }, h('i', {}, bar));
   const unmute = h('button', { class: 'unmute', type: 'button', hidden: true, onclick: e => { e.stopPropagation(); setMuted(false); } }, icon('mute'), t('tap.unmute'));
-  stage.append(v, capBox, playI);
+  const spin = h('div', { class: 'spinner', 'aria-hidden': 'true' });
+  const rate = h('div', { class: 'pill ratebadge', hidden: true, text: '2x ▶▶' });
+  const errBox = h('div', { class: 'verr', hidden: true, text: t('err.video') });
+  const tlabel = h('div', { class: 'seektime', hidden: true });
+  const cc = p.video.captions ? h('button', { class: 'pill ccbtn', type: 'button', text: 'CC' }) : null;
+  const drawCC = () => { if (cc) { cc.classList.toggle('off', !S.isCC()); cc.setAttribute('aria-pressed', S.isCC()); cc.setAttribute('aria-label', t('cc')); } };
+  cc?.addEventListener('click', e => { e.stopPropagation(); S.setCC(!S.isCC()); drawCC(); toast(t(S.isCC() ? 'cc.on' : 'cc.off')); });
+  drawCC();
+  stage.append(v, capBox, playI, spin, rate, errBox, tlabel);
+  v.addEventListener('waiting', () => el.classList.add('buffering'));
+  ['playing', 'canplay', 'pause'].forEach(ev => v.addEventListener(ev, () => el.classList.remove('buffering')));
+  v.addEventListener('error', () => { el.classList.remove('buffering'); if (loaded) errBox.hidden = false; });
+  const mmss = x => `${Math.floor(x / 60)}:${String(Math.floor(x % 60)).padStart(2, '0')}`;
   let loaded = false, isActive = false, cues = [], wantPlay = false;
   const loadCues = async () => { cues = await loadVtt(p.video.captions?.[getLang()] || p.video.captions?.en); };
   const src = () => { if (!loaded) { v.src = p.video.src; loaded = true; loadCues(); } };
@@ -216,20 +248,24 @@ function videoPost(p, el, stage, setMuted) {
     if (v.duration) { const pc = v.currentTime / v.duration * 100; bar.style.width = pc + '%'; prog.setAttribute('aria-valuenow', Math.round(pc)); }
     const c = cues.find(c => v.currentTime >= c.start && v.currentTime <= c.end);
     const txt = c ? c.text : '';
-    if (capBox.dataset.t !== txt) { capBox.dataset.t = txt; capBox.replaceChildren(txt ? h('span', { text: txt }) : ''); }
+    if (!S.isCC()) { if (capBox.dataset.t) { capBox.dataset.t = ''; capBox.replaceChildren(); } }
+    else if (capBox.dataset.t !== txt) { capBox.dataset.t = txt; capBox.replaceChildren(txt ? h('span', { text: txt }) : ''); }
     raf = requestAnimationFrame(tick);
   };
   // scrub
-  const seekTo = x => { const r = prog.getBoundingClientRect(); if (v.duration) v.currentTime = Math.max(0, Math.min(1, (x - r.left) / r.width)) * v.duration; };
+  const seekTo = x => { const r = prog.getBoundingClientRect(); if (v.duration) { v.currentTime = Math.max(0, Math.min(1, (x - r.left) / r.width)) * v.duration; tlabel.hidden = false; tlabel.textContent = `${mmss(v.currentTime)} / ${mmss(v.duration)}`; } };
   prog.addEventListener('pointerdown', e => { e.stopPropagation(); prog.setPointerCapture(e.pointerId); prog.classList.add('drag'); seekTo(e.clientX); });
   prog.addEventListener('pointermove', e => { if (prog.classList.contains('drag')) seekTo(e.clientX); });
-  prog.addEventListener('pointerup', () => prog.classList.remove('drag'));
+  prog.addEventListener('pointerup', () => { prog.classList.remove('drag'); setTimeout(() => { tlabel.hidden = true; }, 600); });
   prog.addEventListener('keydown', e => { if (e.key === 'ArrowRight') { v.currentTime += 2; e.stopPropagation(); } if (e.key === 'ArrowLeft') { v.currentTime -= 2; e.stopPropagation(); } });
   return {
-    extra: [prog, unmute],
+    extra: [prog, unmute, cc],
     activate() { isActive = true; applyMute(); play(); cancelAnimationFrame(raf); tick(); },
     deactivate() { isActive = false; pause(); unmute.hidden = true; cancelAnimationFrame(raf); },
     preload() { if (!loaded) { v.preload = 'auto'; src(); } },
+    preloadLight() { if (!loaded) { v.preload = 'metadata'; src(); } },
+    setRate(r) { v.playbackRate = r; rate.hidden = r === 1; if (r !== 1) unmute.hidden = true; else applyMute(); },
+    applyCC: drawCC,
     unload() { pause(); cancelAnimationFrame(raf); if (loaded) { v.removeAttribute('src'); v.load(); loaded = false; } },
     togglePlay() { if (v.paused) { play(); } else if (S.isMuted()) { setMuted(false); } else { pause(); el.classList.add('paused'); } },
     applyMute, slide() {}, currentText: () => L(p.caption)
@@ -243,7 +279,7 @@ function carouselPost(p, el, stage, onSlide) {
   slides.forEach(s => car.append(renderSlide(s, { post: p })));
   stage.append(car);
   const dots = h('div', { class: 'dots', 'aria-hidden': 'true' }, slides.map(() => h('i')));
-  const counter = h('span', { class: 'pill counter' });
+  const counter = h('span', { class: 'pill counter', 'aria-live': 'polite' });
   const prev = h('button', { class: 'carnav prev', type: 'button', 'aria-label': 'Previous slide', onclick: e => { e.stopPropagation(); go(idx - 1); } }, icon('left'));
   const next = h('button', { class: 'carnav next', type: 'button', 'aria-label': 'Next slide', onclick: e => { e.stopPropagation(); go(idx + 1); } }, icon('right'));
   let idx = 0, loaded = false;
@@ -267,7 +303,7 @@ function carouselPost(p, el, stage, onSlide) {
     extra: [dots, counter, prev, next],
     activate() { load(); el.classList.add('playing'); if (audio && !S.isMuted()) audio.play().catch(() => {}); },
     deactivate() { el.classList.remove('playing'); audio?.pause(); },
-    preload: load,
+    preload: load, preloadLight() { const i = car.querySelector('img[data-src]'); if (i) { i.src = i.dataset.src; i.removeAttribute('data-src'); } },
     unload() { audio?.pause(); },
     togglePlay() { if (audio) { if (audio.paused && !S.isMuted()) audio.play().catch(() => {}); else audio.pause(); } },
     applyMute() { if (!audio) return; if (S.isMuted()) audio.pause(); else if (el.classList.contains('playing')) audio.play().catch(() => {}); },

@@ -26,10 +26,8 @@ const UI = {
     'cr.answer': 'Correct choice number', 'cr.explain': 'Explanation', 'cr.before': 'Top label', 'cr.after': 'Bottom label', 'cr.bg2': 'Bottom photo',
     'cr.msgs': 'Messages (start a line with > for your side)', 'cr.docTitle': 'Paper title', 'cr.rows': 'Rows (label: value, one per line)', 'cr.stamp': 'Stamp',
     'cr.photoCredit': 'Photo credit', 'cr.privacy': 'Your photo stays on this device. Do not use photos of real people\'s faces or names of children.',
-    'cr.downloading': 'Making images…',
-    'lay.overlay': 'Photo + text', 'lay.number': 'Big number', 'lay.quiz': 'Quiz', 'lay.compare': 'Before / after', 'lay.chat': 'Chat', 'lay.document': 'Paper / form', 'lay.tier': 'Tier list', 'lay.dump': 'Photo dump',
-    'quiz.tap': 'Tap an answer', 'true': 'This is a true story',
-    'err.media': 'Image could not load', 'lang': '日本語', 'lang.short': 'あ'
+    'cr.downloading': 'Making images…',  'true': 'This is a true story',
+    'err.media': 'Image could not load', 'err.video': 'Video could not load', 'cc': 'Captions', 'cc.on': 'Captions on', 'cc.off': 'Captions off', 'lang': '日本語', 'lang.short': 'あ'
   },
   ja: {
     'nav.home': 'ホーム', 'nav.discover': '見つける', 'nav.create': '作る', 'nav.me': 'じぶん', 'nav.about': 'この作品',
@@ -58,10 +56,8 @@ const UI = {
     'cr.answer': '正解の番号', 'cr.explain': '解説', 'cr.before': '上のラベル', 'cr.after': '下のラベル', 'cr.bg2': '下の写真',
     'cr.msgs': 'メッセージ（自分側は行の先頭に > ）', 'cr.docTitle': '書類の名前', 'cr.rows': '項目（項目: 内容 を1行ずつ）', 'cr.stamp': 'はんこ',
     'cr.photoCredit': '写真のクレジット', 'cr.privacy': '自分の写真はこの端末から出ません。実在の人の顔や、子どもの名前は使わないでください。',
-    'cr.downloading': '画像を作っています…',
-    'lay.overlay': '写真＋文字', 'lay.number': '大きな数字', 'lay.quiz': 'クイズ', 'lay.compare': 'ビフォーアフター', 'lay.chat': 'チャット', 'lay.document': '紙・書類', 'lay.tier': 'ティア表', 'lay.dump': '写真ダンプ',
-    'quiz.tap': '答えをタップ', 'true': 'これは本当の話です',
-    'err.media': '画像を読み込めませんでした', 'lang': 'English', 'lang.short': 'EN'
+    'cr.downloading': '画像を作っています…',  'true': 'これは本当の話です',
+    'err.media': '画像を読み込めませんでした', 'err.video': '動画を読み込めませんでした', 'cc': '字幕', 'cc.on': '字幕：オン', 'cc.off': '字幕：オフ', 'lang': 'English', 'lang.short': 'EN'
   }
 };
 

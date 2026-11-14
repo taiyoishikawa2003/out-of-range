@@ -1,7 +1,7 @@
 import { get, set, del } from '../vendor/idb-keyval.js';
 
 const KEY = 'oor.state.v1';
-const def = { likes: {}, saves: {}, follows: {}, comments: {}, muted: true, read: false };
+const def = { likes: {}, saves: {}, follows: {}, comments: {}, muted: true, read: false, cc: true };
 let st;
 try { st = { ...def, ...JSON.parse(localStorage.getItem(KEY) || '{}') }; } catch { st = { ...def }; }
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch {} };
@@ -30,6 +30,8 @@ export function addComment(id, text) {
 }
 export const isMuted = () => st.muted;
 export function setMuted(m) { st.muted = m; save(); emit('muted', m); }
+export const isCC = () => st.cc !== false;
+export function setCC(v) { st.cc = v; save(); emit('cc', v); }
 export const isRead = () => st.read;
 export function setRead(r) { st.read = r; save(); emit('read', r); }
 
@@ -37,7 +39,7 @@ export function setRead(r) { st.read = r; save(); emit('read', r); }
 const urlCache = new Map();
 export async function loadMine() {
   const list = (await get('oor.mine')) || [];
-  for (const p of list) for (const s of p.slides) for (const k of ['bg', 'bg2']) {
+  for (const p of list) for (const s of p.slides) for (const k of ['bg']) {
     if (s[k] && s[k].startsWith('idb:')) s[k] = await blobUrl(s[k]);
   }
   return list;
@@ -62,6 +64,6 @@ export async function saveMine(post) {
 export async function deleteMine(id) {
   const list = (await get('oor.mine')) || [];
   const p = list.find(x => x.id === id);
-  if (p) for (const s of p.slides) for (const k of ['bg', 'bg2']) if (s[k]?.startsWith('idb:')) await del(s[k]);
+  if (p) for (const s of p.slides) for (const k of ['bg']) if (s[k]?.startsWith('idb:')) await del(s[k]);
   await set('oor.mine', list.filter(x => x.id !== id));
 }
