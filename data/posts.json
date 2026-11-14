@@ -132,7 +132,8 @@
     "alt": {
      "ja": "引きずった車輪の跡が残る火星の地面",
      "en": "Track left by the dragged wheel"
-    }
+    },
+    "sfx": "media/sfx/sad_trombone.mp3"
    },
    {
     "bg": {
@@ -152,7 +153,8 @@
     "alt": {
      "ja": "白い土のアップ",
      "en": "Close-up of the white soil"
-    }
+    },
+    "sfx": "media/sfx/reveal.mp3"
    }
   ],
   "caption": {
@@ -164,8 +166,8 @@
    "spirit"
   ],
   "sound": {
-   "ja": "オリジナル音源",
-   "en": "Original sound"
+   "ja": "効果音：チーム制作",
+   "en": "SFX: our team"
   },
   "stats": {
    "likes": 0,

@@ -309,7 +309,19 @@ function carouselPost(p, el, stage, onSlide) {
   const prev = h('button', { class: 'carnav prev', type: 'button', 'aria-label': 'Previous slide', onclick: e => { e.stopPropagation(); go(idx - 1); } }, icon('left'));
   const next = h('button', { class: 'carnav next', type: 'button', 'aria-label': 'Next slide', onclick: e => { e.stopPropagation(); go(idx + 1); } }, icon('right'));
   let idx = 0, loaded = false;
-  const audio = p.audio ? h('audio', { src: p.audio, loop: true, preload: 'none' }) : null;
+  /* sound: per-slide music (slide.music, inherited by later slides; "" = silence) + one-shot slide.sfx; p.audio = default */
+  const tracks = {}; let cur = null;
+  const track = src => tracks[src] ||= Object.assign(new Audio(src), { loop: true, preload: 'none' });
+  const musicAt = i => { let m = p.audio || null; for (let k = 0; k <= i; k++) if (slides[k] && 'music' in slides[k]) m = slides[k].music || null; return m; };
+  const live = () => el.classList.contains('playing') && !S.isMuted();
+  const stopAll = () => Object.values(tracks).forEach(a => a.pause());
+  const sound = (i, entering) => {
+    const m = musicAt(i);
+    if (m !== cur) { if (cur) tracks[cur]?.pause(); cur = m; if (m) { const a = track(m); a.currentTime = 0; if (live()) a.play().catch(() => {}); } }
+    else if (m && live() && track(m).paused) track(m).play().catch(() => {});
+    if (entering && slides[i]?.sfx && live()) { const s = new Audio(slides[i].sfx); s.play().catch(() => {}); }
+  };
+  const audio = (p.audio || slides.some(s => 'music' in s || s.sfx)) ? true : null;
   const draw = () => {
     [...dots.children].forEach((d, i) => d.classList.toggle('on', i === idx));
     counter.textContent = `${idx + 1}/${slides.length}`;
@@ -320,19 +332,19 @@ function carouselPost(p, el, stage, onSlide) {
   car.addEventListener('scroll', () => {
     clearTimeout(st); st = setTimeout(() => {
       const i = Math.round(car.scrollLeft / car.clientWidth);
-      if (i !== idx) { idx = i; draw(); onSlide(); }
+      if (i !== idx) { idx = i; draw(); onSlide(); if (audio) sound(idx, true); }
     }, 60);
   }, { passive: true });
   draw();
   const load = () => { if (!loaded) { loadImgs(car); loaded = true; } };
   return {
     extra: [dots, counter, prev, next],
-    activate() { load(); el.classList.add('playing'); if (audio && !S.isMuted()) audio.play().catch(() => {}); },
-    deactivate() { el.classList.remove('playing'); audio?.pause(); },
+    activate() { load(); el.classList.add('playing'); if (audio) { cur = null; sound(idx, idx > 0); } },
+    deactivate() { el.classList.remove('playing'); stopAll(); },
     preload: load, preloadLight() { const i = car.querySelector('img[data-src]'); if (i) { i.src = i.dataset.src; i.removeAttribute('data-src'); } },
-    unload() { audio?.pause(); },
-    togglePlay() { if (audio) { if (audio.paused && !S.isMuted()) audio.play().catch(() => {}); else audio.pause(); } },
-    applyMute() { if (!audio) return; if (S.isMuted()) audio.pause(); else if (el.classList.contains('playing')) audio.play().catch(() => {}); },
+    unload() { stopAll(); },
+    togglePlay() { if (!audio) return; const a = cur && tracks[cur]; if (a && !a.paused) a.pause(); else if (S.isMuted()) { S.setMuted(false); sound(idx, false); } else sound(idx, false); },
+    applyMute() { if (!audio) return; if (S.isMuted()) stopAll(); else if (el.classList.contains('playing')) sound(idx, false); },
     slide: d => go(idx + d),
     currentText: () => slides[idx].layout === 'sources' ? t('true') : slideText(slides[idx])
   };
