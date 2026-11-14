@@ -1,0 +1,6 @@
+{
+  "test_rover": {"name": {"en": "Test Rover", "ja": "テスト探査車"}, "place": "mars", "followers": 12000, "bio": {"en": "TEST ACCOUNT — placeholder for a real machine account.", "ja": "テスト用アカウント（本物の機械のアカウントに差し替え）"}},
+  "test_lander": {"name": {"en": "Test Lander", "ja": "テスト着陸機"}, "place": "moon", "followers": 8400, "bio": {"en": "TEST ACCOUNT — placeholder.", "ja": "テスト用アカウント"}},
+  "team_oor": {"name": {"en": "Team SunSunWorld", "ja": "チーム SunSunWorld"}, "place": "", "hidden": true},
+  "you": {"name": {"en": "You", "ja": "あなた"}, "hidden": true}
+}

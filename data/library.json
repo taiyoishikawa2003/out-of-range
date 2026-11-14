@@ -1,0 +1,8 @@
+[
+  {"id": "t1", "src": "media/test/p1.jpg", "title": {"en": "Test photo 1", "ja": "テスト写真1"}, "credit": "TEST (replace with NASA credit)", "url": "https://images.nasa.gov/"},
+  {"id": "t2", "src": "media/test/p2.jpg", "title": {"en": "Test photo 2", "ja": "テスト写真2"}, "credit": "TEST", "url": "https://images.nasa.gov/"},
+  {"id": "t3", "src": "media/test/p3.jpg", "title": {"en": "Test photo 3", "ja": "テスト写真3"}, "credit": "TEST", "url": "https://images.nasa.gov/"},
+  {"id": "t4", "src": "media/test/p4.jpg", "title": {"en": "Test photo 4", "ja": "テスト写真4"}, "credit": "TEST", "url": "https://images.nasa.gov/"},
+  {"id": "t5", "src": "media/test/p5.jpg", "title": {"en": "Test photo 5", "ja": "テスト写真5"}, "credit": "TEST", "url": "https://images.nasa.gov/"},
+  {"id": "t6", "src": "media/test/p6.jpg", "title": {"en": "Test photo 6", "ja": "テスト写真6"}, "credit": "TEST", "url": "https://images.nasa.gov/"}
+]

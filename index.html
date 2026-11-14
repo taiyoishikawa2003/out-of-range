@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="OUT OF RANGE — a short-video style feed where the machines NASA left on the Moon, Mars and deep space tell their true stories.">
+<title>OUT OF RANGE</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23000'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%23ffb000' stroke-width='2.5'/%3E%3Cpath d='M3 19c8-2 18-6 26-8' stroke='%23fff' stroke-width='2' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="app">
+  <nav class="sidenav" aria-label="Main">
+    <a class="brand" href="#/">OUT OF RANGE</a>
+    <a href="#/" data-nav="feed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8v10h-6v-6H9v6H3z"/></svg><span data-i18n="nav.home"></span></a>
+    <a href="#/discover" data-nav="discover"><svg viewBox="0 0 24 24" aria-hidden="true" class="st"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span data-i18n="nav.discover"></span></a>
+    <a href="#/create" data-nav="create"><svg viewBox="0 0 24 24" aria-hidden="true" class="st"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg><span data-i18n="nav.create"></span></a>
+    <a href="#/me" data-nav="me"><svg viewBox="0 0 24 24" aria-hidden="true" class="st"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg><span data-i18n="nav.me"></span></a>
+    <a href="#/about" data-nav="about"><svg viewBox="0 0 24 24" aria-hidden="true" class="st"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span data-i18n="nav.about"></span></a>
+    <button class="langbtn" type="button" data-action="lang"></button>
+  </nav>
+  <main id="view" tabindex="-1"></main>
+  <nav class="tabbar" aria-label="Main">
+    <a href="#/" data-nav="feed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8v10h-6v-6H9v6H3z"/></svg><span data-i18n="nav.home"></span></a>
+    <a href="#/discover" data-nav="discover"><svg viewBox="0 0 24 24" aria-hidden="true" class="st"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><span data-i18n="nav.discover"></span></a>
+    <a href="#/create" data-nav="create" class="plus" aria-label="Create"><span class="plusbox">+</span></a>
+    <a href="#/about" data-nav="about"><svg viewBox="0 0 24 24" aria-hidden="true" class="st"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span data-i18n="nav.about"></span></a>
+    <a href="#/me" data-nav="me"><svg viewBox="0 0 24 24" aria-hidden="true" class="st"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg><span data-i18n="nav.me"></span></a>
+  </nav>
+  <div id="sheet-root"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+</div>
+<noscript>This site needs JavaScript.</noscript>
+<script src="vendor/html-to-image.js" defer></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
