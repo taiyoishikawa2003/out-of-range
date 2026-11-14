@@ -178,7 +178,7 @@ function buildPost(p, el, { setMuted, onSlide, onComments }) {
   fol.addEventListener('click', e => { e.stopPropagation(); const on = S.toggleFollow(p.account); drawFol(); toast(t(on ? 'followed' : 'unfollowed')); });
   drawFol();
   const av = h('div', { class: 'avatar' }, h('a', { href: '#/u/' + p.account, 'aria-label': '@' + p.account },
-    acc.avatar ? img(acc.avatar, '', '') : h('div', { class: 'ph', text: (L(acc.name) || p.account)[0] })), p.mine ? null : fol);
+    acc.avatar ? h('img', { src: acc.avatar, alt: '', decoding: 'async', draggable: 'false' }) : h('div', { class: 'ph', text: (L(acc.name) || p.account)[0] })), p.mine ? null : fol);
 
   const base = p.stats || {};
   const likeBtn = h('button', { class: 'rb like', type: 'button' });
@@ -202,10 +202,13 @@ function buildPost(p, el, { setMuted, onSlide, onComments }) {
     h('div', { class: 'disc', 'aria-hidden': 'true' }));
 
   /* meta */
-  const cap = h('p', { class: 'cap' }, L(p.caption), ' ', (p.tags || []).map(x => '#' + x).join(' '));
+  const capText = L(p.caption) || ''; const tagText = capText.includes('#') ? '' : (p.tags || []).map(x => '#' + x).join(' ');
+  const cap = h('p', { class: 'cap' }, capText, ' ', tagText);
   const more = h('button', { class: 'more', type: 'button', text: t('more'), onclick: e => { e.stopPropagation(); const o = cap.classList.toggle('open'); more.textContent = t(o ? 'less' : 'more'); } });
-  if ((L(p.caption) + (p.tags || []).join(' ')).length < 38) more.hidden = true;
-  const meta = h('div', { class: 'meta' }, h('a', { class: 'who', href: '#/u/' + p.account, text: '@' + p.account }), cap, more,
+  if ((capText + tagText).length < 38) more.hidden = true;
+  const cta = p.ad ? h('button', { class: 'cta', type: 'button', onclick: e => { e.stopPropagation(); onComments ? onComments(p, drawCounts) : openComments(p, drawCounts); } }, h('span', { text: L(p.cta) || t('ad.cta') }), icon('right')) : null;
+  if (p.ad) { el.classList.add('ad'); const ps = L(p.video?.poster); if (ps) stage.style.setProperty('--poster', `url("${new URL(ps, location.href).href}")`); }
+  const meta = h('div', { class: 'meta' }, h('div', { class: 'whoRow' }, h('a', { class: 'who', href: '#/u/' + p.account, text: '@' + p.account }), p.ad ? h('span', { class: 'adtag', text: t('ad.label') }) : null), cap, more, cta,
     h('div', { class: 'snd' }, icon('music'), h('span', { text: L(p.sound) || 'Original sound - OUT OF RANGE' })));
 
   /* gestures: tap = play/pause (or unmute), double tap = like, long press = 2x speed (video) */
@@ -252,6 +255,7 @@ function videoPost(p, el, stage, setMuted) {
   const errBox = h('div', { class: 'verr', hidden: true, text: t('err.video') });
   const tlabel = h('div', { class: 'seektime', hidden: true });
   const cc = p.video.captions ? h('button', { class: 'pill ccbtn', type: 'button', text: 'CC' }) : null;
+  const full = p.ad ? h('button', { class: 'pill fullbtn', type: 'button', text: '⤢ ' + t('ad.full'), onclick: e => { e.stopPropagation(); const go = v.requestFullscreen || v.webkitRequestFullscreen; if (go) { Promise.resolve(go.call(v)).then(() => screen.orientation?.lock?.('landscape').catch(() => {})).catch(() => {}); } else v.webkitEnterFullscreen?.(); } }) : null;
   const drawCC = () => { if (cc) { cc.classList.toggle('off', !S.isCC()); cc.setAttribute('aria-pressed', S.isCC()); cc.setAttribute('aria-label', t('cc')); } };
   cc?.addEventListener('click', e => { e.stopPropagation(); S.setCC(!S.isCC()); drawCC(); toast(t(S.isCC() ? 'cc.on' : 'cc.off')); });
   drawCC();
@@ -286,7 +290,7 @@ function videoPost(p, el, stage, setMuted) {
   prog.addEventListener('pointerup', () => { prog.classList.remove('drag'); setTimeout(() => { tlabel.hidden = true; }, 600); });
   prog.addEventListener('keydown', e => { if (e.key === 'ArrowRight') { v.currentTime += 2; e.stopPropagation(); } if (e.key === 'ArrowLeft') { v.currentTime -= 2; e.stopPropagation(); } });
   return {
-    extra: [prog, unmute, cc],
+    extra: [prog, unmute, cc, full],
     activate() { isActive = true; applyMute(); play(); cancelAnimationFrame(raf); tick(); },
     deactivate() { isActive = false; pause(); unmute.hidden = true; cancelAnimationFrame(raf); },
     preload() { if (!loaded) { v.preload = 'auto'; src(); } },

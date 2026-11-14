@@ -5,11 +5,12 @@
    "ja": "月面遺失物センター（ファンメイド）"
   },
   "place": "moon",
-  "followers": 96,
+  "followers": 0,
   "bio": {
    "en": "Things people left on the Moon, and the science behind them. Made by students; facts checked against NASA and other sources.",
    "ja": "月に置いてきた物と、その裏の科学を紹介します。学生が作っています。事実はNASAの資料などで確認しています。"
-  }
+  },
+  "avatar": "media/avatars/moon_lostfound.jpg"
  },
  "spirit_rover": {
   "name": {
@@ -17,11 +18,12 @@
    "ja": "スピリット（ファンメイドの物語）"
   },
   "place": "mars",
-  "followers": 2208,
+  "followers": 0,
   "bio": {
    "en": "Mars rover, 2004–2010. Planned for 90 days, kept going for over 6 years. Stories are by students; facts checked against NASA sources.",
    "ja": "火星探査車（2004〜2010）。予定は90日、実際は6年以上。学生が作った物語です。事実はNASAの資料などで確認しています。"
-  }
+  },
+  "avatar": "media/avatars/spirit_rover.jpg"
  },
  "insight_lander": {
   "name": {
@@ -29,35 +31,12 @@
    "ja": "インサイト（ファンメイドの物語）"
   },
   "place": "mars",
-  "followers": 13190,
+  "followers": 0,
   "bio": {
    "en": "Mars lander that listened to the ground, 2018–2022. Stories here are dramatized by students; facts are checked against NASA sources.",
    "ja": "地面の音を聞いていた火星の着陸機（2018〜2022）。学生が演出した物語です。事実はNASAの資料で確認しています。"
-  }
- },
- "test_rover": {
-  "name": {
-   "en": "Test Rover",
-   "ja": "テスト探査車"
   },
-  "place": "mars",
-  "followers": 12000,
-  "bio": {
-   "en": "TEST ACCOUNT — placeholder for a real machine account.",
-   "ja": "テスト用アカウント（本物の機械のアカウントに差し替え）"
-  }
- },
- "test_lander": {
-  "name": {
-   "en": "Test Lander",
-   "ja": "テスト着陸機"
-  },
-  "place": "moon",
-  "followers": 8400,
-  "bio": {
-   "en": "TEST ACCOUNT — placeholder.",
-   "ja": "テスト用アカウント"
-  }
+  "avatar": "media/avatars/insight_lander.jpg"
  },
  "team_oor": {
   "name": {
@@ -80,11 +59,90 @@
    "ja": "ケプラー星占い（ファンメイド）"
   },
   "place": "deep",
-  "followers": 812,
+  "followers": 0,
   "bio": {
    "en": "Zodiac rankings made from real NASA Kepler data. Just for fun: astrology is not science. Made by students.",
    "ja": "NASAのケプラー望遠鏡の本物のデータで作る星座ランキング。占いは科学ではありません（お遊びです）。学生が作っています。"
-  }
+  },
+  "avatar": "media/avatars/kepler_uranai.jpg"
+ },
+ "surveyor3": {
+  "name": {
+   "en": "Surveyor 3 (fan-made story)",
+   "ja": "サーベイヤー3号（ファンメイドの物語）"
+  },
+  "place": "moon",
+  "followers": 0,
+  "bio": {
+   "en": "Moon lander, 1967. Still in the Ocean of Storms. Visited once, in 1969. Made by students; facts checked against NASA sources.",
+   "ja": "1967年に月に着いた探査機。今も「嵐の大洋」にいます。1969年に一度だけ、人が来ました。学生が作っています。事実はNASAの資料で確認しています。"
+  },
+  "avatar": "media/avatars/surveyor3.jpg"
+ },
+ "viking1_lander": {
+  "name": {
+   "en": "Viking 1 (fan-made story)",
+   "ja": "バイキング1号（ファンメイドの物語）"
+  },
+  "place": "mars",
+  "followers": 0,
+  "bio": {
+   "en": "Mars lander, 1976–1982. Planned for 90 days, worked for over 6 years. Made by students; facts checked against NASA sources.",
+   "ja": "火星の着陸機（1976〜1982）。予定は90日、実際は6年以上。学生が作っています。事実はNASAの資料で確認しています。"
+  },
+  "avatar": "media/avatars/viking1_lander.jpg"
+ },
+ "pioneer10": {
+  "name": {
+   "en": "Pioneer 10 (fan-made story)",
+   "ja": "パイオニア10号（ファンメイドの物語）"
+  },
+  "place": "deep",
+  "followers": 0,
+  "bio": {
+   "en": "Launched 1972. Last signal 2003. Heading toward Aldebaran, arriving in about 2 million years. Made by students; facts checked against NASA sources.",
+   "ja": "1972年に出発。最後の信号は2003年。アルデバランの方向へ、あと約200万年。学生が作っています。事実はNASAの資料で確認しています。"
+  },
+  "avatar": "media/avatars/pioneer10.jpg"
+ },
+ "near_shoemaker": {
+  "name": {
+   "en": "NEAR Shoemaker (fan-made story)",
+   "ja": "NEARシューメーカー（ファンメイドの物語）"
+  },
+  "place": "deep",
+  "followers": 0,
+  "bio": {
+   "en": "Built to orbit asteroid Eros. Landed on it anyway, in 2001. Still there. Made by students; facts checked against NASA sources.",
+   "ja": "小惑星エロスを回るための探査機。2001年、なぜか着陸にも成功。今もエロスの上。学生が作っています。事実はNASAの資料で確認しています。"
+  },
+  "avatar": "media/avatars/near_shoemaker.jpg"
+ },
+ "space_runway": {
+  "name": {
+   "en": "Moon & Mars Collection (fan-made)",
+   "ja": "月・火星コレクション（ファンメイド）"
+  },
+  "place": "moon",
+  "followers": 0,
+  "bio": {
+   "en": "Fashion checks for machines left on the Moon and Mars. Every look has a real reason. Made by students; facts checked against NASA sources.",
+   "ja": "月と火星に置いてきた機械のファッションチェック。見た目には全部、本当の理由があります。学生が作っています。事実はNASAの資料で確認しています。"
+  },
+  "avatar": "media/avatars/space_runway.jpg"
+ },
+ "machine_ranking": {
+  "name": {
+   "en": "Left-Behind Machine Rankings (fan-made)",
+   "ja": "置いてきた機械ランキング（ファンメイド）"
+  },
+  "place": "mars",
+  "followers": 0,
+  "bio": {
+   "en": "Rankings made from real NASA numbers. Made by students; facts checked against NASA sources.",
+   "ja": "NASAの本物の数字で作るランキング。学生が作っています。事実はNASAの資料で確認しています。"
+  },
+  "avatar": "media/avatars/machine_ranking.jpg"
  },
  "opportunity_trailer": {
   "name": {
@@ -94,8 +152,9 @@
   "place": "mars",
   "followers": 0,
   "bio": {
-   "en": "A film-trailer style story about NASA's Opportunity rover (2004–). Made by students with real NASA images; facts checked against NASA sources.",
-   "ja": "NASAの火星探査車オポチュニティ（2004〜）を、映画の予告編の形で描きました。学生が作っています。画像はNASAの本物、事実はNASAの資料で確認しています。"
-  }
+   "en": "A film-trailer style story about NASA's Opportunity rover (2004–). Made by students with real NASA images; facts checked against NASA sources. This is an in-story trailer, not a real ad.",
+   "ja": "NASAの火星探査車オポチュニティ（2004〜）を、映画の予告編の形で描きました。学生が作っています。画像はNASAの本物、事実はNASAの資料で確認しています。 これは作品の中の「予告」で、本物の広告ではありません。"
+  },
+  "avatar": "media/avatars/opportunity_trailer.jpg"
  }
 }

@@ -1,8 +1,122 @@
 [
-  {"id": "t1", "src": "media/test/p1.jpg", "title": {"en": "Test photo 1", "ja": "テスト写真1"}, "credit": "TEST (replace with NASA credit)", "url": "https://images.nasa.gov/"},
-  {"id": "t2", "src": "media/test/p2.jpg", "title": {"en": "Test photo 2", "ja": "テスト写真2"}, "credit": "TEST", "url": "https://images.nasa.gov/"},
-  {"id": "t3", "src": "media/test/p3.jpg", "title": {"en": "Test photo 3", "ja": "テスト写真3"}, "credit": "TEST", "url": "https://images.nasa.gov/"},
-  {"id": "t4", "src": "media/test/p4.jpg", "title": {"en": "Test photo 4", "ja": "テスト写真4"}, "credit": "TEST", "url": "https://images.nasa.gov/"},
-  {"id": "t5", "src": "media/test/p5.jpg", "title": {"en": "Test photo 5", "ja": "テスト写真5"}, "credit": "TEST", "url": "https://images.nasa.gov/"},
-  {"id": "t6", "src": "media/test/p6.jpg", "title": {"en": "Test photo 6", "ja": "テスト写真6"}, "credit": "TEST", "url": "https://images.nasa.gov/"}
+ {
+  "id": "surveyor3",
+  "src": "media/library/surveyor3.jpg",
+  "title": {
+   "en": "Surveyor 3 on the Moon",
+   "ja": "月のサーベイヤー3号"
+  },
+  "credit": "as12-48-7121 Surveyor 3 on the Moon (NASA)",
+  "url": "https://images.nasa.gov/details/as12-48-7121"
+ },
+ {
+  "id": "apollo12",
+  "src": "media/library/apollo12.jpg",
+  "title": {
+   "en": "An astronaut visits Surveyor 3",
+   "ja": "サーベイヤー3号と宇宙飛行士"
+  },
+  "credit": "AS12-48-7133 An astronaut visits Surveyor 3 (NASA)",
+  "url": "https://images.nasa.gov/details/AS12-48-7133"
+ },
+ {
+  "id": "lm",
+  "src": "media/library/lm.jpg",
+  "title": {
+   "en": "Apollo 11 lander on the Moon",
+   "ja": "月のアポロ11号の着陸船"
+  },
+  "credit": "KSC-as11-40-5927 Apollo 11 lander on the Moon (NASA)",
+  "url": "https://images.nasa.gov/details/KSC-as11-40-5927"
+ },
+ {
+  "id": "lrv",
+  "src": "media/library/lrv.jpg",
+  "title": {
+   "en": "Apollo 17 lunar rover",
+   "ja": "アポロ17号の月面車"
+  },
+  "credit": "as17-137-20979 Apollo 17 lunar rover (NASA)",
+  "url": "https://images.nasa.gov/details/as17-137-20979"
+ },
+ {
+  "id": "earth",
+  "src": "media/library/earth.jpg",
+  "title": {
+   "en": "Earth seen from Apollo 17",
+   "ja": "アポロ17号から見た地球"
+  },
+  "credit": "as17-148-22727 Earth seen from Apollo 17 (NASA)",
+  "url": "https://images.nasa.gov/details/as17-148-22727"
+ },
+ {
+  "id": "viking",
+  "src": "media/library/viking.jpg",
+  "title": {
+   "en": "Mars, photographed by Viking 1",
+   "ja": "バイキング1号が撮った火星"
+  },
+  "credit": "PIA00563 Mars, photographed by Viking 1 (NASA/JPL)",
+  "url": "https://photojournal.jpl.nasa.gov/catalog/PIA00563"
+ },
+ {
+  "id": "spirit",
+  "src": "media/library/spirit.jpg",
+  "title": {
+   "en": "Spirit’s view of itself",
+   "ja": "スピリットの自撮り"
+  },
+  "credit": "PIA16442 Spirit’s view of itself (NASA/JPL-Caltech/Cornell Univ./Arizona State Univ.)",
+  "url": "https://photojournal.jpl.nasa.gov/catalog/PIA16442"
+ },
+ {
+  "id": "oppy",
+  "src": "media/library/oppy.jpg",
+  "title": {
+   "en": "Opportunity’s wheel tracks",
+   "ja": "オポチュニティの車輪のあと"
+  },
+  "credit": "PIA22928 Opportunity’s wheel tracks (NASA/JPL-Caltech)",
+  "url": "https://photojournal.jpl.nasa.gov/catalog/PIA22928"
+ },
+ {
+  "id": "oppyview",
+  "src": "media/library/oppyview.jpg",
+  "title": {
+   "en": "Mars, seen by Opportunity",
+   "ja": "オポチュニティが見た火星"
+  },
+  "credit": "PIA15281 Mars, seen by Opportunity (NASA/JPL-Caltech/Cornell/Arizona State Univ.)",
+  "url": "https://photojournal.jpl.nasa.gov/catalog/PIA15281"
+ },
+ {
+  "id": "insight",
+  "src": "media/library/insight.jpg",
+  "title": {
+   "en": "InSight’s selfie",
+   "ja": "インサイトの自撮り"
+  },
+  "credit": "PIA22876 InSight’s selfie (NASA/JPL-Caltech)",
+  "url": "https://photojournal.jpl.nasa.gov/catalog/PIA22876"
+ },
+ {
+  "id": "ingenuity",
+  "src": "media/library/ingenuity.jpg",
+  "title": {
+   "en": "Ingenuity on Mars",
+   "ja": "火星のインジェニュイティ"
+  },
+  "credit": "PIA24648 Ingenuity on Mars (NASA/JPL-Caltech/ASU/MSSS)",
+  "url": "https://photojournal.jpl.nasa.gov/catalog/PIA24648"
+ },
+ {
+  "id": "eros",
+  "src": "media/library/eros.jpg",
+  "title": {
+   "en": "Asteroid Eros",
+   "ja": "小惑星エロス"
+  },
+  "credit": "PIA02467 Asteroid Eros (NASA/JPL/JHUAPL)",
+  "url": "https://photojournal.jpl.nasa.gov/catalog/PIA02467"
+ }
 ]

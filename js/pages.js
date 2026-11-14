@@ -60,7 +60,7 @@ export function renderProfile(view, handle) {
   const page = h('div', { class: 'page' },
     h('div', { class: 'backbar' }, h('button', { class: 'iconbtn', type: 'button', 'aria-label': t('back'), onclick: () => history.back() }, icon('left'))),
     h('div', { class: 'prof' },
-      h('div', { class: 'big' }, a.avatar ? img(a.avatar, '', '') : (L(a.name) || handle)[0]),
+      h('div', { class: 'big' }, a.avatar ? h('img', { src: a.avatar, alt: '' }) : (L(a.name) || handle)[0]),
       h('h1', { style: { margin: 0 }, text: L(a.name) || handle }), h('div', { class: 'hint', text: '@' + handle }),
       h('div', { class: 'stats' }, h('div', {}, h('b', { text: posts.length }), h('span', { text: t('prof.posts') })),
         h('div', {}, fc, h('span', { text: t('prof.followers') })), h('div', {}, h('b', { text: fmt(likes) }), h('span', { text: t('prof.likes') }))),
