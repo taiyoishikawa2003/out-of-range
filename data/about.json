@@ -9,16 +9,23 @@
    "body": {
     "en": [
      "OUT OF RANGE is a short-video style feed for kids who grew up on short videos, including kids who are not (yet) interested in space. The machines NASA left on the Moon, on Mars and in deep space post about their own lives.",
-     "The jokes are only in the format: a scary story, a group chat, a nav app, a fashion check, a ranking, a movie trailer. Every fact is true. Each post says what the machine is, why it was sent, and what it found, and links to its sources.",
+     "The jokes are only in the format: a scary story, a POV, a group chat, a nav app, a fashion check, a ranking, a movie trailer, a just-for-fun quiz. Every fact is true. Each post says what the machine is, why it was sent, and what it found, and links to its sources.",
      "Made for the NASA Space Apps Challenge 2026 challenge “Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars”."
     ],
     "ja": [
      "OUT OF RANGE は、短い動画で育った子どもたちのための、ショート動画風のフィードです。宇宙に（まだ）興味がない子にも楽しんでもらえるように作りました。NASA が月・火星・宇宙に置いてきた機械が、自分のことを投稿します。",
-     "笑いは見せ方だけです。こわい話、グループチャット、カーナビ、ファッションチェック、ランキング、映画の予告。中身はすべて本当の話です。どの投稿も、「どんな機械か」「なぜ送られたか」「何を見つけたか」を伝え、出典につながっています。",
+     "笑いは見せ方だけです。こわい話、POV、グループチャット、カーナビ、ファッションチェック、ランキング、映画の予告、お遊びの診断。中身はすべて本当の話です。どの投稿も、「どんな機械か」「なぜ送られたか」「何を見つけたか」を伝え、出典につながっています。",
      "NASA Space Apps Challenge 2026 の課題「Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars」の作品です。"
     ]
    },
    "links": [
+    {
+     "label": {
+      "en": "🗺 Where are they now? (map)",
+      "ja": "🗺 今どこにいる？マップ"
+     },
+     "href": "#/map"
+    },
     {
      "label": {
       "en": "Lunar Lost & Found (our second piece)",
@@ -57,6 +64,10 @@
     {
      "en": "Press + to make your own true post. It stays on your device.",
      "ja": "＋で自分の「本当の話」の投稿を作れます。作った投稿はこの端末にだけ残ります。"
+    },
+    {
+     "en": "Discover has a map of the Moon and Mars. Tap a pin to see what that machine is, why it was sent and what it found.",
+     "ja": "「見つける」に、月と火星の地図があります。ピンを押すと、その機械が何で、なぜ送られ、何を見つけたかが出ます。"
     }
    ]
   },
@@ -78,17 +89,17 @@
    "body": {
     "en": [
      "We used an AI assistant (Claude by Anthropic). Here is exactly how.",
-     "Code and page design: written with the AI assistant, following the team's direction. The team chose the concept, the audience, the formats and what to keep or drop.",
-     "Post text: drafted with the AI assistant from NASA sources. Every fact is linked to its source, and the team checks the wording for kids.",
-     "Videos and photo posts: put together with AI assistance from real NASA images and sound. We do not use AI-generated images, AI-generated video or AI voices. NASA artist's concepts are labelled as such.",
+     "Code and page design: written with the AI assistant, following the team's direction. The team chose the concept, the audience and the rules: use formats kids already know, keep the jokes in the format only, and make every fact real.",
+     "Post ideas and text: some ideas came from the team, and some were proposed and drafted by the AI assistant from NASA sources. The team reviews the posts, checks the wording for kids and decides what stays. Every fact is linked to its source.",
+     "Videos and photo posts: put together with AI assistance from real NASA images, video and sound (the motion videos are web pages recorded frame by frame by our scripts). We do not use AI-generated images, AI-generated video or AI voices. NASA artist's concepts are labelled as such.",
      "Read-aloud voice: made on your device by the browser's built-in text-to-speech. It is a synthetic voice.",
      "Sound: music is by Kevin MacLeod (CC BY 4.0) and a public-domain recording of Holst's “Mars”. Short interface sounds were made by the team's own scripts."
     ],
     "ja": [
      "AI アシスタント（Anthropic の Claude）を使いました。使い方は次のとおりです。",
-     "コードと画面のデザイン：チームが決めた方向にそって、AI アシスタントと書きました。企画、だれに届けるか、見せ方、何を残して何を捨てるかは、チームが決めました。",
-     "投稿の文章：NASA の資料をもとに、AI アシスタントと下書きを作りました。事実にはすべて出典を付け、子ども向けの言葉はチームが確認しています。",
-     "動画と写真の投稿：NASA の本物の画像と音から、AI の助けを借りて組み立てました。AI が作った画像・動画・声は使っていません。NASA の想像図には「想像図」と書いています。",
+     "コードと画面のデザイン：チームが決めた方向にそって、AI アシスタントと書きました。企画、だれに届けるか、決まり（子どもが知っている形を使う、笑いは形だけにする、事実は全部本物にする）は、チームが決めました。",
+     "投稿の案と文章：チームが出した案と、AI アシスタントが NASA の資料から出して下書きした案があります。チームが投稿を見て、子ども向けの言葉を直し、残すものを決めます。事実にはすべて出典を付けています。",
+     "動画と写真の投稿：NASA の本物の画像・映像・音から、AI の助けを借りて組み立てました（動く動画は、Web ページを1コマずつ記録するスクリプトで作っています）。AI が作った画像・動画・声は使っていません。NASA の想像図には「想像図」と書いています。",
      "読み上げの声：ブラウザに入っている音声合成で、端末の中で作られる合成音声です。",
      "音：音楽は Kevin MacLeod（CC BY 4.0）と、ホルスト「火星」のパブリックドメインの録音です。短い操作音は、チームのスクリプトで作りました。"
     ]
@@ -199,12 +210,16 @@
      "ja": "NASA の画像・映像は NASA のメディア利用ガイドラインに沿って使用しています。NASA がこの作品を推奨しているわけではありません。"
     },
     {
-     "en": "Music by Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 (creativecommons.org/licenses/by/4.0/): “Monkeys Spinning Monkeys”, “Fluffing a Duck”, “Heartwarming”, “Gymnopedie No. 1”, “Carefree”, “Investigations”, “Local Forecast - Elevator”, “Sneaky Snitch”, “Funkorama”, “Hyperfun”. Some tracks are shortened. Holst, “Mars, the Bringer of War”, U.S. Air Force Band (public domain, via Wikimedia Commons).",
-     "ja": "音楽：Kevin MacLeod（incompetech.com）、Creative Commons: By Attribution 4.0（creativecommons.org/licenses/by/4.0/）。「Monkeys Spinning Monkeys」「Fluffing a Duck」「Heartwarming」「Gymnopedie No. 1」「Carefree」「Investigations」「Local Forecast - Elevator」「Sneaky Snitch」「Funkorama」「Hyperfun」。一部は短く切って使っています。ホルスト「火星」米空軍バンド（パブリックドメイン、Wikimedia Commons）。"
+     "en": "Music by Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 (creativecommons.org/licenses/by/4.0/): “Monkeys Spinning Monkeys”, “Fluffing a Duck”, “Heartwarming”, “Gymnopedie No. 1”, “Carefree”, “Investigations”, “Local Forecast - Elevator”, “Sneaky Snitch”, “Funkorama”, “Hyperfun”, “Wholesome”, “Heartbreaking”. Some tracks are shortened. Holst, “Mars, the Bringer of War”, U.S. Air Force Band (public domain, via Wikimedia Commons).",
+     "ja": "音楽：Kevin MacLeod（incompetech.com）、Creative Commons: By Attribution 4.0（creativecommons.org/licenses/by/4.0/）。「Monkeys Spinning Monkeys」「Fluffing a Duck」「Heartwarming」「Gymnopedie No. 1」「Carefree」「Investigations」「Local Forecast - Elevator」「Sneaky Snitch」「Funkorama」「Hyperfun」「Wholesome」「Heartbreaking」。一部は短く切って使っています。ホルスト「火星」米空軍バンド（パブリックドメイン、Wikimedia Commons）。"
     },
     {
      "en": "Sound effects (horror ambience): made by our team in code.",
      "ja": "効果音（ホラーの環境音）：チームがプログラムで作成。"
+    },
+    {
+     "en": "Maps: Moon map from NASA’s Scientific Visualization Studio (CGI Moon Kit); Mars map from NASA 3D Resources. Positions from NSSDCA and NASA mission pages.",
+     "ja": "地図：月の地図は NASA Scientific Visualization Studio（CGI Moon Kit）、火星の地図は NASA 3D Resources。位置は NSSDCA と NASA のミッションのページによります。"
     }
    ]
   }

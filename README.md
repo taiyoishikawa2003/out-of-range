@@ -15,23 +15,30 @@ The challenge asks for a story that introduces school-age kids to this hardware 
 | Post | Machine (place) | Format |
 |---|---|---|
 | "This was recorded on Mars." | InSight (Mars) | Scary-story video built on the real sound of a meteoroid impact |
-| Expectation vs reality | Spirit (Mars) | Photo post: a broken wheel digs up evidence of ancient hot springs |
-| What did people leave on the Moon the most of? | Apollo landing sites (Moon) | Tappable quiz |
+| I waited on the Moon for 2.5 years | Surveyor 3 (Moon) | POV story video |
+| What did people leave on the Moon the most of? | Apollo landing sites (Moon) | Photo post with a tappable quiz |
 | OPPORTUNITY | Opportunity (Mars) | Landscape movie trailer shown in a "PR" slot (our own trailer, not a real ad) |
+| Pioneer 10's nav app | Pioneer 10 (deep space) | Nav app video: "arrive in about 2 million years" |
+| Expectation vs reality | Spirit (Mars) | Photo post: a broken wheel digs up evidence of ancient hot springs |
+| Which space machine are you? | 8 machines | Interactive just-for-fun quiz |
+| "Want to try landing?" | NEAR Shoemaker (asteroid Eros) | Group chat video |
 | NASA's "favorite" zodiac signs | Kepler (deep space) | Ranking video made from real Kepler data |
-| I waited on the Moon for 2.5 years | Surveyor 3 (Moon) | POV story |
-| Pioneer 10's nav app | Pioneer 10 (deep space) | Nav app: "arrive in about 2 million years" |
-| Case file | Viking 1 (Mars) | Detective file with a tappable quiz |
-| "Want to try landing?" | NEAR Shoemaker (asteroid Eros) | Group chat |
-| Fashion check | Apollo 17 rover, Ingenuity, InSight, Apollo 11 lander | Four looks, four real reasons |
-| Worked longer than planned: TOP 5 | Opportunity, Spirit, Viking 1, Pioneer 10, Ingenuity | Ranking |
+| Case file | Viking 1 (Mars) | Photo post: detective file with a tappable quiz |
+| We texted 1,000 times. No reply. | Opportunity (Mars) | Chat video (the ending of the trailer) |
+| Fashion check | Apollo 17 rover, Ingenuity, InSight, Apollo 11 lander | Photo post: four looks, four real reasons |
+| Worked longer than planned: TOP 5 | Opportunity, Spirit, Viking 1, Pioneer 10, Ingenuity | Ranking countdown video |
 
-A second, separate piece lives at [`/lost/`](https://taiyoishikawa2003.github.io/out-of-range/lost/): the **Lunar Lost & Found**, a counter for things left on the Moon. Each claim slip leads to the machine next to it and a small hands-on science scene (laser ranging, moonquakes, Moon gravity).
+Beyond the feed:
+
+- **Where are they now?** (`#/map`): maps of the Moon and Mars with 22 machines. Tap a pin to see what the machine is, why it was sent, what it found and where it rests now. Positions come from NASA's NSSDCA catalogue.
+- **Lunar Lost & Found** ([`/lost/`](https://taiyoishikawa2003.github.io/out-of-range/lost/)): a second, separate piece. A counter for things left on the Moon; each claim slip leads to the machine next to it and a small hands-on science scene (laser ranging, moonquakes, Moon gravity).
+- **30-second demo**: [`/demo/`](https://taiyoishikawa2003.github.io/out-of-range/demo/)
 
 ## Features
 
 - Vertical swipe feed with autoplaying video, sound, seek bar, tap to pause, double-tap to like
 - Swipeable photo posts with tappable quizzes and per-slide music
+- Interactive posts (a quiz) and an interactive map of the Moon and Mars
 - A **Sources** button on every post, and one page that lists every NASA resource used (About)
 - Pinned "answer" comments that explain the science in plain words, and say which parts are dramatized
 - **Create**: kids make their own true post in the browser. A source is required. Posts stay on the device
@@ -65,12 +72,18 @@ Then open http://localhost:8000/. There is no build step for the site itself (pl
   - `tools/slides/slides.css`: the slide design system
   - `python3 tools/slides/build.py [post ...]` renders the slides with headless Chrome and updates `data/posts.json`
   - NASA photos are read from `$OOR_ASSETS/<nasa_id>.jpg` (download them from images.nasa.gov; the ids are in each post file)
+- Motion videos are web pages with a timeline, recorded frame by frame:
+  - `tools/motion/v_*.html`: one page per video (scenes, text, sound cues) in Japanese and English
+  - `tools/motion/motion.js`: the small timeline runtime; `tools/motion/make_sfx.py` synthesizes the interface sounds
+  - `node tools/motion/build.mjs <page> <output>` records the frames with headless Chrome and mixes the sound with ffmpeg; `python3 tools/motion/publish.py` puts the videos into `data/posts.json`
+- `data/machines.json` holds the map entries (position, what / why / found / now, sources). `js/map.js` draws the map.
+- Interactive posts live in `js/apps/` (for example `shindan.js`, the quiz).
 - `tools/build_*.py` build the earlier videos and photo posts. `tools/version_media.py` adds a content hash to every media path.
 - `tools/nasa_collect.py` collects candidate media for every machine on the official challenge resource list (`data/nasa_catalog.json`).
 
 ## Use of AI
 
-We used an AI assistant (Claude by Anthropic) for code, drafts and source look-ups, under the team's direction. The team chose the concept, the audience and the formats, and checks what is published. We do not use AI-generated images, video or voices. Details are on the About page of the site.
+We used an AI assistant (Claude by Anthropic) for code, drafts and source look-ups, under the team's direction. The team chose the concept, the audience and the rules (formats kids already know, jokes in the format only, every fact real). Some post ideas came from the team and some were proposed by the AI assistant; the team reviews the posts and decides what stays. We do not use AI-generated images, video or voices. Details are on the About page of the site.
 
 ## Credits
 

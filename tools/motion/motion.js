@@ -5,7 +5,7 @@ export const LANG = Q.get('lang') || 'ja';
 export const A = Q.get('assets') || '/assets';
 export const T = (ja, en) => (LANG === 'ja' ? ja : en);
 document.documentElement.lang = LANG; document.body.classList.add(LANG);   // set language first, so text is measured with its final line breaks
-export const M = { dur: 0, poster: 1, events: [], music: [], ticks: [], anims: [] };
+export const M = { dur: 0, poster: 1, events: [], music: [], ticks: [], anims: [], clips: [] };
 const ms = s => Math.round(s * 1000);
 const clamp = x => Math.min(1, Math.max(0, x));
 export function an(el, kf, opt) { const a = el.animate(kf, { fill: 'both', easing: 'linear', ...opt }); a.pause(); M.anims.push(a); return a; }
@@ -47,9 +47,17 @@ export function type(e, at, text, cps = 14, snd = 'tick') {
   const chars = [...text]; M.ticks.push(t => { e.textContent = chars.slice(0, Math.max(0, Math.floor((t - at) * cps))).join(''); });
   if (snd) chars.forEach((_, i) => sfx(at + i / cps, snd, 0.45)); return at + chars.length / cps;
 }
+/** Play part of a <video> in step with the timeline: at time `at` the video shows its own time `from`. */
+export function clip(v, at, until, from = 0) { M.clips.push({ v, at, until, from }); }
 export function done() {
   window.__motion = { dur: M.dur, poster: M.poster, events: M.events, music: M.music };
-  window.__seek = t => { const x = t * 1000; for (const a of M.anims) a.currentTime = x; for (const f of M.ticks) f(t); };
+  window.__seek = async t => {
+    const x = t * 1000; for (const a of M.anims) a.currentTime = x; for (const f of M.ticks) f(t);
+    for (const c of M.clips) if (t >= c.at - 0.6 && t < c.until + 0.6) {
+      const want = Math.max(0, c.from + (t - c.at));
+      if (Math.abs(c.v.currentTime - want) > 0.004) await new Promise(r => { c.v.addEventListener('seeked', r, { once: true }); c.v.currentTime = want; });
+    }
+  };
   window.__seek(Number(Q.get('t') || 0)); window.__ready = true;
 }
 /** A full-screen photo scene with a text column; returns its parts. */

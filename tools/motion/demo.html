@@ -1,0 +1,72 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#07090d;color:#fff;font-family:'Noto Sans CJK JP','Noto Sans','Noto Color Emoji',sans-serif;font-weight:900}
+.s{position:relative;width:1920px;height:1080px;overflow:hidden;background:radial-gradient(1200px 800px at 30% 50%,#141b26,#07090d)}
+.phone{position:absolute;left:250px;top:50px;width:412px;height:892px;transform:scale(1.1);transform-origin:0 0;border-radius:40px;overflow:hidden;background:#000;box-shadow:0 0 0 9px #23262d,0 0 0 11px #3a3f49,0 30px 80px rgba(0,0,0,.7)}
+.panes{position:absolute;left:0;top:0;width:412px}
+.pane{position:absolute;left:0;width:412px;height:892px;overflow:hidden;background:#000}
+.stagebox{position:absolute;left:0;top:0;width:412px;height:836px;overflow:hidden;background:#000}
+.stagebox video{position:absolute;inset:0;width:100%;height:100%}
+.pane img{position:absolute;left:0;top:0;width:412px;height:892px}
+.right{position:absolute;left:840px;top:0;width:1000px;height:1080px}
+.brand{position:absolute;left:0;top:76px;font-size:30px;letter-spacing:.2em;color:#ffc400}
+.brand small{display:block;font-size:22px;letter-spacing:.02em;color:#aeb7c4;font-weight:700;margin-top:10px}
+.seg{position:absolute;left:0;top:370px;width:1000px;opacity:0}
+.seg h2{font-size:108px;line-height:1.12}
+.seg p{font-size:42px;line-height:1.4;font-weight:700;margin-top:26px;color:#e6ebf2}
+.seg .ja{font-size:28px;color:#9aa5b5;margin-top:18px}
+.card{position:absolute;inset:0;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;opacity:0}
+.card h1{font-size:92px;line-height:1.25}
+.card h1 em{font-style:normal;color:#ffc400}
+.card .t{font-size:150px;letter-spacing:.14em}
+.card p{font-size:44px;font-weight:700;margin-top:26px;color:#e6ebf2}
+.card .url{font-size:46px;color:#ffc400;margin-top:38px}
+.card .fine{position:absolute;left:0;right:0;bottom:56px;font-size:23px;font-weight:700;color:#8c96a6;line-height:1.6}
+</style></head>
+<body><div class="s" id="stage"></div>
+<script type="module">
+// 30-second project demo (1920x1080): the real posts and screens of the site, in a phone frame.
+import { M, el, sfx, music, win, pop, an, fadeIn, clip, done } from './motion.js';
+const st = document.getElementById('stage'); M.dur = 29.7; M.poster = 8;
+const T = [2.6, 6.3, 10.1, 13.9, 17.6, 20.4, 23.0, 25.5];   // segment starts; the last one is the end card
+const phone = el('<div class="phone"><div class="panes"></div></div>', st), panes = phone.firstChild;
+const vids = [
+  ['media/insight/kaidan1.en.mp4', 'cover', 'ui_insight-kaidan-1', 0.3],
+  ['media/surveyor/pov.en.mp4', 'contain', 'ui_surveyor-pov-1', 3.6],
+  ['media/pioneer/navi.en.mp4', 'contain', 'ui_pioneer-navi-1', 4.5],
+  ['media/near/chat.en.mp4', 'contain', 'ui_near-chat-1', 6.5]];
+vids.forEach(([src, fit, ui, from], i) => {
+  const p = el(`<div class="pane" style="top:${i * 892}px"><div class="stagebox"><video src="/${src}" muted playsinline preload="auto" style="object-fit:${fit}"></video></div><img src="demo_assets/${ui}.png"></div>`, panes);
+  clip(p.querySelector('video'), T[i], T[i + 1], from);
+  music(src, T[i], T[i + 1] + 0.12, { from, fadeIn: 0.15, fadeOut: 0.2 });
+});
+const still = (i, files) => { const p = el(`<div class="pane" style="top:${i * 892}px"></div>`, panes); const d = (T[i + 1] - T[i]) / files.length;
+  files.forEach((f, k) => { const im = el(`<img src="demo_assets/${f}.png">`, p); if (k) { an(im, [{ opacity: 0 }, { opacity: 1 }], { duration: 160, delay: (T[i] + d * k) * 1000 }); sfx(T[i] + d * k, 'pop', 0.8); } }); };
+still(4, ['quiz_0', 'quiz_1', 'quiz_2']); still(5, ['map_0', 'map_1', 'map_2']); still(6, ['sources']);
+// swipes
+const kf = [{ transform: 'translateY(0)', offset: 0 }];
+T.slice(1, 7).forEach((t, i) => { const a = (t - 0.2) / M.dur, b = (t + 0.2) / M.dur; kf.push({ transform: `translateY(${-i * 892}px)`, offset: a, easing: 'cubic-bezier(.3,.8,.3,1)' }, { transform: `translateY(${-(i + 1) * 892}px)`, offset: b }); sfx(t - 0.18, 'whoosh', 0.7); });
+kf.push({ transform: `translateY(${-6 * 892}px)`, offset: 1 }); an(panes, kf, { duration: M.dur * 1000 });
+music('Carefree', T[4], M.dur, { from: 0.1, gain: 0.75, fadeIn: 0.3, fadeOut: 0.8 });
+// right column
+const R = el('<div class="right"><div class="brand">OUT OF RANGE<small>The machines NASA left behind, posting in the formats kids already watch</small></div></div>', st);
+const segs = [
+  ['A scary story.', 'The sound is real. InSight recorded it on Mars.', 'こわい話。音は本物です（インサイトが火星で記録）'],
+  ['A POV.', 'Surveyor 3 waited on the Moon for 2.5 years.', 'POV。月で2年半待ったサーベイヤー3号'],
+  ['A nav app.', 'Pioneer 10 will arrive in 2 million years.', 'カーナビ。パイオニア10号の到着は200万年後'],
+  ['A group chat.', 'An orbiter with no legs is asked to land.', 'グループチャット。足のない探査機が着陸をたのまれる'],
+  ['A quiz.', 'Which space machine are you?', '診断。あなたはどの探査機タイプ？'],
+  ['A map.', 'Where every machine rests now.', '地図。機械は今どこにいる？'],
+  ['Every fact is real.', 'NASA sources on every post.', '全部ほんとの話。どの投稿にも NASA の出典']];
+segs.forEach(([a, b, c], i) => { const s = el(`<div class="seg"><h2>${a}</h2><p>${b}</p><p class="ja">${c}</p></div>`, R); win(s, T[i] + 0.15, T[i + 1] - 0.1, 0.18); });
+// intro and end cards
+const intro = el('<div class="card"><h1 class="a">NASA left machines<br>on the Moon and Mars.</h1><h1 class="b" style="margin-top:44px"><em>Now they post.</em></h1></div>', st);
+win(intro, 0, T[0], 0); an(intro, [{ opacity: 1 }, { opacity: 0 }], { duration: 300, delay: (T[0] - 0.3) * 1000, fill: 'none' });
+fadeIn(intro.querySelector('.a'), 0.15, 0.4); pop(intro.querySelector('.b'), 1.35, { snd: 'ding' });
+const end = el(`<div class="card"><h1 class="t">OUT OF RANGE</h1><p>True stories of the machines NASA left on the Moon, on Mars and in deep space.</p>
+  <div class="url">taiyoishikawa2003.github.io/out-of-range</div><p style="font-size:32px;color:#9aa5b5">Team SunSunWorld · NASA Space Apps Challenge 2026</p>
+  <div class="fine">Images, video and sound: NASA. NASA does not endorse this project. Music: Kevin MacLeod (CC BY 4.0).<br>No AI-generated images, video or voices. Built with AI assistance (Claude).</div></div>`, st);
+win(end, T[7], M.dur, 0); an(end, [{ opacity: 0 }, { opacity: 1 }], { duration: 300, delay: T[7] * 1000, fill: 'none' }); sfx(T[7] + 0.1, 'ding');
+done();
+</script></body></html>
