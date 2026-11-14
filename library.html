@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NASA 素材の棚 — OUT OF RANGE</title>
+<style>
+body{margin:0;background:#0b0b0b;color:#fff;font-family:"Hiragino Sans","Noto Sans JP",system-ui,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#0b0b0bee;padding:12px 14px;border-bottom:1px solid #222}
+h1{font-size:18px;margin:0 0 8px}
+.hint{font-size:12px;color:#aaa;line-height:1.6;margin:0 0 8px}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}
+.tabs button,.f button{flex:none;min-height:36px;padding:0 12px;border-radius:999px;border:0;background:#1f1f1f;color:#fff;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.tabs button.on,.f button.on{background:#fff;color:#000}
+.f{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;align-items:center}
+.res{font-size:13px;margin:12px 14px}
+.res a{color:#ffb000}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;padding:0 14px 40px}
+.card{background:#161616;border-radius:10px;overflow:hidden;position:relative;border:2px solid transparent}
+.card.star{border-color:#ffb000}
+.card img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#222}
+.card .m{padding:6px 8px;font-size:12px;line-height:1.4}
+.card .t{font-weight:700;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card .d{color:#999}
+.card a{color:#ffb000;font-size:11px}
+.card .s{position:absolute;top:6px;right:6px;width:36px;height:36px;border-radius:50%;border:0;background:#000a;color:#fff;font-size:18px;cursor:pointer}
+.card.star .s{background:#ffb000;color:#000}
+.badge{position:absolute;top:6px;left:6px;background:#000c;font-size:11px;font-weight:700;padding:2px 6px;border-radius:4px}
+#out{width:100%;min-height:60px;background:#111;color:#ddd;border:1px solid #333;border-radius:8px;font:12px monospace;margin-top:6px}
+</style>
+</head>
+<body>
+<header>
+  <h1>NASA 素材の棚（候補）</h1>
+  <p class="hint">課題の公式リストにある機械ごとに、NASA Image and Video Library から集めた候補です。まだどの投稿にも使っていません。使いたいものに ☆ を付けると、この端末に記録されます。写真を押すと NASA の元ページが開きます。</p>
+  <div class="tabs" id="tabs"></div>
+  <div class="f" id="filters"></div>
+</header>
+<div class="res" id="res"></div>
+<div class="grid" id="grid"></div>
+<div style="padding:0 14px 40px">
+  <button id="copy" style="min-height:40px;padding:0 14px;border-radius:8px;border:0;background:#ffb000;font-weight:800;cursor:pointer">☆を付けた素材の一覧をコピー</button>
+  <textarea id="out" readonly></textarea>
+</div>
+<script>
+const KEY = 'oor.library.stars';
+let stars = {}; try { stars = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch {}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(stars)); } catch {} };
+let cat, cur, media = 'all';
+const el = (t, a = {}, ...k) => { const e = document.createElement(t); for (const [x, v] of Object.entries(a)) x === 'text' ? e.textContent = v : x.startsWith('on') ? e.addEventListener(x.slice(2), v) : e.setAttribute(x, v); e.append(...k); return e; };
+const place = { moon: '月', mars: '火星', deep: '深宇宙' };
+function draw() {
+  const tabs = document.getElementById('tabs');
+  tabs.replaceChildren(...Object.entries(cat).map(([k, m]) => el('button', { class: k === cur ? 'on' : '', text: `${place[m.place]}｜${m.label}`, onclick: () => { cur = k; draw(); } })));
+  document.getElementById('filters').replaceChildren(...[['all', 'すべて'], ['image', '写真'], ['video', '動画'], ['audio', '音']].map(([k, l]) => el('button', { class: media === k ? 'on' : '', text: l, onclick: () => { media = k; draw(); } })),
+    el('span', { class: 'hint', style: 'margin:0', text: `☆ ${Object.keys(stars).length} 件` }));
+  const m = cat[cur];
+  document.getElementById('res').replaceChildren('公式リソース： ', el('a', { href: m.resource, target: '_blank', rel: 'noopener', text: m.resource }));
+  document.getElementById('grid').replaceChildren(...m.items.filter(i => media === 'all' || i.media === media).map(i => {
+    const key = cur + ':' + i.nasa_id;
+    const c = el('div', { class: 'card' + (stars[key] ? ' star' : '') },
+      el('a', { href: i.page, target: '_blank', rel: 'noopener' }, i.thumb ? el('img', { src: i.thumb, loading: 'lazy', alt: i.title || '' }) : el('div', { style: 'aspect-ratio:1;display:grid;place-items:center;background:#222', text: i.media === 'audio' ? '♪ 音声' : '（画像なし）' })),
+      i.media !== 'image' ? el('span', { class: 'badge', text: i.media === 'video' ? '▶ 動画' : '♪ 音' }) : '',
+      el('button', { class: 's', 'aria-label': '☆', text: stars[key] ? '★' : '☆', onclick: () => { if (stars[key]) delete stars[key]; else stars[key] = { machine: cur, nasa_id: i.nasa_id, title: i.title, page: i.page, media: i.media }; save(); draw(); } }),
+      el('div', { class: 'm' }, el('div', { class: 't', text: i.title || i.nasa_id }), el('div', { class: 'd', text: `${i.date}　${i.nasa_id}` })));
+    return c;
+  }));
+}
+document.getElementById('copy').onclick = () => {
+  const t = Object.values(stars).map(s => `${s.machine}\t${s.nasa_id}\t${s.media}\t${s.title}\t${s.page}`).join('\n');
+  const o = document.getElementById('out'); o.value = t || '（まだ☆はありません）'; o.select();
+  navigator.clipboard?.writeText(t).catch(() => {});
+};
+fetch('data/nasa_catalog.json').then(r => r.json()).then(j => { cat = j; cur = Object.keys(j)[0]; draw(); });
+</script>
+</body>
+</html>
