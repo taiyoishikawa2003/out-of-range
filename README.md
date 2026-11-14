@@ -90,6 +90,10 @@ Then open http://localhost:8000/. There is no build step for the site itself (pl
 - `tools/build_*.py` build the earlier videos and photo posts. `tools/version_media.py` adds a content hash to every media path.
 - `tools/nasa_collect.py` collects candidate media for every machine on the official challenge resource list (`data/nasa_catalog.json`).
 
+## Images for slides and posts
+
+`docs/press/` has ready-made images: `cover_1200x630.jpg` (link preview) and `screens_en.jpg` / `screens_ja.jpg` (four screens, 1920×1080).
+
 ## Use of AI
 
 We used an AI assistant (Claude by Anthropic) for code, drafts and source look-ups, under the team's direction. The team chose the concept, the audience and the rules (formats kids already know, jokes in the format only, every fact real). Some post ideas came from the team and some were proposed by the AI assistant; the team reviews the posts and decides what stays. We do not use AI-generated images, video or voices. Details are on the About page of the site.
