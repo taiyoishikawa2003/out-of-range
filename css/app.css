@@ -355,3 +355,7 @@ table.t th,table.t td{border-bottom:1px solid var(--line);padding:8px 6px;text-a
 @keyframes ctaon{to{background:#ffc400;color:#161616}}
 .fullbtn{position:absolute;left:50%;transform:translateX(-50%);top:calc(50% + min(22vw,110px) + 14px);z-index:9;border:0;cursor:pointer;font-size:13px;padding:7px 14px}
 @media (prefers-reduced-motion:reduce){.post.ad.playing .cta{animation:none;background:#ffc400;color:#161616}}
+
+.gate-brand{font-size:30px;font-weight:900;letter-spacing:.14em}
+.gate-tag{font-size:15px;line-height:1.6;max-width:300px;text-align:center;opacity:.92;margin-bottom:18px}
+img.av{object-fit:cover}

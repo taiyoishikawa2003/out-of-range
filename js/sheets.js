@@ -100,7 +100,7 @@ export function commentsView(post, onCount) {
     (post.comments || []).forEach((c, i) => {
       const a = account(c.user); const isAuthor = c.user === post.account;
       list.append(h('div', { class: 'ycm' + (c.pinned ? ' pinned' : '') },
-        h('div', { class: 'av', text: initial(L(a.name) || c.user) }),
+        a.avatar ? h('img', { class: 'av', src: a.avatar, alt: '' }) : h('div', { class: 'av', text: initial(L(a.name) || c.user) }),
         h('div', { class: 'ycm-main' },
           c.pinned ? h('div', { class: 'ypin', text: '📌 ' + t('cm.pinnedBy').replace('{u}', '@' + c.user) }) : '',
           h('div', { class: 'yhd' }, h('span', { class: 'yname' + (isAuthor ? ' author' : ''), text: '@' + c.user })),

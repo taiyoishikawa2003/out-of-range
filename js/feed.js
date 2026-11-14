@@ -65,6 +65,7 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
   let gate = null;
   if (!started) {
     gate = h('button', { class: 'gate', type: 'button', 'aria-label': t('gate.play') },
+      h('span', { class: 'gate-brand', text: 'OUT OF RANGE' }), h('span', { class: 'gate-tag', text: t('gate.tag') }),
       h('span', { class: 'gate-ic' }, icon('play')), h('b', { text: t('gate.play') }), h('small', { text: t('gate.sound') }));
     gate.addEventListener('click', e => {
       e.stopPropagation(); AU.unlock(); started = true; gate.remove(); gate = null;
@@ -82,7 +83,8 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
   if (!posts.length) feed.append(h('div', { class: 'feed-end' }, h('p', { text: t('feed.followEmpty') }), h('button', { class: 'btn', type: 'button', text: t('feed.foryou'), onclick: () => { destroy(); renderFeed(view, { tab: 'foryou' }); } })));
   else feed.append(h('section', { class: 'feed-end', 'aria-label': t('feed.end.title') }, h('h2', { text: t('feed.end.title') }), h('p', { text: t('feed.end.text') }),
     h('button', { class: 'btn', type: 'button', text: t('feed.replay'), onclick: () => go(0, 'auto') }),
-    h('a', { class: 'btn ghost', href: '#/create', text: t('feed.makeOwn') })));
+    h('a', { class: 'btn ghost', href: '#/create', text: t('feed.makeOwn') }),
+    h('a', { class: 'btn ghost', href: 'lost/', text: t('feed.lost') })));
 
   function build(i) {
     const it = items[i]; if (!it || it.built) return;

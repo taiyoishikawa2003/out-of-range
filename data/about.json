@@ -1,5 +1,5 @@
 {
- "version": "0.1 (2026-11-14)",
+ "version": "1.0 (2026-11-15)",
  "sections": [
   {
    "title": {
@@ -8,14 +8,25 @@
    },
    "body": {
     "en": [
-     "OUT OF RANGE is a short-video style feed for kids who grew up on short videos. The machines NASA left on the Moon, on Mars and in deep space post about their own lives. The jokes are only in the format. Every fact is true, and each post ends with its sources.",
+     "OUT OF RANGE is a short-video style feed for kids who grew up on short videos, including kids who are not (yet) interested in space. The machines NASA left on the Moon, on Mars and in deep space post about their own lives.",
+     "The jokes are only in the format: a scary story, a group chat, a nav app, a fashion check, a ranking, a movie trailer. Every fact is true. Each post says what the machine is, why it was sent, and what it found, and links to its sources.",
      "Made for the NASA Space Apps Challenge 2026 challenge “Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars”."
     ],
     "ja": [
-     "OUT OF RANGE は、短い動画で育った子どもたちのための、ショート動画風のフィードです。NASA が月・火星・深宇宙に置いてきた機械が、自分のことを投稿します。笑いは見せ方だけで、中身はすべて本当の話です。どの投稿も最後に出典が付いています。",
+     "OUT OF RANGE は、短い動画で育った子どもたちのための、ショート動画風のフィードです。宇宙に（まだ）興味がない子にも楽しんでもらえるように作りました。NASA が月・火星・宇宙に置いてきた機械が、自分のことを投稿します。",
+     "笑いは見せ方だけです。こわい話、グループチャット、カーナビ、ファッションチェック、ランキング、映画の予告。中身はすべて本当の話です。どの投稿も、「どんな機械か」「なぜ送られたか」「何を見つけたか」を伝え、出典につながっています。",
      "NASA Space Apps Challenge 2026 の課題「Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars」の作品です。"
     ]
-   }
+   },
+   "links": [
+    {
+     "label": {
+      "en": "Lunar Lost & Found (our second piece)",
+      "ja": "月面遺失物センター（もう1つの作品）"
+     },
+     "href": "lost/"
+    }
+   ]
   },
   {
    "title": {
@@ -66,16 +77,20 @@
    },
    "body": {
     "en": [
-     "DRAFT — to be finalised by the team before submission.",
-     "Code and design: written with help from an AI assistant (Claude by Anthropic), then tested and reviewed by the team.",
-     "Read-aloud voice: generated on your device by the browser's built-in text-to-speech. It is a synthetic voice.",
-     "Images: we use real NASA photos. We do not use AI-generated images."
+     "We used an AI assistant (Claude by Anthropic). Here is exactly how.",
+     "Code and page design: written with the AI assistant, following the team's direction. The team chose the concept, the audience, the formats and what to keep or drop.",
+     "Post text: drafted with the AI assistant from NASA sources. Every fact is linked to its source, and the team checks the wording for kids.",
+     "Videos and photo posts: put together with AI assistance from real NASA images and sound. We do not use AI-generated images, AI-generated video or AI voices. NASA artist's concepts are labelled as such.",
+     "Read-aloud voice: made on your device by the browser's built-in text-to-speech. It is a synthetic voice.",
+     "Sound: music is by Kevin MacLeod (CC BY 4.0) and a public-domain recording of Holst's “Mars”. Short interface sounds were made by the team's own scripts."
     ],
     "ja": [
-     "下書き — 提出前にチームで確定します。",
-     "コードとデザイン：AI アシスタント（Anthropic の Claude）の助けを借りて書き、チームが動作確認と見直しをしました。",
-     "読み上げの声：ブラウザに入っている音声合成で、端末の中で作られた合成音声です。",
-     "画像：NASA の本物の写真を使っています。AI で作った画像は使っていません。"
+     "AI アシスタント（Anthropic の Claude）を使いました。使い方は次のとおりです。",
+     "コードと画面のデザイン：チームが決めた方向にそって、AI アシスタントと書きました。企画、だれに届けるか、見せ方、何を残して何を捨てるかは、チームが決めました。",
+     "投稿の文章：NASA の資料をもとに、AI アシスタントと下書きを作りました。事実にはすべて出典を付け、子ども向けの言葉はチームが確認しています。",
+     "動画と写真の投稿：NASA の本物の画像と音から、AI の助けを借りて組み立てました。AI が作った画像・動画・声は使っていません。NASA の想像図には「想像図」と書いています。",
+     "読み上げの声：ブラウザに入っている音声合成で、端末の中で作られる合成音声です。",
+     "音：音楽は Kevin MacLeod（CC BY 4.0）と、ホルスト「火星」のパブリックドメインの録音です。短い操作音は、チームのスクリプトで作りました。"
     ]
    }
   },
@@ -85,9 +100,37 @@
     "ja": "プライバシーと安全"
    },
    "body": {
-    "en": "No login, no ads, no tracking. Likes, follows, comments and the posts you make are stored only in your own browser and are never uploaded. Comments you write are visible only to you.",
-    "ja": "ログイン・広告・追跡はありません。いいね、フォロー、コメント、作った投稿は、あなたのブラウザの中にだけ保存され、どこにも送られません。書いたコメントはあなたにしか見えません。"
+    "en": "No login, no ads, no tracking. Likes, follows, comments and the posts you make are stored only in your own browser and are never uploaded. Comments you write are visible only to you. The post marked “PR” is a trailer made by our team as part of the story. It is not a real ad.",
+    "ja": "ログイン・広告・追跡はありません。いいね、フォロー、コメント、作った投稿は、あなたのブラウザの中にだけ保存され、どこにも送られません。書いたコメントはあなたにしか見えません。「PR」と書かれた投稿は、作品の一部としてチームが作った予告で、本物の広告ではありません。"
    }
+  },
+  {
+   "title": {
+    "en": "For teachers and families",
+    "ja": "先生・保護者の方へ"
+   },
+   "body": {
+    "en": "A 10-minute activity for a class or a living room. No sign-up is needed, and nothing a child does here leaves the device.",
+    "ja": "授業やご家庭で、10分でできる使い方です。登録はいりません。子どもがここでしたことは、端末の外に出ません。"
+   },
+   "list": [
+    {
+     "en": "3 min: watch three posts together. Ask: which part do you think is true?",
+     "ja": "3分：投稿を3本、いっしょに見る。「どこが本当だと思う？」と聞いてみる。"
+    },
+    {
+     "en": "2 min: tap the page icon on one post and open the NASA page that proves it.",
+     "ja": "2分：紙のアイコンを押して、その話のもとになった NASA のページを開く。"
+    },
+    {
+     "en": "5 min: press + and make your own true post. The app asks for a source before it lets you post.",
+     "ja": "5分：＋を押して、自分の「本当の話」を1つ作る。出典を書かないと投稿できない仕組みです。"
+    },
+    {
+     "en": "Reading help: the speech bubble at the top left reads photo posts aloud. English / 日本語 can be switched at any time.",
+     "ja": "読むのが苦手な子には：左上の吹き出しで、写真の投稿を読み上げます。English／日本語はいつでも切り替えられます。"
+    }
+   ]
   },
   {
    "title": {
@@ -109,15 +152,25 @@
      [
       "Taiyo Ishikawa",
       {
-       "en": "Concept, direction, kid-friendly wording",
-       "ja": "企画・方向性・子ども向けの言葉直し"
+       "en": "Concept and direction: the short-video format, the audience, which ideas to keep or drop; kid-friendly wording; final checks",
+       "ja": "企画と方向性（ショート動画の形、だれに届けるか、どの案を残すか）、子ども向けの言葉直し、最終確認"
       }
      ],
      [
       "MISAKI MATSUDA",
       {
-       "en": "TBD",
-       "ja": "未定"
+       "en": "Ideas and feedback",
+       "ja": "アイデア出し・感想"
+      }
+     ],
+     [
+      {
+       "en": "AI assistant (Claude)",
+       "ja": "AI アシスタント（Claude）"
+      },
+      {
+       "en": "Code, drafts and source look-ups, under the team’s direction (see “Use of AI”)",
+       "ja": "チームの指示のもとで、コード・下書き・資料さがし（「AI の使い方」を参照）"
       }
      ]
     ]
@@ -146,8 +199,8 @@
      "ja": "NASA の画像・映像は NASA のメディア利用ガイドラインに沿って使用しています。NASA がこの作品を推奨しているわけではありません。"
     },
     {
-     "en": "Music: \"Monkeys Spinning Monkeys\", \"Fluffing a Duck\" and \"Heartwarming\" by Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 (creativecommons.org/licenses/by/4.0/).",
-     "ja": "音楽：Kevin MacLeod「Monkeys Spinning Monkeys」「Fluffing a Duck」「Heartwarming」（incompetech.com）、Creative Commons 表示 4.0（creativecommons.org/licenses/by/4.0/）。"
+     "en": "Music by Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0 (creativecommons.org/licenses/by/4.0/): “Monkeys Spinning Monkeys”, “Fluffing a Duck”, “Heartwarming”, “Gymnopedie No. 1”, “Carefree”, “Investigations”, “Local Forecast - Elevator”, “Sneaky Snitch”, “Funkorama”, “Hyperfun”. Some tracks are shortened. Holst, “Mars, the Bringer of War”, U.S. Air Force Band (public domain, via Wikimedia Commons).",
+     "ja": "音楽：Kevin MacLeod（incompetech.com）、Creative Commons: By Attribution 4.0（creativecommons.org/licenses/by/4.0/）。「Monkeys Spinning Monkeys」「Fluffing a Duck」「Heartwarming」「Gymnopedie No. 1」「Carefree」「Investigations」「Local Forecast - Elevator」「Sneaky Snitch」「Funkorama」「Hyperfun」。一部は短く切って使っています。ホルスト「火星」米空軍バンド（パブリックドメイン、Wikimedia Commons）。"
     },
     {
      "en": "Sound effects (horror ambience): made by our team in code.",
