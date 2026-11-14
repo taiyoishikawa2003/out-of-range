@@ -307,8 +307,8 @@ function carouselPost(p, el, stage, onSlide) {
   stage.append(car);
   const dots = h('div', { class: 'dots', 'aria-hidden': 'true' }, slides.map(() => h('i')));
   const counter = h('span', { class: 'pill counter', 'aria-live': 'polite' });
-  const prev = h('button', { class: 'carnav prev', type: 'button', 'aria-label': 'Previous slide', onclick: e => { e.stopPropagation(); go(idx - 1); } }, icon('left'));
-  const next = h('button', { class: 'carnav next', type: 'button', 'aria-label': 'Next slide', onclick: e => { e.stopPropagation(); go(idx + 1); } }, icon('right'));
+  const prev = h('button', { class: 'carnav prev', type: 'button', 'aria-label': 'Previous slide', onclick: e => { e.stopPropagation(); hold(); go(idx - 1); } }, icon('left'));
+  const next = h('button', { class: 'carnav next', type: 'button', 'aria-label': 'Next slide', onclick: e => { e.stopPropagation(); hold(); go(idx + 1); } }, icon('right'));
   let idx = 0, loaded = false;
   /* sound: per-slide music (slide.music, inherited by later slides; "" = silence) + one-shot slide.sfx; p.audio = default */
   let cur = null, handle = null;
@@ -328,25 +328,36 @@ function carouselPost(p, el, stage, onSlide) {
     counter.textContent = `${idx + 1}/${slides.length}`;
     prev.hidden = idx === 0; next.hidden = idx === slides.length - 1;
   };
-  const go = i => { i = Math.max(0, Math.min(slides.length - 1, i)); car.scrollTo({ left: i * car.clientWidth, behavior: 'smooth' }); };
+  const go = (i, behavior = 'smooth') => { i = Math.max(0, Math.min(slides.length - 1, i)); car.scrollTo({ left: i * car.clientWidth, behavior }); };
+  /* auto-advance: slides move on by themselves until the viewer touches the post (slide.dur sec, default 2) */
+  let auto = null, held = false;
+  const stopAuto = () => { clearTimeout(auto); auto = null; };
+  const planAuto = () => {
+    stopAuto(); if (held || slides.length < 2 || !el.classList.contains('playing')) return;
+    const d = (slides[idx]?.dur || p.slideDur || 2) * 1000;
+    auto = setTimeout(() => { if (idx >= slides.length - 1) go(0, 'instant'); else go(idx + 1); }, d);
+  };
+  const hold = () => { held = true; stopAuto(); };
+  ['pointerdown', 'wheel', 'keydown'].forEach(ev => car.addEventListener(ev, hold, { passive: true }));
   let st;
   car.addEventListener('scroll', () => {
     clearTimeout(st); st = setTimeout(() => {
       const i = Math.round(car.scrollLeft / car.clientWidth);
       if (i !== idx) { idx = i; draw(); onSlide(); if (audio) sound(idx, true); }
+      planAuto();
     }, 60);
   }, { passive: true });
   draw();
   const load = () => { if (!loaded) { loadImgs(car); loaded = true; } };
   return {
     extra: [dots, counter, prev, next],
-    activate() { load(); el.classList.add('playing'); if (audio) { stopAll(); sound(idx, idx > 0); } },
-    deactivate() { el.classList.remove('playing'); stopAll(); },
+    activate() { load(); el.classList.add('playing'); held = false; if (audio) { stopAll(); sound(idx, idx > 0); } planAuto(); },
+    deactivate() { el.classList.remove('playing'); stopAll(); stopAuto(); },
     preload: load, preloadLight() { const i = car.querySelector('img[data-src]'); if (i) { i.src = i.dataset.src; i.removeAttribute('data-src'); } },
     unload() { stopAll(); },
     togglePlay() { if (!audio) return; if (handle) stopAll(); else { if (S.isMuted()) S.setMuted(false); sound(idx, false); } },
     applyMute() { if (!audio) return; if (S.isMuted()) stopAll(); else if (el.classList.contains('playing')) sound(idx, false); },
-    slide: d => go(idx + d),
+    slide: d => { hold(); go(idx + d); },
     currentText: () => slides[idx].layout === 'sources' ? t('true') : slideText(slides[idx])
   };
 }
