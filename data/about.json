@@ -91,6 +91,126 @@
   },
   {
    "title": {
+    "en": "Words you will see",
+    "ja": "ことばのミニ辞典"
+   },
+   "table": {
+    "head": [
+     {
+      "en": "Word",
+      "ja": "ことば"
+     },
+     {
+      "en": "What it means",
+      "ja": "いみ"
+     }
+    ],
+    "rows": [
+     [
+      {
+       "en": "Spacecraft (probe)",
+       "ja": "探査機"
+      },
+      {
+       "en": "A machine that goes to explore space with no people on board.",
+       "ja": "人を乗せずに、宇宙を調べに行く機械。"
+      }
+     ],
+     [
+      {
+       "en": "Lander",
+       "ja": "着陸機（ランダー）"
+      },
+      {
+       "en": "A machine that lands on a world and studies it from where it sits. It cannot drive.",
+       "ja": "月や火星の地面におりて、その場所で調べる機械。走ることはできない。"
+      }
+     ],
+     [
+      {
+       "en": "Rover",
+       "ja": "探査車（ローバー）"
+      },
+      {
+       "en": "A robot car that drives around to study different places.",
+       "ja": "地面を走って、いろいろな場所を調べるロボットの車。"
+      }
+     ],
+     [
+      {
+       "en": "Orbit",
+       "ja": "軌道"
+      },
+      {
+       "en": "The path something follows as it goes around a moon, a planet or the Sun.",
+       "ja": "月や火星や太陽のまわりを回るときの、道すじ。"
+      }
+     ],
+     [
+      {
+       "en": "Asteroid",
+       "ja": "小惑星"
+      },
+      {
+       "en": "A small rocky body that goes around the Sun.",
+       "ja": "太陽のまわりを回る、岩でできた小さな天体。"
+      }
+     ],
+     [
+      {
+       "en": "Seismometer",
+       "ja": "地震計"
+      },
+      {
+       "en": "An instrument that measures how the ground shakes.",
+       "ja": "地面のゆれをはかる装置。"
+      }
+     ],
+     [
+      {
+       "en": "Solar panel",
+       "ja": "太陽電池"
+      },
+      {
+       "en": "A panel that makes electricity from sunlight. Dust on it means less power.",
+       "ja": "太陽の光から電気を作る板。砂がつもると、作れる電気がへる。"
+      }
+     ],
+     [
+      {
+       "en": "Losing contact",
+       "ja": "通信がとぎれる"
+      },
+      {
+       "en": "When a machine's radio signal stops reaching Earth.",
+       "ja": "機械からの電波が、地球にとどかなくなること。"
+      }
+     ],
+     [
+      {
+       "en": "Source",
+       "ja": "出典"
+      },
+      {
+       "en": "The original document that shows a fact is true.",
+       "ja": "その話が本当だと分かる、もとの資料。"
+      }
+     ],
+     [
+      {
+       "en": "Artist's concept",
+       "ja": "想像図"
+      },
+      {
+       "en": "A drawing made by an artist, not a photo.",
+       "ja": "写真ではなく、人がかいた絵。"
+      }
+     ]
+    ]
+   }
+  },
+  {
+   "title": {
     "en": "How we checked the facts",
     "ja": "事実の確かめ方"
    },
