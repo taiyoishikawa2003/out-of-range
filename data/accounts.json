@@ -1,42 +1,53 @@
 {
  "moon_lostfound": {
   "name": {
-   "en": "Lunar Lost & Found (fan-made)",
-   "ja": "月面遺失物センター（ファンメイド）"
+   "en": "Lunar Lost & Found",
+   "ja": "月面遺失物センター"
   },
   "place": "moon",
   "followers": 0,
   "bio": {
-   "en": "Things people left on the Moon, and the science behind them. Made by students; facts checked against NASA and other sources.",
-   "ja": "月に置いてきた物と、その裏の科学を紹介します。学生が作っています。事実はNASAの資料などで確認しています。"
+   "en": "We look after the things people left on the Moon.",
+   "ja": "月に置いてきた物を、あずかっています。"
   },
-  "avatar": "media/avatars/moon_lostfound.jpg"
+  "avatar": "media/avatars/moon_lostfound.jpg",
+  "kind": "channel"
  },
  "spirit_rover": {
   "name": {
-   "en": "Spirit (fan-made story)",
-   "ja": "スピリット（ファンメイドの物語）"
+   "en": "Spirit",
+   "ja": "スピリット"
   },
   "place": "mars",
   "followers": 0,
   "bio": {
-   "en": "Mars rover, 2004–2010. Planned for 90 days, kept going for over 6 years. Stories are by students; facts checked against NASA sources.",
-   "ja": "火星探査車（2004〜2010）。予定は90日、実際は6年以上。学生が作った物語です。事実はNASAの資料などで確認しています。"
+   "en": "Mars rover. Opportunity’s twin. One of my front wheels is broken.",
+   "ja": "火星の探査車。オポチュニティのふたご。前の車輪がひとつ、こわれてます。"
   },
-  "avatar": "media/avatars/spirit_rover.jpg"
+  "avatar": "media/avatars/spirit_rover.jpg",
+  "kind": "machine",
+  "since": {
+   "en": "Out of range since March 2010",
+   "ja": "2010年3月から圏外"
+  }
  },
  "insight_lander": {
   "name": {
-   "en": "InSight (fan-made story)",
-   "ja": "インサイト（ファンメイドの物語）"
+   "en": "InSight",
+   "ja": "インサイト"
   },
   "place": "mars",
   "followers": 0,
   "bio": {
-   "en": "Mars lander that listened to the ground, 2018–2022. Stories here are dramatized by students; facts are checked against NASA sources.",
-   "ja": "地面の音を聞いていた火星の着陸機（2018〜2022）。学生が演出した物語です。事実はNASAの資料で確認しています。"
+   "en": "Mars lander. I spent four years with my ear to the ground.",
+   "ja": "火星の着陸機。4年間、地面に耳をあてていました。"
   },
-  "avatar": "media/avatars/insight_lander.jpg"
+  "avatar": "media/avatars/insight_lander.jpg",
+  "kind": "machine",
+  "since": {
+   "en": "Out of range since December 2022",
+   "ja": "2022年12月から圏外"
+  }
  },
  "team_oor": {
   "name": {
@@ -55,94 +66,117 @@
  },
  "kepler_uranai": {
   "name": {
-   "en": "Kepler Star Fortunes (fan-made)",
-   "ja": "ケプラー星占い（ファンメイド）"
+   "en": "Kepler Horoscope",
+   "ja": "ケプラー星占い"
   },
   "place": "deep",
   "followers": 0,
   "bio": {
-   "en": "Zodiac rankings made from real NASA Kepler data. Just for fun: astrology is not science. Made by students.",
-   "ja": "NASAのケプラー望遠鏡の本物のデータで作る星座ランキング。占いは科学ではありません（お遊びです）。学生が作っています。"
+   "en": "Zodiac rankings made from real Kepler data. Astrology is not science.",
+   "ja": "ケプラー望遠鏡の本物のデータで作る星座ランキング。占いは科学ではありません。"
   },
-  "avatar": "media/avatars/kepler_uranai.jpg"
+  "avatar": "media/avatars/kepler_uranai.jpg",
+  "kind": "channel"
  },
  "surveyor3": {
   "name": {
-   "en": "Surveyor 3 (fan-made story)",
-   "ja": "サーベイヤー3号（ファンメイドの物語）"
+   "en": "Surveyor 3",
+   "ja": "サーベイヤー3号"
   },
   "place": "moon",
   "followers": 0,
   "bio": {
-   "en": "Moon lander, 1967. Still in the Ocean of Storms. Visited once, in 1969. Made by students; facts checked against NASA sources.",
-   "ja": "1967年に月に着いた探査機。今も「嵐の大洋」にいます。1969年に一度だけ、人が来ました。学生が作っています。事実はNASAの資料で確認しています。"
+   "en": "Moon lander. Here since 1967. People came to see me, once.",
+   "ja": "月の探査機。1967年からここにいます。一度だけ、人が来ました。"
   },
-  "avatar": "media/avatars/surveyor3.jpg"
+  "avatar": "media/avatars/surveyor3.jpg",
+  "kind": "machine",
+  "since": {
+   "en": "Out of range since May 1967",
+   "ja": "1967年5月から圏外"
+  }
  },
  "viking1_lander": {
   "name": {
-   "en": "Viking 1 (fan-made story)",
-   "ja": "バイキング1号（ファンメイドの物語）"
+   "en": "Viking 1",
+   "ja": "バイキング1号"
   },
   "place": "mars",
   "followers": 0,
   "bio": {
-   "en": "Mars lander, 1976–1982. Planned for 90 days, worked for over 6 years. Made by students; facts checked against NASA sources.",
-   "ja": "火星の着陸機（1976〜1982）。予定は90日、実際は6年以上。学生が作っています。事実はNASAの資料で確認しています。"
+   "en": "Mars lander. Here since 1976. My first photo was of my own foot.",
+   "ja": "火星の着陸機。1976年からここにいます。最初に撮ったのは、自分の足。"
   },
-  "avatar": "media/avatars/viking1_lander.jpg"
+  "avatar": "media/avatars/viking1_lander.jpg",
+  "kind": "machine",
+  "since": {
+   "en": "Out of range since November 1982",
+   "ja": "1982年11月から圏外"
+  }
  },
  "pioneer10": {
   "name": {
-   "en": "Pioneer 10 (fan-made story)",
-   "ja": "パイオニア10号（ファンメイドの物語）"
+   "en": "Pioneer 10",
+   "ja": "パイオニア10号"
   },
   "place": "deep",
   "followers": 0,
   "bio": {
-   "en": "Launched 1972. Last signal 2003. Heading toward Aldebaran, arriving in about 2 million years. Made by students; facts checked against NASA sources.",
-   "ja": "1972年に出発。最後の信号は2003年。アルデバランの方向へ、あと約200万年。学生が作っています。事実はNASAの資料で確認しています。"
+   "en": "Left in 1972. Heading toward Aldebaran. About 2 million years to go.",
+   "ja": "1972年に出発。アルデバランの方向へ、あと200万年くらい。"
   },
-  "avatar": "media/avatars/pioneer10.jpg"
+  "avatar": "media/avatars/pioneer10.jpg",
+  "kind": "machine",
+  "since": {
+   "en": "Out of range since January 2003",
+   "ja": "2003年1月から圏外"
+  }
  },
  "near_shoemaker": {
   "name": {
-   "en": "NEAR Shoemaker (fan-made story)",
-   "ja": "NEARシューメーカー（ファンメイドの物語）"
+   "en": "NEAR Shoemaker",
+   "ja": "NEARシューメーカー"
   },
   "place": "deep",
   "followers": 0,
   "bio": {
-   "en": "Built to orbit asteroid Eros. Landed on it anyway, in 2001. Still there. Made by students; facts checked against NASA sources.",
-   "ja": "小惑星エロスを回るための探査機。2001年、なぜか着陸にも成功。今もエロスの上。学生が作っています。事実はNASAの資料で確認しています。"
+   "en": "I am sitting on asteroid Eros. Landing was not in the plan.",
+   "ja": "小惑星エロスの上にいます。着陸する予定は、なかったんですけど。"
   },
-  "avatar": "media/avatars/near_shoemaker.jpg"
+  "avatar": "media/avatars/near_shoemaker.jpg",
+  "kind": "machine",
+  "since": {
+   "en": "Out of range since February 2001",
+   "ja": "2001年2月から圏外"
+  }
  },
  "space_runway": {
   "name": {
-   "en": "Moon & Mars Collection (fan-made)",
-   "ja": "月・火星コレクション（ファンメイド）"
+   "en": "Moon & Mars Collection",
+   "ja": "月・火星コレクション"
   },
   "place": "moon",
   "followers": 0,
   "bio": {
-   "en": "Fashion checks for machines left on the Moon and Mars. Every look has a real reason. Made by students; facts checked against NASA sources.",
-   "ja": "月と火星に置いてきた機械のファッションチェック。見た目には全部、本当の理由があります。学生が作っています。事実はNASAの資料で確認しています。"
+   "en": "Fashion checks for the machines left on the Moon and Mars. Every look has a reason.",
+   "ja": "置いてきた機械のファッションチェック。見た目には、ぜんぶ理由がある。"
   },
-  "avatar": "media/avatars/space_runway.jpg"
+  "avatar": "media/avatars/space_runway.jpg",
+  "kind": "channel"
  },
  "machine_ranking": {
   "name": {
-   "en": "Left-Behind Machine Rankings (fan-made)",
-   "ja": "置いてきた機械ランキング（ファンメイド）"
+   "en": "Left-Behind Machine Rankings",
+   "ja": "置いてきた機械ランキング"
   },
   "place": "mars",
   "followers": 0,
   "bio": {
-   "en": "Rankings made from real NASA numbers. Made by students; facts checked against NASA sources.",
-   "ja": "NASAの本物の数字で作るランキング。学生が作っています。事実はNASAの資料で確認しています。"
+   "en": "Rankings made from real NASA numbers.",
+   "ja": "NASAの本物の数字で、ランキングを作っています。"
   },
-  "avatar": "media/avatars/machine_ranking.jpg"
+  "avatar": "media/avatars/machine_ranking.jpg",
+  "kind": "channel"
  },
  "opportunity_trailer": {
   "name": {
@@ -152,113 +186,146 @@
   "place": "mars",
   "followers": 0,
   "bio": {
-   "en": "A film-trailer style story about NASA's Opportunity rover (2004–). Made by students with real NASA images; facts checked against NASA sources. This is an in-story trailer, not a real ad.",
-   "ja": "NASAの火星探査車オポチュニティ（2004〜）を、映画の予告編の形で描きました。学生が作っています。画像はNASAの本物、事実はNASAの資料で確認しています。 これは作品の中の「予告」で、本物の広告ではありません。"
+   "en": "Opportunity’s 14 years, cut like a movie trailer.",
+   "ja": "オポチュニティの14年を、映画の予告の形にしました。"
   },
-  "avatar": "media/avatars/opportunity_trailer.jpg"
+  "avatar": "media/avatars/opportunity_trailer.jpg",
+  "kind": "pr"
  },
  "opportunity_rover": {
   "name": {
-   "en": "Opportunity (fan-made story)",
-   "ja": "オポチュニティ（ファンメイドの物語）"
+   "en": "Opportunity",
+   "ja": "オポチュニティ"
   },
   "place": "mars",
   "followers": 0,
   "avatar": "media/avatars/opportunity_rover.jpg",
   "bio": {
-   "en": "Mars rover, 2004–2018. Planned for 90 days, kept going for over 14 years. Made by students; facts checked against NASA sources.",
-   "ja": "火星探査車（2004〜2018）。予定は90日、実際は14年以上。学生が作っています。事実はNASAの資料で確認しています。"
+   "en": "Mars rover. I came for 90 days and stayed for 14 years.",
+   "ja": "火星の探査車。90日の予定で来て、14年いました。"
+  },
+  "kind": "machine",
+  "since": {
+   "en": "Out of range since June 2018",
+   "ja": "2018年6月から圏外"
   }
  },
  "tanken_shindan": {
   "name": {
-   "en": "Which Space Machine Are You? (fan-made)",
-   "ja": "探査機タイプ診断（ファンメイド）"
+   "en": "Which Machine Are You?",
+   "ja": "探査機タイプ診断"
   },
   "place": "deep",
   "followers": 0,
   "avatar": "media/avatars/tanken_shindan.jpg",
   "bio": {
-   "en": "A just-for-fun quiz. The quiz is play; the facts about the machines are real. Made by students; facts checked against NASA sources.",
-   "ja": "お遊びの診断です。診断はお遊び、機械の話は本当です。学生が作っています。事実はNASAの資料で確認しています。"
-  }
+   "en": "A just-for-fun quiz. The machine facts are real.",
+   "ja": "お遊びの診断。機械の話は本当です。"
+  },
+  "kind": "channel"
  },
  "phoenix_lander": {
   "name": {
-   "en": "Phoenix lander (fan-made)",
-   "ja": "フェニックス（ファンメイド）"
+   "en": "Phoenix",
+   "ja": "フェニックス"
   },
   "place": "mars",
   "followers": 0,
   "bio": {
-   "en": "Mars lander, 2008. Dug into the arctic plains and confirmed water ice under the soil. Still there. Made by students; facts checked against NASA sources.",
-   "ja": "火星の着陸機（2008年）。北極の平原をほって、地面の下の氷をたしかめた。今もそこにいます。学生が作っています。事実はNASAの資料で確認しています。"
+   "en": "I dug for ice on the arctic plains of Mars.",
+   "ja": "火星の北極の平原で、氷をほりました。"
   },
-  "avatar": "media/avatars/phoenix_lander.jpg"
+  "avatar": "media/avatars/phoenix_lander.jpg",
+  "kind": "machine",
+  "since": {
+   "en": "Out of range since November 2008",
+   "ja": "2008年11月から圏外"
+  }
  },
  "dawn_spacecraft": {
   "name": {
-   "en": "Dawn (fan-made story)",
-   "ja": "ドーン（ファンメイドの物語）"
+   "en": "Dawn",
+   "ja": "ドーン"
   },
   "place": "deep",
   "followers": 0,
   "bio": {
-   "en": "Orbited the asteroid Vesta and the dwarf planet Ceres. Slow to speed up, never stopped. Still circling Ceres. Made by students; facts checked against NASA sources.",
-   "ja": "小惑星ベスタと準惑星ケレスのまわりを回った探査機。加速はおそいけど、止まらない。今もケレスのまわり。学生が作っています。事実はNASAの資料で確認しています。"
+   "en": "Slow to speed up. Never stopped. Now circling Ceres.",
+   "ja": "加速はおそい。止まったことはない。いまはケレスのまわりを回ってます。"
   },
-  "avatar": "media/avatars/dawn_spacecraft.jpg"
+  "avatar": "media/avatars/dawn_spacecraft.jpg",
+  "kind": "machine",
+  "since": {
+   "en": "Out of range since 2018",
+   "ja": "2018年から圏外"
+  }
  },
  "sojourner_rover": {
   "name": {
-   "en": "Sojourner (fan-made story)",
-   "ja": "ソジャーナ（ファンメイドの物語）"
+   "en": "Sojourner",
+   "ja": "ソジャーナ"
   },
   "place": "mars",
   "followers": 0,
   "bio": {
-   "en": "The first rover on Mars, 1997. Planned for 7 days, worked for 83. Top speed: 1 cm per second. Made by students; facts checked against NASA sources.",
-   "ja": "火星を走ったはじめての探査車（1997年）。予定は7日、実際は83日。最高速度は秒速1cm。学生が作っています。事実はNASAの資料で確認しています。"
+   "en": "The first rover on Mars. Top speed: 1 centimeter per second.",
+   "ja": "火星を走った最初の探査車。最高速度は秒速1cm。"
   },
-  "avatar": "media/avatars/sojourner_rover.jpg"
+  "avatar": "media/avatars/sojourner_rover.jpg",
+  "kind": "machine",
+  "since": {
+   "en": "Out of range since September 1997",
+   "ja": "1997年9月から圏外"
+  }
  },
  "viking2_lander": {
   "name": {
-   "en": "Viking 2 (fan-made story)",
-   "ja": "バイキング2号（ファンメイドの物語）"
+   "en": "Viking 2",
+   "ja": "バイキング2号"
   },
   "place": "mars",
   "followers": 0,
   "bio": {
-   "en": "Mars lander on Utopia Planitia since 1976. Tilted 8.5 degrees. Frost in winter. Still there. Made by students; facts checked against NASA sources.",
-   "ja": "火星・ユートピア平原の着陸機（1976年〜）。8.5度かたむいてます。冬は霜。今もそこにいます。学生が作っています。事実はNASAの資料で確認しています。"
+   "en": "Mars lander. 50 years on Utopia Planitia. I lean a little.",
+   "ja": "火星の着陸機。ユートピア平原に住んで50年。ちょっとかたむいてます。"
   },
-  "avatar": "media/avatars/viking2_lander.jpg"
+  "avatar": "media/avatars/viking2_lander.jpg",
+  "kind": "machine",
+  "since": {
+   "en": "Out of range since April 1980",
+   "ja": "1980年4月から圏外"
+  }
  },
  "pioneer11": {
   "name": {
-   "en": "Pioneer 11 (fan-made story)",
-   "ja": "パイオニア11号（ファンメイドの物語）"
+   "en": "Pioneer 11",
+   "ja": "パイオニア11号"
   },
   "place": "deep",
   "followers": 0,
   "bio": {
-   "en": "First spacecraft to visit Saturn (1979), by way of Jupiter. No return ticket. Still flying outward. Made by students; facts checked against NASA sources.",
-   "ja": "木星を通って、土星に行ったはじめての探査機（1979年）。帰りの便はなし。今も外へ飛びつづけています。学生が作っています。事実はNASAの資料で確認しています。"
+   "en": "Jupiter, then Saturn. No return ticket.",
+   "ja": "木星のつぎに、土星へ。帰りの便はありません。"
   },
-  "avatar": "media/avatars/pioneer11.jpg"
+  "avatar": "media/avatars/pioneer11.jpg",
+  "kind": "machine",
+  "since": {
+   "en": "Out of range since 1995",
+   "ja": "1995年から圏外"
+  }
  },
  "machine_aruaru": {
   "name": {
-   "en": "Left-Behind Machines: So Relatable (fan-made)",
-   "ja": "置いてきた機械あるある（ファンメイド）"
+   "en": "Left-Behind Machines: So Relatable",
+   "ja": "置いてきた機械あるある"
   },
   "place": "mars",
   "followers": 0,
   "bio": {
-   "en": "Things machines left on other worlds always seem to do, shown with real NASA photos. Made by students; facts checked against NASA sources.",
-   "ja": "置いてきた機械の「あるある」を、NASAの本物の写真で。学生が作っています。事実はNASAの資料で確認しています。"
+   "en": "Things left-behind machines always do, in real photos.",
+   "ja": "置いてきた機械の「あるある」を、本物の写真で。"
   },
-  "avatar": "media/avatars/machine_aruaru.jpg"
+  "avatar": "media/avatars/machine_aruaru.jpg",
+  "kind": "channel"
  }
 }

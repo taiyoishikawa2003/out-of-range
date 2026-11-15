@@ -66,7 +66,7 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
   let gate = null, gateOpt = null;
   if (!started) {
     gate = h('button', { class: 'gate', type: 'button', 'aria-label': t('gate.play') },
-      h('span', { class: 'gate-brand', text: 'OUT OF RANGE' }), h('span', { class: 'gate-tag', text: t('gate.tag') }),
+      h('span', { class: 'gate-brand', text: 'OUT OF RANGE' }), t('gate.sub') ? h('span', { class: 'gate-sub' }, h('span', { class: 'bars', 'aria-hidden': 'true' }, h('i'), h('i'), h('i'), h('i')), t('gate.sub')) : null, h('span', { class: 'gate-tag', text: t('gate.tag') }),
       h('span', { class: 'gate-ic' }, icon('play')), h('b', { text: t('gate.play') }), h('small', { text: t('gate.sound') }));
     gateOpt = furiButton('gate-opt');
     gate.addEventListener('click', e => {
@@ -83,12 +83,14 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
     feed.append(el); items.push({ post: p, el, api: null, built: false });
   });
   if (!posts.length) feed.append(h('article', { class: 'feed-end' }, h('p', { text: t('feed.followEmpty') }), h('button', { class: 'btn', type: 'button', text: t('feed.foryou'), onclick: () => { destroy(); renderFeed(view, { tab: 'foryou' }); } })));
-  else feed.append(h('article', { class: 'feed-end', 'aria-label': t('feed.end.title') }, h('h2', { text: t('feed.end.title') }), h('p', { text: t('feed.end.text') }),
-    h('button', { class: 'btn', type: 'button', text: t('feed.replay'), onclick: () => go(0, 'auto') }),
+  else feed.append(h('article', { class: 'feed-end', 'aria-label': t('feed.end.title') },
+    h('span', { class: 'bars big', 'aria-hidden': 'true' }, h('i'), h('i'), h('i'), h('i')),
+    h('h2', { text: t('feed.end.title') }), h('p', { text: t('feed.end.text') }),
+    h('a', { class: 'btn', href: '#/map', text: t('map.title') }),
     h('a', { class: 'btn ghost', href: '#/me', text: `${t('stamp.title')} ${S.stampIds().filter(id => db.posts.some(p => p.id === id)).length}/${db.posts.length}` }),
     h('a', { class: 'btn ghost', href: '#/create', text: t('feed.makeOwn') }),
-    h('a', { class: 'btn ghost', href: '#/map', text: t('map.title') }),
-    h('a', { class: 'btn ghost', href: 'lost/', text: t('feed.lost') })));
+    h('a', { class: 'btn ghost', href: 'lost/', text: t('feed.lost') }),
+    h('button', { class: 'btn ghost', type: 'button', text: t('feed.replay'), onclick: () => go(0, 'auto') })));
 
   function build(i) {
     const it = items[i]; if (!it || it.built) return;

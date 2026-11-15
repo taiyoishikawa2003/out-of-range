@@ -39,8 +39,9 @@ export function renderDiscover(view, q = '') {
     const accs = Object.entries(db.accounts).filter(([k, a]) => !a.hidden && (place === 'all' || a.place === place) && (!qq || (k + ' ' + L(a.name) + ' ' + L(a.bio)).toLowerCase().includes(qq)));
     res.replaceChildren(
       (place === 'all' && !qq) ? h('a', { class: 'mapbanner', href: '#/map' }, h('b', { text: t('map.title') }), h('span', { text: t('map.sub') })) : '',
-      accs.length ? h('h2', { text: t('disc.accounts') }) : '',
-      accs.length ? h('div', { class: 'chips' }, accs.map(([k, a]) => h('a', { class: 'chip', href: '#/u/' + k, style: { display: 'flex', alignItems: 'center', textDecoration: 'none' }, text: L(a.name) }))) : '',
+      ...[['disc.accounts', accs.filter(([, a]) => a.kind === 'machine')], ['disc.channels', accs.filter(([, a]) => a.kind !== 'machine')]].flatMap(([label, list]) => list.length ? [
+        h('h2', { text: t(label) }),
+        h('div', { class: 'chips' }, list.map(([k, a]) => h('a', { class: 'chip', href: '#/u/' + k, style: { display: 'flex', alignItems: 'center', textDecoration: 'none' }, text: L(a.name) })))] : []),
       h('h2', { text: t('disc.posts') }),
       posts.length ? grid(posts) : h('p', { class: 'hint', text: t('disc.none') }));
   };
@@ -63,10 +64,13 @@ export function renderProfile(view, handle) {
     h('div', { class: 'backbar' }, h('button', { class: 'iconbtn', type: 'button', 'aria-label': t('back'), onclick: () => history.back() }, icon('left'))),
     h('div', { class: 'prof' },
       h('div', { class: 'big' }, a.avatar ? h('img', { src: a.avatar, alt: '' }) : (L(a.name) || handle)[0]),
-      h('h1', { style: { margin: 0 }, text: L(a.name) || handle }), h('div', { class: 'hint', text: '@' + handle }),
+      h('h1', { style: { margin: 0 }, text: L(a.name) || handle }),
+      h('div', { class: 'hint' }, '@' + handle, a.kind ? h('span', { class: 'fan', text: t('prof.fan') }) : ''),
+      a.since ? h('div', { class: 'since' }, h('span', { class: 'bars', 'aria-hidden': 'true' }, h('i'), h('i'), h('i'), h('i')), L(a.since)) : '',
       h('div', { class: 'stats' }, h('div', {}, h('b', { text: posts.length }), h('span', { text: t('prof.posts') })),
         h('div', {}, fc, h('span', { text: t('prof.followers') })), h('div', {}, h('b', { text: fmt(likes) }), h('span', { text: t('prof.likes') }))),
-      fb, a.bio ? h('p', { class: 'bio', text: L(a.bio) }) : ''),
+      fb, a.bio ? h('p', { class: 'bio', text: L(a.bio) }) : '',
+      a.kind ? h('p', { class: 'hint pnote', text: t('prof.note.' + a.kind) }) : ''),
     grid(posts));
   loadImgs(page);
   view.replaceChildren(page);
