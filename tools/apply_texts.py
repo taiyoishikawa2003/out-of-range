@@ -6,7 +6,7 @@ because those rebuild a post from its own module and would bring old wording bac
 """
 import json, pathlib, sys
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
-from texts import ACCOUNTS, POSTS, ORDER
+from texts import ACCOUNTS, POSTS, ORDER, LIKES
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PJ, AJ = ROOT / 'data/posts.json', ROOT / 'data/accounts.json'
@@ -79,6 +79,18 @@ for pid, tx in POSTS.items():
         p['sources'] = [s for s in p.get('sources', []) if keep(s)]
         have = {s.get('title') for s in p['sources'] if isinstance(s.get('title'), str)}
         p['sources'] += [s for s in add_src if s['title'] not in have]
+
+# ---- starting counts (staged) ----
+fol = {}
+for p in posts:
+    n = LIKES.get(p['id'])
+    if n is None:
+        problems.append(f"no like count for {p['id']}"); continue
+    p['stats'] = {**(p.get('stats') or {}), 'likes': n, 'saves': n // 9}
+    fol[p['account']] = fol.get(p['account'], 0) + n
+for handle, n in fol.items():
+    if handle in accounts:
+        accounts[handle]['followers'] = round(n * 0.4 / 10) * 10
 
 # ---- order ----
 missing = [i for i in ORDER if i not in by_id]

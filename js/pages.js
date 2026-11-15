@@ -5,6 +5,16 @@ import * as S from './store.js';
 import { db, allPosts, account, postsBy, thumbOf, reloadMine } from './data.js';
 import { fmt, toast } from './sheets.js';
 
+// Everything that is more than a post, in one place (shown at the top of Discover)
+const HUB = [
+  ['🎮', '#/p/lag-1', { ja: '火星の車を運転', en: 'Drive a Mars rover' }, { ja: 'ラグ20分のゲーム', en: 'A game with a 20-minute lag' }],
+  ['🔮', '#/p/shindan-1', { ja: 'タイプ診断', en: 'Which machine are you?' }, { ja: 'あなたはどの探査機？', en: '5 questions' }],
+  ['🗺', '#/map', { ja: '今どこにいる？', en: 'Where are they now?' }, { ja: '月と火星の地図', en: 'Maps of the Moon and Mars' }],
+  ['🧾', 'lost/', { ja: '遺失物センター', en: 'Lunar Lost & Found' }, { ja: '月の落とし物の窓口', en: 'Things left on the Moon' }],
+  ['✏️', '#/create', { ja: '投稿を作る', en: 'Make a post' }, { ja: '本物の写真で', en: 'With real NASA photos' }],
+  ['✅', '#/me', { ja: 'スタンプ', en: 'Fact-check stamps' }, { ja: '出典を開いて集める', en: 'Open sources to collect' }],
+];
+
 function tile(p, { onDelete } = {}) {
   const lk = (p.stats?.likes || 0) + (S.isLiked(p.id) ? 1 : 0);
   const a = h('a', { href: '#/p/' + encodeURIComponent(p.id), 'aria-label': `@${p.account}: ${L(p.caption)}` },
@@ -38,7 +48,8 @@ export function renderDiscover(view, q = '') {
     const posts = allPosts().filter(p => (place === 'all' || p.place === place) && (!qq || searchText(p).includes(qq)));
     const accs = Object.entries(db.accounts).filter(([k, a]) => !a.hidden && (place === 'all' || a.place === place) && (!qq || (k + ' ' + L(a.name) + ' ' + L(a.bio)).toLowerCase().includes(qq)));
     res.replaceChildren(
-      (place === 'all' && !qq) ? h('a', { class: 'mapbanner', href: '#/map' }, h('b', { text: t('map.title') }), h('span', { text: t('map.sub') })) : '',
+      ...((place === 'all' && !qq) ? [h('h2', { class: 'hub-h', text: t('hub.title') }),
+        h('div', { class: 'hub' }, HUB.map(([em, href, title, sub]) => h('a', { href }, h('span', { class: 'em', 'aria-hidden': 'true', text: em }), h('span', {}, h('b', { text: L(title) }), h('small', { text: L(sub) })))))] : []),
       ...[['disc.accounts', accs.filter(([, a]) => a.kind === 'machine')], ['disc.channels', accs.filter(([, a]) => a.kind !== 'machine')]].flatMap(([label, list]) => list.length ? [
         h('h2', { text: t(label) }),
         h('div', { class: 'chips' }, list.map(([k, a]) => h('a', { class: 'chip', href: '#/u/' + k, style: { display: 'flex', alignItems: 'center', textDecoration: 'none' }, text: L(a.name) })))] : []),

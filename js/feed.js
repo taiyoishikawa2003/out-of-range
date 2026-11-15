@@ -70,7 +70,7 @@ export function renderFeed(view, { startId, tab = 'foryou' } = {}) {
       h('span', { class: 'gate-ic' }, icon('play')), h('b', { text: t('gate.play') }), h('small', { text: t('gate.sound') }));
     gateOpt = furiButton('gate-opt');
     gate.addEventListener('click', e => {
-      e.stopPropagation(); AU.unlock(); started = true; gate.remove(); gate = null; gateOpt.remove();
+      e.stopPropagation(); AU.unlock(); unlockVideos(); started = true; gate.remove(); gate = null; gateOpt.remove();
       setMuted(false);
       const it = items[active]; const vid = it?.el.querySelector('video'); if (vid) vid.currentTime = 0;
       if (it?.api) { it.api.deactivate(); it.api.activate(); }
@@ -264,8 +264,43 @@ function appPost(p, el, stage) {
     preload() {}, unload() {}, applyMute() {}, slide() {}, currentText: () => L(p.caption) };
 }
 
+/* Sound on phones. An iPhone lets a video play with sound only if that same <video> element was once started during a tap.
+   So each video post gets one element for the whole visit (it survives leaving the feed and coming back),
+   and every tap "unlocks" the elements that have not been unlocked yet by playing a tiny silent file on them. */
+const VPOOL = new Map();
+function pooledVideo(id) {
+  let v = VPOOL.get(id);
+  if (!v) {
+    v = document.createElement('video');
+    v.setAttribute('playsinline', ''); v.setAttribute('webkit-playsinline', ''); v.loop = true; v.preload = 'none'; v.muted = true;
+    VPOOL.set(id, v);
+  }
+  return v;
+}
+const SILENCE = 'media/silence.mp3';
+export function unlockVideos() {
+  for (const p of db.posts) {
+    if (p.type !== 'video') continue;
+    const v = pooledVideo(p.id);
+    if (v._ok) continue;
+    v._ok = true;
+    if (v._active) continue;                                  // the post on screen is started by the tap itself
+    try {
+      const real = !!v.getAttribute('src');
+      if (!real) v.src = SILENCE;
+      v.muted = true;
+      const pr = v.play();
+      if (pr) pr.then(() => { if (v._active) return; v.pause(); if ((v.getAttribute('src') || '') === SILENCE) { v.removeAttribute('src'); v.load(); } }).catch(() => {});
+    } catch {}
+  }
+}
+if (typeof document !== 'undefined') document.addEventListener('click', unlockVideos, true);
+
 function videoPost(p, el, stage, setMuted) {
-  const v = h('video', { playsinline: true, 'webkit-playsinline': true, loop: true, preload: 'none', poster: L(p.video.poster), muted: true, 'aria-label': L(p.caption) });
+  const v = pooledVideo(p.id);
+  v._ac?.abort(); const ac = v._ac = new AbortController();       // listeners from an earlier visit to the feed
+  v.pause(); if (v.getAttribute('src')) { v.removeAttribute('src'); v.load(); }
+  v.poster = L(p.video.poster); v.setAttribute('aria-label', L(p.caption)); v.playbackRate = 1; v._active = false;
   v.muted = true;
   if (p.video.fit === 'contain') el.classList.add('contain');
   const capBox = h('div', { class: 'captions', 'aria-hidden': 'true' });
@@ -282,18 +317,18 @@ function videoPost(p, el, stage, setMuted) {
   cc?.addEventListener('click', e => { e.stopPropagation(); S.setCC(!S.isCC()); drawCC(); toast(t(S.isCC() ? 'cc.on' : 'cc.off')); });
   drawCC();
   stage.append(v, capBox, playI, spin, rate, errBox, tlabel);
-  v.addEventListener('waiting', () => el.classList.add('buffering'));
-  ['playing', 'canplay', 'pause'].forEach(ev => v.addEventListener(ev, () => el.classList.remove('buffering')));
-  v.addEventListener('error', () => { el.classList.remove('buffering'); if (loaded) errBox.hidden = false; });
+  v.addEventListener('waiting', () => el.classList.add('buffering'), { signal: ac.signal });
+  ['playing', 'canplay', 'pause'].forEach(ev => v.addEventListener(ev, () => el.classList.remove('buffering'), { signal: ac.signal }));
+  v.addEventListener('error', () => { el.classList.remove('buffering'); if (loaded && v.getAttribute('src') !== SILENCE) errBox.hidden = false; }, { signal: ac.signal });
   const mmss = x => `${Math.floor(x / 60)}:${String(Math.floor(x % 60)).padStart(2, '0')}`;
   let loaded = false, isActive = false, cues = [], wantPlay = false;
   const loadCues = async () => { cues = await loadVtt(p.video.captions?.[getLang()] || p.video.captions?.en); };
-  const src = () => { if (!loaded) { v.src = L(p.video.src); loaded = true; loadCues(); } };
+  const src = () => { if (!loaded) { v.src = L(p.video.src); loaded = true; errBox.hidden = true; loadCues(); } };
   const applyMute = () => { v.muted = S.isMuted(); unmute.hidden = !S.isMuted() || !isActive; };
   const play = () => { src(); wantPlay = true; v.play().then(() => { el.classList.add('playing'); el.classList.remove('paused'); }).catch(err => {
     if (err?.name === 'AbortError') return; // interrupted by a newer play/pause, not a block
     // autoplay with sound blocked → fall back to muted
-    if (!v.muted) { v.muted = true; unmute.hidden = !isActive; v.play().catch(() => el.classList.add('paused')); } else el.classList.add('paused');
+    if (!v.muted) { v.muted = true; unmute.hidden = !isActive; VPOOL.forEach(x => { x._ok = false; }); v.play().catch(() => el.classList.add('paused')); } else el.classList.add('paused');   // the next tap unlocks every video again
   }); };
   const pause = () => { wantPlay = false; v.pause(); el.classList.remove('playing'); };
   let raf;
@@ -313,8 +348,8 @@ function videoPost(p, el, stage, setMuted) {
   prog.addEventListener('keydown', e => { if (e.key === 'ArrowRight') { v.currentTime += 2; e.stopPropagation(); } if (e.key === 'ArrowLeft') { v.currentTime -= 2; e.stopPropagation(); } });
   return {
     extra: [prog, unmute, cc, full],
-    activate() { isActive = true; applyMute(); play(); cancelAnimationFrame(raf); tick(); },
-    deactivate() { isActive = false; pause(); unmute.hidden = true; cancelAnimationFrame(raf); },
+    activate() { isActive = v._active = true; applyMute(); play(); cancelAnimationFrame(raf); tick(); },
+    deactivate() { isActive = v._active = false; pause(); unmute.hidden = true; cancelAnimationFrame(raf); },
     preload() { if (!loaded) { v.preload = 'auto'; src(); } },
     preloadLight() { if (!loaded) { v.preload = 'metadata'; src(); } },
     setRate(r) { v.playbackRate = r; rate.hidden = r === 1; if (r !== 1) unmute.hidden = true; else applyMute(); },

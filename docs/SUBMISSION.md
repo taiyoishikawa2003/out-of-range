@@ -94,6 +94,7 @@ Each post starts from one NASA record, and we picked the format that fits the re
 - Numbers we calculated ourselves are marked as our calculation, with the assumptions written out.
 - Real photos are labelled "Real photo". NASA artist's concepts are labelled. We use no AI-generated images, video or voices.
 - Lines we made up (the chats, the POV thoughts, the comments) are labelled as ours in each post.
+- The like and follower counts the feed starts with are staged, and the About page says so.
 
 **How it was built**
 
