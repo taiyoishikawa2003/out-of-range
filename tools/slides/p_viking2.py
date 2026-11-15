@@ -82,12 +82,12 @@ SLIDES = [
     tilt(),
     bx('着陸したら、8.5度かたむいてた', 'It landed with an 8.5° tilt', 'sm'),
     f'<div class="cr" style="position:static;max-width:860px">{t("わたしたちが描いたイラストです。本当の地面は、ほぼ平ら", "Our own drawing. The real ground is nearly level")}</div>', style='top:310px;gap:26px')),
- dict(dur=5, alt={'ja': '庭。見わたすかぎり岩。右下のまるいものは、自分の足', 'en': 'The yard. Rocks as far as you can see. The round thing at lower right is its own foot'},
+ dict(dur=5, alt={'ja': '庭。見わたすかぎり岩。大きい岩は、はば90センチくらい', 'en': 'The yard. Rocks as far as you can see. The big ones are about 3 feet across'},
   html=lambda: bg('PIA00396', '70% 50%', 1.1, BLUR) + col(
     tag('庭', 'The yard', 'white sm'),
     photo('PIA00396', '本物の写真：着陸して数分後の1枚目。1976年9月3日（NASA/JPL）', 'Real photo: its first picture, minutes after landing on Sept. 3, 1976 (NASA/JPL)', 860, 1.2, 560, '100% 50%'),
     h('見わたすかぎり<em>岩</em>', '<em>Rocks</em> as far as<br>you can see', 'md'),
-    bx('右下のまるいのは、自分の足', 'The round thing at lower right is my own foot', 'sm'), style='top:310px;gap:28px')),
+    bx('大きい岩は、はば90cmくらい', 'The big ones are about 3 feet across', 'sm'), style='top:310px;gap:28px')),
  dict(dur=5.5, alt={'ja': '冬。庭が白くなる。うすい水の氷、霜。1979年5月18日の本物の写真', 'en': 'In winter the yard turns white. A thin coat of water ice: frost. A real photo from May 18, 1979'},
   html=lambda: bg('PIA00571', '50% 60%', 1.1, BLUR) + col(
     tag('冬', 'In winter', 'blue sm'),
@@ -158,7 +158,7 @@ Note: “rent $0” and the room-tour format are ours. The floor plan and the ti
   pj('PIA00571', 'Ice on Mars Utopia Planitia Again (May 18, 1979; thin coating of water ice; earlier frost remained about 100 days)', 'NASA/JPL'),
   pj('PIA00573', 'Frost at the Viking Lander 2 Site (Sept. 25, 1977)', 'NASA/JPL'),
   pj('PIA01882', 'Viking Lander 2 Imaged from Orbit (lander about 3 meters across; located by the HiRISE camera in 2006)', 'NASA/JPL-Caltech/University of Arizona'),
-  nasa_img('ARC-1976-AC76-1011-2-15', 'Viking 2: a utopian bright summer afternoon on Mars (Sept. 7, 1976)', 'NASA'),
+  nasa_img('ARC-1976-AC76-1011-2-15', 'Viking 2: a utopian bright summer afternoon on Mars (Sept. 7, 1976; rocks as large as three feet across)', 'NASA'),
   fact("For @phoenix_lander's comment: Phoenix (NASA Science): verified water ice in the Martian subsurface", 'https://science.nasa.gov/mission/phoenix/'),
   src('calc', 'Sept. 3, 1976 to April 12, 1980 is 3 years 7 months; 1976 to 2026 is 50 years', V2),
   music('Local Forecast - Elevator')])
