@@ -221,5 +221,31 @@
    "ja": "火星を走ったはじめての探査車（1997年）。予定は7日、実際は83日。最高速度は秒速1cm。学生が作っています。事実はNASAの資料で確認しています。"
   },
   "avatar": "media/avatars/sojourner_rover.jpg"
+ },
+ "viking2_lander": {
+  "name": {
+   "en": "Viking 2 (fan-made story)",
+   "ja": "バイキング2号（ファンメイドの物語）"
+  },
+  "place": "mars",
+  "followers": 0,
+  "bio": {
+   "en": "Mars lander on Utopia Planitia since 1976. Tilted 8.5 degrees. Frost in winter. Still there. Made by students; facts checked against NASA sources.",
+   "ja": "火星・ユートピア平原の着陸機（1976年〜）。8.5度かたむいてます。冬は霜。今もそこにいます。学生が作っています。事実はNASAの資料で確認しています。"
+  },
+  "avatar": "media/avatars/viking2_lander.jpg"
+ },
+ "pioneer11": {
+  "name": {
+   "en": "Pioneer 11 (fan-made story)",
+   "ja": "パイオニア11号（ファンメイドの物語）"
+  },
+  "place": "deep",
+  "followers": 0,
+  "bio": {
+   "en": "First spacecraft to visit Saturn (1979), by way of Jupiter. No return ticket. Still flying outward. Made by students; facts checked against NASA sources.",
+   "ja": "木星を通って、土星に行ったはじめての探査機（1979年）。帰りの便はなし。今も外へ飛びつづけています。学生が作っています。事実はNASAの資料で確認しています。"
+  },
+  "avatar": "media/avatars/pioneer11.jpg"
  }
 }
