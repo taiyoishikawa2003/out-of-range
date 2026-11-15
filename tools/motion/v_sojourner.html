@@ -1,0 +1,82 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../slides/slides.css"><link rel="stylesheet" href="motion.css">
+<style>
+.vb{position:absolute;left:-60px;top:-60px;width:1200px;height:2040px;object-fit:cover;filter:blur(28px) brightness(.5) saturate(1.15)}
+.day{position:absolute;left:40px;right:160px;top:292px;text-align:center}
+.day small{display:block;font-size:36px;font-weight:700;letter-spacing:.1em;margin-bottom:12px;text-shadow:0 2px 10px #000,0 0 4px #000}
+.day b{display:inline-block;font-size:94px;line-height:1.16;background:#ffd21f;color:#161616;border-radius:26px;padding:4px 46px;transform:rotate(-2deg);box-shadow:0 8px 0 rgba(0,0,0,.35);font-variant-numeric:tabular-nums}
+.pw{position:absolute;left:60px;width:820px;top:560px}
+.pc{border:10px solid #fff;border-radius:22px;overflow:hidden;box-shadow:0 22px 50px rgba(0,0,0,.6);background:#000;position:relative}
+.pc img{display:block;width:100%;object-fit:cover}
+.pc .lb{position:absolute;left:14px;bottom:14px;font-size:34px;line-height:1.3;background:#161616;color:#fff;padding:4px 16px;border-radius:10px}
+.cap{position:absolute;left:40px;right:160px;text-align:center}
+.cap .bxw{margin-top:22px}
+.cal{background:#fff;color:#161616;border-radius:26px;padding:30px 26px 36px;box-shadow:0 22px 50px rgba(0,0,0,.6);text-align:center}
+.cal .cw{font-size:40px;margin-bottom:22px;color:#555}
+.cg{display:flex;gap:14px;justify-content:center}
+.cg i{width:96px;height:96px;border-radius:18px;background:#d9f5e1;color:#1c8a43;display:grid;place-items:center;font-style:normal;font-size:54px}
+.cg i.last{background:#ffd21f;color:#161616;box-shadow:0 0 0 8px #ff3b3b}
+.cg i.x{background:#ff3b3b;color:#fff}
+.cg.r2{justify-content:flex-start;margin:14px 0 0 7px}
+.cw2{font-size:36px;color:#ff3b3b;margin-top:10px;text-align:left;padding-left:124px;margin-top:-76px;height:76px;line-height:76px}
+</style></head>
+<body><div class="s" id="stage"></div>
+<script type="module">
+// "Day N of working on Mars": a daily-vlog style diary of Sojourner, planned for 7 days, worked for 83 (about 31 s). Facts: NASA/JPL.
+import { M, T, LANG, an, el, img, sfx, music, win, pop, punch, shake, flash, scene, add, h, bx, done } from './motion.js';
+const st = document.getElementById('stage'); M.dur = 31.2; M.poster = 9.9; const ja = LANG === 'ja';
+music('Carefree', 0, 21.0, { from: 0.4, gain: 0.6, fadeOut: 0.12 });
+music('Carefree', 25.3, M.dur, { from: 62, gain: 0.5, fadeIn: 0.5, fadeOut: 1.0 });
+const D = n => ja ? `${n}日目` : `DAY ${n}`, SER = T('火星ではたらく Vlog', 'WORKING ON MARS · VLOG');
+const sway = (e, a, b) => an(e, [{ transform: 'rotate(-1.4deg)' }, { transform: 'rotate(.7deg) translate(6px,-8px)' }, { transform: 'rotate(-.5deg) translate(-4px,5px)' }], { duration: (b - a) * 1000, delay: a * 1000, easing: 'ease-in-out' });
+function base(a, b, bgId) { const sc = el('<div class="sc"></div>', st); win(sc, a, b); el(`<img class="vb" src="${img(bgId)}">`, sc); return sc; }
+function dayChip(sc, n, at, snd = 'pop') { const d = el(`<div class="day"><small>${SER}</small><b>${D(n)}</b></div>`, sc); pop(d.querySelector('b'), at, { from: 'rotate(-2deg) scale(.4)', to: 'rotate(-2deg)', snd }); return d; }
+function card(sc, id, at, { hgt = 540, pos = '50% 50%', top = 560, w = 820, lb = '' } = {}) {
+  const wr = el(`<div class="pw" style="top:${top}px;width:${w}px;left:${60 + (820 - w) / 2}px"><div class="pc"><img src="${img(id)}" style="height:${hgt}px;object-position:${pos}">${lb ? `<span class="lb">${lb}</span>` : ''}</div></div>`, sc);
+  pop(wr, at, { from: 'scale(.86) translateY(40px)', snd: null }); return wr;
+}
+function cap(sc, html, at, top, opt) { const c = el(`<div class="cap" style="top:${top}px">${html}</div>`, sc); pop(c, at, opt); return c; }
+const crd = (sc, t, top = 1420) => el(`<div class="cr" style="top:${top}px">${t}</div>`, sc);
+
+// Day 1
+let sc = base(0, 3.7, 'PIA00621'); dayChip(sc, 1, 0.1); sway(card(sc, 'PIA00621', 0.2, { pos: '48% 60%' }).firstChild, 0, 3.7);
+cap(sc, h(T('着いた。<br>でも、まだ出られない', 'Landed.<br>But I can’t get out yet'), 'md') + bx(T('エアバッグが出口をふさいでた', 'An airbag was blocking the ramp'), 'sm'), 0.6, 1150);
+crd(sc, T('本物の写真：1日目。ソジャーナは、まだ着陸機の上（NASA/JPL）', 'Real photo: day 1. Sojourner is still on top of the lander (NASA/JPL)'), 1480);
+// Day 2
+sc = base(3.7, 6.9, 'PIA01551'); sfx(3.7, 'whoosh'); dayChip(sc, 2, 3.75); sway(card(sc, 'PIA01551', 3.8, { pos: '45% 50%' }).firstChild, 3.7, 6.9);
+cap(sc, h(T('やっと<br>地面におりた', 'Finally<br>on the ground'), 'md'), 4.2, 1150);
+crd(sc, T('本物の写真：地面におりたソジャーナ（NASA/JPL）', 'Real photo: Sojourner after rolling down to the ground (NASA/JPL)'));
+// Day 3: the "feeling productive" beat
+sc = base(6.9, 11.7, 'PIA00634'); sfx(6.9, 'whoosh'); dayChip(sc, 3, 6.95); sway(card(sc, 'PIA00634', 7.0, { hgt: 494 }).firstChild, 6.9, 11.7);
+cap(sc, h(T('<em>36cm</em>進んで<br>石をさわった', 'Drove <em>1.2 feet.</em><br>Touched a rock.'), 'md'), 7.4, 1110);
+const fp = cap(sc, bx(T('きょうは、もう充分はたらいた 😌', 'Feeling productive 😌'), 'yellow'), 9.3, 1330, { snd: 'ding' }); punch(fp, 9.56, { scale: 1.12 });
+crd(sc, T('本物の写真：3日目、石に機械をおし当てるソジャーナ（NASA/JPL）', 'Real photo: day 3, Sojourner pressing its instrument against a rock (NASA/JPL)'), 1470);
+// Day 7 and day 8: a drawn calendar (not a photo)
+const calHtml = extra => `<div class="pw" style="top:600px"><div class="cal"><div class="cw">${T('はたらく予定：7日', 'Work plan: 7 days')}</div><div class="cg">${[1, 2, 3, 4, 5, 6].map(i => `<i>✓</i>`).join('')}<i class="last">7</i></div>${extra}</div></div>`;
+sc = base(11.7, 14.7, 'PIA01122'); sfx(11.7, 'whoosh'); dayChip(sc, 7, 11.75); let c = el(calHtml(''), sc); pop(c, 11.8, { from: 'scale(.86) translateY(40px)', snd: null });
+punch(c.querySelector('.last'), 12.5, { scale: 1.5 }); sfx(12.5, 'ding');
+cap(sc, h(T('予定では<br>きょうが最終日', 'The plan says<br>today is my last day'), 'md'), 12.2, 960);
+sc = base(14.7, 17.0, 'PIA01122'); dayChip(sc, 8, 14.75, 'thud'); c = el(calHtml(`<div class="cg r2"><i class="x">8</i></div><div class="cw2">${T('← 予定にない', '← not in the plan')}</div>`), sc);
+const x8 = c.querySelector('.x'); pop(x8, 14.9, { from: 'scale(2.6)', snd: null }); shake(c, 15.0, 0.5, 12);
+cap(sc, h(T('…あれ？<br>まだ動ける', '…wait.<br>I can still move'), 'md'), 15.2, 1060);
+// Days 9 to 83: the counter runs, with real photos from days 52, 65 and 80
+sc = base(17.0, 21.0, 'PIA00766'); sfx(17.0, 'whoosh');
+const dc = el(`<div class="day"><small>${SER}</small><b></b></div>`, sc), num = dc.querySelector('b');
+const seg = [[17.0, 17.55, 9, 52], [18.45, 18.75, 52, 65], [19.65, 19.95, 65, 80], [20.75, 21.0, 80, 83]];
+M.ticks.push(t => { let v = 9; for (const [a, b, f, g] of seg) { if (t >= b) v = g; else if (t >= a) { v = Math.round(f + (g - f) * (t - a) / (b - a)); break; } else break; } num.textContent = D(v); });
+for (const [a, b] of seg) for (let x = a; x < b; x += 0.06) sfx(x, 'tick', 0.5);
+[['PIA00921', 17.55, 18.45, T('52日目　岩の名前は「シャーク」', 'Day 52 · a rock nicknamed “Shark”'), 620, 600], ['PIA00967', 18.75, 19.65, T('65日目　岩の名前は「モー」', 'Day 65 · a rock nicknamed “Moe”'), 620, 600], ['PIA01585', 19.95, 20.85, T('80日目　岩の名前は「チンプ」', 'Day 80 · a rock nicknamed “Chimp”'), 418, 820]]
+  .forEach(([id, a, b, lb, hgt, w]) => { const wr = card(sc, id, a, { hgt, w, top: 580 }); win(wr.firstChild, a, b); sfx(a, 'pop'); cap(sc, bx(lb, 'sm'), a, 580 + hgt + 50, { snd: null }).animate; const cp = sc.lastElementChild; win(cp.firstChild, a, b); });
+crd(sc, T('本物の写真（NASA/JPL）', 'Real photos (NASA/JPL)'), 1420);
+// Day 83: the lander stops answering
+sc = base(21.0, 25.3, 'PIA01121'); sfx(21.0, 'thud', 1.2); dayChip(sc, 83, 21.05, null); sway(card(sc, 'PIA01121', 21.1, { hgt: 380 }).firstChild, 21.0, 25.3);
+cap(sc, h(T('親機から<br>返事がこない', 'The lander has<br>stopped answering'), 'md'), 21.9, 1010, { snd: 'thud' });
+[23.2, 23.8, 24.4].forEach(t => sfx(t, 'tick', 0.7));
+crd(sc, T('本物の写真：ソジャーナから見た親機（着陸機）。33日目に撮影（NASA/JPL）', 'Real photo: the lander, as seen by Sojourner on day 33 (NASA/JPL)'));
+// Ending
+const s = scene(st, 25.3, M.dur, { bg: 'PIA01122', pos: '50% 50%', filt: 'brightness(.82)', move: { s0: 1.0, s1: 1.1 }, cr: T('本物の写真：ソジャーナ（NASA/JPL）', 'Real photo: Sojourner (NASA/JPL)') });
+add(s.col, h(T('7日の予定が<br><em>83日</em>', 'Planned: 7 days.<br>Worked: <em>83</em>')), 25.5, { snd: 'ding' });
+add(s.col, bx(T('火星を走った、はじめての探査車', 'The first rover ever to drive on Mars'), 'sm'), 27.0);
+const ec = el(`<div class="cap" style="top:1085px">${bx(T('このあと、どうなった？→ コメント欄 👇', 'What happened next? → comments 👇'), 'sm yellow')}</div>`, s.sc); pop(ec, 28.5);
+done();
+</script></body></html>

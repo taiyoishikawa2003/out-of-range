@@ -1,0 +1,81 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../slides/slides.css"><link rel="stylesheet" href="motion.css">
+<style>
+.vg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,rgba(0,0,0,.1),rgba(0,0,0,.7) 80%)}
+.q{position:absolute;left:40px;right:160px;text-align:center;font-family:'Noto Serif CJK JP','Noto Serif',serif;font-weight:900;font-size:88px;line-height:1.3;color:#fff;text-shadow:0 0 34px #000,0 0 12px #000,0 5px 12px #000;letter-spacing:.02em}
+.q em{font-style:normal;color:#ffd21f}
+.q.sm2{font-size:64px}
+.en .q{font-size:80px}.en .q.sm2{font-size:58px}
+.nm{position:absolute;left:40px;right:160px;text-align:center;font-size:170px;line-height:1.1;color:#ffd21f;text-shadow:0 0 34px #000,0 6px 14px #000;font-variant-numeric:tabular-nums}
+.nm small{font-size:64px;color:#fff;margin:0 10px}
+.nt{position:absolute;left:40px;right:160px;text-align:center}
+.nt>span{font-size:40px;line-height:1.4;background:rgba(0,0,0,.72);color:#fff;font-weight:700;padding:8px 22px;border-radius:12px;border:2px solid rgba(255,255,255,.35)}
+.gen{position:absolute;left:40px;right:160px;top:318px;text-align:center}
+.gen span{font-size:36px;font-weight:700;letter-spacing:.2em;color:#fff;opacity:.85;border-top:3px solid #fff;border-bottom:3px solid #fff;padding:6px 20px}
+.paper{position:absolute;left:290px;top:660px;width:300px;height:400px;background:#fdfdf6;border-radius:4px;box-shadow:0 30px 60px rgba(0,0,0,.8);overflow:hidden}
+.paper i{display:block;height:2px;background:#9db7e0;margin-top:36px}
+.paper b{position:absolute;left:44px;top:0;bottom:0;width:2px;background:#f0a0a0}
+</style></head>
+<body><div class="s" id="stage"></div>
+<script type="module">
+// Parody of a "while they were out partying, I was grinding" motivation video, told by the Dawn spacecraft (about 29 s). Numbers: NASA/JPL.
+import { M, T, LANG, an, el, img, sfx, music, win, pop, fadeIn, punch, flash, count, scene, add, bx, done } from './motion.js';
+const st = document.getElementById('stage'); M.dur = 28.8; M.poster = 8.2; const ja = LANG === 'ja'; if (!ja) document.body.classList.add('en');
+music('Heroic_Age', 0, M.dur, { from: 1.5, gain: 0.85, fadeIn: 0.3, fadeOut: 1.2 });
+const fmt = v => Math.round(v).toLocaleString('en-US');
+// a line of text that fades up slowly, with a low hit
+function line(sc, html, at, top, cls = '', snd = 'thud') {
+  const e = el(`<div class="q ${cls}" style="top:${top}px">${html}</div>`, sc);
+  an(e, [{ opacity: 0, transform: 'translateY(26px)' }, { opacity: 1, transform: 'none' }], { duration: 520, delay: at * 1000, easing: 'ease-out' }); if (snd) sfx(at, snd, 0.55); return e;
+}
+function note(sc, html, at, top) { const e = el(`<div class="nt" style="top:${top}px"><span>${html}</span></div>`, sc); pop(e, at, { snd: 'pop', gain: 0.6 }); return e; }
+function mv(s, e, o) { const x = scene(st, s, e, { shade: null, ...o }); el('<div class="vg"></div>', x.sc).after(x.col); if (o.genre !== false) el(`<div class="gen"><span>${T('モチベ動画', 'MOTIVATION')}</span></div>`, x.sc); return x; }
+const GRAY = 'grayscale(1) contrast(1.1) brightness(.85)';
+
+// 1) the opening line
+let s = mv(0, 3.5, { bg: 'PIA18922', pos: '46% 50%', filt: GRAY, move: { s0: 1.0, s1: 1.1 }, cr: T('NASAの想像図（NASA/JPL-Caltech）', 'NASA artist’s concept (NASA/JPL-Caltech)') });
+line(s.sc, T('みんなが<br>遊んでる間に', 'While they were<br>out partying'), 0.3, 560);
+line(s.sc, T('ぼくは、<br><em>加速</em>してた。', 'I was<br><em>accelerating.</em>'), 1.8, 860);
+
+// 2) four days to reach 60 mph
+s = mv(3.5, 8.9, { bg: 'PIA20919', pos: '62% 50%', filt: GRAY, move: { s0: 1.05, s1: 1.2 }, cr: T('NASAの想像図（NASA/JPL-Caltech/UCLA/MPS/DLR/IDA）', 'NASA artist’s concept (NASA/JPL-Caltech/UCLA/MPS/DLR/IDA)') });
+line(s.sc, T('全力で。', 'Full throttle.'), 3.6, 500);
+line(s.sc, T('<em>4日間</em>。', 'For <em>4 days.</em>'), 4.6, 640);
+const sp = el(`<div class="nm" style="top:820px"><small>${T('時速', '')}</small><span class="n">0</span><small>${T('km', 'mph')}</small></div>`, s.sc); fadeIn(sp, 5.5, 0.3);
+count(sp.querySelector('.n'), 5.7, 1.9, 0, ja ? 96 : 60, fmt, { every: 0.16 }); sfx(7.6, 'thud', 0.9);
+note(s.sc, T('※4日かけて、やっとこれ', '*Yes. That took four days.'), 7.75, 1060);
+
+// 3) the push of one sheet of paper
+s = mv(8.9, 13.0, { bg: 'PIA18922', pos: '30% 50%', filt: 'grayscale(1) brightness(.22)', move: { s0: 1.2, s1: 1.25 }, cr: '' });
+line(s.sc, T('押す力は', 'How hard I push:'), 9.0, 500, 'sm2');
+const pp = el('<div class="paper"><b></b>' + '<i></i>'.repeat(9) + '</div>', s.sc); pop(pp, 9.7, { from: 'rotate(-18deg) scale(.5)', to: 'rotate(-6deg)', snd: 'whoosh' });
+line(s.sc, T('<em>紙1枚</em>ぶん。', '<em>one sheet of paper.</em>'), 10.1, 1090);
+note(s.sc, T('手のひらに紙を1枚のせた、あの重さ', 'The weight of one sheet resting on your hand'), 11.2, 1240);
+
+// 4) ...for 5.9 years (the blue glow slowly comes back in colour)
+s = mv(13.0, 17.8, { bg: 'PIA18922', pos: '40% 50%', filt: GRAY, move: { s0: 1.25, s1: 1.45 }, cr: T('NASAの想像図（NASA/JPL-Caltech）', 'NASA artist’s concept (NASA/JPL-Caltech)') });
+an(s.im, [{ filter: GRAY }, { filter: 'grayscale(0) contrast(1.1) brightness(.8)' }], { duration: 4000, delay: 13400 });
+line(s.sc, T('でも、<br>やめなかった。', 'But I never<br>stopped.'), 13.1, 500);
+const dy = el(`<div class="nm" style="top:800px">${ja ? '<span class="n">1</span><small>日</small>' : '<span class="n">1</span><small>days</small>'}</div>`, s.sc); fadeIn(dy, 14.3, 0.25);
+count(dy.querySelector('.n'), 14.4, 2.0, 1, 2141, fmt, { every: 0.06 });
+line(s.sc, T('＝ <em>5.9年</em>ぶん', '= <em>5.9 years</em> of pushing'), 16.5, 1020, 'sm2');
+
+// 5) the speed it added
+s = mv(17.8, 22.2, { bg: 'PIA18922', pos: '46% 50%', filt: 'grayscale(0) contrast(1.1) brightness(.8)', move: { s0: 1.45, s1: 1.15 }, cr: T('NASAの想像図（NASA/JPL-Caltech）', 'NASA artist’s concept (NASA/JPL-Caltech)') });
+line(s.sc, T('足した速さ', 'Speed I added'), 17.9, 520, 'sm2');
+const vv = el(`<div class="nm" style="top:680px;font-size:150px"><small>${T('時速', '')}</small><span class="n">0</span><small>${T('km', 'mph')}</small></div>`, s.sc); fadeIn(vv, 18.3, 0.2);
+sfx(18.3, 'riser'); count(vv.querySelector('.n'), 18.4, 2.1, ja ? 96 : 60, ja ? 41400 : 25700, fmt, { every: 0.05 }); sfx(20.5, 'ding'); flash(s.sc, 20.5, 0.35, 0.7); punch(vv, 20.5, { scale: 1.25 });
+note(s.sc, T('自分のエンジンで出した記録（NASA）', 'A record for a spacecraft’s own engines (NASA)'), 20.95, 1010);
+
+// 6) who is speaking: real photos taken by Dawn
+const CRD = 'NASA/JPL-Caltech/UCLA/MPS/DLR/IDA';
+s = scene(st, 22.2, 25.4, { bg: 'PIA14894', pos: '50% 50%', filt: 'brightness(.8)', move: { s0: 1.0, s1: 1.1 }, cr: T('ドーンが撮った本物の写真：小惑星ベスタ（' + CRD + '）', 'Real photo taken by Dawn: asteroid Vesta (' + CRD + ')') });
+s.im.style.objectFit = 'contain'; s.sc.style.background = '#000';
+sfx(22.2, 'whoosh'); line(s.sc, T('名前は <em>ドーン</em>', 'My name is <em>Dawn</em>'), 22.3, 330, '', 'ding');
+const b1 = el(`<div class="nt" style="top:1050px">${bx(T('2つの星のまわりを回った、<br>はじめての探査機', 'The first spacecraft to orbit<br>two different worlds'), 'sm')}</div>`, s.sc); pop(b1, 23.5);
+s = scene(st, 25.4, M.dur, { bg: 'PIA21078', pos: '40% 50%', filt: 'brightness(.9)', move: { s0: 1.12, s1: 1.0 }, cr: T('ドーンが撮った本物の写真：準惑星ケレス（' + CRD + '）', 'Real photo taken by Dawn: dwarf planet Ceres (' + CRD + ')') });
+line(s.sc, T('名前は <em>ドーン</em>', 'My name is <em>Dawn</em>'), 0, 330, '', null);
+const b2 = el(`<div class="nt" style="top:1050px">${bx(T('いまも、ケレスのまわりを回ってる', 'It is still circling Ceres today'), 'sm green')}</div>`, s.sc); pop(b2, 25.6, { snd: 'whoosh' });
+const b3 = el(`<div class="nt" style="top:880px">${bx(T('数字のくわしい話はコメント欄 👇', 'The numbers are in the comments 👇'), 'sm yellow')}</div>`, s.sc); pop(b3, 27.0);
+done();
+</script></body></html>

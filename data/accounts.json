@@ -182,5 +182,44 @@
    "en": "A just-for-fun quiz. The quiz is play; the facts about the machines are real. Made by students; facts checked against NASA sources.",
    "ja": "お遊びの診断です。診断はお遊び、機械の話は本当です。学生が作っています。事実はNASAの資料で確認しています。"
   }
+ },
+ "phoenix_lander": {
+  "name": {
+   "en": "Phoenix lander (fan-made)",
+   "ja": "フェニックス（ファンメイド）"
+  },
+  "place": "mars",
+  "followers": 0,
+  "bio": {
+   "en": "Mars lander, 2008. Dug into the arctic plains and confirmed water ice under the soil. Still there. Made by students; facts checked against NASA sources.",
+   "ja": "火星の着陸機（2008年）。北極の平原をほって、地面の下の氷をたしかめた。今もそこにいます。学生が作っています。事実はNASAの資料で確認しています。"
+  },
+  "avatar": "media/avatars/phoenix_lander.jpg"
+ },
+ "dawn_spacecraft": {
+  "name": {
+   "en": "Dawn (fan-made story)",
+   "ja": "ドーン（ファンメイドの物語）"
+  },
+  "place": "deep",
+  "followers": 0,
+  "bio": {
+   "en": "Orbited the asteroid Vesta and the dwarf planet Ceres. Slow to speed up, never stopped. Still circling Ceres. Made by students; facts checked against NASA sources.",
+   "ja": "小惑星ベスタと準惑星ケレスのまわりを回った探査機。加速はおそいけど、止まらない。今もケレスのまわり。学生が作っています。事実はNASAの資料で確認しています。"
+  },
+  "avatar": "media/avatars/dawn_spacecraft.jpg"
+ },
+ "sojourner_rover": {
+  "name": {
+   "en": "Sojourner (fan-made story)",
+   "ja": "ソジャーナ（ファンメイドの物語）"
+  },
+  "place": "mars",
+  "followers": 0,
+  "bio": {
+   "en": "The first rover on Mars, 1997. Planned for 7 days, worked for 83. Top speed: 1 cm per second. Made by students; facts checked against NASA sources.",
+   "ja": "火星を走ったはじめての探査車（1997年）。予定は7日、実際は83日。最高速度は秒速1cm。学生が作っています。事実はNASAの資料で確認しています。"
+  },
+  "avatar": "media/avatars/sojourner_rover.jpg"
  }
 }

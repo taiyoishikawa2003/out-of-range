@@ -12,6 +12,9 @@ V = {
  'p_near': ('media/near/chat', ('Kevin MacLeod「Sneaky Snitch」「Carefree」(CC BY 4.0)', 'Kevin MacLeod – Sneaky Snitch / Carefree (CC BY 4.0)'), ['Carefree'], None),
  'p_ranking': ('media/ranking/top5', ('Kevin MacLeod「Hyperfun」「Wholesome」(CC BY 4.0)', 'Kevin MacLeod – Hyperfun / Wholesome (CC BY 4.0)'), ['Wholesome'], None),
  'p_oppy': ('media/opportunity/unread', None, [], 'runway-looks-1'),
+ 'p_phoenix': ('media/phoenix/spot', None, [], None),
+ 'p_dawn': ('media/dawn/grind', None, [], None),
+ 'p_sojourner': ('media/sojourner/vlog', None, [], None),
 }
 P = 'data/posts.json'; posts = json.load(open(P))
 for name in (sys.argv[1:] or V):

@@ -1,0 +1,91 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../slides/slides.css"><link rel="stylesheet" href="motion.css">
+<style>
+.dk{position:absolute;inset:0;background:#17120e}
+.pair{position:absolute;left:40px;top:575px;width:860px;height:700px;display:flex;gap:20px}
+.fr{position:relative;width:420px;height:700px;overflow:hidden;border-radius:18px;background:#000}
+.fr::after,.big::after{content:'';position:absolute;inset:0;border:6px solid #fff;border-radius:18px}
+.fr img,.big img{position:absolute;left:0;top:0;width:512px;height:1024px;max-width:none;transform-origin:0 0}
+.lb{position:absolute;left:16px;top:16px;font-size:34px;line-height:1.3;background:#161616;color:#fff;padding:4px 16px;border-radius:10px;z-index:2}
+.lb.y{background:#ffc400;color:#161616}
+.tm{position:absolute;left:40px;top:1300px;width:760px;height:28px;border-radius:14px;background:rgba(255,255,255,.22);overflow:hidden}
+.tm i{position:absolute;inset:0;background:#ffc400;transform-origin:0 50%}
+.sec{position:absolute;left:820px;top:1268px;width:80px;text-align:center;font-size:76px;line-height:1.2;color:#ffc400}
+.lv{font-size:36px;color:#ffc400;letter-spacing:.04em}
+.hint{position:absolute;left:40px;right:180px;top:1352px;text-align:center}
+.big{position:absolute;left:40px;top:560px;width:840px;height:840px;overflow:hidden;border-radius:18px;background:#000}
+.big .mark{width:150px;height:150px;border-width:9px;z-index:3}
+.ba{position:absolute;left:60px;top:1010px;font-size:96px;line-height:1.2;padding:8px 40px;border-radius:24px;background:#fff;color:#161616}
+.ba.y{background:#ffc400}
+.bx.k{background:#161616;color:#fff}
+</style></head>
+<body><div class="s" id="stage"></div>
+<script type="module">
+// Spot the difference with two real Phoenix photos taken four days apart (about 28 s). Facts: NASA/JPL.
+import { M, T, LANG, an, el, img, sfx, music, win, pop, punch, shake, flash, scene, add, tag, h, bx, done } from './motion.js';
+const st = document.getElementById('stage'); M.dur = 28.4; M.poster = 6.0;
+const CR = 'NASA/JPL-Caltech/University of Arizona/Texas A&amp;M University';
+music('Thinking_Music', 0, 12.6, { gain: 0.5, fadeOut: 0.15 });
+music('Wallpaper', 17.8, M.dur, { from: 8, gain: 0.55, fadeIn: 0.4, fadeOut: 0.8 });
+
+// 1) Hook: a "before / after" where nothing seems to change
+let sc = el('<div class="sc"></div>', st); win(sc, 0, 3.4);
+const b1 = el(`<img class="bg" src="${img('PIA10910')}" style="object-position:50% 60%">`, sc), b2 = el(`<img class="bg" src="${img('PIA10911')}" style="object-position:50% 60%">`, sc);
+win(b1, 0, 1.7); win(b2, 1.7, 3.4); el('<div class="shade top"></div>', sc);
+let col = el('<div class="col"></div>', sc);
+add(col, tag(T('ビフォーアフター', 'Before / After'), 'pink sm'), 0.1);
+add(col, h(T('たった4日で<br>ここまで変わった', 'Look how much<br>changed in 4 days')), 0.35);
+const bf = el('<div class="ba">BEFORE</div>', sc), af = el(`<div class="ba y">AFTER</div>`, sc);
+pop(bf, 0.9); win(bf, 0.9, 1.7); win(af, 1.7, 3.4); sfx(1.7, 'whoosh'); flash(sc, 1.7, 0.25, 0.6);
+const wq = el(`<div class="hint" style="top:1180px">${bx(T('…どこが？', '…where?'), 'k')}</div>`, sc); pop(wq, 2.55, { snd: 'thud' });
+el(`<div class="cr" style="top:1330px">${T('火星で撮った本物の写真（' + CR + '）', 'Real photos taken on Mars (' + CR + ')')}</div>`, sc);
+
+// 2) The game: two real photos side by side, 8 seconds
+sc = el('<div class="sc"><div class="dk"></div></div>', st); win(sc, 3.4, 12.6);
+col = el('<div class="col" style="top:300px;gap:16px"></div>', sc);
+add(col, tag(T('まちがい探し', 'Spot the difference'), 'yellow sm'), 3.45, { snd: 'ding' });
+add(col, `<div class="lv">${T('レベル：激ムズ ★★★★★', 'Level: very hard ★★★★★')}</div>`, 3.7, { snd: null });
+add(col, h(T('消えたのは、どれ？', 'What vanished?'), 'md'), 3.9);
+const pair = el('<div class="pair"></div>', sc); const fi = [];
+for (const [id, lb, cls] of [['PIA10910', 'BEFORE', ''], ['PIA10911', T('AFTER（4日後）', 'AFTER (4 days)'), 'y']]) {
+  const f = el(`<div class="fr"><span class="lb ${cls}">${lb}</span><img src="${img(id)}"></div>`, pair); fi.push(f.querySelector('img'));
+}
+pop(pair, 4.0, { snd: null, from: 'scale(.9)' });
+const V0 = 'translate(-24px,-250px) scale(1)', V1 = 'translate(-80px,-1090px) scale(2)';
+for (const i of fi) an(i, [{ transform: V0 }, { transform: V1 }], { duration: 650, delay: 8250, easing: 'ease-in-out' });
+const tm = el('<div class="tm"><i></i></div>', sc); win(tm, 4.3, 12.6);
+an(tm.firstChild, [{ transform: 'scaleX(1)', background: '#ffc400' }, { transform: 'scaleX(.375)', background: '#ffc400' }, { transform: 'scaleX(0)', background: '#ff5a4d' }], { duration: 8000, delay: 4400 });
+for (let k = 8; k >= 1; k--) { const t = 4.4 + (8 - k); const n = el(`<div class="sec">${k}</div>`, sc); win(n, t, t + 1); sfx(t, 'tick', k <= 3 ? 0.9 : 0.5); }
+const hint = el(`<div class="hint">${bx(T('ヒント：左下のかげの中', 'Hint: in the shadow, lower left'), 'sm yellow')}</div>`, sc); pop(hint, 8.2, { snd: 'whoosh' });
+sfx(12.4, 'buzz', 0.6);
+
+// 3) Answer: zoom in and blink between the two photos
+sc = el('<div class="sc"><div class="dk"></div></div>', st); win(sc, 12.6, 17.8);
+col = el('<div class="col" style="top:300px;gap:18px"></div>', sc);
+add(col, tag(T('正解', 'Answer'), 'green sm'), 12.65, { snd: 'ding' });
+add(col, h(T('白いつぶが消えた', 'The white bits are gone'), 'md'), 12.95);
+const big = el(`<div class="big"><img src="${img('PIA10910')}"><img src="${img('PIA10911')}"></div>`, sc);
+const Z = 'translate(-160px,-2320px) scale(4)'; const [ia, ib] = big.querySelectorAll('img'); ia.style.transform = ib.style.transform = Z;
+const la = el('<span class="lb">BEFORE</span>', big), lb2 = el(`<span class="lb y">${T('AFTER（4日後）', 'AFTER (4 days)')}</span>`, big);
+// one animation per element: several win() calls on the same element would cancel each other
+function wins(e, list) { const D = M.dur, kf = [{ opacity: 0, offset: 0 }]; for (const [a, b] of list) kf.push({ opacity: 0, offset: a / D }, { opacity: 1, offset: a / D }, { opacity: 1, offset: b / D }, { opacity: 0, offset: b / D }); kf.push({ opacity: 0, offset: 1 }); an(e, kf, { duration: D * 1000 }); }
+const sw = [12.6, 14.3, 15.2, 16.1, 17.0, 17.8];   // before, after, before, after, before
+const wb = [[sw[0], sw[1]], [sw[2], sw[3]], [sw[4], sw[5]]], wa = [[sw[1], sw[2]], [sw[3], sw[4]]];
+wins(ia, wb); wins(la, wb); wins(ib, wa); wins(lb2, wa); sw.slice(1, -1).forEach(t => sfx(t, 'tick', 0.9));
+[[240, 356], [372, 490], [328, 630]].forEach(([x, y], k) => { const m = el(`<div class="mark" style="left:${x}px;top:${y}px"></div>`, big); pop(m, 13.25 + k * 0.18, { from: 'translate(-50%,-50%) scale(2.2)', to: 'translate(-50%,-50%)', snd: k ? null : 'pop' }); });
+el(`<div class="cr" style="top:1416px">${T('火星で撮った本物の写真：2008年6月15日と19日（' + CR + '）', 'Real photos taken on Mars: June 15 and 19, 2008 (' + CR + ')')}</div>`, sc);
+
+// 4) Why it matters
+let s = scene(st, 17.8, 22.8, { bg: 'PIA10911', pos: '50% 38%', filt: 'brightness(.5)', shade: 'all', move: { s0: 1.0, s1: 1.08 }, colCls: 'mid', cr: T('火星で撮った本物の写真（' + CR + '）', 'Real photo taken on Mars (' + CR + ')') });
+add(s.col, h(T('だれも、さわってない', 'Nobody touched them'), 'md'), 17.95, { snd: 'whoosh' });
+add(s.col, h(T('正体は <em>氷</em>', 'They were <em>ice</em>'), 'xl'), 19.3, { snd: 'ding', from: 'scale(1.8)' }); flash(s.sc, 19.3, 0.3, 0.5);
+add(s.col, bx(T('とけずに、そのまま空気の中へ消えた', 'It did not melt. It went straight into the air.'), 'sm'), 20.7);
+
+// 5) Who dug the hole
+s = scene(st, 22.8, M.dur, { bg: 'PIA11719', pos: '50% 50%', filt: 'brightness(.82)', move: { s0: 1.25, s1: 1.1 }, cr: T('本物の写真をつないで、上から見た形にした画像（' + CR + '）', 'Real photos combined into a view from above (' + CR + ')') });
+add(s.col, h(T('ほったのは<br><em>フェニックス</em>', 'Dug by<br><em>Phoenix</em>')), 22.95, { snd: 'whoosh' });
+add(s.col, bx(T('2008年、火星の北極の平原に着陸', 'Landed on the arctic plains of Mars in 2008'), 'sm'), 24.3);
+add(s.col, bx(T('火星の地面の下に氷がある、とたしかめた', 'It confirmed water ice under the Martian soil'), 'sm green'), 25.5);
+const ec = el(`<div class="hint" style="top:1085px">${bx(T('答え合わせはコメント欄 👇', 'Answer key in the comments 👇'), 'sm yellow')}</div>`, s.sc); pop(ec, 26.7);
+done();
+</script></body></html>
