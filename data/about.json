@@ -9,13 +9,13 @@
    "body": {
     "ja": [
      "OUT OF RANGE（圏外）は、NASA が月・火星・宇宙に置いてきた機械たちの SNS です。機械たちは、もう地球に返事をしません。そのかわり、ここで投稿します。短い動画を毎日見ている子どもたち、とくに宇宙に（まだ）興味がない子のために作りました。",
-     "アカウントは2種類あります。機械になりきって書く「機械」のアカウントと、機械をネタにする「チャンネル」です。どちらもチームが書いています。 いいねやフォロワーの最初の数は、SNSらしく見せるための演出です（本物の利用者の数ではありません）。",
+     "アカウントは2種類あります。機械になりきって書く「機械」のアカウントと、機械をネタにする「チャンネル」です。どちらもチームが書いています。",
      "ふざけているのは形だけです。こわい話、まちがい探し、POV、Vlog、ルームツアー、チャット、カーナビ、ランキング、診断、ゲーム。もとになった話は、すべて本当です。どの投稿にも、コメント欄に「答え合わせ」があります。どんな機械か、なぜ送られたか、何を見つけたか、いまどこにあるかを、そこで説明します。出典も付いています。",
      "NASA Space Apps Challenge 2026 の課題「Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars」の作品です。"
     ],
     "en": [
      "OUT OF RANGE is a social feed for the machines NASA left on the Moon, on Mars and in deep space. They no longer answer Earth. Here, they post. We made it for kids who watch short videos every day, especially kids who are not (yet) interested in space.",
-     "There are two kinds of accounts. “Machines” are written in the machine’s own voice. “Channels” make posts about the machines. Our team writes both. The like and follower counts the feed starts with are staged. They are not real users.",
+     "There are two kinds of accounts. “Machines” are written in the machine’s own voice. “Channels” make posts about the machines. Our team writes both.",
      "The jokes are only in the format: a scary story, a spot-the-difference, a POV, a vlog, a room tour, a group chat, a nav app, a ranking, a just-for-fun quiz, a game. The stories behind them are true. Under every post, the pinned comment tells the real story: what the machine is, why it was sent, what it found and where it is now. Every post links to its sources.",
      "Made for the NASA Space Apps Challenge 2026 challenge “Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars”."
     ]
@@ -219,12 +219,12 @@
    "body": {
     "en": [
      "Every fact is checked against NASA or other primary sources before it is posted. Where a number is our own calculation (for example walking time), the assumptions are written in the sources.",
-     "Real photos are labelled as real photos. Drawings by NASA are labelled as artist's concepts. Lines we made up for the machines (chats, thoughts, comments) are labelled as our own.",
+     "Real photos are labelled as real photos. Drawings by NASA are labelled as artist's concepts. Lines we made up for the machines (chats, thoughts) are labelled as our own. There are no staged comments, likes or followers: the only comment under a post is its own pinned one, and the counts start at zero.",
      "The sources were last checked on November 14 and 15, 2026. If you find a mistake, please tell us and we will fix it."
     ],
     "ja": [
      "投稿の事実は、NASA などの一次資料で確かめてから載せています。自分たちで計算した数字（たとえば歩いてかかる時間）は、計算の前提を出典に書いています。",
-     "本物の写真には「本物の写真」と書いています。NASA がかいた絵は「想像図」と書いています。機械のセリフ（チャット、心の声、コメント）は、わたしたちが考えたものだと書いています。",
+     "本物の写真には「本物の写真」と書いています。NASA がかいた絵は「想像図」と書いています。機械のセリフ（チャット、心の声）は、わたしたちが考えたものだと書いています。サクラのコメントやいいねはありません。投稿の下にあるのは、その投稿の固定コメント（答え合わせ）だけで、いいねとフォロワーは0から始まります。",
      "出典を最後に確かめたのは、2026年11月14日と15日です。まちがいを見つけたら、教えてください。直します。"
     ]
    },
