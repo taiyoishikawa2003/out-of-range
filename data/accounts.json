@@ -5,7 +5,7 @@
    "ja": "月面遺失物センター"
   },
   "place": "moon",
-  "followers": 0,
+  "followers": 1580,
   "bio": {
    "en": "We look after the things people left on the Moon.",
    "ja": "月に置いてきた物を、あずかっています。"
@@ -19,7 +19,7 @@
    "ja": "スピリット"
   },
   "place": "mars",
-  "followers": 0,
+  "followers": 880,
   "bio": {
    "en": "Mars rover. Opportunity’s twin. One of my front wheels is broken.",
    "ja": "火星の探査車。オポチュニティのふたご。前の車輪がひとつ、こわれてます。"
@@ -37,7 +37,7 @@
    "ja": "インサイト"
   },
   "place": "mars",
-  "followers": 0,
+  "followers": 1920,
   "bio": {
    "en": "Mars lander. I spent four years with my ear to the ground.",
    "ja": "火星の着陸機。4年間、地面に耳をあてていました。"
@@ -70,7 +70,7 @@
    "ja": "ケプラー星占い"
   },
   "place": "deep",
-  "followers": 0,
+  "followers": 1360,
   "bio": {
    "en": "Zodiac rankings made from real Kepler data. Astrology is not science.",
    "ja": "ケプラー望遠鏡の本物のデータで作る星座ランキング。占いは科学ではありません。"
@@ -84,7 +84,7 @@
    "ja": "サーベイヤー3号"
   },
   "place": "moon",
-  "followers": 0,
+  "followers": 1330,
   "bio": {
    "en": "Moon lander. Here since 1967. People came to see me, once.",
    "ja": "月の探査機。1967年からここにいます。一度だけ、人が来ました。"
@@ -102,7 +102,7 @@
    "ja": "バイキング1号"
   },
   "place": "mars",
-  "followers": 0,
+  "followers": 750,
   "bio": {
    "en": "Mars lander. Here since 1976. My first photo was of my own foot.",
    "ja": "火星の着陸機。1976年からここにいます。最初に撮ったのは、自分の足。"
@@ -120,7 +120,7 @@
    "ja": "パイオニア10号"
   },
   "place": "deep",
-  "followers": 0,
+  "followers": 1460,
   "bio": {
    "en": "Left in 1972. Heading toward Aldebaran. More than 2 million years to go.",
    "ja": "1972年に出発。アルデバランの方向へ、あと200万年以上。"
@@ -138,7 +138,7 @@
    "ja": "NEARシューメーカー"
   },
   "place": "deep",
-  "followers": 0,
+  "followers": 1150,
   "bio": {
    "en": "I am sitting on asteroid Eros. Landing was not in the plan.",
    "ja": "小惑星エロスの上にいます。着陸する予定は、なかったんですけど。"
@@ -156,7 +156,7 @@
    "ja": "月・火星コレクション"
   },
   "place": "moon",
-  "followers": 0,
+  "followers": 660,
   "bio": {
    "en": "Fashion checks for the machines left on the Moon and Mars. Every look has a reason.",
    "ja": "置いてきた機械のファッションチェック。見た目には、ぜんぶ理由がある。"
@@ -170,7 +170,7 @@
    "ja": "置いてきた機械ランキング"
   },
   "place": "mars",
-  "followers": 0,
+  "followers": 1240,
   "bio": {
    "en": "Rankings made from real NASA numbers.",
    "ja": "NASAの本物の数字で、ランキングを作っています。"
@@ -184,7 +184,7 @@
    "ja": "OPPORTUNITY（予告編）"
   },
   "place": "mars",
-  "followers": 0,
+  "followers": 480,
   "bio": {
    "en": "Opportunity’s 14 years, cut like a movie trailer.",
    "ja": "オポチュニティの14年を、映画の予告の形にしました。"
@@ -198,7 +198,7 @@
    "ja": "オポチュニティ"
   },
   "place": "mars",
-  "followers": 0,
+  "followers": 4670,
   "avatar": "media/avatars/opportunity_rover.jpg",
   "bio": {
    "en": "Mars rover. I came for 90 days and worked for 14 years.",
@@ -216,7 +216,7 @@
    "ja": "探査機タイプ診断"
   },
   "place": "deep",
-  "followers": 0,
+  "followers": 1690,
   "avatar": "media/avatars/tanken_shindan.jpg",
   "bio": {
    "en": "A just-for-fun quiz. The machine facts are real.",
@@ -230,7 +230,7 @@
    "ja": "フェニックス"
   },
   "place": "mars",
-  "followers": 0,
+  "followers": 1100,
   "bio": {
    "en": "I dug for ice on the arctic plains of Mars.",
    "ja": "火星の北極の平原で、氷をほりました。"
@@ -248,7 +248,7 @@
    "ja": "ドーン"
   },
   "place": "deep",
-  "followers": 0,
+  "followers": 710,
   "bio": {
    "en": "Four days to reach 60 mph. I kept that up for 5.9 years. Now circling Ceres.",
    "ja": "4日かけて、やっと時速96km。それを5.9年つづけました。いまはケレスのまわり。"
@@ -266,7 +266,7 @@
    "ja": "ソジャーナ"
   },
   "place": "mars",
-  "followers": 0,
+  "followers": 1180,
   "bio": {
    "en": "The first rover on Mars. Top speed: 1 centimeter per second.",
    "ja": "火星を走った最初の探査車。最高速度は秒速1cm。"
@@ -284,7 +284,7 @@
    "ja": "バイキング2号"
   },
   "place": "mars",
-  "followers": 0,
+  "followers": 1010,
   "bio": {
    "en": "Mars lander. 50 years on Utopia Planitia. I lean a little.",
    "ja": "火星の着陸機。ユートピア平原に住んで50年。ちょっとかたむいてます。"
@@ -302,7 +302,7 @@
    "ja": "パイオニア11号"
   },
   "place": "deep",
-  "followers": 0,
+  "followers": 560,
   "bio": {
    "en": "Jupiter, then Saturn. No return ticket.",
    "ja": "木星のつぎに、土星へ。帰りの便はありません。"
@@ -320,7 +320,7 @@
    "ja": "置いてきた機械あるある"
   },
   "place": "mars",
-  "followers": 0,
+  "followers": 830,
   "bio": {
    "en": "Things left-behind machines always do, in real photos.",
    "ja": "置いてきた機械の「あるある」を、本物の写真で。"

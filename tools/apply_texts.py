@@ -6,7 +6,7 @@ because those rebuild a post from its own module and would bring old wording bac
 """
 import json, pathlib, sys
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
-from texts import ACCOUNTS, POSTS, ORDER, MACHINE_COMMENTS
+from texts import ACCOUNTS, POSTS, ORDER, LIKES
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PJ, AJ = ROOT / 'data/posts.json', ROOT / 'data/accounts.json'
@@ -57,7 +57,7 @@ for pid, tx in POSTS.items():
                 hit = True
         if not hit:
             problems.append(f'{pid}: text to replace not found: {old[:40]}')
-    if 'comments' in tx and MACHINE_COMMENTS:
+    if 'comments' in tx:
         rest, keep_src, add_src = [], set(), []
         for c in tx['comments']:
             user, ja, en = c[:3]
@@ -80,16 +80,17 @@ for pid, tx in POSTS.items():
         have = {s.get('title') for s in p['sources'] if isinstance(s.get('title'), str)}
         p['sources'] += [s for s in add_src if s['title'] not in have]
 
-# ---- nothing staged: only the pinned comment, and counts start at zero ----
-if not MACHINE_COMMENTS:
-    for p in posts:
-        p['comments'] = [c for c in p.get('comments', []) if c.get('pinned')]
-        p['sources'] = [x for x in p.get('sources', []) if not (isinstance(x.get('title'), str) and x['title'].startswith('For @'))]
+# ---- starting counts (staged) ----
+fol = {}
 for p in posts:
-    p.pop('stats', None)
-for acc in accounts.values():
-    if 'followers' in acc:
-        acc['followers'] = 0
+    n = LIKES.get(p['id'])
+    if n is None:
+        problems.append(f"no like count for {p['id']}"); continue
+    p['stats'] = {**(p.get('stats') or {}), 'likes': n, 'saves': n // 9}
+    fol[p['account']] = fol.get(p['account'], 0) + n
+for handle, n in fol.items():
+    if handle in accounts:
+        accounts[handle]['followers'] = round(n * 0.4 / 10) * 10
 
 # ---- every video is shown whole (never cropped to fill the screen) ----
 for p in posts:

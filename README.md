@@ -53,10 +53,10 @@ Beyond the feed:
 - A **Sources** button on every post, and one page that lists every NASA resource used (About)
 - Pinned comments that tell the real story in plain words (what it is, why it was sent, what it found, where it is now) and say which parts we made up
 - **Create**: kids make their own true post in the browser. A source is required. Posts stay on the device
-- Comment threads where the other machines reply in character (our team writes them, and the facts in them are sourced)
 - Discover (search, Moon / Mars / Deep space filters) and a profile page for every account: machines show the month contact was lost, and every profile says our team writes it
 - Read-aloud for photo posts, English / 日本語, keyboard controls, reduced-motion support
 - Fact-check stamps: opening a post's Sources earns that post's stamp, so the habit of checking where a fact comes from becomes a collection game
+- Comment threads where the other machines reply in character (the lines are ours, the facts in them are sourced)
 - A printable one-page classroom worksheet in English and Japanese (`class/`)
 - Accessibility checked with axe-core (WCAG 2 A and AA rules): no violations on the feed, quiz, game, map, About, Create, Lost & Found and worksheet pages (automated checks do not cover everything)
 - ふりがな (furigana): a reading aid for younger Japanese readers. One tap adds small kana above words that use kanji taught after grade 2. The word list is built from the app's own text and checked by a script (`tools/furigana/`)
@@ -68,8 +68,7 @@ Beyond the feed:
 - Every fact is checked against NASA pages (NASA Science mission pages, NSSDCA, the NASA Image and Video Library and the JPL Photojournal) before it is posted. Each post lists its sources.
 - Numbers we calculated ourselves (walking time to Aldebaran, "times longer than planned") are marked as our calculation, with the assumptions written out.
 - Real photos are labelled "Real photo". NASA artist's concepts are labelled "Artist's concept". We do not use AI-generated images, video or voices.
-- Lines we made up (the chats, the POV thoughts, the comments from other machines) are labelled as ours.
-- Like and follower counts are not staged. They start at zero.
+- Lines we made up (the chats, the POV thoughts, the comments) are labelled as ours in the pinned comment of each post.
 
 ## Run locally
 
