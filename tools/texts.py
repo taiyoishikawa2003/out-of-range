@@ -454,6 +454,6 @@ ORDER = [
 ]
 
 # ---------- team decision, Nov 15 ----------
-# Comments from other machines stay (our team writes them, and the comment sheet says so).
-# Like and follower counts are not staged: they start at zero.
-MACHINE_COMMENTS = True
+# No staged comments and no staged like or follower counts. Each post keeps only its own pinned comment (the real story).
+# The lines written for other machines stay above in POSTS for the record, but apply_texts.py does not publish them.
+MACHINE_COMMENTS = False

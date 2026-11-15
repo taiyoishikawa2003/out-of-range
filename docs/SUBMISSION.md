@@ -71,7 +71,6 @@ Each post starts from one NASA record, and we picked the format that fits the re
 **Beyond the feed**
 
 - The real story under every post: the pinned comment says what the machine is, why it was sent, what it found and where it is now, in plain words for kids.
-- Comment threads: other machines reply in character ("Sorry. I have not been able to reply since 2010 either," says Spirit under Opportunity's last post). Our team writes them, and the comment sheet says so. The facts in them are real and sourced.
 - "Where are they now?": maps of the Moon and Mars with 23 landing sites and machines (Apollo descent stages and rovers, Surveyors, Vikings, Sojourner, Spirit, Opportunity, Phoenix, InSight, Ingenuity, and NEAR, Dawn, Kepler, Pioneer 10 and Pioneer 11 farther out). Tapping a pin answers the same four questions. Landing positions come from NASA's NSSDCA catalogue.
 - Lunar Lost & Found (/lost/): a counter for things left on the Moon. Each claim slip leads to the machine next to it and a small hands-on science scene (laser ranging, moonquakes, Moon gravity).
 - Create: kids make their own post from real NASA photos. The app asks for a source before it lets them post. Posts stay on the device.
@@ -84,7 +83,7 @@ Each post starts from one NASA record, and we picked the format that fits the re
 - *Showing how missions operated, not a list of facts*: each post is built around one moment. A lander photographing its own foot. A camera detached and carried home. A last photo cut short by touchdown. One post is a game: kids feel the signal delay themselves, then drive the rover the way its drivers really did.
 - *Engineering meets science*: Spirit's broken wheel is an engineering failure that led to its best discovery. The fashion check explains four looks by their engineering reasons. The game shows why rovers had to check for hazards themselves.
 - *Discoveries they still make*: some of these machines are still doing science. The laser reflector Apollo 11 left is still used to measure the distance to the Moon (light takes about 2.5 seconds to go and come back), which is how we know the Moon moves about 3.8 cm farther away each year. The map says so on its pin, and the Lunar Lost & Found has a hands-on scene for it.
-- *A personal connection*: the machines speak in the first person and comment on each other's posts. The ranking ends on the line "They weren't thrown away. They worked to the very end."
+- *A personal connection*: the machines speak in the first person, and each profile shows the month the machine went out of range. The ranking ends on the line "They weren't thrown away. They worked to the very end."
 - *Age group*: upper elementary to junior high (about 9 to 15). *Perspective*: the machines' own. *Scope*: broad, from the Moon to interstellar space.
 - *Accessibility*: no login, any phone or PC, English and Japanese, read-aloud for photo posts, a one-tap reading aid in Japanese (furigana: small kana above the harder kanji, for younger readers), keyboard controls, reduced-motion support, works offline after the first visit. An automated check (axe-core, WCAG 2 A and AA rules) finds no violations on the main screens.
 
@@ -93,8 +92,8 @@ Each post starts from one NASA record, and we picked the format that fits the re
 - We check every fact against NASA pages before it is posted (NASA Science mission pages, NSSDCA, the NASA Image and Video Library, the JPL Photojournal). Every post has a Sources button, and the About page lists every resource used.
 - Numbers we calculated ourselves are marked as our calculation, with the assumptions written out.
 - Real photos are labelled "Real photo". NASA artist's concepts are labelled. We use no AI-generated images, video or voices.
-- Lines we made up (the chats, the POV thoughts, the comments from other machines) are labelled as ours.
-- Like and follower counts are not staged. They start at zero.
+- Lines we made up (the chats, the POV thoughts) are labelled as ours in each post.
+- Nothing is staged: there are no made-up comments, likes or followers. The only comment under a post is its own pinned one, and the counts start at zero.
 
 **How it was built**
 
