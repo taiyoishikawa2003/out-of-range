@@ -219,12 +219,12 @@
    "body": {
     "en": [
      "Every fact is checked against NASA or other primary sources before it is posted. Where a number is our own calculation (for example walking time), the assumptions are written in the sources.",
-     "Real photos are labelled as real photos. Drawings by NASA are labelled as artist's concepts. Lines we made up for the machines (chats, thoughts) are labelled as our own. There are no staged comments, likes or followers: the only comment under a post is its own pinned one, and the counts start at zero.",
+     "Real photos are labelled as real photos. Drawings by NASA are labelled as artist's concepts. Lines we made up for the machines (chats, thoughts, comments) are labelled as our own. Like and follower counts are not staged: they start at zero.",
      "The sources were last checked on November 14 and 15, 2026. If you find a mistake, please tell us and we will fix it."
     ],
     "ja": [
      "投稿の事実は、NASA などの一次資料で確かめてから載せています。自分たちで計算した数字（たとえば歩いてかかる時間）は、計算の前提を出典に書いています。",
-     "本物の写真には「本物の写真」と書いています。NASA がかいた絵は「想像図」と書いています。機械のセリフ（チャット、心の声）は、わたしたちが考えたものだと書いています。サクラのコメントやいいねはありません。投稿の下にあるのは、その投稿の固定コメント（答え合わせ）だけで、いいねとフォロワーは0から始まります。",
+     "本物の写真には「本物の写真」と書いています。NASA がかいた絵は「想像図」と書いています。機械のセリフ（チャット、心の声、コメント）は、わたしたちが考えたものだと書いています。いいねとフォロワーの数は作っていません。0から始まります。",
      "出典を最後に確かめたのは、2026年11月14日と15日です。まちがいを見つけたら、教えてください。直します。"
     ]
    },

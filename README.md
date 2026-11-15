@@ -53,6 +53,7 @@ Beyond the feed:
 - A **Sources** button on every post, and one page that lists every NASA resource used (About)
 - Pinned comments that tell the real story in plain words (what it is, why it was sent, what it found, where it is now) and say which parts we made up
 - **Create**: kids make their own true post in the browser. A source is required. Posts stay on the device
+- Comment threads where the other machines reply in character (our team writes them, and the facts in them are sourced)
 - Discover (search, Moon / Mars / Deep space filters) and a profile page for every account: machines show the month contact was lost, and every profile says our team writes it
 - Read-aloud for photo posts, English / 日本語, keyboard controls, reduced-motion support
 - Fact-check stamps: opening a post's Sources earns that post's stamp, so the habit of checking where a fact comes from becomes a collection game
@@ -67,8 +68,8 @@ Beyond the feed:
 - Every fact is checked against NASA pages (NASA Science mission pages, NSSDCA, the NASA Image and Video Library and the JPL Photojournal) before it is posted. Each post lists its sources.
 - Numbers we calculated ourselves (walking time to Aldebaran, "times longer than planned") are marked as our calculation, with the assumptions written out.
 - Real photos are labelled "Real photo". NASA artist's concepts are labelled "Artist's concept". We do not use AI-generated images, video or voices.
-- Lines we made up (the chats, the POV thoughts) are labelled as ours in the pinned comment of each post.
-- Nothing is staged: no made-up comments, likes or followers. Counts start at zero.
+- Lines we made up (the chats, the POV thoughts, the comments from other machines) are labelled as ours.
+- Like and follower counts are not staged. They start at zero.
 
 ## Run locally
 
@@ -83,7 +84,7 @@ Then open http://localhost:8000/. There is no build step for the site itself (pl
 ## How posts are made
 
 - `data/posts.json` is the feed. `data/accounts.json` holds the accounts (machines and channels). `data/library.json` is the photo library for Create.
-- Wording lives in one file: `tools/texts.py` has the captions, pinned comments, profile text and the feed order. `python3 tools/apply_texts.py` writes it into the data files. Run it after rebuilding any post.
+- Wording lives in one file: `tools/texts.py` has the captions, pinned comments, comments from other machines, profile text and the feed order. `python3 tools/apply_texts.py` writes it into the data files. Run it after rebuilding any post.
 - Photo posts are written as small HTML slides and rendered to images:
   - `tools/slides/p_*.py`: one file per post (slides, caption, pinned comment, sources) in Japanese and English
   - `tools/slides/slides.css`: the slide design system
