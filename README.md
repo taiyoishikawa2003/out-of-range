@@ -24,7 +24,6 @@ The challenge asks for a story that introduces school-age kids to this hardware 
 | While they were out partying | Dawn (asteroid belt) | Parody of a motivation video: four days to reach 60 mph, for 5.9 years |
 | Expectation vs reality | Spirit (Mars) | Photo post: a broken wheel digs up evidence of ancient hot springs |
 | Which space machine are you? | 8 machines | Interactive just-for-fun quiz |
-| Gotta tell everyone we left 3 cars on the Moon | Apollo lunar rovers (Moon) | Photo post in a running-meme format, on a real frame of the Apollo 16 "Grand Prix" |
 | Pioneer 10's nav app | Pioneer 10 (deep space) | Nav app video: "arrive in about 2 million years" |
 | Case file | Viking 1 (Mars) | Photo post: detective file with a tappable quiz |
 | Working on Mars, day 3 | Sojourner (Mars) | "Day N" daily vlog video: planned for 7 days, worked for 83 |
