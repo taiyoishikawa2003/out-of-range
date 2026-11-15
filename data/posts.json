@@ -12,7 +12,8 @@
    "poster": {
     "en": "media/insight/kaidan1.poster.en.jpg?v=3c9f664e",
     "ja": "media/insight/kaidan1.poster.ja.jpg?v=74b8fe35"
-   }
+   },
+   "fit": "contain"
   },
   "caption": {
    "ja": "誰もいない火星で、音が3回。 #意味がわかると怖い話 #火星 #インサイト",
@@ -1673,7 +1674,8 @@
    "poster": {
     "en": "media/kepler/uranai.poster.en.jpg?v=4f36ca03",
     "ja": "media/kepler/uranai.poster.ja.jpg?v=cb1fede2"
-   }
+   },
+   "fit": "contain"
   },
   "caption": {
    "ja": "NASAに“推されていた”星座TOP5🔭 あなたの星座は何位？ 1位はコメント欄へ #星座占い #ケプラー #NASA",

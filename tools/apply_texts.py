@@ -92,6 +92,11 @@ for handle, n in fol.items():
     if handle in accounts:
         accounts[handle]['followers'] = round(n * 0.4 / 10) * 10
 
+# ---- every video is shown whole (never cropped to fill the screen) ----
+for p in posts:
+    if p.get('type') == 'video':
+        p['video']['fit'] = 'contain'
+
 # ---- order ----
 missing = [i for i in ORDER if i not in by_id]
 extra = [p['id'] for p in posts if p['id'] not in ORDER]
