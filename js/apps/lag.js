@@ -24,8 +24,8 @@ const buzz = ms => { try { if (navigator.vibrate) navigator.vibrate(ms); } catch
 const TX = {
   ja: {
     title: '火星の車を\nラジコンで運転してみた', sub: '電波がとどくまで、片道20分。岩の手前で止められる？', start: 'やってみる', note: '※ゲームでは、20分を2秒にちぢめています',
-    earth: '地球', mars: '火星', r1: 'ROUND 1　ラジコン方式', r1task: '岩の手前で「止まれ」を押そう', screen: 'きみの画面（20分前の火星）', real: '本物',
-    go: '進め', stop: '止まれ', ready: '「進め」を押すとスタート', sending: '「進め」を送信中… 火星にとどくまで20分', waiting: '本物は走りだした。でも、それが画面にうつるのは20分後',
+    earth: '地球', mars: '火星', r1: 'ROUND 1　ラジコン方式', r1task: '岩の手前で「止まれ」を押そう', screen: 'きみの画面（20分前の火星）', real: '本物', fog: '？ まだ見えない',
+    go: '進め', stop: '止まれ', ready: '「進め」でスタート。岩は、カメラが近づくまで見えない', sending: '「進め」を送信中… 火星にとどくまで20分', waiting: '本物は走りだした。でも、それが画面にうつるのは20分後',
     driving: '走っている。岩はどこだ…？', stopping: '「止まれ」を送信中… とどくまで20分',
     crash: 'ドン！ 岩にぶつかった', crashWhy: 'きみの画面に岩がうつったとき、本物のローバーは、もうぶつかっていた。',
     early: '止まった。でも、岩はまだ先', earlyWhy: '岩が見える前に止めるしかない。それでは、どこにも行けない。',
@@ -44,8 +44,8 @@ const TX = {
   },
   en: {
     title: 'I drove a Mars rover\nlike an RC car', sub: 'The signal takes 20 minutes each way. Can you stop before the rock?', start: 'Try it', note: 'In this game, 20 minutes takes 2 seconds',
-    earth: 'Earth', mars: 'Mars', r1: 'ROUND 1: RC-car style', r1task: 'Press STOP just before the rock', screen: 'Your screen (Mars, 20 minutes ago)', real: 'REAL',
-    go: 'GO', stop: 'STOP', ready: 'Press GO to start', sending: 'Sending GO… 20 minutes to reach Mars', waiting: 'The real rover is moving. Its picture reaches you 20 minutes later',
+    earth: 'Earth', mars: 'Mars', r1: 'ROUND 1: RC-car style', r1task: 'Press STOP just before the rock', screen: 'Your screen (Mars, 20 minutes ago)', real: 'REAL', fog: '? Not in view yet',
+    go: 'GO', stop: 'STOP', ready: 'Press GO to start. The rock stays hidden until the camera gets close', sending: 'Sending GO… 20 minutes to reach Mars', waiting: 'The real rover is moving. Its picture reaches you 20 minutes later',
     driving: 'Driving. Where is the rock…?', stopping: 'Sending STOP… 20 minutes to reach Mars',
     crash: 'CRASH! It hit the rock', crashWhy: 'When the rock showed up on your screen, the real rover had already hit it.',
     early: 'It stopped. But the rock is still far away', earlyWhy: 'The only safe way is to stop before you can see the rock. That gets you nowhere.',
@@ -90,9 +90,9 @@ export function mount(box, { lang, toast }) {
   function round1(ghost) {
     play(true);
     const R = 0.56 + Math.random() * 0.28;
-    const scr = el('div', 'lg-scr'), rov = rover('lg-rov'), real = rover('lg-rov lg-real'), rock = el('i', 'lg-rock'), boom = el('i', 'lg-boom', '💥');
+    const scr = el('div', 'lg-scr'), rov = rover('lg-rov'), real = rover('lg-rov lg-real'), rock = el('i', 'lg-rock'), boom = el('i', 'lg-boom', '💥'), fog = el('i', 'lg-fog', X.fog);   // fog = the ground the camera cannot see yet
     real.append(el('em', '', X.real)); real.hidden = !ghost; rock.hidden = boom.hidden = true; rock.style.left = R * 100 + '%';
-    scr.append(el('span', 'lg-lab', X.screen), rock, real, rov, boom);
+    scr.append(el('span', 'lg-lab', X.screen), rock, fog, real, rov, boom);
     const link = wire(), msg = status(X.ready), row = el('div', 'lg-row');
     const go = btn('lg-big go', X.go, () => { snd('send'); go.disabled = true; st.disabled = false; tGo = performance.now() + LAG; ping(link); tick(); });
     const st = btn('lg-big stop', X.stop, () => { snd('send'); st.disabled = true; pressed = true; tStop = performance.now() + LAG; ping(link, 'red'); });
@@ -102,17 +102,17 @@ export function mount(box, { lang, toast }) {
     const tCrash = () => tGo + (R - HIT - X0) / V * 1000;
     const trueX = t => t <= tGo ? X0 : Math.min(X0 + V * (Math.min(t, tStop) - tGo) / 1000, R - HIT);
     const put = (e, x) => { e.style.left = x * 100 + '%'; };
-    put(rov, X0); put(real, X0);
+    put(rov, X0); put(real, X0); put(fog, X0 + CAM);
     function tick() {
       const now = performance.now(), end = Math.min(tCrash(), tStop), xs = trueX(now - LAG);
-      put(real, trueX(now)); put(rov, xs);
+      put(real, trueX(now)); put(rov, xs); put(fog, xs + CAM);
       if (xs >= R - CAM) rock.hidden = false;
       say(msg, pressed ? X.stopping : now < tGo ? X.sending : now < tGo + LAG ? X.waiting : X.driving);
       if (now >= end + LAG) return finish(tStop < tCrash() ? (trueX(tStop) >= R - HIT - NEAR ? 'lucky' : 'early') : 'crash');
       raf = requestAnimationFrame(tick);
     }
     function finish(kind) {
-      rock.hidden = false;
+      rock.hidden = false; fog.remove();
       snd(kind === 'crash' ? 'thud' : kind === 'lucky' ? 'chime' : 'pop'); if (kind === 'crash') buzz(120);
       if (kind === 'crash') { boom.hidden = false; boom.style.left = (R - 0.02) * 100 + '%'; }
       link.remove(); msg.remove(); row.remove();

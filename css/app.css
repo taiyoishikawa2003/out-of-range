@@ -539,3 +539,5 @@ html.furi-on .ytx,html.furi-on .mcard p,html.furi-on .sec p,html.furi-on .sd-fac
 .chip{font-size:15px}
 .page p,.page li{color:#e8e8e8}
 .srclist li{font-size:15px}
+/* game, round 1: the part of the ground the rover's camera cannot see yet */
+.lg-fog{position:absolute;top:30%;bottom:0;right:0;z-index:2;display:flex;align-items:center;justify-content:center;overflow:hidden;white-space:nowrap;font-style:normal;font-size:13px;font-weight:800;color:rgba(255,255,255,.92);background:linear-gradient(90deg,rgba(20,10,8,0),rgba(20,10,8,.86) 26px);padding-left:26px}
