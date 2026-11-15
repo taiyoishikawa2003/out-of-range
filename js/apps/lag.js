@@ -23,19 +23,19 @@ const buzz = ms => { try { if (navigator.vibrate) navigator.vibrate(ms); } catch
 
 const TX = {
   ja: {
-    title: '火星の車を\nラジコンで運転してみた', sub: '電波がとどくまで、片道20分。岩の手前で止められる？', start: 'やってみる', note: '※ゲームでは、20分を2秒にちぢめています',
-    earth: '地球', mars: '火星', r1: 'ROUND 1　ラジコン方式', r1task: '岩の手前で「止まれ」を押そう', screen: 'きみの画面（20分前の火星）', real: '本物',
-    go: '進め', stop: '止まれ', ready: '「進め」を押すとスタート', sending: '「進め」を送信中… 火星にとどくまで20分', waiting: '本物は走りだした。でも、それが画面にうつるのは20分後',
-    driving: '走っている。岩の手前で止めろ！', stopping: '「止まれ」を送信中… とどくまで20分',
-    crash: 'ドン！ 岩にぶつかった', crashWhy: '画面にうつるのは、20分前の火星。「止まれ」がとどくのも20分後。本物は、画面より40分ぶん先まで走っていた。',
-    early: '止まった。でも、岩はまだ先', earlyWhy: '早く押しすぎた。40分ぶん先を読んで押すのは、むずかしい。',
-    lucky: '止まれた！ …でも、それは運', luckyWhy: '画面ではまだ遠いうちに押したはず。40分ぶん先を、かんで読んだ。本物の火星で毎回これは、あぶなすぎる。',
-    fact1: '本物の火星では、電波は片道3〜22分。だから、ラジコンのようには運転できない。', again: 'もう1回（本物の位置も見る）', next: 'じゃあ、どうやって？ ▶',
-    r2: 'ROUND 2　NASA 方式', r2task: '1日分の命令を、まとめて送る', sol: n => `火星の${n}日目`, r2hint: '矢印で道を作って、★の岩まで行こう', count: n => `命令 ${n}/6`,
+    title: '火星の車を\nラジコンで運転してみた', sub: 'ボタンを押してから車が動くのが見えるまで、往復40分。岩の手前で止められる？', start: 'やってみる', note: '※ゲームでは、20分を2秒にちぢめています',
+    earth: '地球', mars: '火星', r1: 'ROUND 1　ラジコン方式', r1task: '岩の手前で止めよう', screen: '火星からの映像（20分おくれ）', real: '本物（いま）',
+    go: '進め', stop: '止まれ', ready: '① 「進め」を押す', left: n => `あと ${n}分`, r2go: '② 「まとめて送信」を押す', sending: '「進め」を送った。車が動くのが見えるまで、往復40分',
+    driving: '② 岩の手前で「止まれ」を押す', stopping: '「止まれ」を送った。でも、とどくまで車は走りつづける',
+    crash: 'ドン！ 岩にぶつかった', crashWhy: '「止まれ」を押しても、すぐには止まらない。とどくまでのあいだ、車は走りつづけた。',
+    early: '止まった。でも、岩はまだずっと先', earlyWhy: '早く押しすぎた。40分先を当てるのは、むずかしい。',
+    lucky: '止まれた！ …でも、それは運', luckyWhy: '40分先を、かんで当てた。本物の火星で毎回これは、あぶなすぎる。',
+    fact1: '本物の火星では、電波は片道3〜22分。だから、ラジコンのようには運転できない。', again: 'もう1回（本物の車の位置も出す）', next: 'じゃあ、どうやって？ ▶',
+    r2: 'ROUND 2　NASA 方式', r2task: '道を作って、まとめて送ろう', sol: n => `火星の${n}日目`, r2hint: '① 矢印を押して、★までの道を作る（岩はよける）', count: n => `命令 ${n}/6`,
     send: 'まとめて送信', undo: '1つ消す', dir: { u: '上へ', r: '右へ', d: '下へ', l: '左へ' },
-    full: 'このゲームでは、1日に6個まで', edge: 'そこは地図の外', isRock: 'そこは岩。地図に見えている', already: 'もう★に着く道ができている。送信しよう',
+    full: '1日に送れるのは6個まで。「まとめて送信」を押そう', edge: 'そこは地図の外', isRock: 'そこは岩。地図に見えている', already: '★までの道ができた。「まとめて送信」を押そう',
     r2sending: '命令を送信中… 火星にとどくまで20分', running: 'ローバーが、命令を1つずつ進めている',
-    hazard: 'ストップ！ カメラが岩を見つけて、自分で止まった', hazard2: '地図になかった岩だった。つづきの命令は、次の日に送る', dayEnd: '今日の命令はここまで。つづきは、次の日に送る',
+    hazard: 'ストップ！ カメラが岩を見つけて、自分で止まった', hazard2: '地図にない岩だった。よける道を作って、また送信しよう', dayEnd: '今日の命令はここまで。つづきの道を作って、また送信しよう',
     arrived: n => `到着！ 火星の${n}日目でクリア`, cleared: n => `クリア（火星の${n}日目）`, finTitle: 'これが本当のやり方',
     facts: ['火星ローバーにジョイスティックはない。運転する人は、次の日の命令をまとめて送った', 'ローバーは2つのカメラで岩や坂を見つけて、自分でよけたり、止まったりした'],
     cap: '本物の写真：オポチュニティのタイヤのあと（2011年）。約1.2mごとに向きを変えて、カメラで道を確かめたので、模様がついた（NASA/JPL-Caltech）',
@@ -43,19 +43,19 @@ const TX = {
     shareText: n => `火星ローバーを「NASA 方式」で運転して、火星の${n}日目でクリアした`,
   },
   en: {
-    title: 'I drove a Mars rover\nlike an RC car', sub: 'The signal takes 20 minutes each way. Can you stop before the rock?', start: 'Try it', note: 'In this game, 20 minutes takes 2 seconds',
-    earth: 'Earth', mars: 'Mars', r1: 'ROUND 1: RC-car style', r1task: 'Press STOP just before the rock', screen: 'Your screen (Mars, 20 minutes ago)', real: 'REAL',
-    go: 'GO', stop: 'STOP', ready: 'Press GO to start', sending: 'Sending GO… 20 minutes to reach Mars', waiting: 'The real rover is moving. Its picture reaches you 20 minutes later',
-    driving: 'Driving. Stop it before the rock!', stopping: 'Sending STOP… 20 minutes to reach Mars',
-    crash: 'CRASH! It hit the rock', crashWhy: 'Your screen shows Mars 20 minutes ago, and STOP takes 20 more minutes to arrive. The real rover drove 40 minutes farther than what you saw.',
+    title: 'I drove a Mars rover\nlike an RC car', sub: 'From pressing a button to seeing the rover move: 40 minutes, there and back. Can you stop before the rock?', start: 'Try it', note: 'In this game, 20 minutes takes 2 seconds',
+    earth: 'Earth', mars: 'Mars', r1: 'ROUND 1: RC-car style', r1task: 'Stop before the rock', screen: 'Video from Mars (20 minutes late)', real: 'REAL (now)',
+    go: 'GO', stop: 'STOP', ready: '1. Press GO', left: n => `${n} min to go`, r2go: '2. Press “Send them all”', sending: 'GO is on its way. You will see the rover move in 40 minutes, there and back',
+    driving: '2. Press STOP before the rock', stopping: 'STOP is on its way. Until it arrives, the rover keeps driving',
+    crash: 'CRASH! It hit the rock', crashWhy: 'STOP does not work right away. Until it arrived, the rover kept driving.',
     early: 'It stopped. But the rock is still far away', earlyWhy: 'You pressed too early. Guessing 40 minutes ahead is hard.',
-    lucky: 'You stopped in time! …by luck', luckyWhy: 'You must have pressed while the rover still looked far from the rock. You guessed 40 minutes ahead. On the real Mars, doing that every time is far too risky.',
-    fact1: 'On the real Mars, a signal takes 3 to 22 minutes each way. That is why nobody can drive a rover like an RC car.', again: 'Again (show the real rover too)', next: 'So how did they do it? ▶',
-    r2: 'ROUND 2: The NASA way', r2task: 'Plan the day, then send', sol: n => `Mars day ${n}`, r2hint: 'Use the arrows to plan a path to the ★ rock', count: n => `Commands ${n}/6`,
+    lucky: 'You stopped in time! …by luck', luckyWhy: 'You guessed 40 minutes ahead and got it right. On the real Mars, doing that every time is far too risky.',
+    fact1: 'On the real Mars, a signal takes 3 to 22 minutes each way. That is why nobody can drive a rover like an RC car.', again: 'Again (also show where the real rover is)', next: 'So how did they do it? ▶',
+    r2: 'ROUND 2: The NASA way', r2task: 'Plan a path, then send it', sol: n => `Mars day ${n}`, r2hint: '1. Press the arrows to plan a path to the ★ (go around the rocks)', count: n => `Commands ${n}/6`,
     send: 'Send them all', undo: 'Undo', dir: { u: 'Up', r: 'Right', d: 'Down', l: 'Left' },
-    full: 'In this game: six commands a day, max', edge: 'That is off the map', isRock: 'That is a rock. You can see it on the map', already: 'Your path already reaches the ★. Send it!',
+    full: 'Six commands a day is the limit. Press “Send them all”', edge: 'That is off the map', isRock: 'That is a rock. You can see it on the map', already: 'Your path reaches the ★. Press “Send them all”',
     r2sending: 'Sending the commands… 20 minutes to reach Mars', running: 'The rover is running your commands, one by one',
-    hazard: 'STOP! Its cameras spotted a rock, so it stopped itself', hazard2: 'That rock was not on the map. The next commands go up the next day', dayEnd: 'That is all for today. The next commands go up the next day',
+    hazard: 'STOP! Its cameras spotted a rock, so it stopped itself', hazard2: 'That rock was not on the map. Plan a way around it and send again', dayEnd: 'That is all for today. Plan the rest of the path and send again',
     arrived: n => `Arrived! Cleared on Mars day ${n}`, cleared: n => `Cleared (Mars day ${n})`, finTitle: 'This is how it was really done',
     facts: ['There is no joystick for a Mars rover. Drivers sent the next day’s commands all at once', 'The rover used two cameras to spot rocks and slopes, then steered around them or stopped by itself'],
     cap: 'Real photo: Opportunity’s wheel tracks (2011). About every 1.2 m it turned to check the route with its camera, which left this pattern (NASA/JPL-Caltech)',
@@ -78,7 +78,7 @@ export function mount(box, { lang, toast }) {
   const status = text => { const m = el('p', 'lg-msg'); m.setAttribute('role', 'status'); return say(m, text); };
   const rover = cls => { const r = el('i', cls); r.innerHTML = ROVER; return r; };
   const wire = () => { const w = el('div', 'lg-link'); w.append(el('b', '', X.earth), el('span', 'lg-wire'), el('b', '', X.mars)); return w; };
-  const ping = (link, cls) => { const d = el('i', 'lg-dot' + (cls ? ' ' + cls : '')); link.children[1].append(d); later(() => d.remove(), LAG + 60); };
+  const ping = (link, cls, back) => { const d = el('i', 'lg-dot' + (cls ? ' ' + cls : '') + (back ? ' rt' : '')); link.children[1].append(d); later(() => d.remove(), (back ? 2 : 1) * LAG + 60); };   // back: to Mars, then the picture comes back
 
   function intro() {
     frame(rover('lg-hero'), lines('h2', 'sd-title', X.title), say(el('p', 'sd-sub'), X.sub), btn('sd-start', X.start, () => { arm(); round1(false); }), el('p', 'sd-note', X.note));
@@ -93,11 +93,12 @@ export function mount(box, { lang, toast }) {
     const scr = el('div', 'lg-scr'), rov = rover('lg-rov'), real = rover('lg-rov lg-real'), rock = el('i', 'lg-rock'), boom = el('i', 'lg-boom', '💥');
     real.append(el('em', '', X.real)); real.hidden = !ghost; boom.hidden = true; rock.style.left = R * 100 + '%';
     scr.append(el('span', 'lg-lab', X.screen), rock, real, rov, boom);
-    const link = wire(), msg = status(X.ready), row = el('div', 'lg-row');
-    const go = btn('lg-big go', X.go, () => { snd('send'); go.disabled = true; st.disabled = false; tGo = performance.now() + LAG; ping(link); tick(); });
-    const st = btn('lg-big stop', X.stop, () => { snd('send'); st.disabled = true; pressed = true; tStop = performance.now() + LAG; ping(link, 'red'); });
-    st.disabled = true; row.append(go, st);
-    const w = frame(el('p', 'lg-round', X.r1), el('h2', 'lg-task', X.r1task), scr, link, msg, row);
+    const link = wire(), msg = status(X.ready), cd = el('p', 'lg-cd'), row = el('div', 'lg-row');
+    let cdEnd = 0;
+    const go = btn('lg-big go', X.go, () => { snd('send'); go.disabled = true; go.classList.remove('lg-pulse'); tGo = performance.now() + LAG; cdEnd = tGo + LAG; ping(link, '', true); tick(); });
+    const st = btn('lg-big stop', X.stop, () => { snd('send'); st.disabled = true; st.classList.remove('lg-pulse'); pressed = true; tStop = performance.now() + LAG; cdEnd = tStop + LAG; ping(link, 'red', true); });
+    st.disabled = true; go.classList.add('lg-pulse'); row.append(go, st);
+    const w = frame(el('p', 'lg-round', X.r1), el('h2', 'lg-task', X.r1task), scr, link, msg, cd, row);
     let tGo = Infinity, tStop = Infinity, pressed = false;
     const tCrash = () => tGo + (R - HIT - X0) / V * 1000;
     const trueX = t => t <= tGo ? X0 : Math.min(X0 + V * (Math.min(t, tStop) - tGo) / 1000, R - HIT);
@@ -106,14 +107,17 @@ export function mount(box, { lang, toast }) {
     function tick() {
       const now = performance.now(), end = Math.min(tCrash(), tStop), xs = trueX(now - LAG);
       put(real, trueX(now)); put(rov, xs);
-      say(msg, pressed ? X.stopping : now < tGo ? X.sending : now < tGo + LAG ? X.waiting : X.driving);
+      const seen = now >= tGo + LAG;                                   // the rover is moving on the player's screen
+      if (seen && !pressed && st.disabled) { st.disabled = false; st.classList.add('lg-pulse'); }
+      say(msg, pressed ? X.stopping : seen ? X.driving : X.sending);
+      cd.textContent = cdEnd > now ? X.left(Math.ceil((cdEnd - now) / 100)) : '';
       if (now >= end + LAG) return finish(tStop < tCrash() ? (trueX(tStop) >= R - HIT - NEAR ? 'lucky' : 'early') : 'crash');
       raf = requestAnimationFrame(tick);
     }
     function finish(kind) {
       snd(kind === 'crash' ? 'thud' : kind === 'lucky' ? 'chime' : 'pop'); if (kind === 'crash') buzz(120);
       if (kind === 'crash') { boom.hidden = false; boom.style.left = (R - 0.02) * 100 + '%'; }
-      link.remove(); msg.remove(); row.remove();
+      link.remove(); msg.remove(); cd.remove(); row.remove();
       const again = btn('sd-ghost', X.again, () => round1(true));
       w.append(el('h3', 'lg-res ' + kind, X[kind]), say(el('p', 'lg-why'), X[kind + 'Why']), say(el('p', 'lg-fact'), X.fact1), btn('sd-start lg-next', X.next, round2), again);
     }
@@ -141,6 +145,9 @@ export function mount(box, { lang, toast }) {
       rv.style.transform = `translate(${pos[0] * 100}%,${pos[1] * 100}%) rotate(${ang * 90}deg)`;
       chips.replaceChildren(...plan.map(k => el('b', '', DIRS[k][3])), el('span', '', X.count(plan.length)));
       send.disabled = undo.disabled = busy || !plan.length;
+      const pp = path(), last = pp[pp.length - 1], ready = !busy && plan.length && (plan.length >= 6 || (last[0] === T[0] && last[1] === T[1]));
+      send.classList.toggle('lg-pulse', !!ready);
+      if (!busy && plan.length) say(msg, ready ? X.r2go : X.r2hint);
       for (const k in keys) keys[k].disabled = busy;
     }
     function add(k) {

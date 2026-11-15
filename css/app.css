@@ -539,3 +539,11 @@ html.furi-on .ytx,html.furi-on .mcard p,html.furi-on .sec p,html.furi-on .sd-fac
 .chip{font-size:15px}
 .page p,.page li{color:#e8e8e8}
 .srclist li{font-size:15px}
+/* game: countdown, there-and-back signal, and a pulse on the button to press next */
+.lg-cd{margin:-2px 0 0;min-height:1.35em;font-size:21px;font-weight:900;color:#ffc400;font-variant-numeric:tabular-nums}
+.lg-dot.rt{animation:lgfly 2s linear 2 alternate forwards}
+.lg-msg{font-size:15px;font-weight:700}
+.lg-pulse:not(:disabled){animation:lgpulse 1.1s ease-in-out infinite}
+@keyframes lgpulse{50%{box-shadow:0 0 0 8px rgba(255,255,255,.3)}}
+@media (prefers-reduced-motion:reduce){.lg-pulse:not(:disabled){animation:none;outline:3px solid #fff}}
+@media (max-height:700px){.lg-cd{font-size:18px}.lg-msg{font-size:13.5px}}
