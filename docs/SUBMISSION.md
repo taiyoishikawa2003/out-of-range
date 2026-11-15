@@ -52,7 +52,7 @@ Each post starts from one NASA record, and we picked the format that fits the re
 3. Phoenix (Mars): a spot-the-difference video made from two real photos. What vanished were dice-size bits of ice, and that is how the team knew it was ice and not salt
 4. Surveyor 3 (Moon): a POV video. Alone for 2.5 years, then Apollo 12 landed about 180 m away and took its camera home for science
 5. Opportunity (Mars): a landscape movie trailer in a "PR" slot, like a sponsored post (our own trailer, labelled as not a real ad)
-6. Opportunity (Mars): a playable game. First try to drive the rover like an RC car with a 20-minute signal delay (you cannot). Then drive it the way rover drivers really did: plan the day, send the commands together, and let the rover stop itself when its cameras see a rock
+6. Opportunity (Mars): a playable game. First try to drive the rover like an RC car, with a signal that takes 20 minutes each way (you cannot). Then drive it the way rover drivers really did: plan the day, send the commands together, and let the rover stop itself when its cameras see a rock
 7. Pioneer 10 (deep space): its nav app. "Arrive in about 2 million years." Walking would take longer than the age of the universe
 8. Viking 1 (Mars): a detective case file with a tappable quiz. What cut off the lander after six years? (A faulty command from Earth.)
 9. Sojourner (Mars): a daily vlog. Day 3: drove 1.2 feet, touched a rock, feeling productive. Planned for 7 days, worked for 83
@@ -70,6 +70,7 @@ Each post starts from one NASA record, and we picked the format that fits the re
 
 **Beyond the feed**
 
+- Discover, the first page you see: one place that leads to the feed, the game, the quiz, the map, the Lunar Lost & Found, Create and the stamps.
 - The real story under every post: the pinned comment says what the machine is, why it was sent, what it found and where it is now, in plain words for kids.
 - "Where are they now?": maps of the Moon and Mars with 23 landing sites and machines (Apollo descent stages and rovers, Surveyors, Vikings, Sojourner, Spirit, Opportunity, Phoenix, InSight, Ingenuity, and NEAR, Dawn, Kepler, Pioneer 10 and Pioneer 11 farther out). Tapping a pin answers the same four questions. Landing positions come from NASA's NSSDCA catalogue.
 - Lunar Lost & Found (/lost/): a counter for things left on the Moon. Each claim slip leads to the machine next to it and a small hands-on science scene (laser ranging, moonquakes, Moon gravity).
@@ -98,10 +99,6 @@ Each post starts from one NASA record, and we picked the format that fits the re
 **How it was built**
 
 A static web app in plain HTML, CSS and JavaScript (no framework, no server, no accounts), hosted on GitHub Pages. Posts are data (JSON). Photo posts are small HTML slides rendered to images. Motion videos are web pages with a timeline, recorded frame by frame with headless Chrome and mixed with ffmpeg, in both languages. Everything personal (likes, follows, comments, created posts) stays in the browser. Open source under Apache 2.0: https://github.com/taiyoishikawa2003/out-of-range
-
-**A longer look**
-
-A walkthrough in under 3 minutes (Japanese, with English subtitles): https://taiyoishikawa2003.github.io/out-of-range/walkthrough/
 
 **What is next**
 

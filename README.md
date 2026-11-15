@@ -53,7 +53,7 @@ Beyond the feed:
 - A **Sources** button on every post, and one page that lists every NASA resource used (About)
 - Pinned comments that tell the real story in plain words (what it is, why it was sent, what it found, where it is now) and say which parts we made up
 - **Create**: kids make their own true post in the browser. A source is required. Posts stay on the device
-- Discover (search, Moon / Mars / Deep space filters) and a profile page for every account: machines show the month contact was lost, and every profile says our team writes it
+- Discover, the first page you see: it leads to the feed, the game, the quiz, the map, the Lunar Lost & Found, Create and the stamps, and it has search and Moon / Mars / Deep space filters. There is also and a profile page for every account: machines show the month contact was lost, and every profile says our team writes it
 - Read-aloud for photo posts, English / 日本語, keyboard controls, reduced-motion support
 - Fact-check stamps: opening a post's Sources earns that post's stamp, so the habit of checking where a fact comes from becomes a collection game
 - A printable one-page classroom worksheet in English and Japanese (`class/`)
@@ -102,7 +102,6 @@ Then open http://localhost:8000/. There is no build step for the site itself (pl
 ## Videos about the project
 
 - 30-second demo (English, small Japanese): https://taiyoishikawa2003.github.io/out-of-range/demo/
-- Walkthrough in under 3 minutes (Japanese with English subtitles): https://taiyoishikawa2003.github.io/out-of-range/walkthrough/
 
 Both are recorded from the real site by `tools/motion/demo.html` and `tools/motion/pitch.html`.
 
