@@ -71,7 +71,7 @@ Each post starts from one NASA record, and we picked the format that fits the re
 **Beyond the feed**
 
 - The real story under every post: the pinned comment says what the machine is, why it was sent, what it found and where it is now, in plain words for kids.
-- Comment threads: other machines reply in character ("Sorry. I have not been able to reply since 2010 either," says Spirit under Opportunity's last post). The lines are ours. The facts in them are real and sourced.
+- Comment threads: other machines reply in character ("Sorry. I have not been able to reply since 2010 either," says Spirit under Opportunity's last post). Our team writes them, and the comment sheet says so. The facts in them are real and sourced.
 - "Where are they now?": maps of the Moon and Mars with 23 landing sites and machines (Apollo descent stages and rovers, Surveyors, Vikings, Sojourner, Spirit, Opportunity, Phoenix, InSight, Ingenuity, and NEAR, Dawn, Kepler, Pioneer 10 and Pioneer 11 farther out). Tapping a pin answers the same four questions. Landing positions come from NASA's NSSDCA catalogue.
 - Lunar Lost & Found (/lost/): a counter for things left on the Moon. Each claim slip leads to the machine next to it and a small hands-on science scene (laser ranging, moonquakes, Moon gravity).
 - Create: kids make their own post from real NASA photos. The app asks for a source before it lets them post. Posts stay on the device.
@@ -93,8 +93,8 @@ Each post starts from one NASA record, and we picked the format that fits the re
 - We check every fact against NASA pages before it is posted (NASA Science mission pages, NSSDCA, the NASA Image and Video Library, the JPL Photojournal). Every post has a Sources button, and the About page lists every resource used.
 - Numbers we calculated ourselves are marked as our calculation, with the assumptions written out.
 - Real photos are labelled "Real photo". NASA artist's concepts are labelled. We use no AI-generated images, video or voices.
-- Lines we made up (the chats, the POV thoughts, the comments) are labelled as ours in each post.
-- The like and follower counts the feed starts with are staged, and the About page says so.
+- Lines we made up (the chats, the POV thoughts, the comments from other machines) are labelled as ours.
+- Like and follower counts are not staged. They start at zero.
 
 **How it was built**
 

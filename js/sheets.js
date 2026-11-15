@@ -9,6 +9,7 @@ export function toast(msg, gold = false) {
   el.textContent = msg; el.classList.add('show'); el.classList.toggle('gold', gold);
   clearTimeout(tmr); tmr = setTimeout(() => el.classList.remove('show'), gold ? 2800 : 1600);
 }
+const cmCount = n => (n === 1 && getLang() !== 'ja' ? '1 comment' : t('cm.count').replace('{n}', n));
 export const fmt = n => new Intl.NumberFormat(getLang() === 'ja' ? 'ja-JP' : 'en', { notation: 'compact', maximumFractionDigits: 1 }).format(n);
 
 let current = null;
@@ -95,7 +96,7 @@ export function commentsView(post, onCount) {
   const list = h('div', { class: 'yc-list' });
   const total = () => (post.comments?.length || 0) + localComments(post.id).length;
   const draw = () => {
-    count.textContent = t('cm.count').replace('{n}', total());
+    count.textContent = cmCount(total());
     list.replaceChildren();
     (post.comments || []).forEach((c, i) => {
       const a = account(c.user); const isAuthor = c.user === post.account;
@@ -141,7 +142,7 @@ export function commentsView(post, onCount) {
 
 export function openComments(post, onCount) {
   const v = commentsView(post, onCount);
-  openSheet(t('cm.count').replace('{n}', v.count()), v.root);
+  openSheet(cmCount(v.count()), v.root);
   document.querySelector('#sheet-root .sheet')?.classList.add('tall');
 }
 

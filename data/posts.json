@@ -28,10 +28,6 @@
    "en": "Original sound – NASA InSight data",
    "ja": "オリジナル音源 – NASA インサイトの観測データ"
   },
-  "stats": {
-   "likes": 4812,
-   "saves": 534
-  },
   "comments": [
    {
     "user": "insight_lander",
@@ -258,10 +254,6 @@
   "sound": {
    "ja": "Kevin MacLeod「Monkeys Spinning Monkeys」(CC BY 4.0)",
    "en": "Kevin MacLeod – Monkeys Spinning Monkeys (CC BY 4.0)"
-  },
-  "stats": {
-   "likes": 3960,
-   "saves": 440
   },
   "comments": [
    {
@@ -497,10 +489,6 @@
     "en": "media/phoenix/spot.poster.en.jpg?v=e5b40502"
    },
    "fit": "contain"
-  },
-  "stats": {
-   "likes": 2741,
-   "saves": 304
   }
  },
  {
@@ -662,10 +650,6 @@
     "en": "media/surveyor/pov.poster.en.jpg?v=89d5726f"
    },
    "fit": "contain"
-  },
-  "stats": {
-   "likes": 3318,
-   "saves": 368
   }
  },
  {
@@ -696,10 +680,6 @@
   "sound": {
    "ja": "ホルスト「火星」– 米空軍バンド（パブリックドメイン）",
    "en": "Holst, \"Mars\" – U.S. Air Force Band (public domain)"
-  },
-  "stats": {
-   "likes": 1204,
-   "saves": 133
   },
   "comments": [
    {
@@ -830,10 +810,6 @@
   "sound": {
    "ja": "効果音：チームが作った音",
    "en": "Sound effects made by our team"
-  },
-  "stats": {
-   "likes": 5127,
-   "saves": 569
   },
   "comments": [
    {
@@ -1084,10 +1060,6 @@
     "en": "media/pioneer/navi.poster.en.jpg?v=2ee96fa6"
    },
    "fit": "contain"
-  },
-  "stats": {
-   "likes": 3655,
-   "saves": 406
   }
  },
  {
@@ -1298,11 +1270,7 @@
    }
   ],
   "noSourceSlide": true,
-  "fit": "contain",
-  "stats": {
-   "likes": 1873,
-   "saves": 208
-  }
+  "fit": "contain"
  },
  {
   "id": "sojourner-vlog-1",
@@ -1478,10 +1446,6 @@
     "en": "media/sojourner/vlog.poster.en.jpg?v=2804ee91"
    },
    "fit": "contain"
-  },
-  "stats": {
-   "likes": 2946,
-   "saves": 327
   }
  },
  {
@@ -1546,10 +1510,6 @@
   "sound": {
    "ja": "Kevin MacLeod「Fluffing a Duck」(CC BY 4.0)",
    "en": "Kevin MacLeod – Fluffing a Duck (CC BY 4.0)"
-  },
-  "stats": {
-   "likes": 2208,
-   "saves": 245
   },
   "comments": [
    {
@@ -1690,10 +1650,6 @@
   "sound": {
    "ja": "Heartwarming – Kevin MacLeod",
    "en": "Heartwarming – Kevin MacLeod"
-  },
-  "stats": {
-   "likes": 3402,
-   "saves": 378
   },
   "comments": [
    {
@@ -2056,11 +2012,7 @@
    }
   ],
   "noSourceSlide": true,
-  "fit": "contain",
-  "stats": {
-   "likes": 2517,
-   "saves": 279
-  }
+  "fit": "contain"
  },
  {
   "id": "dawn-grind-1",
@@ -2228,10 +2180,6 @@
     "en": "media/dawn/grind.poster.en.jpg?v=5e1db92e"
    },
    "fit": "contain"
-  },
-  "stats": {
-   "likes": 1766,
-   "saves": 196
   }
  },
  {
@@ -2255,10 +2203,6 @@
   "sound": {
    "ja": "音はありません",
    "en": "No sound"
-  },
-  "stats": {
-   "likes": 4230,
-   "saves": 470
   },
   "comments": [
    {
@@ -2533,11 +2477,7 @@
    }
   ],
   "noSourceSlide": true,
-  "fit": "contain",
-  "stats": {
-   "likes": 1392,
-   "saves": 154
-  }
+  "fit": "contain"
  },
  {
   "id": "near-chat-1",
@@ -2657,10 +2597,6 @@
     "en": "media/near/chat.poster.en.jpg?v=177f0c92"
    },
    "fit": "contain"
-  },
-  "stats": {
-   "likes": 2864,
-   "saves": 318
   }
  },
  {
@@ -2897,11 +2833,7 @@
    }
   ],
   "noSourceSlide": true,
-  "fit": "contain",
-  "stats": {
-   "likes": 1648,
-   "saves": 183
-  }
+  "fit": "contain"
  },
  {
   "id": "machine-aruaru-1",
@@ -3154,11 +3086,7 @@
    }
   ],
   "noSourceSlide": true,
-  "fit": "contain",
-  "stats": {
-   "likes": 2075,
-   "saves": 230
-  }
+  "fit": "contain"
  },
  {
   "id": "ranking-overtime-1",
@@ -3351,10 +3279,6 @@
     "en": "media/ranking/top5.poster.en.jpg?v=68e1ec18"
    },
    "fit": "contain"
-  },
-  "stats": {
-   "likes": 3091,
-   "saves": 343
   }
  },
  {
@@ -3506,10 +3430,6 @@
     "en": "media/opportunity/unread.poster.en.jpg?v=a3bea94f"
    },
    "fit": "contain"
-  },
-  "stats": {
-   "likes": 6538,
-   "saves": 726
   }
  }
 ]

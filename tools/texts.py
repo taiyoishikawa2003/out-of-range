@@ -453,11 +453,7 @@ ORDER = [
  'near-chat-1', 'runway-looks-1', 'machine-aruaru-1', 'ranking-overtime-1', 'opportunity-unread-1',
 ]
 
-# ---------- starting like counts ----------
-# Staged numbers so the feed reads like a feed. The About page says they are staged. A reader's own like adds 1.
-LIKES = {
- 'insight-kaidan-1': 4812, 'lost-quiz-1': 3960, 'phoenix-spot-1': 2741, 'surveyor-pov-1': 3318, 'opportunity-trailer-1': 1204,
- 'lag-1': 5127, 'pioneer-navi-1': 3655, 'viking-casefile-1': 1873, 'sojourner-vlog-1': 2946, 'spirit-ideal-1': 2208,
- 'kepler-uranai-1': 3402, 'viking2-roomtour-1': 2517, 'dawn-grind-1': 1766, 'shindan-1': 4230, 'pioneer11-dump-1': 1392,
- 'near-chat-1': 2864, 'runway-looks-1': 1648, 'machine-aruaru-1': 2075, 'ranking-overtime-1': 3091, 'opportunity-unread-1': 6538,
-}
+# ---------- team decision, Nov 15 ----------
+# Comments from other machines stay (our team writes them, and the comment sheet says so).
+# Like and follower counts are not staged: they start at zero.
+MACHINE_COMMENTS = True
