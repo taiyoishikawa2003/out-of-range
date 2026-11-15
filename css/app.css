@@ -548,3 +548,8 @@ html.furi-on .ytx,html.furi-on .mcard p,html.furi-on .sec p,html.furi-on .sd-fac
 @keyframes lgpulse{50%{box-shadow:0 0 0 8px rgba(255,255,255,.3)}}
 @media (prefers-reduced-motion:reduce){.lg-pulse:not(:disabled){animation:none;outline:3px solid #fff}}
 @media (max-height:700px){.lg-cd{font-size:18px}.lg-msg{font-size:13.5px}}
+/* Discover is the first page: name, one line about the site, and the way into the feed */
+.page h1.disc-brand{margin:0;font-size:18px;letter-spacing:.08em;font-weight:900;white-space:nowrap}
+.page p.disc-tag{margin:8px 0 12px;font-size:14px;line-height:1.6;color:#e8e8e8;word-break:auto-phrase}
+.disc-go{width:100%;margin:0 0 14px;font-size:16px}
+.disc-go svg{width:18px;height:18px}

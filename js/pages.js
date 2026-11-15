@@ -58,7 +58,11 @@ export function renderDiscover(view, q = '') {
   };
   input.addEventListener('input', draw);
   drawChips(); draw();
-  view.replaceChildren(h('div', { class: 'page' }, h('div', { class: 'search' }, icon('search'), input), chips, res));
+  view.replaceChildren(h('div', { class: 'page' },
+    h('div', { class: 'backbar', style: { justifyContent: 'space-between' } }, h('h1', { class: 'disc-brand', text: 'OUT OF RANGE' }), h('div', { style: { display: 'flex', gap: '8px' } }, furiButton(), h('button', { class: 'btn ghost sm', type: 'button', 'data-action': 'lang', text: t('lang') }))),
+    h('p', { class: 'disc-tag', text: t('gate.tag') }),
+    h('a', { class: 'btn disc-go', href: '#/' }, icon('play'), t('disc.watch')),
+    h('div', { class: 'search' }, icon('search'), input), chips, res));
   if (!matchMedia('(pointer:coarse)').matches) input.focus();
 }
 

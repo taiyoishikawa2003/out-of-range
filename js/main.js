@@ -51,6 +51,8 @@ onLang(() => route());
   }
   window.addEventListener('hashchange', route);
   if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
+  // A visit with no address opens Discover: it leads to every part of the site. The Home tab (#/) is the feed.
+  if (!location.hash || location.hash === '#') history.replaceState(null, '', location.pathname + location.search + '#/discover');
   route();
   initFuri();
 })();
