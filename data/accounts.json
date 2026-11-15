@@ -122,8 +122,8 @@
   "place": "deep",
   "followers": 0,
   "bio": {
-   "en": "Left in 1972. Heading toward Aldebaran. About 2 million years to go.",
-   "ja": "1972年に出発。アルデバランの方向へ、あと200万年くらい。"
+   "en": "Left in 1972. Heading toward Aldebaran. More than 2 million years to go.",
+   "ja": "1972年に出発。アルデバランの方向へ、あと200万年以上。"
   },
   "avatar": "media/avatars/pioneer10.jpg",
   "kind": "machine",
@@ -201,8 +201,8 @@
   "followers": 0,
   "avatar": "media/avatars/opportunity_rover.jpg",
   "bio": {
-   "en": "Mars rover. I came for 90 days and stayed for 14 years.",
-   "ja": "火星の探査車。90日の予定で来て、14年いました。"
+   "en": "Mars rover. I came for 90 days and worked for 14 years.",
+   "ja": "火星の探査車。90日の予定で来て、14年はたらきました。"
   },
   "kind": "machine",
   "since": {
@@ -250,8 +250,8 @@
   "place": "deep",
   "followers": 0,
   "bio": {
-   "en": "Slow to speed up. Never stopped. Now circling Ceres.",
-   "ja": "加速はおそい。止まったことはない。いまはケレスのまわりを回ってます。"
+   "en": "Four days to reach 60 mph. I kept that up for 5.9 years. Now circling Ceres.",
+   "ja": "4日かけて、やっと時速96km。それを5.9年つづけました。いまはケレスのまわり。"
   },
   "avatar": "media/avatars/dawn_spacecraft.jpg",
   "kind": "machine",

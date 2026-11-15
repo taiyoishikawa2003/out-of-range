@@ -438,8 +438,8 @@
     "en": "Viking 1’s twin. It landed farther north, on the other side of Mars."
    },
    "found": {
-    "ja": "片足が岩に乗って、8.2度かたむいたまま着陸しましたが、すぐに写真を撮りはじめました。火星で1281日（火星の日数）はたらきました。",
-    "en": "It came down with one leg on a rock, tilted 8.2 degrees, and started taking pictures right away. It worked for 1,281 Mars days."
+    "ja": "片足が岩に乗って、8.5度かたむいたまま着陸しましたが、すぐに写真を撮りはじめました。火星で1281日（火星の日数）はたらきました。",
+    "en": "It came down with one leg on a rock, tilted 8.5 degrees, and started taking pictures right away. It worked for 1,281 Mars days."
    },
    "now": {
     "ja": "ユートピア平原にあります。1980年4月、電池が使えなくなって止まりました。",
@@ -449,6 +449,10 @@
     {
      "title": "NSSDCA: Viking 2 Lander",
      "url": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-083C"
+    },
+    {
+     "title": "NASA Science: Viking 2 (tilted 8.5 degrees to the west; NSSDCA gives 8.2)",
+     "url": "https://science.nasa.gov/mission/viking-2/"
     }
    ]
   },
@@ -470,8 +474,8 @@
     "en": "A lander and Sojourner, a small 10.6 kg rover. They were sent to test whether Mars could be landed on and explored at low cost."
    },
    "found": {
-    "ja": "その方法でうまくいくことを示しました。",
-    "en": "They showed that it could be done."
+    "ja": "安い費用でも火星に着陸して、探査車を走らせられることを示しました。ソジャーナは、岩や土の成分を15回以上はかりました。",
+    "en": "It showed that a low-cost mission could land on Mars and drive a rover there. Sojourner made more than 15 chemical analyses of rocks and soil."
    },
    "now": {
     "ja": "アレス谷にあります。1997年9月27日のデータが最後です。",
