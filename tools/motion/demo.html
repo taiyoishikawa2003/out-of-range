@@ -13,7 +13,7 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#07090d;color:#f
 .brand{position:absolute;left:0;top:76px;font-size:30px;letter-spacing:.2em;color:#ffc400}
 .brand small{display:block;font-size:22px;letter-spacing:.02em;color:#aeb7c4;font-weight:700;margin-top:10px}
 .seg{position:absolute;left:0;top:370px;width:1000px;opacity:0}
-.seg h2{font-size:108px;line-height:1.12}
+.seg h2{font-size:104px;line-height:1.12}
 .seg p{font-size:42px;line-height:1.4;font-weight:700;margin-top:26px;color:#e6ebf2}
 .seg .ja{font-size:28px;color:#9aa5b5;margin-top:18px}
 .card{position:absolute;inset:0;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;opacity:0}
@@ -23,49 +23,57 @@ html,body{width:1920px;height:1080px;overflow:hidden;background:#07090d;color:#f
 .card p{font-size:44px;font-weight:700;margin-top:26px;color:#e6ebf2}
 .card .url{font-size:46px;color:#ffc400;margin-top:38px}
 .card .fine{position:absolute;left:0;right:0;bottom:56px;font-size:23px;font-weight:700;color:#8c96a6;line-height:1.6}
+.card .pre{position:absolute;left:0;right:0;top:70px;font-size:26px;font-weight:700;letter-spacing:.06em;color:#8c96a6}
+.card h1.c{margin-top:40px}
 </style></head>
 <body><div class="s" id="stage"></div>
 <script type="module">
 // 30-second project demo (1920x1080): the real posts and screens of the site, in a phone frame.
+// Order: the challenge and the idea, four posts, the real story with its sources, the map, making your own post, the last post, the name.
 import { M, el, sfx, music, win, pop, an, fadeIn, clip, done } from './motion.js';
-const st = document.getElementById('stage'); M.dur = 29.7; M.poster = 8;
-const T = [2.4, 5.7, 9.0, 12.3, 15.6, 18.0, 20.9, 23.3, 25.6];   // segment starts; the last one is the end card
+const st = document.getElementById('stage'); M.dur = 29.7; M.poster = 4.6;
+const T = [3.0, 5.9, 8.8, 11.7, 14.4, 17.3, 19.9, 22.5, 25.4];   // segment starts; the last one is the end card
 const phone = el('<div class="phone"><div class="panes"></div></div>', st), panes = phone.firstChild;
+// [segment, video, fit, UI overlay, start inside the video]
 const vids = [
-  ['media/insight/kaidan1.en.mp4', 'cover', 'ui_insight-kaidan-1', 0.3],
-  ['media/surveyor/pov.en.mp4', 'contain', 'ui_surveyor-pov-1', 3.6],
-  ['media/pioneer/navi.en.mp4', 'contain', 'ui_pioneer-navi-1', 4.9],
-  ['media/near/chat.en.mp4', 'contain', 'ui_near-chat-1', 6.9]];
-vids.forEach(([src, fit, ui, from], i) => {
+  [0, 'media/insight/kaidan1.en.mp4', 'cover', 'ui_insight-kaidan-1', 0.3],
+  [1, 'media/phoenix/spot.en.mp4', 'contain', 'ui_phoenix-spot-1', 4.4],
+  [2, 'media/sojourner/vlog.en.mp4', 'contain', 'ui_sojourner-vlog-1', 9.0],
+  [7, 'media/opportunity/unread.en.mp4', 'contain', 'ui_opportunity-unread-1', 17.3]];
+vids.forEach(([i, src, fit, ui, from]) => {
   const p = el(`<div class="pane" style="top:${i * 892}px"><div class="stagebox"><video src="/${src}" muted playsinline preload="auto" style="object-fit:${fit}"></video></div><img src="demo_assets/${ui}.png"></div>`, panes);
-  clip(p.querySelector('video'), T[i], T[i + 1], from);
-  music(src, T[i], T[i + 1] + 0.12, { from, fadeIn: 0.15, fadeOut: 0.2 });
+  const last = i === 7;
+  clip(p.querySelector('video'), T[i], last ? M.dur : T[i + 1], from);
+  music(src, T[i], last ? M.dur : T[i + 1] + 0.12, { from, fadeIn: 0.15, fadeOut: last ? 1.6 : 0.2 });
 });
 const still = (i, files) => { const p = el(`<div class="pane" style="top:${i * 892}px"></div>`, panes); const d = (T[i + 1] - T[i]) / files.length;
   files.forEach((f, k) => { const im = el(`<img src="demo_assets/${f}.png">`, p); if (k) { an(im, [{ opacity: 0 }, { opacity: 1 }], { duration: 160, delay: (T[i] + d * k) * 1000 }); sfx(T[i] + d * k, 'pop', 0.8); } }); };
-still(4, ['quiz_0', 'quiz_1', 'quiz_2']); still(5, ['game_0', 'game_1', 'game_2']); still(6, ['map_0', 'map_1', 'map_2']); still(7, ['sources']);
+still(3, ['game_0', 'game_1', 'game_2']); still(4, ['real_0', 'real_1', 'sources']); still(5, ['map_0', 'map_1', 'map_2']); still(6, ['create_0', 'create_1']);
 // swipes
 const kf = [{ transform: 'translateY(0)', offset: 0 }];
 T.slice(1, 8).forEach((t, i) => { const a = (t - 0.2) / M.dur, b = (t + 0.2) / M.dur; kf.push({ transform: `translateY(${-i * 892}px)`, offset: a, easing: 'cubic-bezier(.3,.8,.3,1)' }, { transform: `translateY(${-(i + 1) * 892}px)`, offset: b }); sfx(t - 0.18, 'whoosh', 0.7); });
 kf.push({ transform: `translateY(${-7 * 892}px)`, offset: 1 }); an(panes, kf, { duration: M.dur * 1000 });
-music('Carefree', T[4], M.dur, { from: 0.1, gain: 0.75, fadeIn: 0.3, fadeOut: 0.8 });
+music('Carefree', T[3], T[7] + 0.1, { from: 0.1, gain: 0.75, fadeIn: 0.3, fadeOut: 0.5 });
+// under the opening card: the quiet Mars ambience from the first post (InSight data made audible by NASA)
+music('media/insight/kaidan1.en.mp4', 0, T[0], { from: 3.3, gain: 1, fadeIn: 0.5, fadeOut: 0.3 });
 // right column
-const R = el('<div class="right"><div class="brand">OUT OF RANGE<small>The machines NASA left behind, posting in the formats kids already watch</small></div></div>', st);
+const R = el('<div class="right"><div class="brand">OUT OF RANGE<small>A feed for the machines NASA left behind, in the formats kids already watch</small></div></div>', st);
 const segs = [
-  ['A scary story.', 'The sound is real. InSight recorded it on Mars.', 'こわい話。音は本物です（インサイトが火星で記録）'],
-  ['A POV.', 'Surveyor 3 waited on the Moon for 2.5 years.', 'POV。月で2年半待ったサーベイヤー3号'],
-  ['A nav app.', 'Pioneer 10 will arrive in 2 million years.', 'カーナビ。パイオニア10号の到着は200万年後'],
-  ['A group chat.', 'An orbiter with no legs is asked to land.', 'グループチャット。足のない探査機が着陸をたのまれる'],
-  ['A quiz.', 'Which space machine are you?', '診断。あなたはどの探査機タイプ？'],
-  ['A game.', 'Drive a Mars rover with a 20-minute signal delay.', 'ゲーム。ラグ20分で火星ローバーを運転'],
-  ['A map.', 'Where every machine rests now.', '地図。機械は今どこにいる？'],
-  ['Every fact is real.', 'NASA sources on every post.', '全部ほんとの話。どの投稿にも NASA の出典']];
+  ['A scary story.', 'The sound is real. InSight recorded it on Mars.', 'こわい話。音は本物（インサイトが火星で記録）'],
+  ['Spot the difference.', 'Two real photos from Mars. Something vanished in 4 days.', 'まちがい探し。火星で撮った本物の写真2枚'],
+  ['A vlog.', 'Sojourner’s first days on Mars, in real photos from 1997.', 'Vlog。ソジャーナの最初の数日を、本物の写真で'],
+  ['A game.', 'Drive a Mars rover with a 20-minute signal delay.', 'ゲーム。ラグ20分で火星の車を運転'],
+  ['The real story.', 'Under every post: what it is, why NASA sent it, what it found. With sources.', '答え合わせ。どの投稿にも、本当の話と出典'],
+  ['A map.', '23 landing sites and machines. Where each one is now.', '地図。機械は、いまどこに？'],
+  ['Your turn.', 'Kids make their own post. No source, no post.', '自分でも作れる。出典がないと投稿できない'],
+  ['The last post.', 'NASA called Opportunity more than 1,000 times. No reply.', '最後の投稿。1000回よんでも、返事はなかった']];
 segs.forEach(([a, b, c], i) => { const s = el(`<div class="seg"><h2>${a}</h2><p>${b}</p><p class="ja">${c}</p></div>`, R); win(s, T[i] + 0.15, T[i + 1] - 0.1, 0.18); });
 // intro and end cards
-const intro = el('<div class="card"><h1 class="a">NASA left machines<br>on the Moon and Mars.</h1><h1 class="b" style="margin-top:44px"><em>Now they post.</em></h1></div>', st);
+const intro = el(`<div class="card"><div class="pre">NASA Space Apps Challenge 2026 · Abandoned but not Forgotten · Team SunSunWorld</div>
+  <h1 class="a">NASA left machines<br>on the Moon and Mars.</h1><h1 class="b" style="margin-top:36px;color:#aeb7c4">They stopped answering.</h1><h1 class="c"><em>Here, they post.</em></h1></div>`, st);
 win(intro, 0, T[0], 0); an(intro, [{ opacity: 1 }, { opacity: 0 }], { duration: 300, delay: (T[0] - 0.3) * 1000, fill: 'none' });
-fadeIn(intro.querySelector('.a'), 0.15, 0.4); pop(intro.querySelector('.b'), 1.35, { snd: 'ding' });
-const end = el(`<div class="card"><h1 class="t">OUT OF RANGE</h1><p>True stories of the machines NASA left on the Moon, on Mars and in deep space.</p>
+fadeIn(intro.querySelector('.a'), 0.15, 0.4); fadeIn(intro.querySelector('.b'), 1.05, 0.35); pop(intro.querySelector('.c'), 1.85, { snd: 'ding' });
+const end = el(`<div class="card"><h1 class="t">OUT OF RANGE</h1><p>True stories of the machines NASA left on the Moon, on Mars and in deep space,<br>for kids who would never search for them.</p>
   <div class="url">taiyoishikawa2003.github.io/out-of-range</div><p style="font-size:32px;color:#9aa5b5">Team SunSunWorld · NASA Space Apps Challenge 2026</p>
   <div class="fine">Images, video and sound: NASA. NASA does not endorse this project. Music: Kevin MacLeod (CC BY 4.0).<br>No AI-generated images, video or voices. Built with AI assistance (Claude).</div></div>`, st);
 win(end, T[8], M.dur, 0); an(end, [{ opacity: 0 }, { opacity: 1 }], { duration: 300, delay: T[8] * 1000, fill: 'none' }); sfx(T[8] + 0.1, 'ding');

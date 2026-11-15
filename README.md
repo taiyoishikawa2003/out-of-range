@@ -4,38 +4,40 @@
 
 **Live:** https://taiyoishikawa2003.github.io/out-of-range/ (no login; phones, tablets and PCs; English / 日本語)
 
-A short-video style feed where the machines NASA left on the Moon, on Mars and in deep space post about their own lives. The jokes are only in the format. Every fact is true and linked to its source.
+A social feed for the machines NASA left on the Moon, on Mars and in deep space. They no longer answer Earth, so here they post. The jokes are only in the format. The stories are true, and every post links to its NASA sources.
 
 NASA Space Apps Challenge 2026, challenge *Abandoned but not Forgotten: Storytelling about NASA's Discarded Equipment on the Moon and Mars*. Team SunSunWorld (Kushimoto, Japan).
 
 ## Why a short-video feed?
 
-The challenge asks for a story that introduces school-age kids to this hardware and the science it made possible. Kids already spend their time in short-video feeds, including kids who are not interested in space. So we put the machines there, in formats those kids already know: a scary story, a group chat, a nav app, a fashion check, a ranking, a movie trailer. Each post says what the machine is, why it was sent, and what it found.
+The challenge asks for a story that introduces school-age kids to this hardware and the science it made possible. Kids already spend their time in short-video feeds, including kids who are not interested in space. So we put the machines there, in formats those kids already know: a scary story, a spot-the-difference, a vlog, a room tour, a group chat, a ranking, a game. Under each post, the pinned comment tells the real story: what the machine is, why it was sent, what it found and where it is now.
+
+There are two kinds of accounts. "Machines" are written in the machine's own voice, and each profile shows the month contact was lost ("Out of range since June 2018"). "Channels" post about the machines. Our team writes both, and every profile says so.
 
 ## What is in the feed
 
 | Post | Machine (place) | Format |
 |---|---|---|
 | "This was recorded on Mars." | InSight (Mars) | Scary-story video built on the real sound of a meteoroid impact |
-| I waited on the Moon for 2.5 years | Surveyor 3 (Moon) | POV story video |
-| Something vanished from a hole on Mars | Phoenix (Mars) | Spot-the-difference video made from two real photos taken four days apart |
-| OPPORTUNITY | Opportunity (Mars) | Landscape movie trailer shown in a "PR" slot (our own trailer, not a real ad) |
 | What did people leave on the Moon the most of? | Apollo landing sites (Moon) | Photo post with a tappable quiz |
-| While they were out partying | Dawn (asteroid belt) | Parody of a motivation video: four days to reach 60 mph, for 5.9 years |
-| Expectation vs reality | Spirit (Mars) | Photo post: a broken wheel digs up evidence of ancient hot springs |
-| Which space machine are you? | 8 machines | Interactive just-for-fun quiz |
+| Something vanished from a hole on Mars | Phoenix (Mars) | Spot-the-difference video made from two real photos taken four days apart |
+| I waited on the Moon for 2.5 years | Surveyor 3 (Moon) | POV story video |
+| OPPORTUNITY | Opportunity (Mars) | Landscape movie trailer in a "PR" slot (our own trailer, not a real ad) |
+| Try driving me like an RC car | Opportunity (Mars) | Playable game: feel the 20-minute signal delay, then drive the way rover drivers really did |
 | Pioneer 10's nav app | Pioneer 10 (deep space) | Nav app video: "arrive in about 2 million years" |
 | Case file | Viking 1 (Mars) | Photo post: detective file with a tappable quiz |
-| Working on Mars, day 3 | Sojourner (Mars) | "Day N" daily vlog video: planned for 7 days, worked for 83 |
+| Working on Mars, day 3 | Sojourner (Mars) | Daily vlog video: planned for 7 days, worked for 83 |
+| Expectation vs reality | Spirit (Mars) | Photo post: a broken wheel digs up evidence of ancient hot springs |
 | NASA's "favorite" zodiac signs | Kepler (deep space) | Ranking video made from real Kepler data |
-| Try driving me like an RC car | Opportunity (Mars) | Playable game: feel the 20-minute signal delay, then drive the way rover drivers really did |
 | Room tour: 50 years alone on Mars | Viking 2 (Mars) | Photo post: rent $0, great view, floor tilted 8.5 degrees |
-| "Want to try landing?" | NEAR Shoemaker (asteroid Eros) | Group chat video |
+| While they were out partying | Dawn (asteroid belt) | Parody of a motivation video: four days to reach 60 mph, for 5.9 years |
+| Which space machine are you? | 8 machines | Interactive just-for-fun quiz |
 | I went to Jupiter and Saturn | Pioneer 11 (deep space) | Photo dump: real photos from the trip, no return ticket |
-| Worked longer than planned: TOP 5 | Opportunity, Spirit, Viking 1, Pioneer 10, Ingenuity | Ranking countdown video |
+| "Want to try landing?" | NEAR Shoemaker (asteroid Eros) | Group chat video |
 | Fashion check | Apollo 17 rover, Ingenuity, InSight, Apollo 11 lander | Photo post: four looks, four real reasons |
-| We texted 1,000 times. No reply. | Opportunity (Mars) | Chat video (the ending of the trailer) |
-| Things machines left on Mars always do | Viking 1 and 2, Mars Pathfinder, Phoenix, InSight | "So relatable" list with real photos |
+| Things machines left on Mars always do | Mars Pathfinder, Spirit, Opportunity, Viking 1 and 2, Phoenix, Ingenuity | "So relatable" list with real photos: bouncing landings, a photo of their own foot, nicknames, names chosen by kids |
+| Worked longer than planned: TOP 5 | Opportunity, Spirit, Viking 1, Pioneer 10, Ingenuity | Ranking countdown video |
+| We texted 1,000 times. No reply. | Opportunity (Mars) | Chat video. The last post: after it, the feed says "Past this point: out of range" and opens the map |
 
 Beyond the feed:
 
@@ -49,9 +51,9 @@ Beyond the feed:
 - Swipeable photo posts with tappable quizzes and per-slide music
 - Interactive posts (a quiz) and an interactive map of the Moon and Mars
 - A **Sources** button on every post, and one page that lists every NASA resource used (About)
-- Pinned "answer" comments that explain the science in plain words, and say which parts are dramatized
+- Pinned comments that tell the real story in plain words (what it is, why it was sent, what it found, where it is now) and say which parts we made up
 - **Create**: kids make their own true post in the browser. A source is required. Posts stay on the device
-- Discover (search, Moon / Mars / Deep space filters) and a profile page for every machine
+- Discover (search, Moon / Mars / Deep space filters) and a profile page for every account: machines show the month contact was lost, and every profile says our team writes it
 - Read-aloud for photo posts, English / 日本語, keyboard controls, reduced-motion support
 - Fact-check stamps: opening a post's Sources earns that post's stamp, so the habit of checking where a fact comes from becomes a collection game
 - Comment threads where the other machines reply in character (the lines are ours, the facts in them are sourced)
@@ -66,7 +68,7 @@ Beyond the feed:
 - Every fact is checked against NASA pages (NASA Science mission pages, NSSDCA, the NASA Image and Video Library and the JPL Photojournal) before it is posted. Each post lists its sources.
 - Numbers we calculated ourselves (walking time to Aldebaran, "times longer than planned") are marked as our calculation, with the assumptions written out.
 - Real photos are labelled "Real photo". NASA artist's concepts are labelled "Artist's concept". We do not use AI-generated images, video or voices.
-- Invented lines (the chat, the POV thoughts) are labelled as dramatization in the pinned comment of each post.
+- Lines we made up (the chats, the POV thoughts, the comments) are labelled as ours in the pinned comment of each post.
 
 ## Run locally
 
@@ -80,7 +82,8 @@ Then open http://localhost:8000/. There is no build step for the site itself (pl
 
 ## How posts are made
 
-- `data/posts.json` is the feed. `data/accounts.json` holds the machine accounts. `data/library.json` is the photo library for Create.
+- `data/posts.json` is the feed. `data/accounts.json` holds the accounts (machines and channels). `data/library.json` is the photo library for Create.
+- Wording lives in one file: `tools/texts.py` has the captions, pinned comments, comments from other machines, profile text and the feed order. `python3 tools/apply_texts.py` writes it into the data files. Run it after rebuilding any post.
 - Photo posts are written as small HTML slides and rendered to images:
   - `tools/slides/p_*.py`: one file per post (slides, caption, pinned comment, sources) in Japanese and English
   - `tools/slides/slides.css`: the slide design system
