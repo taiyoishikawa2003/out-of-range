@@ -193,11 +193,12 @@ function buildPost(p, el, { setMuted, onSlide, onComments }) {
   const likeBtn = h('button', { class: 'rb like', type: 'button' });
   const cmBtn = h('button', { class: 'rb', type: 'button', onclick: e => { e.stopPropagation(); onComments ? onComments(p, drawCounts) : openComments(p, drawCounts); } });
   const saveBtn = h('button', { class: 'rb save', type: 'button' });
+  const hasAnswer = (p.comments || []).some(c => c.pinned);   // the pinned comment tells the real story: a small tag on the button says so
   const drawCounts = () => {
     const lk = S.isLiked(p.id), sv = S.isSaved(p.id);
     likeBtn.replaceChildren(icon('heart'), fmt((base.likes || 0) + (lk ? 1 : 0))); likeBtn.classList.toggle('on', lk); likeBtn.setAttribute('aria-pressed', lk); likeBtn.setAttribute('aria-label', t('like'));
     const nc = (p.comments?.length || 0) + S.localComments(p.id).length + (base.comments || 0);
-    cmBtn.replaceChildren(icon('comment'), fmt(nc)); cmBtn.setAttribute('aria-label', t('comments'));
+    cmBtn.replaceChildren(icon('comment'), hasAnswer ? h('span', { class: 'ans', text: t('cm.answer') }) : '', fmt(nc)); cmBtn.setAttribute('aria-label', hasAnswer ? `${t('comments')} (${t('cm.answer')})` : t('comments'));
     saveBtn.replaceChildren(icon('save'), fmt((base.saves || 0) + (sv ? 1 : 0))); saveBtn.classList.toggle('on', sv); saveBtn.setAttribute('aria-pressed', sv); saveBtn.setAttribute('aria-label', t('save'));
   };
   drawCounts();

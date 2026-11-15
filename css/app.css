@@ -510,3 +510,6 @@ html.furi-on .ytx,html.furi-on .mcard p,html.furi-on .sec p,html.furi-on .sd-fac
 .prof .fan{display:inline-block;margin-left:8px;padding:1px 8px;border:1px solid #555;border-radius:999px;font-size:11px;font-weight:700;color:#ccc}
 .prof .since{display:inline-flex;align-items:center;gap:8px;padding:5px 12px;border-radius:999px;background:var(--panel2);font-size:13px;font-weight:700}
 .prof .pnote{max-width:420px;margin:0;word-break:auto-phrase;text-wrap:balance}
+/* the comment button of a post whose pinned comment tells the real story */
+.rail .rb{position:relative}
+.rail .rb .ans{position:absolute;top:-7px;right:-3px;padding:1px 6px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:10px;font-weight:900;line-height:1.5;text-shadow:none}
