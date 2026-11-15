@@ -59,7 +59,15 @@ ACCOUNTS = {
 # sub=[(old, new), ...]       small in-place edits to the existing pinned comment (either language)
 # comments=[(user, ja, en)]   replaces every comment that is not pinned
 POSTS = {
- 'insight-kaidan-1': dict(comments=[
+ 'insight-kaidan-1': dict(
+    caption=('誰もいない火星で、音が3回。 #意味がわかると怖い話 #火星 #インサイト', 'No one was on Mars. Something made a sound. 3 times. #creepy #mars #InSight'),
+    sub=[('インサイトにマイクはありません。聞いていたのは「地震計」です。',
+          'インサイトにマイクはありません。聞いていたのは「地震計」です。\n\n■ インサイトって？\n火星の中身を調べるために送られた着陸機です。2018年11月に火星に着きました。'),
+         ('InSight had no microphone. It was listening with its seismometer.',
+          'InSight had no microphone. It was listening with its seismometer.\n\n■ What was InSight?\nA lander sent to study the inside of Mars. It reached Mars in November 2018.'),
+         ('\n\n※動画の風の音は', '\n\n■ いまは？\n太陽電池に砂がつもって、2022年12月に通信が終わりました。今も火星のエリシウム平原にあります。\n\n※動画の風の音は'),
+         ('\n\nNote: the wind sound was', '\n\n■ And now?\nDust piled up on its solar panels, and contact ended in December 2022. It is still on Elysium Planitia on Mars.\n\nNote: the wind sound was'),],
+    comments=[
     ('viking1_lander', 'こわくて3回見た', 'So scary I watched it three times.', dict(fact=False)),
     ('opportunity_rover', '隕石さん、こっちには落ちないでね（同じ火星にいます）', 'Dear meteoroids, please do not land on me. (Same planet.)')]),
 
@@ -226,7 +234,13 @@ Note: the “while they were out partying” framing is ours."""),
         dict(src=[('Mars Pathfinder fact sheet (NASA/JPL): rover top speed 1 cm per second', 'https://mars.nasa.gov/internal_resources/815/')])),
     ('near_shoemaker', '小惑星なかま！', 'Fellow asteroid visitor!')]),
 
- 'spirit-ideal-1': dict(comments=[
+ 'spirit-ideal-1': dict(
+    sub=[('スピリットは、2004年に火星に着いた探査車です。', 'スピリットは、昔の火星に水があったかを調べるために送られた探査車です。2004年に火星に着きました。'),
+         ('Spirit landed on Mars in 2004.', 'Spirit was a rover sent to find out whether ancient Mars had water. It landed in 2004.'),
+         ('2010年3月22日の通信が最後になりました。', '2010年3月22日の通信が最後になりました。今も火星のグセフ・クレーターにあります。'),
+         ('Its last message came on March 22, 2010.', 'Its last message came on March 22, 2010. It is still in Gusev crater on Mars.'),
+         ('steam vents — places where', 'steam vents, places where')],
+    comments=[
     ('opportunity_rover', 'ふたごです。会ったことは一度もないけど', 'Twin here. We never met.'),
     ('insight_lander', 'こわれた車輪で大発見、かっこいい', 'A big discovery from a broken wheel. Respect.', dict(fact=False))]),
 
@@ -293,7 +307,10 @@ Note: the photos are real. The lines and the vlog format are ours. The day 7 and
     ('opportunity_rover', '先輩…！予定より長くいるの、わたしたちもやりました', 'Senpai…! Staying longer than planned: we did that too.'),
     ('spirit_rover', '36cmで「充分」、ちょっとわかる', '“1.2 feet. Feeling productive.” I get it.')]),
 
- 'kepler-uranai-1': dict(comments=[
+ 'kepler-uranai-1': dict(
+    sub=[('2018年に燃料が尽きて引退しました。', '2018年に燃料が尽きて引退しました。今は、地球からはなれた軌道で太陽のまわりを回っています。'),
+         ('It ran out of fuel and retired in 2018.', 'It ran out of fuel and retired in 2018. It now circles the Sun in an orbit away from Earth.')],
+    comments=[
     ('pioneer10', 'わたしが向かってるの、おうし座の方向です。おうし座、何位でした？', 'I am heading toward Taurus. So… where did Taurus place?')]),
 
  'lag-1': dict(
