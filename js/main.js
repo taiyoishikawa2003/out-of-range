@@ -41,7 +41,14 @@ onLang(() => route());
 (async () => {
   applyStatic();
   try { await loadData(); }
-  catch (e) { view.textContent = 'Could not load data. ' + e.message; return; }
+  catch (e) {
+    const ja = (navigator.language || '').startsWith('ja');
+    view.replaceChildren(Object.assign(document.createElement('div'), { className: 'empty' }));
+    const box = view.firstChild;
+    box.append(Object.assign(document.createElement('p'), { textContent: ja ? '読みこめませんでした。電波のよい所で、もう一度ためしてください。' : 'Could not load. Please check your connection and try again.' }),
+      Object.assign(document.createElement('button'), { className: 'btn', type: 'button', textContent: ja ? 'もう一度' : 'Try again', onclick: () => location.reload() }));
+    return;
+  }
   window.addEventListener('hashchange', route);
   if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
   route();

@@ -4,7 +4,13 @@ import { loadMine } from './store.js';
 export const db = { posts: [], accounts: {}, library: [], mine: [] };
 
 export async function loadData() {
-  const j = u => fetch(u, { cache: 'no-cache' }).then(r => r.json());
+  // retry: a phone on a weak connection (or a moment during a site update) can fail one request
+  const j = async u => {
+    for (let k = 0; ; k++) {
+      try { const r = await fetch(u + (k ? `?r=${Date.now()}` : ''), { cache: k ? 'reload' : 'no-cache' }); if (!r.ok) throw new Error(r.status); return await r.json(); }
+      catch (e) { if (k >= 3) throw e; await new Promise(res => setTimeout(res, 600 * (k + 1))); }
+    }
+  };
   const [posts, accounts, library] = await Promise.all([j('data/posts.json'), j('data/accounts.json'), j('data/library.json')]);
   db.posts = posts; db.accounts = accounts; db.library = library;
   await reloadMine();
