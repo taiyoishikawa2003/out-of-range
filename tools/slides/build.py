@@ -4,7 +4,7 @@ Renders slides (ja/en) with headless Chrome and upserts each post into data/post
 import sys, os, json, subprocess, importlib, shutil, tempfile
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lib
-ALL = ['p_surveyor', 'p_viking', 'p_pioneer', 'p_near', 'p_runway', 'p_ranking']
+ALL = ['p_surveyor', 'p_viking', 'p_pioneer', 'p_near', 'p_runway', 'p_ranking', 'p_viking2', 'p_pioneer11', 'p_lrv', 'p_aruaru']
 mods = sys.argv[1:] or ALL
 P = 'data/posts.json'; posts = json.load(open(P))
 for name in mods:

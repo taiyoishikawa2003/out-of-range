@@ -247,5 +247,18 @@
    "ja": "木星を通って、土星に行ったはじめての探査機（1979年）。帰りの便はなし。今も外へ飛びつづけています。学生が作っています。事実はNASAの資料で確認しています。"
   },
   "avatar": "media/avatars/pioneer11.jpg"
+ },
+ "machine_aruaru": {
+  "name": {
+   "en": "Left-Behind Machines: So Relatable (fan-made)",
+   "ja": "置いてきた機械あるある（ファンメイド）"
+  },
+  "place": "mars",
+  "followers": 0,
+  "bio": {
+   "en": "Things machines left on other worlds always seem to do, shown with real NASA photos. Made by students; facts checked against NASA sources.",
+   "ja": "置いてきた機械の「あるある」を、NASAの本物の写真で。学生が作っています。事実はNASAの資料で確認しています。"
+  },
+  "avatar": "media/avatars/machine_aruaru.jpg"
  }
 }

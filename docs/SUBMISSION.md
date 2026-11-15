@@ -28,26 +28,33 @@ OUT OF RANGE looks and works like the short-video apps kids already use: a verti
 
 The challenge says school-age kids "often hear only about active, ongoing missions", and that the history of past missions sits in "dense technical websites" that do not capture "a younger or more casual audience's attention". We asked where those kids already spend their attention. The answer is short-video feeds. So instead of asking kids to come to a space site, we took the machines to the place and the formats kids already know. A kid with no interest in space will still stop for a scary story, a group chat or a ranking. The space fact is the punchline. That is how we read the goal of teaching "school-age and casual space enthusiasts": start with the casual ones, and give the enthusiasts every source.
 
-**What is in the feed** (14 posts: videos with sound, swipeable photo posts, a playable game and a quiz)
+**What is in the feed** (21 posts: videos with sound, swipeable photo posts, a playable game and a quiz. Each one borrows a format kids already know from short-video apps)
 
 - InSight (Mars): a scary-story video built on the real sound of a meteoroid hitting Mars, recorded by its seismometer
 - Surveyor 3 (Moon): a POV video. Alone for 2.5 years, then Apollo 12 landed about 180 m away and took its camera home for science
-- Apollo landing sites (Moon): a tappable quiz about what people left on the Moon, and why scientists want some of it back
+- Phoenix (Mars): a spot-the-difference video made from two real photos taken four days apart. What vanished were dice-size bits of ice, and that is how the team knew it was ice and not salt
 - Opportunity (Mars): a landscape movie trailer shown in a "PR" slot, like a sponsored post (our own trailer, labelled as not a real ad)
-- Pioneer 10 (deep space): its nav app. "Arrive in about 2 million years." Walking would take longer than the age of the universe
+- Apollo landing sites (Moon): a tappable quiz about what people left on the Moon, and why scientists want some of it back
+- Dawn (asteroid belt): a parody of a "while they were out partying, I was grinding" motivation video. Four days to reach 60 mph on the push of one sheet of paper, kept up for 5.9 years, and the first spacecraft to orbit two worlds
 - Spirit (Mars): "expectation vs reality". A broken wheel dragged through the soil and dug up nearly pure silica, evidence of ancient hot springs or steam vents
 - A just-for-fun quiz, "Which space machine are you?", whose result cards carry real facts about eight machines
-- NEAR Shoemaker (asteroid Eros): a group chat. An orbiter with no legs is asked to land, and survives
+- Apollo lunar rovers (Moon): the "gotta tell everyone" running meme on one real frame of the Apollo 16 "Grand Prix" drive. Three cars are still on the Moon
+- Pioneer 10 (deep space): its nav app. "Arrive in about 2 million years." Walking would take longer than the age of the universe
+- Viking 1 (Mars): a detective case file with a tappable quiz. What cut off the lander after six years? (A faulty command from Earth.)
+- Sojourner (Mars): a "day N" daily vlog. Day 3: drove 1.2 feet, touched a rock, feeling productive. Planned for 7 days, worked for 83
 - Kepler (deep space): a zodiac ranking video made from real Kepler / K2 data
 - Opportunity (Mars): a playable game. First try to drive the rover like an RC car with a 20-minute signal delay (you cannot). Then drive it the way rover drivers really did: plan the day, send the commands at once, and let the rover stop itself when its cameras see a rock
-- Viking 1 (Mars): a detective case file with a tappable quiz. What cut off the lander after six years? (A faulty command from Earth.)
-- Opportunity (Mars): "We texted 1,000 times. No reply." The ending of the trailer: more than a thousand commands after the 2018 dust storm
-- Apollo 17 rover, Ingenuity, InSight, Apollo 11 lander: a fashion check. Four looks, four real engineering reasons
+- Viking 2 (Mars): a room tour. Fifty years on Utopia Planitia: rent $0, a pink sky, a floor tilted 8.5 degrees and frost in the yard in winter
+- NEAR Shoemaker (asteroid Eros): a group chat. An orbiter with no legs is asked to land, and survives
+- Pioneer 11 (deep space): a photo dump from a solo trip. Jupiter from above its pole, the first visit to Saturn, and no return ticket
 - Opportunity, Spirit, Viking 1, Pioneer 10, Ingenuity: a ranking of how many times longer than planned each one worked
+- Apollo 17 rover, Ingenuity, InSight, Apollo 11 lander: a fashion check. Four looks, four real engineering reasons
+- Opportunity (Mars): "We texted 1,000 times. No reply." The ending of the trailer: more than a thousand commands after the 2018 dust storm
+- Viking 1 and 2, Mars Pathfinder, Phoenix, InSight: a "so relatable" list. Their first photo is their own foot, every rock gets a nickname, and selfies end up dusty
 
 **Beyond the feed**
 
-- "Where are they now?": interactive maps of the Moon and Mars with 22 landing sites and machines (Apollo descent stages and rovers, Surveyors, Vikings, Sojourner, Spirit, Opportunity, Phoenix, InSight, Ingenuity, and NEAR, Dawn, Kepler and Pioneer 10 farther out). Tapping a pin answers the questions the challenge asks: what it is, why it was sent, what it found, and where it is now. Landing positions come from NASA's NSSDCA catalogue.
+- "Where are they now?": interactive maps of the Moon and Mars with 23 landing sites and machines (Apollo descent stages and rovers, Surveyors, Vikings, Sojourner, Spirit, Opportunity, Phoenix, InSight, Ingenuity, and NEAR, Dawn, Kepler, Pioneer 10 and Pioneer 11 farther out). Tapping a pin answers the questions the challenge asks: what it is, why it was sent, what it found, and where it is now. Landing positions come from NASA's NSSDCA catalogue.
 - Lunar Lost & Found (/lost/): a counter for things left on the Moon. Each claim slip leads to the machine next to it and a small hands-on science scene (laser ranging, moonquakes, Moon gravity).
 - Create: kids make their own true post from real NASA photos. The app asks for a source before it lets them post, so the habit we want to teach (check where a fact comes from) is built into the tool. Posts stay on the device.
 - Fact-check stamps: opening a post's Sources earns that post's stamp. Collecting all 14 turns the habit we most want to teach (check where a fact comes from) into a game.
@@ -115,12 +122,25 @@ NASA Science mission pages and news (facts, dates, design goals):
 - https://www-robotics.jpl.nasa.gov/media/documents/tradeoffs_ijrr_07.pdf
 - https://www.jpl.nasa.gov/videos/spirit-six-years-of-roving-mars/
 - https://www.nasa.gov/missions/lro/laser-beams-reflected-between-earth-and-moon-boost-science/
+- https://science.nasa.gov/mission/phoenix/
+- https://www.jpl.nasa.gov/news/bright-chunks-at-phoenix-landers-mars-site-must-have-been-ice/
+- https://science.nasa.gov/mission/dawn/toolkit/quick-facts/
+- https://science.nasa.gov/mission/dawn/technology/ion-propulsion/
+- https://science.nasa.gov/mission/dawn/toolkit/highlights/
+- https://www.jpl.nasa.gov/blog/columns/dawn-journal/
+- https://mars.nasa.gov/internal_resources/815/
+- https://science.nasa.gov/mission/viking-2/
+- https://science.nasa.gov/mission/pioneer-11/
+- https://www.nasa.gov/history/40-years-ago-pioneer-11-first-to-explore-saturn/
+- https://www.nasa.gov/history/25-years-ago-mars-pathfinder-launches-to-mars-to-deploy-sojourner-the-first-planetary-rover/
 
-NASA Space Science Data Coordinated Archive (NSSDCA), https://nssdc.gsfc.nasa.gov/ : spacecraft entries 1966-045A, 1967-084A, 1967-112A, 1968-001A, 1969-059C, 1969-099C, 1971-008C, 1971-063C, 1972-031C, 1972-096C, 1975-075C, 1975-083C, 1996-068A, 2003-027A, 2003-032A, 2007-034A, 2007-043A, 2020-052A (what each machine was, its landing coordinates and its final state). These coordinates place the pins on our maps.
+NASA Space Science Data Coordinated Archive (NSSDCA), https://nssdc.gsfc.nasa.gov/ : spacecraft entries 1966-045A, 1967-084A, 1967-112A, 1968-001A, 1969-059C, 1969-099C, 1971-008C, 1971-063C, 1972-031C, 1972-096C, 1975-075C, 1975-083C, 1996-068A, 2003-027A, 2003-032A, 2007-034A, 2007-043A, 2020-052A, MESURPR (what each machine was, its landing coordinates and its final state). These coordinates place the pins on our maps.
 
-NASA Image and Video Library (https://images.nasa.gov/), images, video and sound used in posts, in the photo library of the Create tool and in profile pictures: 7040032, ARC-1972-AC72-1338, ARC-1973-AC73-4247, ARC-1973-AC73-9019, AS12-48-7133, AS12-48-7134, JPL-20190423-INSIGHf-0001-First Likely Marsquake Heard by NASAs InSight, JPL-20220919-INSIGHf-0001-InSight Captures Sound of a Meteoroid Striking Mars_1080, KSC-as11-40-5927, PIA04413, PIA09262, PIA09491, PIA11823, PIA15801, PIA21473, PIA21751, PIA22871, PIA22876, PIA23177, PIA23202, PIA23376, PIA25408, S69-39334, as08-14-2383, as11-40-5899, as12-48-7099, as12-48-7110, as12-48-7121, as12-48-7136, as14-66-09277, as17-137-20979, as17-148-22727, iss073e0027806.
+NASA Image and Video Library (https://images.nasa.gov/), images, video and sound used in posts, in the photo library of the Create tool and in profile pictures: 7040032, ARC-1972-AC72-1338, ARC-1973-AC73-4247, ARC-1973-AC73-9019, AS12-48-7133, AS12-48-7134, JPL-20190423-INSIGHf-0001-First Likely Marsquake Heard by NASAs InSight, JPL-20220919-INSIGHf-0001-InSight Captures Sound of a Meteoroid Striking Mars_1080, KSC-as11-40-5927, PIA04413, PIA09262, PIA09491, PIA11823, PIA15801, PIA21473, PIA21751, PIA22871, PIA22876, PIA23177, PIA23202, PIA23376, PIA25408, S69-39334, as08-14-2383, as11-40-5899, as12-48-7099, as12-48-7110, as12-48-7121, as12-48-7136, as14-66-09277, as17-137-20979, as17-148-22727, iss073e0027806, S72-37002, ARC-1976-AC76-1011-2-15.
 
-JPL Photojournal (https://photojournal.jpl.nasa.gov/): PIA00381, PIA00407, PIA00563, PIA00567, PIA01881, PIA02467, PIA03148, PIA04413, PIA04422, PIA05144, PIA06739, PIA07999, PIA09262, PIA09491, PIA09703, PIA11823, PIA11824, PIA12131, PIA12922, PIA13088, PIA14129, PIA15281, PIA15689, PIA15801, PIA16120, PIA16442, PIA16923, PIA17956, PIA18614, PIA19154, PIA19155, PIA21473, PIA21751, PIA22871, PIA22876, PIA22928, PIA22929, PIA23177, PIA23202, PIA23376, PIA23882, PIA24438, PIA24648, PIA25287, PIA25408.
+JPL Photojournal (https://photojournal.jpl.nasa.gov/): PIA00381, PIA00396, PIA00407, PIA00563, PIA00567, PIA00568, PIA00571, PIA00573, PIA00621, PIA00634, PIA00766, PIA00921, PIA00967, PIA01121, PIA01122, PIA01551, PIA01585, PIA01881, PIA01882, PIA02467, PIA03148, PIA04413, PIA04422, PIA05144, PIA06739, PIA07999, PIA09262, PIA09491, PIA09703, PIA10906, PIA10910, PIA10911, PIA11719, PIA11823, PIA11824, PIA12131, PIA12922, PIA13088, PIA14129, PIA14894, PIA15281, PIA15689, PIA15801, PIA16120, PIA16442, PIA16923, PIA17956, PIA18614, PIA18922, PIA19154, PIA19155, PIA20919, PIA21078, PIA21473, PIA21751, PIA22871, PIA22876, PIA22928, PIA22929, PIA23177, PIA23202, PIA23376, PIA23882, PIA24438, PIA24648, PIA25287, PIA25408.
+
+Images published on NASA Science and NASA History pages (Pioneer 11): Saturn and its moon Titan, Jupiter from above its north pole, the launch, the trajectory diagram, Titan, and Saturn after the flyby (from the two Pioneer 11 pages listed above).
 
 Maps: Moon map from NASA's Scientific Visualization Studio CGI Moon Kit (https://svs.gsfc.nasa.gov/4720); Mars map from NASA 3D Resources (https://github.com/nasa/NASA-3D-Resources).
 
@@ -149,7 +169,7 @@ Other sources used for facts in posts (each is linked from the post that uses it
 
 Music, libraries and fonts:
 
-- Music: Kevin MacLeod (incompetech.com), Creative Commons Attribution 4.0: "Monkeys Spinning Monkeys", "Fluffing a Duck", "Heartwarming", "Gymnopedie No. 1", "Carefree", "Investigations", "Local Forecast - Elevator", "Sneaky Snitch", "Funkorama", "Hyperfun", "Wholesome", "Heartbreaking" (some shortened)
+- Music: Kevin MacLeod (incompetech.com), Creative Commons Attribution 4.0: "Monkeys Spinning Monkeys", "Fluffing a Duck", "Heartwarming", "Gymnopedie No. 1", "Carefree", "Investigations", "Local Forecast - Elevator", "Sneaky Snitch", "Funkorama", "Hyperfun", "Wholesome", "Heartbreaking", "Thinking Music", "Wallpaper", "Heroic Age" (some shortened)
 - Open-source libraries: idb-keyval (Apache-2.0), html-to-image (MIT). Font in rendered slides and videos: Noto Sans CJK (SIL Open Font License).
 
 ## Use of Artificial Intelligence

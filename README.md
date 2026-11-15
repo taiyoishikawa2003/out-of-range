@@ -18,22 +18,29 @@ The challenge asks for a story that introduces school-age kids to this hardware 
 |---|---|---|
 | "This was recorded on Mars." | InSight (Mars) | Scary-story video built on the real sound of a meteoroid impact |
 | I waited on the Moon for 2.5 years | Surveyor 3 (Moon) | POV story video |
-| What did people leave on the Moon the most of? | Apollo landing sites (Moon) | Photo post with a tappable quiz |
+| Something vanished from a hole on Mars | Phoenix (Mars) | Spot-the-difference video made from two real photos taken four days apart |
 | OPPORTUNITY | Opportunity (Mars) | Landscape movie trailer shown in a "PR" slot (our own trailer, not a real ad) |
-| Pioneer 10's nav app | Pioneer 10 (deep space) | Nav app video: "arrive in about 2 million years" |
+| What did people leave on the Moon the most of? | Apollo landing sites (Moon) | Photo post with a tappable quiz |
+| While they were out partying | Dawn (asteroid belt) | Parody of a motivation video: four days to reach 60 mph, for 5.9 years |
 | Expectation vs reality | Spirit (Mars) | Photo post: a broken wheel digs up evidence of ancient hot springs |
 | Which space machine are you? | 8 machines | Interactive just-for-fun quiz |
-| "Want to try landing?" | NEAR Shoemaker (asteroid Eros) | Group chat video |
+| Gotta tell everyone we left 3 cars on the Moon | Apollo lunar rovers (Moon) | Photo post in a running-meme format, on a real frame of the Apollo 16 "Grand Prix" |
+| Pioneer 10's nav app | Pioneer 10 (deep space) | Nav app video: "arrive in about 2 million years" |
+| Case file | Viking 1 (Mars) | Photo post: detective file with a tappable quiz |
+| Working on Mars, day 3 | Sojourner (Mars) | "Day N" daily vlog video: planned for 7 days, worked for 83 |
 | NASA's "favorite" zodiac signs | Kepler (deep space) | Ranking video made from real Kepler data |
 | Try driving me like an RC car | Opportunity (Mars) | Playable game: feel the 20-minute signal delay, then drive the way rover drivers really did |
-| Case file | Viking 1 (Mars) | Photo post: detective file with a tappable quiz |
-| We texted 1,000 times. No reply. | Opportunity (Mars) | Chat video (the ending of the trailer) |
-| Fashion check | Apollo 17 rover, Ingenuity, InSight, Apollo 11 lander | Photo post: four looks, four real reasons |
+| Room tour: 50 years alone on Mars | Viking 2 (Mars) | Photo post: rent $0, great view, floor tilted 8.5 degrees |
+| "Want to try landing?" | NEAR Shoemaker (asteroid Eros) | Group chat video |
+| I went to Jupiter and Saturn | Pioneer 11 (deep space) | Photo dump: real photos from the trip, no return ticket |
 | Worked longer than planned: TOP 5 | Opportunity, Spirit, Viking 1, Pioneer 10, Ingenuity | Ranking countdown video |
+| Fashion check | Apollo 17 rover, Ingenuity, InSight, Apollo 11 lander | Photo post: four looks, four real reasons |
+| We texted 1,000 times. No reply. | Opportunity (Mars) | Chat video (the ending of the trailer) |
+| Things machines left on Mars always do | Viking 1 and 2, Mars Pathfinder, Phoenix, InSight | "So relatable" list with real photos |
 
 Beyond the feed:
 
-- **Where are they now?** (`#/map`): maps of the Moon and Mars with 22 machines. Tap a pin to see what the machine is, why it was sent, what it found and where it rests now. Positions come from NASA's NSSDCA catalogue.
+- **Where are they now?** (`#/map`): maps of the Moon and Mars with 23 machines. Tap a pin to see what the machine is, why it was sent, what it found and where it rests now. Positions come from NASA's NSSDCA catalogue.
 - **Lunar Lost & Found** ([`/lost/`](https://taiyoishikawa2003.github.io/out-of-range/lost/)): a second, separate piece. A counter for things left on the Moon; each claim slip leads to the machine next to it and a small hands-on science scene (laser ranging, moonquakes, Moon gravity).
 - **30-second demo**: [`/demo/`](https://taiyoishikawa2003.github.io/out-of-range/demo/)
 
